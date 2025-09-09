@@ -10,17 +10,45 @@ export function basicMatch(query, nurses) {
     .filter(n => {
       if (!city) return true;
       const cityLower = String(city).toLowerCase();
-      // Check if any municipality matches
-      return (n.municipality || []).some(muni => 
-        muni.toLowerCase().includes(cityLower) || 
-        cityLower.includes(muni.toLowerCase())
-      );
+      
+      // Check the city field directly
+      if (n.city && n.city.toLowerCase().includes(cityLower)) {
+        return true;
+      }
+      
+      // Also check municipality array for backwards compatibility
+      if (n.municipality && n.municipality.length > 0) {
+        return n.municipality.some(muni => 
+          muni.toLowerCase().includes(cityLower) || 
+          cityLower.includes(muni.toLowerCase())
+        );
+      }
+      
+      // Check _originalMunicipalities if available
+      if (n._originalMunicipalities && n._originalMunicipalities.length > 0) {
+        return n._originalMunicipalities.some(muni => 
+          muni.toLowerCase().includes(cityLower) || 
+          cityLower.includes(muni.toLowerCase())
+        );
+      }
+      
+      return false;
     })
     .filter(n => {
       if (!service) return true;
       const reqLower = String(service).toLowerCase();
-      // Check if any specialization matches
-      return (n.specialization || []).some(spec => {
+      
+      // Check services array (formatted friendly names like "General Nursing")
+      const hasServiceMatch = (n.services || []).some(svc => {
+        const svcLower = svc.toLowerCase();
+        return svcLower.includes(reqLower) || 
+               reqLower.includes(svcLower) ||
+               (reqLower === 'general care' && svcLower === 'general nursing') ||
+               (reqLower === 'wound care' && svcLower.includes('wound'));
+      });
+      
+      // Also check specialization array (raw format like "DEFAULT", "WOUND_CARE")
+      const hasSpecMatch = (n.specialization || []).some(spec => {
         const specLower = spec.toLowerCase();
         return specLower.includes(reqLower) || 
                reqLower.includes(specLower) || 
@@ -28,6 +56,8 @@ export function basicMatch(query, nurses) {
                (reqLower.includes('care') && (specLower.includes('care') || specLower.includes('treatment'))) ||
                (reqLower.includes('general') && specLower.includes('default'));
       });
+      
+      return hasServiceMatch || hasSpecMatch;
     })
     .map(n => {
       const dKm = (lat!=null && lng!=null && n.lat!=null && n.lng!=null) ? distanceKm(lat,lng,n.lat,n.lng) : null;

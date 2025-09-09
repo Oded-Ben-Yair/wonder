@@ -52,8 +52,27 @@ export async function executeMatch(
   engine?: string
 ): Promise<MatchResponse> {
   try {
-    const url = engine ? `/match?engine=${encodeURIComponent(engine)}` : '/match';
-    const response = await api.post<MatchResponse>(url, query);
+    // Transform StructuredQuery to match gateway's expected format
+    const gatewayQuery: any = {
+      city: query.municipality || 'Tel Aviv', // Gateway expects 'city' not 'municipality'
+      servicesQuery: query.specializations || [],
+      expertiseQuery: query.specializations || [],
+      urgent: query.isUrgent || false,
+      topK: query.limit || 5,
+    };
+
+    // Add optional fields if present
+    if (query.dateRange?.start) {
+      gatewayQuery.start = query.dateRange.start;
+    }
+    if (query.dateRange?.end) {
+      gatewayQuery.end = query.dateRange.end;
+    }
+
+    // Use working engine (Basic) by default for chatbot
+    const selectedEngine = engine || 'engine-basic';
+    const url = `/match?engine=${encodeURIComponent(selectedEngine)}`;
+    const response = await api.post<MatchResponse>(url, gatewayQuery);
     return response.data;
   } catch (error) {
     console.error('Failed to execute match:', error);

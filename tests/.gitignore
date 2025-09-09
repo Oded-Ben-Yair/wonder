@@ -1,0 +1,15 @@
+# Test artifacts
+screenshots/
+reports/
+*.png
+
+# Temporary test files
+*.tmp
+*.log
+
+# Node modules (if any local test dependencies)
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
