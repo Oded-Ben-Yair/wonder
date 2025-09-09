@@ -1,6 +1,19 @@
-# CLAUDE.md
+# CLAUDE.md - Basic Filter Engine
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## ⚠️ CRITICAL FIXES APPLIED
+
+### City Filtering Fix (basic.js:152-171)
+**Problem**: Nurses have `city: "Tel Aviv-Yafo"` but queries search for `"Tel Aviv"`
+**Solution**: Flexible substring matching that checks:
+1. Direct city field match with includes()
+2. Municipality array (backwards compatibility)
+3. _originalMunicipalities field if present
+
+### Service Filtering Fix (basic.js:173-185)
+**Problem**: Gateway sends `servicesQuery` array but some data has `specialization` field
+**Solution**: Check both `services` array and `specialization` field for matches
 
 ## Commands
 
