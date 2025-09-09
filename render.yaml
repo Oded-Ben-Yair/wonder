@@ -1,0 +1,44 @@
+services:
+  # Gateway service
+  - type: web
+    name: wonder-gateway
+    runtime: docker
+    repo: https://github.com/YOUR_USERNAME/wonder # Update with your repo
+    branch: main
+    region: oregon # or your preferred region
+    plan: free # or 'starter' for production
+    
+    # Health check endpoint
+    healthCheckPath: /health
+    
+    # Environment variables
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5050
+      - key: LOG_LEVEL
+        value: info
+      - key: ALLOWED_ORIGINS
+        sync: false # Set this in Render dashboard for security
+      
+      # Azure OpenAI Configuration (set these in Render dashboard)
+      - key: AZURE_OPENAI_KEY
+        sync: false # Secret - set in Render dashboard
+      - key: AZURE_OPENAI_URI
+        sync: false # Secret - set in Render dashboard
+      - key: AZURE_OPENAI_DEPLOYMENT
+        value: gpt-5
+      
+    # Build configuration
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    
+    # Scaling configuration (for paid plans)
+    # numInstances: 1
+    # autoscaling:
+    #   enabled: false
+    #   minInstances: 1
+    #   maxInstances: 3
+    #   targetMemoryPercent: 60
+    #   targetCPUPercent: 60

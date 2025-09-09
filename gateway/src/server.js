@@ -103,10 +103,44 @@ const matchSchema = Joi.object({
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: ['http://localhost:*', 'http://127.0.0.1:*'],
-  credentials: true
-}));
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    // Allowed origins patterns
+    const allowedPatterns = [
+      /^http:\/\/localhost(:\d+)?$/,
+      /^http:\/\/127\.0\.0\.1(:\d+)?$/,
+      /^https?:\/\/.*\.ngrok\.io$/,
+      /^https?:\/\/.*\.ngrok-free\.app$/,
+      /^https?:\/\/.*\.onrender\.com$/,
+      /^https?:\/\/.*\.railway\.app$/
+    ];
+    
+    // Check if origin matches any allowed pattern
+    const isAllowed = allowedPatterns.some(pattern => pattern.test(origin));
+    
+    // In production, also check explicit allowed origins from env
+    if (process.env.ALLOWED_ORIGINS) {
+      const explicitOrigins = process.env.ALLOWED_ORIGINS.split(',');
+      if (explicitOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+    }
+    
+    if (isAllowed) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
@@ -265,9 +299,10 @@ async function start() {
     await loadEngines();
     await loadNursesData();
     
-    app.listen(PORT, () => {
-      logger.info({ port: PORT }, `Gateway server running at http://localhost:${PORT}`);
-      logger.info(`CEO Playground available at http://localhost:${PORT}/ceo-playground.html`);
+    app.listen(PORT, '0.0.0.0', () => {
+      const host = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
+      logger.info({ port: PORT }, `Gateway server running at ${host}`);
+      logger.info(`CEO Playground available at ${host}/ceo-playground.html`);
     });
   } catch (error) {
     logger.error({ error: error.message }, 'Failed to start server');

@@ -444,6 +444,23 @@
         let lastResponse = null;
         let engines = [];
         
+        // Get API base URL - automatically detect or use configured
+        function getApiBaseUrl() {
+            // Check if we're running from a different domain (deployed)
+            const currentHost = window.location.host;
+            
+            // If we're on a deployment platform, use relative URLs
+            if (currentHost.includes('ngrok') || 
+                currentHost.includes('onrender.com') || 
+                currentHost.includes('railway.app') ||
+                !currentHost.includes('localhost')) {
+                return ''; // Use relative URLs
+            }
+            
+            // For local development
+            return window.API_BASE_URL || '';
+        }
+        
         // Initialize on load
         window.addEventListener('load', async () => {
             await loadEngines();
@@ -453,7 +470,7 @@
         
         async function loadEngines() {
             try {
-                const response = await fetch('/engines');
+                const response = await fetch(getApiBaseUrl() + '/engines');
                 const data = await response.json();
                 engines = data.engines;
                 
@@ -490,7 +507,7 @@
             
             try {
                 const startTime = Date.now();
-                const response = await fetch('/match', {
+                const response = await fetch(getApiBaseUrl() + '/match', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(request)
@@ -557,12 +574,12 @@
             try {
                 // Run both engines in parallel
                 const [responseA, responseB] = await Promise.all([
-                    fetch(`/match?engine=${engineA}`, {
+                    fetch(getApiBaseUrl() + `/match?engine=${engineA}`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(request)
                     }),
-                    fetch(`/match?engine=${engineB}`, {
+                    fetch(getApiBaseUrl() + `/match?engine=${engineB}`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(request)
