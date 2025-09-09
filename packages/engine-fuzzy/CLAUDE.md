@@ -51,3 +51,17 @@ Query parameters for `/match`:
 - `urgent`: Boolean flag for priority
 - `topK`: Number of results to return
 - `weights`: Custom weight configuration
+
+## 🚀 Azure Deployment
+
+This fuzzy matching engine operates as part of the gateway service in Azure:
+- **Gateway Integration**: Imported as library by main gateway service
+- **Serverless Scaling**: Scales with Container Apps based on request load
+- **Performance Optimization**: Uses Fuse.js for efficient fuzzy string matching
+- **Database Integration**: Uses live PostgreSQL data instead of JSON files
+
+### Production Benefits
+- Advanced weighted scoring for complex matching scenarios
+- Handles misspellings and partial matches in service names
+- Configurable weights for different matching priorities
+- Optimized for healthcare staffing use cases

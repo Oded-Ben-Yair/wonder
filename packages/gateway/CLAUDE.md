@@ -16,6 +16,34 @@ PORT=5050 npm start
 topK: Joi.number().min(1).max(100).default(5)
 ```
 
+## 🚀 Azure Deployment
+
+This gateway is configured for Azure deployment using:
+- **Azure Container Apps** for serverless container hosting
+- **Azure Database for PostgreSQL** for live data storage
+- **Key Vault** for secure credential management
+- **Application Insights** for monitoring and logging
+
+### Environment Variables
+For Azure production:
+```bash
+NODE_ENV=production
+PORT=5050
+DATABASE_URL=<from-key-vault>
+AZURE_OPENAI_KEY=<from-key-vault>
+AZURE_OPENAI_URI=<azure-openai-endpoint>
+APPLICATIONINSIGHTS_CONNECTION_STRING=<from-key-vault>
+```
+
+### Database Integration
+When `USE_DB=true`, the gateway will:
+1. Connect to PostgreSQL instead of JSON files
+2. Query nurses table with real-time data
+3. Support live availability and booking system
+4. Enable audit logging for all operations
+
+See `database/schema.sql` for complete database structure.
+
 ## Commands
 
 - **Start server**: `PORT=5050 npm start` - Runs on port 5050

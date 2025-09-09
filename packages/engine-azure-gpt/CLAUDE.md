@@ -48,3 +48,18 @@ The service uses Azure OpenAI's Responses API with:
 - Structured JSON output via `response_format.json_schema`
 - Input format using role-based messages with `input_text` type
 - Returns top candidates with scores (0-1) and reasoning
+
+## 🚀 Azure Deployment
+
+This engine integrates with Azure OpenAI service in production:
+- **Azure OpenAI**: Uses your Azure OpenAI resource for LLM inference
+- **Key Vault Integration**: Credentials stored securely in Azure Key Vault
+- **Gateway Integration**: Imported as library by main gateway service
+- **Monitoring**: Azure Application Insights tracks performance and errors
+
+### Production Configuration
+```bash
+AZURE_OPENAI_URI=https://your-openai-resource.openai.azure.com/
+AZURE_OPENAI_KEY=<from-key-vault>
+AZURE_OPENAI_DEPLOYMENT=gpt-4o-mini
+```

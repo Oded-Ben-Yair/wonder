@@ -15,6 +15,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **Problem**: Gateway sends `servicesQuery` array but some data has `specialization` field
 **Solution**: Check both `services` array and `specialization` field for matches
 
+### Enhanced Service Mappings (basic.js:49-67)
+**Added**: Support for Pediatrics, Day Night, Home Care services:
+- Maps "Day Night" to "circumcision_nurse" specializations
+- Maps "Pediatrics" to pediatric-related services
+- Maps "Home Care" to home-based nursing services
+
 ## Commands
 
 - **Run server**: `npm start` - Starts the Express server on port 5001 (or PORT env variable)
@@ -33,6 +39,16 @@ This is a Node.js/Express API service that filters and matches nurses based on q
 - **Geo calculations**: `src/lib/geo.js` - Haversine formula distance calculation between coordinates
 - **Time utilities**: `src/lib/time.js` - Calculates availability overlap ratio for scheduling
 - **Sample data**: `sample_data/nurses.json` - JSON array of nurse objects with services, availability, location, and ratings
+
+## 🚀 Azure Deployment
+
+This engine is designed to run within the Azure Container Apps environment as part of the main gateway service. It operates as a library imported by the gateway, not as a standalone service in production.
+
+### Production Integration
+- Imported by gateway through `adapter.js` interface
+- Uses live PostgreSQL data instead of JSON files
+- Inherits Azure monitoring and logging from gateway
+- Scales automatically with gateway container
 
 ## API Usage
 

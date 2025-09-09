@@ -1,0 +1,394 @@
+name: 🚀 Azure Production Deployment
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - 'tests/**'
+  pull_request:
+    branches: [ main ]
+    types: [ opened, synchronize, reopened ]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'prod'
+        type: choice
+        options:
+          - dev
+          - staging
+          - prod
+      deploy_database:
+        description: 'Run database migrations'
+        required: false
+        default: true
+        type: boolean
+
+env:
+  AZURE_RESOURCE_GROUP: wonder-healthcare-${{ inputs.environment || 'prod' }}
+  AZURE_LOCATION: "East US"
+  CONTAINER_REGISTRY: wonderhealthcare${{ inputs.environment || 'prod' }}acr
+  NODE_VERSION: '20'
+  
+jobs:
+  # Validation and Testing
+  validate:
+    name: 🔍 Code Quality & Testing
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+
+    - name: 🔧 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+
+    - name: 📦 Install dependencies
+      run: |
+        npm ci --workspaces
+        npm audit --audit-level=moderate
+
+    - name: 🔍 Lint code
+      run: |
+        npm run lint --if-present
+        # Run ESLint on packages with it configured
+        cd packages/ui && npm run lint --if-present
+
+    - name: 🧪 Run tests
+      run: |
+        npm test --if-present
+        cd tests && npm test --if-present
+
+    - name: 📊 Type checking
+      run: |
+        cd packages/ui && npm run type-check --if-present
+
+    - name: 🛡️ Security scan
+      run: |
+        npx audit-ci --config .audit-ci.json
+
+    - name: 🔐 Secrets scanning
+      uses: trufflesecurity/trufflehog@main
+      with:
+        path: ./
+        base: main
+        head: HEAD
+
+  # Build and Test Containers
+  build:
+    name: 🏗️ Build & Test Containers
+    runs-on: ubuntu-latest
+    needs: [ validate ]
+    if: always() && (needs.validate.result == 'success' || needs.validate.result == 'skipped')
+    
+    outputs:
+      image-digest: ${{ steps.build.outputs.digest }}
+      image-tags: ${{ steps.build.outputs.tags }}
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+
+    - name: 🔑 Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: 🐳 Setup Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: 🔑 Login to Azure Container Registry
+      run: |
+        az acr login --name ${{ env.CONTAINER_REGISTRY }}
+
+    - name: 🏷️ Generate image tags
+      id: tags
+      run: |
+        SHORT_SHA=${GITHUB_SHA::8}
+        TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+        
+        echo "short-sha=$SHORT_SHA" >> $GITHUB_OUTPUT
+        echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
+        echo "tags=${{ env.CONTAINER_REGISTRY }}.azurecr.io/wonder-gateway:$SHORT_SHA,${{ env.CONTAINER_REGISTRY }}.azurecr.io/wonder-gateway:latest" >> $GITHUB_OUTPUT
+
+    - name: 🏗️ Build and push container image
+      id: build
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: ${{ steps.tags.outputs.tags }}
+        labels: |
+          org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
+          org.opencontainers.image.revision=${{ github.sha }}
+          org.opencontainers.image.created=${{ steps.tags.outputs.timestamp }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: 🧪 Test container health
+      run: |
+        # Run container locally and test health endpoint
+        docker run -d --name test-container -p 5050:5050 \
+          -e NODE_ENV=production \
+          -e PORT=5050 \
+          -e USE_DB=false \
+          ${{ env.CONTAINER_REGISTRY }}.azurecr.io/wonder-gateway:${{ steps.tags.outputs.short-sha }}
+        
+        # Wait for container to start
+        sleep 30
+        
+        # Test health endpoint
+        curl -f http://localhost:5050/health || exit 1
+        
+        # Cleanup
+        docker stop test-container
+        docker rm test-container
+
+    - name: 🔍 Container vulnerability scan
+      run: |
+        # Install and run vulnerability scanner
+        curl -sSfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+        trivy image --severity HIGH,CRITICAL --exit-code 1 \
+          ${{ env.CONTAINER_REGISTRY }}.azurecr.io/wonder-gateway:${{ steps.tags.outputs.short-sha }}
+
+  # Deploy to Azure
+  deploy:
+    name: 🚀 Deploy to Azure
+    runs-on: ubuntu-latest
+    needs: [ build ]
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+    environment: 
+      name: ${{ inputs.environment || 'production' }}
+      url: ${{ steps.deploy.outputs.app-url }}
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+
+    - name: 🔑 Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: 🔧 Setup Azure CLI
+      run: |
+        az extension add --name containerapp --upgrade
+        az provider register --namespace Microsoft.App
+        az provider register --namespace Microsoft.ContainerRegistry
+
+    - name: 📊 Pre-deployment validation
+      run: |
+        # Validate Bicep template
+        az deployment group validate \
+          --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+          --template-file azure/main.bicep \
+          --parameters appName=wonder-healthcare \
+          --parameters environment=${{ inputs.environment || 'prod' }} \
+          --parameters location="${{ env.AZURE_LOCATION }}" \
+          --parameters adminEmail="${{ secrets.ADMIN_EMAIL }}" \
+          --parameters dbAdminUsername=wonderadmin \
+          --parameters dbAdminPassword="${{ secrets.DB_ADMIN_PASSWORD }}" \
+          --parameters azureOpenAIKey="${{ secrets.AZURE_OPENAI_KEY }}" \
+          --parameters azureOpenAIEndpoint="${{ secrets.AZURE_OPENAI_ENDPOINT }}" \
+          --parameters containerRegistryName=${{ env.CONTAINER_REGISTRY }}
+
+    - name: 🏗️ Deploy infrastructure
+      id: deploy-infra
+      run: |
+        DEPLOYMENT_NAME="wonder-deploy-$(date +%Y%m%d-%H%M%S)"
+        
+        az deployment group create \
+          --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+          --name $DEPLOYMENT_NAME \
+          --template-file azure/main.bicep \
+          --parameters appName=wonder-healthcare \
+          --parameters environment=${{ inputs.environment || 'prod' }} \
+          --parameters location="${{ env.AZURE_LOCATION }}" \
+          --parameters adminEmail="${{ secrets.ADMIN_EMAIL }}" \
+          --parameters dbAdminUsername=wonderadmin \
+          --parameters dbAdminPassword="${{ secrets.DB_ADMIN_PASSWORD }}" \
+          --parameters azureOpenAIKey="${{ secrets.AZURE_OPENAI_KEY }}" \
+          --parameters azureOpenAIEndpoint="${{ secrets.AZURE_OPENAI_ENDPOINT }}" \
+          --parameters containerRegistryName=${{ env.CONTAINER_REGISTRY }} \
+          --query "properties.outputs" > deployment-outputs.json
+        
+        # Extract outputs
+        APP_URL=$(jq -r '.deploymentSummary.value.endpoints.api' deployment-outputs.json)
+        FRONTEND_URL=$(jq -r '.deploymentSummary.value.endpoints.frontend' deployment-outputs.json)
+        
+        echo "app-url=$APP_URL" >> $GITHUB_OUTPUT
+        echo "frontend-url=$FRONTEND_URL" >> $GITHUB_OUTPUT
+        
+        # Save outputs as artifact
+        echo "APP_URL=$APP_URL" >> $GITHUB_ENV
+        echo "FRONTEND_URL=$FRONTEND_URL" >> $GITHUB_ENV
+
+    - name: 🔄 Update container app with new image
+      run: |
+        CONTAINER_APP_NAME="wonder-healthcare-${{ inputs.environment || 'prod' }}-gateway"
+        IMAGE_NAME="${{ env.CONTAINER_REGISTRY }}.azurecr.io/wonder-gateway:${{ needs.build.outputs.image-digest }}"
+        
+        az containerapp update \
+          --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+          --name $CONTAINER_APP_NAME \
+          --image $IMAGE_NAME \
+          --revision-suffix $(date +%s)
+
+    - name: 🗄️ Run database migrations
+      if: inputs.deploy_database == true || inputs.deploy_database == null
+      run: |
+        # Get database connection string
+        DB_CONNECTION=$(jq -r '.databaseConnectionString.value' deployment-outputs.json)
+        
+        # Install dependencies and run migration
+        npm ci
+        DATABASE_URL="$DB_CONNECTION" node database/migrate.js --env ${{ inputs.environment || 'prod' }}
+
+    - name: ⏰ Wait for deployment rollout
+      run: |
+        CONTAINER_APP_NAME="wonder-healthcare-${{ inputs.environment || 'prod' }}-gateway"
+        
+        echo "Waiting for container app to be ready..."
+        for i in {1..30}; do
+          STATUS=$(az containerapp show \
+            --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+            --name $CONTAINER_APP_NAME \
+            --query "properties.latestRevisionName" -o tsv)
+          
+          if [[ -n "$STATUS" ]]; then
+            echo "Container app is ready with revision: $STATUS"
+            break
+          fi
+          
+          if [[ $i -eq 30 ]]; then
+            echo "Timeout waiting for container app to be ready"
+            exit 1
+          fi
+          
+          echo "Attempt $i/30 - waiting 30 seconds..."
+          sleep 30
+        done
+
+    - name: 🧪 Post-deployment health checks
+      run: |
+        APP_URL="${{ steps.deploy-infra.outputs.app-url }}"
+        
+        echo "Testing health endpoint: $APP_URL/health"
+        
+        # Health check with retries
+        for i in {1..10}; do
+          if curl -f -s "$APP_URL/health" > /dev/null; then
+            echo "✅ Health check passed"
+            break
+          elif [[ $i -eq 10 ]]; then
+            echo "❌ Health check failed after 10 attempts"
+            exit 1
+          else
+            echo "Health check attempt $i/10 failed, retrying in 30 seconds..."
+            sleep 30
+          fi
+        done
+        
+        # Test engines endpoint
+        echo "Testing engines endpoint: $APP_URL/engines"
+        curl -f -s "$APP_URL/engines" | jq '.' > /dev/null || echo "⚠️ Engines endpoint test failed"
+        
+        # Test sample match query
+        echo "Testing match endpoint with sample query..."
+        curl -f -s -X POST "$APP_URL/match" \
+          -H "Content-Type: application/json" \
+          -d '{"city":"Tel Aviv","topK":3}' | jq '.' > /dev/null || echo "⚠️ Match endpoint test failed"
+
+    - name: 📊 Deployment summary
+      run: |
+        echo "## 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "| Property | Value |" >> $GITHUB_STEP_SUMMARY
+        echo "|----------|-------|" >> $GITHUB_STEP_SUMMARY
+        echo "| Environment | ${{ inputs.environment || 'prod' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Resource Group | ${{ env.AZURE_RESOURCE_GROUP }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Container Image | ${{ needs.build.outputs.image-tags }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| API URL | ${{ steps.deploy-infra.outputs.app-url }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Frontend URL | ${{ steps.deploy-infra.outputs.frontend-url }} |" >> $GITHUB_STEP_SUMMARY
+        echo "| Database Migration | ${{ inputs.deploy_database && '✅ Completed' || '⏭️ Skipped' }} |" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📋 Next Steps" >> $GITHUB_STEP_SUMMARY
+        echo "- Monitor application performance in Azure Portal" >> $GITHUB_STEP_SUMMARY
+        echo "- Check Application Insights for any issues" >> $GITHUB_STEP_SUMMARY
+        echo "- Verify frontend deployment status in Static Web Apps" >> $GITHUB_STEP_SUMMARY
+
+    - name: 💾 Upload deployment artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: deployment-outputs-${{ inputs.environment || 'prod' }}
+        path: |
+          deployment-outputs.json
+          azure-deployment-outputs.json
+        retention-days: 30
+
+    - name: 🔔 Notify on failure
+      if: failure()
+      run: |
+        echo "🚨 Deployment failed for environment: ${{ inputs.environment || 'prod' }}"
+        echo "Please check the logs and Azure Portal for more details"
+        # Add webhook notification here if needed
+
+  # Post-deployment monitoring setup
+  monitoring:
+    name: 📊 Setup Monitoring & Alerts
+    runs-on: ubuntu-latest
+    needs: [ deploy ]
+    if: success()
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+
+    - name: 🔑 Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: 📊 Configure Application Insights dashboards
+      run: |
+        # Create custom dashboard for Wonder Healthcare
+        # This would typically involve ARM templates or Azure CLI commands
+        echo "Setting up monitoring dashboards..."
+        
+        # Example: Create alert rules via CLI (customize as needed)
+        APP_INSIGHTS_NAME="wonder-healthcare-${{ inputs.environment || 'prod' }}-insights"
+        
+        # High error rate alert
+        az monitor metrics alert create \
+          --name "Wonder-HighErrorRate-${{ inputs.environment || 'prod' }}" \
+          --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+          --description "Alert when error rate exceeds 5%" \
+          --condition "avg exceptions/count > 5" \
+          --window-size 5m \
+          --evaluation-frequency 1m \
+          --action-group /subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }}/resourceGroups/${{ env.AZURE_RESOURCE_GROUP }}/providers/microsoft.insights/actionGroups/wonder-healthcare-${{ inputs.environment || 'prod' }}-alerts \
+          --severity 2 \
+          --target-resource-id /subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }}/resourceGroups/${{ env.AZURE_RESOURCE_GROUP }}/providers/Microsoft.Insights/components/$APP_INSIGHTS_NAME \
+          || echo "Alert rule may already exist"
+
+    - name: 🎯 Performance baseline establishment
+      run: |
+        echo "Establishing performance baselines..."
+        APP_URL="${{ needs.deploy.outputs.app-url }}"
+        
+        # Run basic load test to establish baseline
+        npx loadtest -c 10 -t 60 "$APP_URL/health" || echo "Load test completed with warnings"
+
+# Workflow notifications and status
+env:
+  ACTIONS_RUNNER_DEBUG: true # Enable for debugging
+  ACTIONS_STEP_DEBUG: true   # Enable for debugging

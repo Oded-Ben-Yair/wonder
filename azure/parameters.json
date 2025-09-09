@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appName": {
+      "value": "wonder-healthcare"
+    },
+    "environment": {
+      "value": "prod"
+    },
+    "location": {
+      "value": "East US"
+    },
+    "adminEmail": {
+      "value": "admin@example.com"
+    },
+    "dbAdminUsername": {
+      "value": "wonderadmin"
+    },
+    "dbAdminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/{subscription-id}/resourceGroups/{rg-name}/providers/Microsoft.KeyVault/vaults/{kv-name}"
+        },
+        "secretName": "postgres-admin-password"
+      }
+    },
+    "azureOpenAIKey": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/{subscription-id}/resourceGroups/{rg-name}/providers/Microsoft.KeyVault/vaults/{kv-name}"
+        },
+        "secretName": "azure-openai-key"
+      }
+    },
+    "azureOpenAIEndpoint": {
+      "value": "https://your-openai-resource.openai.azure.com/"
+    },
+    "containerRegistryName": {
+      "value": "wonderhealthcareprodacr"
+    },
+    "customDomain": {
+      "value": ""
+    },
+    "tags": {
+      "value": {
+        "Application": "Wonder Healthcare",
+        "Environment": "Production",
+        "ManagedBy": "Bicep",
+        "CostCenter": "Healthcare",
+        "Owner": "DevOps Team",
+        "Project": "Healthcare Staffing Platform",
+        "CreatedDate": "2024-01-15"
+      }
+    }
+  }
+}
