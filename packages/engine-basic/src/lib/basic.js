@@ -43,8 +43,15 @@ export function basicMatch(query, nurses) {
         const svcLower = svc.toLowerCase();
         return svcLower.includes(reqLower) || 
                reqLower.includes(svcLower) ||
+               // Special mappings for common service names
                (reqLower === 'general care' && svcLower === 'general nursing') ||
-               (reqLower === 'wound care' && svcLower.includes('wound'));
+               (reqLower === 'wound care' && svcLower.includes('wound')) ||
+               (reqLower === 'pediatrics' && svcLower === 'pediatrics') ||
+               (reqLower === 'day night' && svcLower === 'day night') ||
+               (reqLower === 'home care' && svcLower === 'home care') ||
+               (reqLower === 'hospital' && svcLower === 'hospital') ||
+               (reqLower === 'medication' && svcLower === 'medication') ||
+               (reqLower === 'general' && svcLower === 'general');
       });
       
       // Also check specialization array (raw format like "DEFAULT", "WOUND_CARE")
@@ -54,7 +61,10 @@ export function basicMatch(query, nurses) {
                reqLower.includes(specLower) || 
                (reqLower.includes('wound') && specLower.includes('wound')) ||
                (reqLower.includes('care') && (specLower.includes('care') || specLower.includes('treatment'))) ||
-               (reqLower.includes('general') && specLower.includes('default'));
+               (reqLower.includes('general') && specLower.includes('default')) ||
+               (reqLower === 'pediatrics' && (specLower.includes('pediatric') || specLower.includes('newborn') || specLower.includes('breastfeed'))) ||
+               (reqLower === 'day night' && specLower.includes('day_night')) ||
+               (reqLower === 'home care' && (specLower.includes('home') || specLower.includes('escort') || specLower.includes('palliative')));
       });
       
       return hasServiceMatch || hasSpecMatch;

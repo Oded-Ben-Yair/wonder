@@ -19,11 +19,17 @@ This file serves as the central command center for the multi-agent orchestration
 
 #### City Matching Issues (FIXED)
 - **Problem**: Data has "Tel Aviv-Yafo" but queries search for "Tel Aviv"
-- **Solution**: Flexible substring matching in `packages/engine-basic/src/lib/basic.js:152-171`
+- **Solution**: Flexible substring matching in `packages/engine-basic/src/lib/basic.js:15-35`
 
 #### Service Filtering Issues (FIXED)
 - **Problem**: Basic engine expects singular `service` but gets array `servicesQuery`
-- **Solution**: Check both services array and specialization in basic.js filter logic
+- **Solution**: Check both services array and specialization in basic.js filter logic (lines 37-71)
+- **Problem**: Services like Pediatrics, Day Night, Home Care weren't matching
+- **Solution**: Added specific service mappings in basic.js (lines 49-54, 65-67)
+
+#### Validation Issues (FIXED)
+- **Problem**: topK limited to max 10, rejecting larger values
+- **Solution**: Increased max topK to 100 in gateway validation (server.js:233)
 
 ## 🎯 Project Overview
 

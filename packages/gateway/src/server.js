@@ -230,7 +230,7 @@ const matchSchema = Joi.object({
   expertise: Joi.array().items(Joi.string()).default([]),
   expertiseQuery: Joi.array().items(Joi.string()).default([]),
   urgent: Joi.boolean().default(false),
-  topK: Joi.number().min(1).max(10).default(5),
+  topK: Joi.number().min(1).max(100).default(5),
   engine: Joi.string().optional(),
   start: Joi.string().isoDate().optional(),
   end: Joi.string().isoDate().optional(),
