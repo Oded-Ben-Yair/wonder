@@ -7,14 +7,28 @@ export function basicMatch(query, nurses) {
   const day = s ? ['sun','mon','tue','wed','thu','fri','sat'][s.getUTCDay()] : null;
 
   const filtered = (nurses||[])
-    .filter(n => !city || n.city?.toLowerCase().includes(String(city).toLowerCase()) || String(city).toLowerCase().includes(n.city?.toLowerCase() || ''))
-    .filter(n => !service || (n.services||[]).some(x => {
-      const svc = x.toLowerCase();
-      const req = String(service).toLowerCase();
-      return svc.includes(req) || req.includes(svc) || 
-             (req.includes('general') && svc.includes('general')) ||
-             (req.includes('care') && svc.includes('nursing'));
-    }))
+    .filter(n => {
+      if (!city) return true;
+      const cityLower = String(city).toLowerCase();
+      // Check if any municipality matches
+      return (n.municipality || []).some(muni => 
+        muni.toLowerCase().includes(cityLower) || 
+        cityLower.includes(muni.toLowerCase())
+      );
+    })
+    .filter(n => {
+      if (!service) return true;
+      const reqLower = String(service).toLowerCase();
+      // Check if any specialization matches
+      return (n.specialization || []).some(spec => {
+        const specLower = spec.toLowerCase();
+        return specLower.includes(reqLower) || 
+               reqLower.includes(specLower) || 
+               (reqLower.includes('wound') && specLower.includes('wound')) ||
+               (reqLower.includes('care') && (specLower.includes('care') || specLower.includes('treatment'))) ||
+               (reqLower.includes('general') && specLower.includes('default'));
+      });
+    })
     .map(n => {
       const dKm = (lat!=null && lng!=null && n.lat!=null && n.lng!=null) ? distanceKm(lat,lng,n.lat,n.lng) : null;
       const avail = (s && e) ? availabilityOverlapRatio(s,e,n.availability,day) : 1;
@@ -30,7 +44,11 @@ export function basicMatch(query, nurses) {
   });
 
   return sorted.slice(0, topK).map(n => ({
-    id: n.id, name: n.name, city: n.city,
+    id: n.nurseId || n.id, 
+    name: n.name || `Nurse ${n.nurseId?.substring(0,8)}`, 
+    city: n.municipality?.[0] || n.city || 'Unknown',
+    municipality: n.municipality,
+    specialization: n.specialization,
     reason: `passed: ${[service?'service':null, city?'city':null, s?'availability':null, (lat!=null&&lng!=null)?'distance':null].filter(Boolean).join(', ')}`,
     meta: { distanceKm: n._dKm, availabilityRatio: n._avail, rating: n.rating, reviewsCount: n.reviewsCount }
   }));
