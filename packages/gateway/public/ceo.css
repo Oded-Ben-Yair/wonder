@@ -1,0 +1,11 @@
+/* CEO Playground Styles - Additional styles if needed */
+.status-ok { color: #48bb78; }
+.status-error { color: #f56565; }
+.status-warning { color: #ed8936; }
+
+/* Print styles */
+@media print {
+    .button-group, .expandable { display: none; }
+    body { background: white; }
+    .panel { box-shadow: none; border: 1px solid #ccc; }
+}

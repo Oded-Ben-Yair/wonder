@@ -1,0 +1,23 @@
+{
+  "name": "@wonder/engine-azure-gpt",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "bash scripts/dev.sh",
+    "test:smoke": "bash scripts/smoke.sh",
+    "test:live": "bash scripts/live.sh"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "csv-parse": "^5.6.0",
+    "dotenv": "^17.2.2",
+    "express": "^4.19.2",
+    "mongodb": "^6.19.0",
+    "pg": "^8.16.3"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "mode": "LIVE",
+  "timestamp": "2025-09-09T04:53:49+00:00",
+  "scenarios": [
+    {
+      "case": "A",
+      "city": "Tel Aviv",
+      "description": "Tel Aviv wound care 30km",
+      "latency_ms": 8727,
+      "count": 5
+    },
+    {
+      "case": "B",
+      "city": "Jerusalem",
+      "description": "Jerusalem medication 40km",
+      "latency_ms": 7590,
+      "count": 5
+    },
+    {
+      "case": "C",
+      "city": "Haifa",
+      "description": "Haifa pediatrics 50km",
+      "latency_ms": 7470,
+      "count": 5
+    },
+    {
+      "case": "D",
+      "city": "Beer Sheva",
+      "description": "Beer Sheva hospital 60km",
+      "latency_ms": 6862,
+      "count": 5
+    },
+    {
+      "case": "E",
+      "city": "Rishon LeTsiyon",
+      "description": "Rishon home care 35km",
+      "latency_ms": 10705,
+      "count": 5
+    },
+    {
+      "case": "F",
+      "city": "Netanya",
+      "description": "Netanya day-night 45km",
+      "latency_ms": 5428,
+      "count": 5
+    },
+    {
+      "case": "G",
+      "city": "Ashdod",
+      "description": "Ashdod geriatric 55km",
+      "latency_ms": 13586,
+      "count": 5
+    },
+    {
+      "case": "H",
+      "city": "Herzliya",
+      "description": "Herzliya emergency 30km urgent",
+      "latency_ms": 7357,
+      "count": 5
+    },
+    {
+      "case": "I",
+      "city": "Ramat Gan",
+      "description": "Ramat Gan IV therapy 40km",
+      "latency_ms": 7850,
+      "count": 5
+    },
+    {
+      "case": "J",
+      "city": "Bat Yam",
+      "description": "Bat Yam general care 50km",
+      "latency_ms": 6274,
+      "count": 5
+    }
+  ]
+}

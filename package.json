@@ -4,14 +4,11 @@
   "type": "module",
   "private": true,
   "workspaces": [
-    "gateway",
-    "engine-azure-gpt5",
-    "engine-basic",
-    "engine-fuzzy"
+    "packages/*"
   ],
   "scripts": {
-    "dev": "cd gateway && npm run dev",
-    "start": "cd gateway && npm start",
+    "dev": "cd packages/gateway && npm run dev",
+    "start": "cd packages/gateway && npm start",
     "test": "echo 'Running tests across all workspaces'",
     "probe": "bash scripts/probe.sh",
     "smoke": "bash scripts/csv-smoke.sh"
