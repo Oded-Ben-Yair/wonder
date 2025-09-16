@@ -67,11 +67,9 @@ export async function azureRespond({ uri, apiKey, messages, input, temperature =
     // Chat Completions API format (GPT-5 uses max_completion_tokens)
     // GPT-5 only supports temperature=1, no top_p
     // Add reasoning_effort for GPT-5 to control reasoning token usage
-    body = {
-      messages,
-      max_completion_tokens: max_tokens,
-      reasoning_effort: reasoning_effort
-    };
+    body = (uri.includes('gpt-5'))
+  ? { messages, max_completion_tokens: max_tokens }
+  : { messages, max_tokens };;
   } else if (input) {
     // Responses API format
     body = {

@@ -43,7 +43,7 @@ app.post('/match', async (req, res) => {
 // Initialize database on startup
 await initDb().catch(e => console.warn('DB init error:', e.message));
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log('LLM Matching listening on :' + PORT);
   console.log(`Docs at http://localhost:${PORT}/docs/demo.html`);
   if (process.env.AZURE_OPENAI_URI) {
