@@ -14,10 +14,15 @@ export interface Nurse {
   treatmentType?: TreatmentType[];
 }
 
-export type Specialization = 
+export type Specialization =
   | 'DEFAULT'
   | 'CENTRAL_CATHETER_TREATMENT'
+  | 'CATHETER_INSERTION_REPLACEMENT'
   | 'WOUND_CARE'
+  | 'WOUND_TREATMENT'
+  | 'DIABETIC_WOUND_TREATMENT'
+  | 'DIFFICULT_WOUND_HEALING_TREATMENT'
+  | 'BURN_TREATMENT'
   | 'STOMA_TREATMENT'
   | 'DAY_NIGHT_CIRCUMCISION_NURSE'
   | 'ENEMA_UNDER_INSTRUCTION'
@@ -26,7 +31,19 @@ export type Specialization =
   | 'PEDIATRIC_CARE'
   | 'GERIATRIC_CARE'
   | 'MENTAL_HEALTH'
-  | 'EMERGENCY_CARE';
+  | 'EMERGENCY_CARE'
+  | 'BLOOD_TESTS'
+  | 'MEDICATION'
+  | 'MEDICATION_ARRANGEMENT'
+  | 'BREASTFEEDING_CONSULTATION'
+  | 'HOME_NEWBORN_VISIT'
+  | 'FOLLOW_UP_AFTER_SURGERY'
+  | 'ABDOMINAL_DRAINAGE_BY_EXTERNAL_DRAINAGE'
+  | 'ESCORTED_BY_NURSE'
+  | 'FERTILITY_TREATMENTS'
+  | 'GASTROSTOMY_CARE_FEEDING'
+  | 'HANDLING_AND_TRACKING_METRICS'
+  | 'HEALTHY_LIFESTYLE_GUIDANCE';
 
 export type Mobility = 
   | 'WALKING_CANE'
@@ -49,13 +66,20 @@ export type TreatmentType =
 export interface StructuredQuery {
   municipality?: string;
   specialization?: Specialization[];
+  specializations?: Specialization[];  // alias for specialization
   mobility?: Mobility[];
   treatmentType?: TreatmentType[];
   urgent?: boolean;
+  isUrgent?: boolean;  // alias for urgent
   date?: string;
   time?: string;
   available?: boolean;
   topK?: number;
+  limit?: number;  // alias for topK
+  dateRange?: {
+    start?: string;
+    end?: string;
+  };
 }
 
 export interface NaturalLanguageQuery {
