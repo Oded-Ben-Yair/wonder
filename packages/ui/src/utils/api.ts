@@ -2,8 +2,15 @@ import axios from 'axios';
 import { MatchResponse, EnginesResponse, StructuredQuery, Engine } from '@/types';
 
 // Configure axios defaults
+const getApiUrl = () => {
+  if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+    return 'http://localhost:5050';
+  }
+  return 'https://wonder-engine-web.azurewebsites.net';
+};
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: getApiUrl(),
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
@@ -37,10 +44,11 @@ api.interceptors.response.use(
 export async function getEngines(): Promise<Engine[]> {
   try {
     const response = await api.get<EnginesResponse>('/engines');
-    return response.data.engines;
+    return response.data.engines || [];
   } catch (error) {
     console.error('Failed to fetch engines:', error);
-    throw error;
+    // Return empty array instead of throwing to prevent app crash
+    return [];
   }
 }
 
@@ -110,7 +118,8 @@ export async function healthCheck(): Promise<{ status: string; timestamp: number
     return response.data;
   } catch (error) {
     console.error('Health check failed:', error);
-    throw error;
+    // Return offline status instead of throwing
+    return { status: 'offline', timestamp: Date.now() };
   }
 }
 

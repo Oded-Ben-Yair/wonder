@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appName": {"value": "wonder-healthcare"},
+    "environment": {"value": "prod"},
+    "location": {"value": "East US"},
+    "adminEmail": {"value": "admin@wonder-health.com"},
+    "dbAdminUsername": {"value": "wonderadmin"},
+    "dbAdminPassword": {"value": "WkXCun7AlJkEtNTGrUKiC0k2eTW9NPSA2YoQzd9NA"},
+    "azureOpenAIKey": {"value": "placeholder-key"},
+    "azureOpenAIEndpoint": {"value": "https://placeholder.openai.azure.com/"},
+    "containerRegistryName": {"value": "wonderhealthcareprodacr"},
+    "customDomain": {"value": ""},
+    "tags": {
+      "value": {
+        "Application": "Wonder Healthcare",
+        "Environment": "Production",
+        "ManagedBy": "Bicep",
+        "CostCenter": "Healthcare",
+        "DeployedBy": "odedbe",
+        "DeploymentDate": "2025-09-16"
+      }
+    }
+  }
+}

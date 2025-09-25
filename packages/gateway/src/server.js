@@ -5,6 +5,7 @@ import Joi from 'joi';
 import { promises as fs } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { parse } from 'csv-parse/sync';
 import { maskObject, maskSensitive } from './util/mask.js';
 import { startTimer, withTimeout } from './util/timing.js';
 
@@ -49,21 +50,36 @@ function transformNurseData(productionNurse, index) {
   // Map specializations to user-friendly services
   const services = specializations.map(spec => {
     const specMap = {
-      'DEFAULT': 'General Nursing',
+      'DEFAULT': 'General',
       'WOUND_CARE': 'Wound Care',
-      'CENTRAL_CATHETER_TREATMENT': 'IV Therapy',
-      'MEDICATION': 'Medication Management',
-      'DAY_NIGHT_CIRCUMCISION_NURSE': 'Pediatric Care',
-      'PRIVATE_SECURITY_HOSPITAL': 'Hospital Security',
-      'PRIVATE_SECURITY_HOME': 'Home Security',
-      'PALLIATIVE_CARE': 'Palliative Care',
-      'GERIATRIC_CARE': 'Geriatric Care',
-      'DIABETIC_WOUND_TREATMENT': 'Diabetic Care',
-      'ESCORTED_BY_NURSE': 'Patient Transport',
-      'BLOOD_TESTS': 'Lab Services'
+      'WOUND_TREATMENT': 'Wound Care',
+      'DIABETIC_WOUND_TREATMENT': 'Wound Care',
+      'DIFFICULT_WOUND_HEALING_TREATMENT': 'Wound Care',
+      'BURN_TREATMENT': 'Wound Care',
+      'CENTRAL_CATHETER_TREATMENT': 'Hospital',
+      'CATHETER_INSERTION_REPLACEMENT': 'Hospital',
+      'FOLLOW_UP_AFTER_SURGERY': 'Hospital',
+      'HOSPITAL': 'Hospital',
+      'MEDICATION': 'Medication',
+      'MEDICATION_ARRANGEMENT': 'Medication',
+      'DAY_NIGHT_CIRCUMCISION_NURSE': 'Day Night',
+      'PEDIATRICS': 'Pediatrics',
+      'BREASTFEEDING_CONSULTATION': 'Pediatrics',
+      'HOME_NEWBORN_VISIT': 'Pediatrics',
+      'PRIVATE_SECURITY_HOSPITAL': 'Hospital',
+      'PRIVATE_SECURITY_HOME': 'Home Care',
+      'PALLIATIVE_CARE': 'Home Care',
+      'GERIATRIC_CARE': 'Home Care',
+      'ESCORTED_BY_NURSE': 'Home Care',
+      'FERTILITY_TREATMENTS': 'Home Care',
+      'GASTROSTOMY_CARE_FEEDING': 'Home Care',
+      'HANDLING_AND_TRACKING_METRICS': 'Home Care',
+      'HEALTHY_LIFESTYLE_GUIDANCE': 'Home Care',
+      'BLOOD_TESTS': 'General',
+      'ENEMA_UNDER_INSTRUCTION': 'General'
     };
-    return specMap[spec] || spec;
-  }).filter(s => s !== 'DEFAULT' && s);
+    return specMap[spec] || 'General';
+  }).filter(s => s);
 
   // Ensure at least one service
   if (services.length === 0) {
@@ -183,9 +199,73 @@ async function loadEngines() {
 
 async function loadNursesData() {
   try {
-    const dataPath = path.join(__dirname, 'data', 'nurses.json');
-    const data = await fs.readFile(dataPath, 'utf-8');
-    const rawNursesData = JSON.parse(data);
+    // First try to load CSV data
+    const csvPath = path.join(__dirname, 'data', 'nurses.csv');
+    const jsonPath = path.join(__dirname, 'data', 'nurses.json');
+    
+    let rawNursesData;
+    
+    try {
+      // Check if CSV exists
+      await fs.access(csvPath);
+      logger.info('Loading data from CSV file');
+      
+      const csvContent = await fs.readFile(csvPath, 'utf-8');
+      
+      // Parse CSV
+      const records = parse(csvContent, {
+        columns: true,
+        skip_empty_lines: true,
+        bom: true
+      });
+      
+      // Load city centroids for coordinate mapping
+      const centroidsPath = path.join(__dirname, 'data', 'city_centroids_il.json');
+      let cityCentroids = {};
+      try {
+        const centroidsData = await fs.readFile(centroidsPath, 'utf-8');
+        cityCentroids = JSON.parse(centroidsData);
+      } catch (e) {
+        logger.warn('Could not load city centroids, using defaults');
+      }
+      
+      // Transform CSV records to match expected format
+      rawNursesData = records.map(row => {
+        // Get coordinates from centroids
+        const coords = cityCentroids[row.municipality] || { lat: 32.0853, lng: 34.7818 };
+        
+        // Parse boolean fields - handle 't', 'true', '1', 1, etc.
+        const parseBoolean = (val) => {
+          if (val === undefined || val === null || val === '') return false;
+          if (typeof val === 'number') return val === 1;
+          const str = String(val).toLowerCase().trim();
+          return str === 'true' || str === 't' || str === '1' || str === 'yes';
+        };
+        
+        return {
+          nurseId: row.nurse_id,
+          gender: row.gender,
+          name: row.name,
+          mobility: row.mobility ? [row.mobility] : [],
+          municipality: row.municipality ? [row.municipality] : [],
+          specialization: row.treatment_type ? [row.treatment_type] : [], // Use treatment_type column
+          isActive: parseBoolean(row.is_active),
+          isApproved: parseBoolean(row['is_approved[nurse_nurse]'] || row.is_approved),
+          isProfileUpdated: parseBoolean(row.is_profile_updated),
+          isOnboardingCompleted: parseBoolean(row.is_onboarding_completed),
+          lat: coords.lat,
+          lng: coords.lng
+        };
+      });
+      
+      logger.info({ count: rawNursesData.length }, 'CSV data loaded and transformed');
+      
+    } catch (csvError) {
+      // Fall back to JSON if CSV doesn't exist
+      logger.info('CSV not found, loading from JSON');
+      const data = await fs.readFile(jsonPath, 'utf-8');
+      rawNursesData = JSON.parse(data);
+    }
     
     logger.info({ rawCount: rawNursesData.length }, 'Raw production data loaded');
     

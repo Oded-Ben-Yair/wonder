@@ -6,13 +6,13 @@ WORKDIR /app
 
 # Copy package files
 COPY package*.json ./
-COPY gateway/package*.json ./gateway/
-COPY engine-azure-gpt5/package*.json ./engine-azure-gpt5/
-COPY engine-basic/package*.json ./engine-basic/
-COPY engine-fuzzy/package*.json ./engine-fuzzy/
+COPY packages/gateway/package*.json ./packages/gateway/
+COPY packages/engine-azure-gpt/package*.json ./packages/engine-azure-gpt/
+COPY packages/engine-basic/package*.json ./packages/engine-basic/
+COPY packages/engine-fuzzy/package*.json ./packages/engine-fuzzy/
 
 # Install dependencies
-RUN npm ci --workspace=gateway --workspace=engine-azure-gpt5 --workspace=engine-basic --workspace=engine-fuzzy
+RUN npm ci --workspace=@wonder/gateway --workspace=@wonder/engine-azure-gpt --workspace=@wonder/engine-basic --workspace=@wonder/engine-fuzzy
 
 # Copy source code
 COPY . .
@@ -33,10 +33,8 @@ WORKDIR /app
 # Copy from builder
 COPY --from=builder --chown=nodejs:nodejs /app/package*.json ./
 COPY --from=builder --chown=nodejs:nodejs /app/node_modules ./node_modules
-COPY --from=builder --chown=nodejs:nodejs /app/gateway ./gateway
-COPY --from=builder --chown=nodejs:nodejs /app/engine-azure-gpt5 ./engine-azure-gpt5
-COPY --from=builder --chown=nodejs:nodejs /app/engine-basic ./engine-basic
-COPY --from=builder --chown=nodejs:nodejs /app/engine-fuzzy ./engine-fuzzy
+COPY --from=builder --chown=nodejs:nodejs /app/packages ./packages
+COPY --from=builder --chown=nodejs:nodejs /app/database ./database
 COPY --from=builder --chown=nodejs:nodejs /app/docs ./docs
 COPY --from=builder --chown=nodejs:nodejs /app/scripts ./scripts
 
@@ -56,4 +54,4 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 
 # Start the application with proper signal handling
 ENTRYPOINT ["dumb-init", "--"]
-CMD ["node", "gateway/src/server.js"]
+CMD ["node", "packages/gateway/src/server.js"]

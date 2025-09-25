@@ -1,0 +1,41 @@
+{
+  "count": 3,
+  "results": [
+    {
+      "id": "4e658a0f-bcf7-434b-bf92-dd55f4f5be34",
+      "name": "Nurse 4e658a0f",
+      "city": "Tel Aviv-Yafo",
+      "reason": "passed: service, city",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 4.9925,
+        "reviewsCount": 91
+      }
+    },
+    {
+      "id": "fa6a96c5-e46e-47db-8fbe-cc3494c6ab08",
+      "name": "Nurse fa6a96c5",
+      "city": "Tel Aviv-Yafo",
+      "reason": "passed: service, city",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 4.907,
+        "reviewsCount": 97
+      }
+    },
+    {
+      "id": "a30fa6c5-9fbb-420a-9aaf-e0af40a29b8a",
+      "name": "Nurse a30fa6c5",
+      "city": "Tel Aviv-Yafo",
+      "reason": "passed: service, city",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 4.829,
+        "reviewsCount": 22
+      }
+    }
+  ]
+}

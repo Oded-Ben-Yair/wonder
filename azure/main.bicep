@@ -372,8 +372,10 @@ resource staticWebApp 'Microsoft.Web/staticSites@2023-01-01' = {
     tier: 'Standard'
   }
   properties: {
-    repositoryUrl: 'https://github.com/your-username/wonder' // Update during deployment
-    branch: 'main'
+    // Repository can be configured post-deployment via Azure Portal or CLI
+    // Leaving empty for initial infrastructure deployment
+    repositoryUrl: ''
+    branch: ''
     buildProperties: {
       appLocation: '/packages/ui'
       apiLocation: ''

@@ -1,270 +1,170 @@
-# CLAUDE.md - Master Orchestration Documentation
+# CLAUDE.md
 
-This file serves as the central command center for the multi-agent orchestration system managing the Wonder healthcare matching platform.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## ⚠️ CRITICAL CONFIGURATION - MUST READ FIRST
+## Commands
 
-### Gateway Port Configuration
-- **Gateway runs on port 5050** (NOT 5000)
-- **UI Vite proxy must target**: `http://localhost:5050`
-- **Default engine for chatbot**: `engine-basic` (most stable)
-
-### Known Issues and Solutions
-
-#### Field Mapping Issues (FIXED)
-- **Problem**: Frontend sends `municipality` but gateway expects `city`
-- **Solution**: Transform in `packages/ui/src/utils/api.ts:57`
-- **Problem**: Frontend sends `specializations` but engines expect `servicesQuery`/`expertiseQuery`
-- **Solution**: Map in api.ts before sending to gateway
-
-#### City Matching Issues (FIXED)
-- **Problem**: Data has "Tel Aviv-Yafo" but queries search for "Tel Aviv"
-- **Solution**: Flexible substring matching in `packages/engine-basic/src/lib/basic.js:15-35`
-
-#### Service Filtering Issues (FIXED)
-- **Problem**: Basic engine expects singular `service` but gets array `servicesQuery`
-- **Solution**: Check both services array and specialization in basic.js filter logic (lines 37-71)
-- **Problem**: Services like Pediatrics, Day Night, Home Care weren't matching
-- **Solution**: Added specific service mappings in basic.js (lines 49-54, 65-67)
-
-#### Validation Issues (FIXED)
-- **Problem**: topK limited to max 10, rejecting larger values
-- **Solution**: Increased max topK to 100 in gateway validation (server.js:233)
-
-## 🎯 Project Overview
-
-**Project:** Wonder - Production-Grade Healthcare Matching Platform
-**Goal:** Unified monorepo with natural language chatbot and multi-engine nurse matching
-**Start Date:** 2025-09-09
-**Target Completion:** 2025-09-23
-
-## 🏗️ System Architecture
-
-### Core Components
-1. **Chatbot Interface**: Natural language query system for nurse availability
-2. **Three Matching Engines**:
-   - Azure GPT-5 (LLM-based semantic matching)
-   - Basic Filter (Rule-based filtering)
-   - Fuzzy Match (Weighted fuzzy string matching)
-3. **Unified Data Layer**: Integration with nurses.csv from QuickList
-4. **Production Gateway**: Orchestrates all engines with monitoring
-
-## 🤖 Multi-Agent Orchestra
-
-### Agent Roster and Responsibilities
-
-| Agent | Branch | Status | Current Task | Last Update |
-|-------|--------|--------|--------------|-------------|
-| **Orchestrator** | main/develop | Active | Managing agent deployment | 2025-09-09 |
-| **Backend Engineer** | feature/backend-refactor | Pending | Awaiting assignment | - |
-| **Frontend Developer** | feature/ui-modernization | Pending | Awaiting assignment | - |
-| **Data Analyst** | feature/data-validation | Pending | Awaiting assignment | - |
-| **Tester** | feature/testing-suite | Pending | Awaiting assignment | - |
-| **QA Agent** | feature/quality-assurance | Pending | Awaiting assignment | - |
-| **LLM Specialist** | feature/llm-optimization | Pending | Awaiting assignment | - |
-| **DevOps** | feature/infrastructure | Pending | Awaiting assignment | - |
-| **Documentation** | feature/documentation | Pending | Awaiting assignment | - |
-
-## 📋 Commands and Workflows
-
-### Git Operations
+### Development
 ```bash
-# Check current branch status
-git status
+# Install dependencies (from root)
+npm install
 
-# Create new feature branch
-git checkout -b feature/[agent-task]
-
-# Commit with conventional commits
-git add -A
-git commit -m "feat(agent): Description"
-
-# Push and create PR
-git push origin feature/[agent-task]
-```
-
-### Testing Commands
-```bash
-# Run all tests
-npm test
-
-# Run specific engine tests
-npm test -- --grep "engine-name"
-
-# Run integration tests
-npm run test:integration
-
-# Run performance tests
-npm run test:performance
-```
-
-### Development Commands
-```bash
-# Start gateway (MUST specify port 5050)
+# Start gateway (MUST use port 5050)
 cd packages/gateway && PORT=5050 npm start
 
-# Start with hot reload
+# Start UI (in separate terminal)
+cd packages/ui && npm run dev
+
+# Run all services with hot reload
 npm run dev
-
-# Build for production
-npm run build
-
-# Deploy to staging
-npm run deploy:staging
 ```
 
-## 🔄 Quality Loop Process
-
-```mermaid
-graph TD
-    A[Tester runs tests] --> B{Tests Pass?}
-    B -->|No| C[Mark issues]
-    C --> D[Orchestrator assigns fix]
-    D --> E[Agent fixes issue]
-    E --> A
-    B -->|Yes| F[Data Analyst validates]
-    F --> G{Data correct?}
-    G -->|No| C
-    G -->|Yes| H[LLM Specialist optimizes]
-    H --> I[QA final review]
-    I --> J[Merge to develop]
-```
-
-## 📊 Data Model
-
-### Nurses Data Structure (from QuickList CSV)
-```javascript
-{
-  nurse_id: string,
-  gender: string,
-  name: string,
-  mobility: string,
-  municipality: string,
-  updated_at: datetime,
-  status: string,
-  is_active: boolean,
-  is_profile_updated: boolean,
-  is_onboarding_completed: boolean,
-  is_approved: boolean,
-  treatment_type: string
-}
-```
-
-### Query Interface
-```javascript
-// Natural language query
-"Who is available today at 3pm in Tel Aviv?"
-
-// Parsed to structured query
-{
-  municipality: "Tel Aviv",
-  date: "2025-09-09",
-  time: "15:00",
-  available: true
-}
-```
-
-## 🚀 Deployment Strategy
-
-### Environment Structure
-- **Local**: Development and testing
-- **Staging**: Integration testing with all agents
-- **Production**: Final deployment after QA approval
-
-### Branch Protection Rules
-- `main`: Protected, requires 2 reviews
-- `develop`: Protected, requires 1 review
-- `production`: Protected, requires QA sign-off
-
-## 📈 Progress Metrics
-
-| Metric | Target | Current | Status |
-|--------|--------|---------|--------|
-| Code Coverage | 90% | 0% | 🔴 |
-| Test Pass Rate | 100% | 0% | 🔴 |
-| Documentation | 100% | 10% | 🔴 |
-| Performance Score | 95/100 | 0/100 | 🔴 |
-| Security Score | A | N/A | 🔴 |
-
-## ⚠️ Critical Rules
-
-1. **NO agent works without checking this file first**
-2. **Every commit must update PRODUCTION_TRACKER.md**
-3. **All PRs must reference this documentation**
-4. **Test-Analyze-Fix loop is mandatory**
-5. **No merge without full test coverage**
-6. **Documentation is not optional**
-
-## 🧪 Two-Agent Testing Orchestration
-
-### Overview
-Implemented bulletproof testing system with Playwright MCP and Edge browser for screenshot-based validation.
-
-### Architecture
-- **TestRunnerAgent**: Executes tests sequentially, captures screenshots
-- **FixerValidatorAgent**: Analyzes failures, applies fixes, validates solutions
-
-### Testing Workflow
-1. TestRunner executes test
-2. On error: stops immediately, passes to Fixer
-3. Fixer analyzes error, applies fix
-4. Fixer validates fix works
-5. TestRunner continues from where it stopped
-
-### Running Tests
+### Testing
 ```bash
-# Run two-agent orchestrated tests
-cd tests
-node two-agent-orchestrated-tests.js
+# Run comprehensive test suite
+node tests/run-all-tests.js
 
-# Run Playwright-based tests
-node playwright-orchestrated-tests.js
+# Run NLP chatbot tests
+node tests/chatbot-nlp-tests.js
+
+# Run performance tests
+node tests/performance-tests.js
+
+# Check data integrity
+npm run smoke
+
+# Probe system health
+npm run probe
 ```
 
-### Test Coverage
-- ✅ Basic availability queries (Tel Aviv, Haifa, Beer Sheba)
-- ✅ Hebrew language queries
-- ✅ Time-based queries (today at 3pm)
-- ✅ Service-specific queries (wound care)
-- ❌ Jerusalem queries (no data in CSV)
+### Build & Deployment
+```bash
+# Build UI for production
+cd packages/ui && npm run build
 
-## 🎯 Next Actions
+# Type check TypeScript
+cd packages/ui && npm run type-check
 
-1. ✅ Create CLAUDE.md (this file)
-2. ✅ Fix chatbot 500 errors
-3. ✅ Implement two-agent testing system
-4. ✅ Update gateway port configuration
-5. ⏳ Add Jerusalem test data
-6. ⏳ Expand test coverage for edge cases
+# Lint code
+cd packages/ui && npm run lint
+```
 
-## 📝 Notes and Decisions
+## Architecture
 
-- **2025-09-09**: Project initiated, master documentation created
-- **2025-09-09**: Fixed critical chatbot 500 errors - field mapping issues
-- **2025-09-09**: Implemented two-agent testing orchestration system
-- **2025-09-09**: Fixed gateway port configuration (5000 → 5050)
-- Decided to use React for frontend (modern, component-based)
-- Chose PostgreSQL over JSON for production data storage
-- Will implement WebSocket for real-time updates
+### Monorepo Structure
+This is a monorepo using npm workspaces with the following packages:
+- `packages/gateway` - Central API gateway (port 5050)
+- `packages/ui` - React/TypeScript frontend (port 3000)
+- `packages/engine-basic` - Rule-based filtering engine (port 5001)
+- `packages/engine-fuzzy` - Fuzzy matching with weighted scoring (port 5002)
+- `packages/engine-azure-gpt` - LLM-based semantic matching (port 5003)
+- `packages/shared-utils` - Shared utilities across engines
 
-### Critical Fixes Applied
-1. **api.ts:57-75**: Transform StructuredQuery to gateway format
-2. **vite.config.ts:16**: Fixed proxy target port to 5050
-3. **basic.js:152-171**: Fixed city filtering for partial matches
-4. **basic.js:173-185**: Fixed service filtering to check arrays
+### Gateway Integration
+The gateway (`packages/gateway/src/server.js`) acts as the central hub:
+1. **Engine Discovery**: Automatically loads all `engine-*` packages via `adapter.js` interface
+2. **Request Validation**: Uses Joi schema to validate `/match` endpoint queries
+3. **Data Transformation**: Converts production nurse data to engine-compatible format
+4. **Engine Routing**: Forwards queries to selected engine (default: first available)
 
-## 🔗 Important Links
+### Critical Configuration
+- **Gateway Port**: MUST run on port 5050 (configured in multiple places)
+- **Vite Proxy**: UI proxy must target `http://localhost:5050` in `packages/ui/vite.config.ts`
+- **Default Engine**: `engine-basic` is the most stable for testing
 
-- **Main Repository**: /home/odedbe/wonder
-- **Engines**:
-  - Azure GPT: /home/odedbe/wonder/engine-azure-gpt5
-  - Basic Filter: /home/odedbe/wonder/engine-basic
-  - Fuzzy Match: /home/odedbe/wonder/engine-fuzzy
-- **Gateway**: /home/odedbe/wonder/gateway
-- **Data**: /home/odedbe/wonder/engine-*/sample_data/nurses.csv
+### Data Flow & Transformations
 
----
+#### Frontend → Gateway
+UI sends `StructuredQuery`, gateway expects different format. Transform in `packages/ui/src/utils/api.ts:57-75`:
+```javascript
+const gatewayQuery = {
+  city: query.municipality,          // 'municipality' → 'city'
+  servicesQuery: query.specializations,
+  expertiseQuery: query.specializations,
+  urgent: query.isUrgent,
+  topK: query.limit
+};
+```
 
-**Last Updated**: 2025-09-09 12:00:00
-**Updated By**: Claude Code - Fixed chatbot and testing
-**Version**: 1.1.0
+#### Gateway → Engines
+Gateway transforms nurse data in `loadNursesData()` (server.js:184-224):
+```javascript
+// Input: { nurseId, municipality: ["Tel Aviv-Yafo"], specialization: ["WOUND_CARE"] }
+// Output: { id, city: "Tel Aviv", services: ["Wound Care"], lat, lng, rating }
+```
+### Key Files & Their Roles
+
+#### Gateway
+- `packages/gateway/src/server.js` - Main gateway with all routing logic
+- `packages/gateway/src/data/nurses.json` - Production nurse dataset (457 nurses)
+- `packages/gateway/public/ceo-playground.html` - Testing interface for executives
+
+#### UI
+- `packages/ui/src/App.tsx` - Main app with tabs (Chat, Match Tester, Comparison)
+- `packages/ui/src/components/ChatInterface.tsx` - Natural language chatbot UI
+- `packages/ui/src/utils/api.ts` - API client with critical field transformations
+- `packages/ui/vite.config.ts` - Vite config with proxy settings (must target port 5050)
+
+#### Engines
+- `packages/engine-basic/src/lib/basic.js` - Core filtering with city/service matching fixes
+- `packages/engine-fuzzy/src/lib/weighted.js` - Weighted scoring system with Fuse.js
+- `packages/engine-azure-gpt/src/lib/llm.js` - Azure OpenAI integration
+
+### API Endpoints
+
+#### Gateway
+- `GET /health` - System health and engine status
+- `GET /engines` - List available engines with health
+- `POST /match` - Main matching endpoint
+  ```javascript
+  {
+    city: "Tel Aviv",              // Required
+    servicesQuery: ["Wound Care"],  // Service types array
+    expertiseQuery: ["pediatrics"], // Expertise tags
+    urgent: false,                  // Urgency flag
+    topK: 5,                       // Results count (1-100)
+    start: "2024-01-15T15:00:00Z", // ISO datetime
+    end: "2024-01-15T18:00:00Z",   // ISO datetime
+    lat: 32.0853, lng: 34.7818,    // Coordinates
+    radiusKm: 25                   // Search radius
+  }
+  ```
+
+### Environment Variables
+
+#### Gateway (.env)
+```bash
+PORT=5050
+USE_DB=false  # Set true for PostgreSQL instead of JSON
+DATABASE_URL=<postgres-connection-string>
+```
+
+#### Azure GPT Engine (.env)
+```bash
+AZURE_OPENAI_URI=https://your-resource.openai.azure.com/
+AZURE_OPENAI_KEY=<api-key>
+AZURE_OPENAI_DEPLOYMENT=gpt-4o-mini
+PORT=5003
+```
+
+### Testing Strategy
+
+The project includes comprehensive test suites in `/tests`:
+- `run-all-tests.js` - Master test runner with quality metrics
+- `chatbot-nlp-tests.js` - Natural language processing validation
+- `performance-tests.js` - Load and performance benchmarking
+- `two-agent-orchestrated-tests.js` - Two-agent testing orchestration
+
+### Known Issues & Fixes
+
+#### Fixed Issues
+- **Field Mapping**: Frontend `municipality` → gateway `city` (api.ts:57)
+- **Service Arrays**: `specializations` → `servicesQuery`/`expertiseQuery` (api.ts)
+- **City Matching**: "Tel Aviv-Yafo" matches "Tel Aviv" (basic.js:152-171)
+- **Service Filtering**: Handles both array and string formats (basic.js:173-185)
+- **topK Validation**: Increased max from 10 to 100 (server.js:233)
+
+#### Current Limitations
+- Jerusalem queries return no results (no data in production dataset)
+- Azure GPT engine may fail due to API rate limits
+- Fuzzy engine can return inconsistent results for complex queries

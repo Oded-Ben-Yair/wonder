@@ -1,0 +1,20 @@
+{
+  "name": "@wonder/database",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Database migration and management for Wonder Healthcare Platform",
+  "main": "migrate.js",
+  "scripts": {
+    "migrate": "node migrate.js",
+    "migrate:prod": "node migrate.js --env production",
+    "migrate:dev": "node migrate.js --env development",
+    "migrate:dry": "node migrate.js --dry-run"
+  },
+  "dependencies": {
+    "pg": "^8.16.3",
+    "dotenv": "^17.2.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
