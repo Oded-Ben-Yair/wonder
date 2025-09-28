@@ -168,3 +168,21 @@ The project includes comprehensive test suites in `/tests`:
 - Jerusalem queries return no results (no data in production dataset)
 - Azure GPT engine may fail due to API rate limits
 - Fuzzy engine can return inconsistent results for complex queries
+## MCP Servers Configured
+- filesystem: Full project access at ~/wonder
+- memory: Context persistence 
+- postgres: Database connection
+- github: Repository management
+- fetch: Web fetching capabilities
+
+## MCP Commands Available
+- File operations via filesystem server
+- Database queries via postgres server
+- Git operations via github server
+- Web content fetching via fetch server
+
+## Development Environment
+- Python venv: ~/wonder/venv
+- Node version: 20.x
+- Package manager: npm/pnpm
+- MCP config: ~/.config/claude-code/mcp-config.json

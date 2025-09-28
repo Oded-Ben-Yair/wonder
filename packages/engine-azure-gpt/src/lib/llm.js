@@ -70,8 +70,9 @@ export async function llmMatch(query, allNurses){
     return getMockResponse(allNurses, query.topK || 5);
   }
   
-  // Limit candidates to reduce token usage for Azure API - optimized for speed
-  const maxCandidates = Math.min(5, allNurses.length);
+  // Process all candidates for comprehensive matching
+  // Use intelligent filtering to manage token usage
+  const maxCandidates = Math.min(100, allNurses.length); // Process up to 100 candidates
   const limitedNurses = allNurses.slice(0, maxCandidates);
   
   const uri = resolvedAzureUri();

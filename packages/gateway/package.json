@@ -1,10 +1,9 @@
 {
   "name": "@wonder/gateway",
   "version": "1.0.0",
-  "type": "module",
   "private": true,
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node app.js",
     "dev": "node src/server.js | npx pino-pretty",
     "health": "curl -s http://localhost:${PORT:-5050}/health | jq .",
     "engines": "curl -s http://localhost:${PORT:-5050}/engines | jq ."

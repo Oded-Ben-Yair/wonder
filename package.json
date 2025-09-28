@@ -14,7 +14,14 @@
     "smoke": "bash scripts/csv-smoke.sh"
   },
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
-    "concurrently": "^8.2.2"
+    "@changesets/cli": "^2.29.7",
+    "@playwright/test": "^1.55.1",
+    "concurrently": "^8.2.2",
+    "playwright": "^1.55.1",
+    "turbo": "^2.5.8",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
   }
 }
