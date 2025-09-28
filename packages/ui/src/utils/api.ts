@@ -6,12 +6,12 @@ const getApiUrl = () => {
   if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
     return 'http://localhost:5050';
   }
-  return 'https://wonder-engine-web.azurewebsites.net';
+  return 'https://wonder-backend-api.azurewebsites.net';
 };
 
 const api = axios.create({
   baseURL: getApiUrl(),
-  timeout: 30000,
+  timeout: 60000, // Increased to 60 seconds for Azure cold starts
   headers: {
     'Content-Type': 'application/json',
   },
@@ -59,33 +59,45 @@ export async function executeMatch(
   query: StructuredQuery,
   engine?: string
 ): Promise<MatchResponse> {
-  try {
-    // Transform StructuredQuery to match gateway's expected format
-    const gatewayQuery: any = {
-      city: query.municipality || 'Tel Aviv', // Gateway expects 'city' not 'municipality'
-      servicesQuery: query.specializations || [],
-      expertiseQuery: query.specializations || [],
-      urgent: query.isUrgent || false,
-      topK: query.limit || 5,
-    };
+  return withRetry(async () => {
+    try {
+      // Transform StructuredQuery to match gateway's expected format
+      const gatewayQuery: any = {
+        servicesQuery: query.specializations || [],
+        expertiseQuery: query.specializations || [],
+        urgent: query.isUrgent || false,
+        topK: query.limit || 5,
+      };
 
-    // Add optional fields if present
-    if (query.dateRange?.start) {
-      gatewayQuery.start = query.dateRange.start;
-    }
-    if (query.dateRange?.end) {
-      gatewayQuery.end = query.dateRange.end;
-    }
+      // Add city OR nurseName (nurse name takes priority for specific searches)
+      if (query.nurseName) {
+        gatewayQuery.nurseName = query.nurseName;
+        // Also include city if available for location filtering
+        if (query.municipality) {
+          gatewayQuery.city = query.municipality;
+        }
+      } else {
+        gatewayQuery.city = query.municipality || 'Tel Aviv'; // Default city when no name search
+      }
 
-    // Use working engine (Basic) by default for chatbot
-    const selectedEngine = engine || 'engine-basic';
-    const url = `/match?engine=${encodeURIComponent(selectedEngine)}`;
-    const response = await api.post<MatchResponse>(url, gatewayQuery);
-    return response.data;
-  } catch (error) {
-    console.error('Failed to execute match:', error);
-    throw error;
-  }
+      // Add optional fields if present
+      if (query.dateRange?.start) {
+        gatewayQuery.start = query.dateRange.start;
+      }
+      if (query.dateRange?.end) {
+        gatewayQuery.end = query.dateRange.end;
+      }
+
+      // Use working engine (Basic) by default for chatbot
+      const selectedEngine = engine || 'engine-basic';
+      const url = `/match?engine=${encodeURIComponent(selectedEngine)}`;
+      const response = await api.post<MatchResponse>(url, gatewayQuery);
+      return response.data;
+    } catch (error) {
+      console.error('Failed to execute match:', error);
+      throw error;
+    }
+  }, 2, 2000); // Retry up to 2 times with 2 second delay
 }
 
 /**

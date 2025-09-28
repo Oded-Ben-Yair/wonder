@@ -1,0 +1,161 @@
+{
+    "common": {
+      "save": "save",
+      "cancel": "cancel",
+      "required": "Field is required",
+      "minimum": "Minimum",
+      "maximum": "Maximum",
+      "seconds": "Seconds",
+      "error": "An error occurred, please try again later",
+      "live": "Live",
+      "vs": "vs",
+      "errors": {
+        "tenantExists": "Account already exists"
+      },
+      "confirm": "Confirm"
+    },
+    "routes": {
+      "sessions": "All sessions",
+      "homepage": "Homepage",
+      "exploits": "Exploit inventory",
+      "anonymizers": "Anonymizers",
+      "settings": "Settings",
+      "activityLog": "Activity Log",
+      "logout": "Logout",
+      "userSettings": "Settings"
+    },
+    "auth": {
+      "username_required": "Please enter username",
+      "password_required": "Please enter password",
+      "username": "Username",
+      "password": "Password",
+      "login": "SIGN IN"
+    },
+    "errors": {
+      "name_required": "Please enter name",
+      "first_name_required": "Please enter first name",
+      "currency_required": "Please select currency",
+      "account_required": "Please select an account",
+      "accountName_required_required": "Please enter an account name",
+      "language_required": "Please select language",
+      "last_name_required": "Please enter last name",
+      "phone_number_required": "Please enter phone number",
+      "phoneNumber_invalid": "Phone number should begin with '+country code'",
+      "name_long": "Name should not exceed 50 chars",
+      "last_name_long": "Last name should not exceed 50 chars",
+      "first_name_long": "First name should not exceed 50 chars",
+      "address_long": "Address should not exceed 50 chars",
+      "phoneNumber_long": "Phone number should not exceed 30 chars",
+      "phoneNumber_short": "Phone number should not be less than 7 chars",
+      "accountName_long": "Account name should not exceed 50 chars",
+      "accountName_required": "Please enter account name",
+      "tenantExists": "Account already exists",
+      "emailExists": "Email already exists",
+      "error": "An error occurred, please try again later",
+      "UserNotActive": "User is not active",
+      "USER_PASSWORD_INCORRECT": "Wrong password, please try again.",
+      "USERNAME_OR_PASSWORD_INCORRECT": "Username or password are incorrect, please try again",
+      "NOT_IN_RANGE": "Target Address is not in range.",
+      "WRONG_FORMAT": "Target Address format is invalid.",
+      "ERR_READ_FILE": "Internal server error",
+      "updateFailed": "Server failed to update the value",
+      "serverFailedRegisterTarget": "Server failed to register target"
+    },
+    "tables": {
+      "search": "Search",
+      "showing": "Showing {{totalRowCount}}",
+      "accounts": {
+        "name": "Name",
+        "address": "Address",
+        "phone": "Phone",
+        "status": "Status"
+      },
+      "noResultMsg": "No results match your search."
+    },
+    "HomePage": {
+      "activeSessions": "Active Sessions ({{count}})",
+      "availableAnonymizers": "Available Anonymizers ({{count}})",
+      "activeSessionsMap": "Active Sessions",
+      "availableAnonymizersMap": "Available Anonymizers",
+      "sessionsMap": "Sessions Map",
+      "latestActivity": "Latest Activity",
+      "allSessions": "All sessions",
+      "allAnonymizers": "All anonymizers",
+      "allActivities": "All activities"
+    },
+    "SettingsPage": {
+      "changePassword": {
+        "title": "Change Password",
+        "oldPassword": "Old password",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm new password",
+        "passwordRules": "Password Rules",
+        "rule1": "10-20 characters",
+        "rule2": "Including numbers and letters",
+        "rule3": "At least one uppercase",
+        "rule4": "At least one special character",
+        "passwordError": "Incorrect password",
+        "confirmPasswordError": "Password doesn't match",
+        "updatePasswordSuccess": "Your password has been successfully updated.",
+        "updatePasswordFailed": "Failed to update password",
+        "USER_PASSWORD_INCORRECT": "Old password is wrong, please try again."
+      },
+      "apiGateway": {
+        "title": "API Gateway",
+        "address": "Address",
+        "address_required": "Please enter API gateway address"
+      },
+      "visualSettings": {
+        "title": "Visual Settings",
+        "lightMode": "Light Mode",
+        "darkMode": "Dark Mode"
+      },
+      "sessionTimeout": {
+        "title": "Session Timeout",
+        "hours": "Hours"
+      },
+      "updateSuccess": "The settings have been successfully updated."
+    },
+    "activityLogs": {
+      "id": "ID",
+      "username": "Username",
+      "createdAt": "Timestamp",
+      "sourceScreen": "Screen",
+      "activity": "Event Description",
+      "noDataMsg": "No activity logs to display.",
+      "export": "Export"
+    },
+    "drivers": {
+      "isValid": "Is valid",
+      "driverId": "Driver Id",
+      "DriverName": "Driver name",
+      "ValidDate": "Valid date",
+      "isGpmDriver": "Is gpm driver",
+      "highWorkTrainingDate": "High work training date",
+      "driverEtiquetteDate": "Driver etiquette date",
+      "gapamApprovalToDate": "Gapam approval to date"
+    },
+    "invoicesReport": {
+      "title": "Invoices report",
+      "BillingDate": "Billing date",
+      "InvoiceCreateDate": "Invoice create date",
+      "InvoiceNumber": "Invoice number",
+      "InvoiceTypeDescription": "Invoice type description",
+      "AmountOfInvoiceWithoutVAT": "Amount of invoice without VAT",    
+      "PdfData": "PDF"
+    },
+    "confirmDialog": {
+      "Yes": "Yes",
+      "No": "No",
+      "Close": "Close",
+      "Ok": "Ok",
+      "Cancel": "Cancel"
+    },
+    "toastMessages": {
+      "success": {},
+      "error": {
+        "connectionToServerFailed": "The connection to the server has failed with status code {{errorCode}}\n{{errorMessage}}"
+      }
+    }
+  }
+  

@@ -1,12 +1,37 @@
 import { distanceKm, availabilityOverlapRatio } from '@wonder/shared-utils';
 
 export function basicMatch(query, nurses) {
-  const { city, service, start, end, lat, lng, radiusKm = 25, topK = 3 } = query || {};
+  const { city, service, nurseName, start, end, lat, lng, radiusKm = 25, topK = 3 } = query || {};
   const s = start ? new Date(start) : null;
   const e = end ? new Date(end) : null;
   const day = s ? ['sun','mon','tue','wed','thu','fri','sat'][s.getUTCDay()] : null;
 
   const filtered = (nurses||[])
+    // Filter by nurse name first if provided
+    .filter(n => {
+      if (!nurseName) return true;
+      const searchName = String(nurseName).toLowerCase();
+
+      // Check displayName, name, firstName+lastName, and searchableNames
+      if (n.displayName && n.displayName.toLowerCase().includes(searchName)) return true;
+      if (n.name && n.name.toLowerCase().includes(searchName)) return true;
+      if (n.firstName && n.firstName.toLowerCase().includes(searchName)) return true;
+      if (n.lastName && n.lastName.toLowerCase().includes(searchName)) return true;
+
+      // Check full name combination
+      if (n.firstName && n.lastName) {
+        const fullName = `${n.firstName} ${n.lastName}`.toLowerCase();
+        if (fullName.includes(searchName)) return true;
+      }
+
+      // Check searchable name variations
+      if (n.searchableNames && Array.isArray(n.searchableNames)) {
+        return n.searchableNames.some(sn => sn.toLowerCase().includes(searchName));
+      }
+
+      return false;
+    })
+    // Then filter by city
     .filter(n => {
       if (!city) return true;
       const cityLower = String(city).toLowerCase();
@@ -84,12 +109,16 @@ export function basicMatch(query, nurses) {
   });
 
   return sorted.slice(0, topK).map(n => ({
-    id: n.nurseId || n.id, 
-    name: n.name || `Nurse ${n.nurseId?.substring(0,8)}`, 
+    id: n.nurseId || n.id,
+    name: n.displayName || n.name || `Nurse ${n.nurseId?.substring(0,8)}`,
+    firstName: n.firstName || '',
+    lastName: n.lastName || '',
+    displayName: n.displayName || n.name || '',
+    isHebrew: n.isHebrew || false,
     city: n.municipality?.[0] || n.city || 'Unknown',
     municipality: n.municipality,
     specialization: n.specialization,
-    reason: `passed: ${[service?'service':null, city?'city':null, s?'availability':null, (lat!=null&&lng!=null)?'distance':null].filter(Boolean).join(', ')}`,
+    reason: `passed: ${[nurseName?'name':null, service?'service':null, city?'city':null, s?'availability':null, (lat!=null&&lng!=null)?'distance':null].filter(Boolean).join(', ')}`,
     meta: { distanceKm: n._dKm, availabilityRatio: n._avail, rating: n.rating, reviewsCount: n.reviewsCount }
   }));
 }

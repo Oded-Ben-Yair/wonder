@@ -50,7 +50,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תכלת",
+    "lastName": "כהן",
+    "displayName": "תכלת כהן",
+    "searchableNames": [
+      "תכלת כהן",
+      "כהן תכלת",
+      "תכלת",
+      "כהן",
+      "תכלת כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "012c767f-6856-40a2-9702-38b394dff355",
@@ -98,7 +109,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הילה",
+    "lastName": "שוורץ",
+    "displayName": "הילה שוורץ",
+    "searchableNames": [
+      "הילה שוורץ",
+      "שוורץ הילה",
+      "הילה",
+      "שוורץ",
+      "הילה שוורץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "01b52cbb-bee6-4b5d-9087-fd53c62b2a19",
@@ -133,7 +155,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חן",
+    "lastName": "בן שושן",
+    "displayName": "חן בן שושן",
+    "searchableNames": [
+      "חן בן שושן",
+      "בן שושן חן",
+      "חן",
+      "בן שושן",
+      "חן בן שושן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "023f36e5-dce4-4c67-a860-b2f063ebe321",
@@ -189,7 +222,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תרזה",
+    "lastName": "יעקובוב",
+    "displayName": "תרזה יעקובוב",
+    "searchableNames": [
+      "תרזה יעקובוב",
+      "יעקובוב תרזה",
+      "תרזה",
+      "יעקובוב",
+      "תרזה יעקובוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "025cf8e8-b6a5-43e7-99a3-d8c769e58fc5",
@@ -237,7 +281,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "Rinat",
+    "lastName": "Bellehsen",
+    "displayName": "Rinat Bellehsen",
+    "searchableNames": [
+      "Rinat Bellehsen",
+      "Bellehsen Rinat",
+      "Rinat",
+      "Bellehsen",
+      "Rinat Bellehsen"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "03436ffb-1bef-4def-b618-353af58a23f4",
@@ -264,7 +319,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עדי",
+    "lastName": "קירשון",
+    "displayName": "עדי קירשון",
+    "searchableNames": [
+      "עדי קירשון",
+      "קירשון עדי",
+      "עדי",
+      "קירשון",
+      "עדי קירשון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "03ee11a9-7a5a-4b2b-8bfa-f0dd9fb8a488",
@@ -312,7 +378,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נהורה",
+    "lastName": "קרולציג",
+    "displayName": "נהורה קרולציג",
+    "searchableNames": [
+      "נהורה קרולציג",
+      "קרולציג נהורה",
+      "נהורה",
+      "קרולציג",
+      "נהורה קרולציג"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "042f7523-51ec-41b5-8c0d-3190cc97f847",
@@ -343,7 +420,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "משה",
+    "lastName": "זהר",
+    "displayName": "משה זהר",
+    "searchableNames": [
+      "משה זהר",
+      "זהר משה",
+      "משה",
+      "זהר",
+      "משה זהר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0471f24c-644d-4947-8899-45d66879b6d9",
@@ -380,7 +468,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חני",
+    "lastName": "וקסמן זוהר",
+    "displayName": "חני וקסמן זוהר",
+    "searchableNames": [
+      "חני וקסמן זוהר",
+      "וקסמן זוהר חני",
+      "חני",
+      "וקסמן זוהר",
+      "חני וקסמן זוהר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "053e2a10-35bb-40ab-9901-d28a9f8a7bae",
@@ -453,7 +552,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חן",
+    "lastName": "להב",
+    "displayName": "חן להב",
+    "searchableNames": [
+      "חן להב",
+      "להב חן",
+      "חן",
+      "להב",
+      "חן להב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0714aaa0-1b3e-4441-94cb-c024fdebed02",
@@ -517,7 +627,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "יעל",
+    "lastName": "הבר",
+    "displayName": "יעל הבר",
+    "searchableNames": [
+      "יעל הבר",
+      "הבר יעל",
+      "יעל",
+      "הבר",
+      "יעל הבר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "07683cf6-f7d2-414b-816e-999d0f6a2867",
@@ -545,7 +666,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שני",
+    "lastName": "אנגל",
+    "displayName": "שני אנגל",
+    "searchableNames": [
+      "שני אנגל",
+      "אנגל שני",
+      "שני",
+      "אנגל",
+      "שני אנגל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "07fc2b9b-6dde-4149-8e54-6b90926ab964",
@@ -576,7 +708,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מורד",
+    "lastName": "גמהור",
+    "displayName": "מורד גמהור",
+    "searchableNames": [
+      "מורד גמהור",
+      "גמהור מורד",
+      "מורד",
+      "גמהור",
+      "מורד גמהור"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0810ae69-bf95-4600-84aa-b8a5e430bd05",
@@ -628,7 +771,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מיכל",
+    "lastName": "מזעקי",
+    "displayName": "מיכל מזעקי",
+    "searchableNames": [
+      "מיכל מזעקי",
+      "מזעקי מיכל",
+      "מיכל",
+      "מזעקי",
+      "מיכל מזעקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0926f4f4-1b97-4049-a2a0-bb8e37afa911",
@@ -653,7 +807,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ראמי",
+    "lastName": "גנאים",
+    "displayName": "ראמי גנאים",
+    "searchableNames": [
+      "ראמי גנאים",
+      "גנאים ראמי",
+      "ראמי",
+      "גנאים",
+      "ראמי גנאים"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "09e66f77-0bbd-494d-8f65-e7ad741b10d1",
@@ -682,7 +847,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מאיה",
+    "lastName": "אלחורי",
+    "displayName": "מאיה אלחורי",
+    "searchableNames": [
+      "מאיה אלחורי",
+      "אלחורי מאיה",
+      "מאיה",
+      "אלחורי",
+      "מאיה אלחורי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0abb363e-970b-496b-94f1-b1feca734de4",
@@ -708,7 +884,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלה",
+    "lastName": "גלעדוב",
+    "displayName": "אלה גלעדוב",
+    "searchableNames": [
+      "אלה גלעדוב",
+      "גלעדוב אלה",
+      "אלה",
+      "גלעדוב",
+      "אלה גלעדוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0abe1211-9ca8-4a62-b724-879ca1f46500",
@@ -749,7 +936,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עומר",
+    "lastName": "לניר אטיאס",
+    "displayName": "עומר לניר אטיאס",
+    "searchableNames": [
+      "עומר לניר אטיאס",
+      "לניר אטיאס עומר",
+      "עומר",
+      "לניר אטיאס",
+      "עומר לניר אטיאס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0b393676-e13c-4a11-a36d-8c9c04f7f797",
@@ -777,7 +975,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רגינה",
+    "lastName": "באבייב",
+    "displayName": "רגינה באבייב",
+    "searchableNames": [
+      "רגינה באבייב",
+      "באבייב רגינה",
+      "רגינה",
+      "באבייב",
+      "רגינה באבייב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0b4202aa-028f-4c7c-af29-1d68d8eb1528",
@@ -813,7 +1022,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לנה",
+    "lastName": "מושייב",
+    "displayName": "לנה מושייב",
+    "searchableNames": [
+      "לנה מושייב",
+      "מושייב לנה",
+      "לנה",
+      "מושייב",
+      "לנה מושייב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0c03283b-f92c-4946-aece-9988b6554b7d",
@@ -841,7 +1061,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אברהם",
+    "lastName": "סרחאן",
+    "displayName": "אברהם סרחאן",
+    "searchableNames": [
+      "אברהם סרחאן",
+      "סרחאן אברהם",
+      "אברהם",
+      "סרחאן",
+      "אברהם סרחאן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0d278ef5-3b2f-4aca-b7e6-751a11365923",
@@ -886,7 +1117,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אולה",
+    "lastName": "פומין",
+    "displayName": "אולה פומין",
+    "searchableNames": [
+      "אולה פומין",
+      "פומין אולה",
+      "אולה",
+      "פומין",
+      "אולה פומין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0d2e82a7-6d1e-4eea-b195-e3caea1afd2a",
@@ -946,7 +1188,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "רבקה",
+    "lastName": "פרידמן",
+    "displayName": "רבקה פרידמן",
+    "searchableNames": [
+      "רבקה פרידמן",
+      "פרידמן רבקה",
+      "רבקה",
+      "פרידמן",
+      "רבקה פרידמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0d9e03d7-d4e5-4b92-9aae-5553bc7b4669",
@@ -974,7 +1227,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הדיל",
+    "lastName": "אסדי",
+    "displayName": "הדיל אסדי",
+    "searchableNames": [
+      "הדיל אסדי",
+      "אסדי הדיל",
+      "הדיל",
+      "אסדי",
+      "הדיל אסדי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0dcfd77e-de69-467a-bab7-b5212b4dcfc5",
@@ -1015,7 +1279,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יעלי",
+    "lastName": "וייס",
+    "displayName": "יעלי וייס",
+    "searchableNames": [
+      "יעלי וייס",
+      "וייס יעלי",
+      "יעלי",
+      "וייס",
+      "יעלי וייס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0df66358-9fab-4b70-a725-326bcf644f5f",
@@ -1044,7 +1319,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סיון",
+    "lastName": "איתן",
+    "displayName": "סיון איתן",
+    "searchableNames": [
+      "סיון איתן",
+      "איתן סיון",
+      "סיון",
+      "איתן",
+      "סיון איתן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0ed40d5f-f012-453d-a38c-63d24cb03b96",
@@ -1068,7 +1354,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מאי",
+    "lastName": "שכטר יחזקאל",
+    "displayName": "מאי שכטר יחזקאל",
+    "searchableNames": [
+      "מאי שכטר יחזקאל",
+      "שכטר יחזקאל מאי",
+      "מאי",
+      "שכטר יחזקאל",
+      "מאי שכטר יחזקאל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "0f57ba3d-af6f-440d-b932-780c9e893ac6",
@@ -1119,7 +1416,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עלי",
+    "lastName": "זאמל",
+    "displayName": "עלי זאמל",
+    "searchableNames": [
+      "עלי זאמל",
+      "זאמל עלי",
+      "עלי",
+      "זאמל",
+      "עלי זאמל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "10786aac-6547-4710-9c91-4b41a5512178",
@@ -1152,7 +1460,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "פנינה",
+    "lastName": "שמס",
+    "displayName": "פנינה שמס",
+    "searchableNames": [
+      "פנינה שמס",
+      "שמס פנינה",
+      "פנינה",
+      "שמס",
+      "פנינה שמס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "107b99c9-1165-4eed-8e78-cf9626276e2c",
@@ -1188,7 +1507,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מירן",
+    "lastName": "כהן",
+    "displayName": "מירן כהן",
+    "searchableNames": [
+      "מירן כהן",
+      "כהן מירן",
+      "מירן",
+      "כהן",
+      "מירן כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "10892520-10be-4eb0-90aa-76a4c6d00dcb",
@@ -1249,7 +1579,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "פיראס",
+    "lastName": "מחאגנה",
+    "displayName": "פיראס מחאגנה",
+    "searchableNames": [
+      "פיראס מחאגנה",
+      "מחאגנה פיראס",
+      "פיראס",
+      "מחאגנה",
+      "פיראס מחאגנה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "119add2a-c0ed-4249-b24f-e47e4c396deb",
@@ -1273,7 +1614,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נטלה",
+    "lastName": "שטיבלמן",
+    "displayName": "נטלה שטיבלמן",
+    "searchableNames": [
+      "נטלה שטיבלמן",
+      "שטיבלמן נטלה",
+      "נטלה",
+      "שטיבלמן",
+      "נטלה שטיבלמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "119c7314-d580-431b-a24a-d43487f3ff61",
@@ -1301,7 +1653,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עלי",
+    "lastName": "עסבה",
+    "displayName": "עלי עסבה",
+    "searchableNames": [
+      "עלי עסבה",
+      "עסבה עלי",
+      "עלי",
+      "עסבה",
+      "עלי עסבה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "11bac00f-fa7a-4093-be84-e0d7ae335fe8",
@@ -1328,7 +1691,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דפנה",
+    "lastName": "רובס",
+    "displayName": "דפנה רובס",
+    "searchableNames": [
+      "דפנה רובס",
+      "רובס דפנה",
+      "דפנה",
+      "רובס",
+      "דפנה רובס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "12292869-f0cc-4057-b66b-271b1b840646",
@@ -1365,7 +1739,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עיינה",
+    "lastName": "דודאי",
+    "displayName": "עיינה דודאי",
+    "searchableNames": [
+      "עיינה דודאי",
+      "דודאי עיינה",
+      "עיינה",
+      "דודאי",
+      "עיינה דודאי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "134bc546-b346-4b89-9dd6-72ee493db444",
@@ -1392,7 +1777,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אחמד",
+    "lastName": "סעיד",
+    "displayName": "אחמד סעיד",
+    "searchableNames": [
+      "אחמד סעיד",
+      "סעיד אחמד",
+      "אחמד",
+      "סעיד",
+      "אחמד סעיד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "135e2347-5aec-4e8f-91ec-6d032803bb48",
@@ -1433,7 +1829,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הודיה",
+    "lastName": "עמאר",
+    "displayName": "הודיה עמאר",
+    "searchableNames": [
+      "הודיה עמאר",
+      "עמאר הודיה",
+      "הודיה",
+      "עמאר",
+      "הודיה עמאר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "13d8c46a-3276-4a40-bab8-21a3953d95d5",
@@ -1465,7 +1872,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אריאל",
+    "lastName": "פנחס",
+    "displayName": "אריאל פנחס",
+    "searchableNames": [
+      "אריאל פנחס",
+      "פנחס אריאל",
+      "אריאל",
+      "פנחס",
+      "אריאל פנחס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "140b3d2a-0fd4-4ce4-83fe-b66bc15f3ca5",
@@ -1496,7 +1914,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לירן",
+    "lastName": "קרופניק",
+    "displayName": "לירן קרופניק",
+    "searchableNames": [
+      "לירן קרופניק",
+      "קרופניק לירן",
+      "לירן",
+      "קרופניק",
+      "לירן קרופניק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1421f2c4-6577-4cfa-bb3f-5b925ac87c3f",
@@ -1523,7 +1952,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יורי",
+    "lastName": "רפאילוב",
+    "displayName": "יורי רפאילוב",
+    "searchableNames": [
+      "יורי רפאילוב",
+      "רפאילוב יורי",
+      "יורי",
+      "רפאילוב",
+      "יורי רפאילוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "143ca05e-76ff-486c-b0d1-8d0c1400d5dc",
@@ -1566,7 +2006,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ערין",
+    "lastName": "עדוי",
+    "displayName": "ערין עדוי",
+    "searchableNames": [
+      "ערין עדוי",
+      "עדוי ערין",
+      "ערין",
+      "עדוי",
+      "ערין עדוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1457f8dc-bfd9-49b7-b009-5ada9df4c781",
@@ -1618,7 +2069,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מזי",
+    "lastName": "כהן",
+    "displayName": "מזי כהן",
+    "searchableNames": [
+      "מזי כהן",
+      "כהן מזי",
+      "מזי",
+      "כהן",
+      "מזי כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1464a530-a2b7-4764-bd06-e0dd42c1a00c",
@@ -1656,7 +2118,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוריה",
+    "lastName": "נחמיאס",
+    "displayName": "מוריה נחמיאס",
+    "searchableNames": [
+      "מוריה נחמיאס",
+      "נחמיאס מוריה",
+      "מוריה",
+      "נחמיאס",
+      "מוריה נחמיאס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "158d4fe8-73e9-4e64-ae45-4092e91f69e6",
@@ -1691,7 +2164,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מירית",
+    "lastName": "גוזלן",
+    "displayName": "מירית גוזלן",
+    "searchableNames": [
+      "מירית גוזלן",
+      "גוזלן מירית",
+      "מירית",
+      "גוזלן",
+      "מירית גוזלן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "159287b9-6632-4449-9ed6-c7ba774486d9",
@@ -1724,7 +2208,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נאג׳ד",
+    "lastName": "חאג יחיא",
+    "displayName": "נאג׳ד חאג יחיא",
+    "searchableNames": [
+      "נאג׳ד חאג יחיא",
+      "חאג יחיא נאג׳ד",
+      "נאג׳ד",
+      "חאג יחיא",
+      "נאג׳ד חאג יחיא"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "15b3197b-1a98-4317-bedf-65bad76f8f39",
@@ -1751,7 +2246,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוחמד",
+    "lastName": "שינאתי",
+    "displayName": "מוחמד שינאתי",
+    "searchableNames": [
+      "מוחמד שינאתי",
+      "שינאתי מוחמד",
+      "מוחמד",
+      "שינאתי",
+      "מוחמד שינאתי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "15dcec5d-5115-456f-a3dc-e102c5456d70",
@@ -1831,7 +2337,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "טלי",
+    "lastName": "רצקר",
+    "displayName": "טלי רצקר",
+    "searchableNames": [
+      "טלי רצקר",
+      "רצקר טלי",
+      "טלי",
+      "רצקר",
+      "טלי רצקר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1654d926-0e53-41ab-8b27-cf91da693613",
@@ -1855,7 +2372,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תומר (Tomer)",
+    "lastName": "שגיא ( Sagie)",
+    "displayName": "תומר (Tomer) שגיא ( Sagie)",
+    "searchableNames": [
+      "תומר (Tomer) שגיא ( Sagie)",
+      "שגיא ( Sagie) תומר (Tomer)",
+      "תומר (Tomer)",
+      "שגיא ( Sagie)",
+      "תומר (Tomer) שגיא ( Sagie)"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1707dbaa-82f7-4749-b0d0-947d9bf355bb",
@@ -1885,7 +2413,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הילה",
+    "lastName": "רונן",
+    "displayName": "הילה רונן",
+    "searchableNames": [
+      "הילה רונן",
+      "רונן הילה",
+      "הילה",
+      "רונן",
+      "הילה רונן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "190aa9e0-b005-499e-a7c6-6243de641e25",
@@ -1928,7 +2467,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עינאא",
+    "lastName": "ברבור",
+    "displayName": "עינאא ברבור",
+    "searchableNames": [
+      "עינאא ברבור",
+      "ברבור עינאא",
+      "עינאא",
+      "ברבור",
+      "עינאא ברבור"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "19beee1c-f7a4-4b16-91f9-5f0e94bc3bdd",
@@ -1959,7 +2509,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ויקטוריה",
+    "lastName": "בונד",
+    "displayName": "ויקטוריה בונד",
+    "searchableNames": [
+      "ויקטוריה בונד",
+      "בונד ויקטוריה",
+      "ויקטוריה",
+      "בונד",
+      "ויקטוריה בונד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1a8bc8cc-6fd8-4126-be91-4cee417a296f",
@@ -1995,7 +2556,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תמי",
+    "lastName": "מרדכי",
+    "displayName": "תמי מרדכי",
+    "searchableNames": [
+      "תמי מרדכי",
+      "מרדכי תמי",
+      "תמי",
+      "מרדכי",
+      "תמי מרדכי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1b383bb0-f293-431c-8f5d-2e3c01dd1d14",
@@ -2072,7 +2644,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "חנין",
+    "lastName": "עאמר",
+    "displayName": "חנין עאמר",
+    "searchableNames": [
+      "חנין עאמר",
+      "עאמר חנין",
+      "חנין",
+      "עאמר",
+      "חנין עאמר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1b5fe304-c9ba-481f-ab15-d8f552bcd052",
@@ -2114,7 +2697,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "Liron",
+    "lastName": "Benayoun",
+    "displayName": "Liron Benayoun",
+    "searchableNames": [
+      "Liron Benayoun",
+      "Benayoun Liron",
+      "Liron",
+      "Benayoun",
+      "Liron Benayoun"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "1c022b75-202a-4657-b05d-327614ca984f",
@@ -2182,7 +2776,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "רוסל",
+    "lastName": "שרבאתי",
+    "displayName": "רוסל שרבאתי",
+    "searchableNames": [
+      "רוסל שרבאתי",
+      "שרבאתי רוסל",
+      "רוסל",
+      "שרבאתי",
+      "רוסל שרבאתי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1c999fe0-60ec-44b1-8e04-cc8f6f728087",
@@ -2210,7 +2815,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "קשת",
+    "lastName": "רואה",
+    "displayName": "קשת רואה",
+    "searchableNames": [
+      "קשת רואה",
+      "רואה קשת",
+      "קשת",
+      "רואה",
+      "קשת רואה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1d172edc-e166-4b2c-b066-ead9384279d7",
@@ -2238,7 +2854,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אברהים",
+    "lastName": "עשאן",
+    "displayName": "אברהים עשאן",
+    "searchableNames": [
+      "אברהים עשאן",
+      "עשאן אברהים",
+      "אברהים",
+      "עשאן",
+      "אברהים עשאן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1d33653a-9e2f-4359-9cde-1aa719e244b3",
@@ -2267,7 +2894,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "gennadi",
+    "lastName": "lev",
+    "displayName": "gennadi lev",
+    "searchableNames": [
+      "gennadi lev",
+      "lev gennadi",
+      "gennadi",
+      "lev",
+      "gennadi lev"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "1d3805e2-99cd-4e8e-b652-4aabf92bdc7e",
@@ -2324,7 +2962,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מיכל",
+    "lastName": "אמר",
+    "displayName": "מיכל אמר",
+    "searchableNames": [
+      "מיכל אמר",
+      "אמר מיכל",
+      "מיכל",
+      "אמר",
+      "מיכל אמר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1d46932e-cc6f-4068-9e78-4253826141f6",
@@ -2356,7 +3005,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אירינה",
+    "lastName": "בילייב",
+    "displayName": "אירינה בילייב",
+    "searchableNames": [
+      "אירינה בילייב",
+      "בילייב אירינה",
+      "אירינה",
+      "בילייב",
+      "אירינה בילייב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1d60f7d4-bc5b-46de-be5c-812afd08f954",
@@ -2382,7 +3042,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אינה",
+    "lastName": "שונק",
+    "displayName": "אינה שונק",
+    "searchableNames": [
+      "אינה שונק",
+      "שונק אינה",
+      "אינה",
+      "שונק",
+      "אינה שונק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1e7ceb79-65af-4cca-a6e1-08144d041a66",
@@ -2409,7 +3080,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סייף",
+    "lastName": "גנאיים",
+    "displayName": "סייף גנאיים",
+    "searchableNames": [
+      "סייף גנאיים",
+      "גנאיים סייף",
+      "סייף",
+      "גנאיים",
+      "סייף גנאיים"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1ea503f2-55f0-4d82-b4bf-0e417170f366",
@@ -2441,7 +3123,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רעות",
+    "lastName": "מאור",
+    "displayName": "רעות מאור",
+    "searchableNames": [
+      "רעות מאור",
+      "מאור רעות",
+      "רעות",
+      "מאור",
+      "רעות מאור"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1ea82911-8102-442f-a845-a3f1a6250b8f",
@@ -2474,7 +3167,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "Michal",
+    "lastName": "Darmon",
+    "displayName": "Michal Darmon",
+    "searchableNames": [
+      "Michal Darmon",
+      "Darmon Michal",
+      "Michal",
+      "Darmon",
+      "Michal Darmon"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "1ee14cdf-def3-4d60-a20e-53ac89e584ad",
@@ -2515,7 +3219,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חנן",
+    "lastName": "קרישר",
+    "displayName": "חנן קרישר",
+    "searchableNames": [
+      "חנן קרישר",
+      "קרישר חנן",
+      "חנן",
+      "קרישר",
+      "חנן קרישר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "1f305bbb-862c-4f86-a1d1-afccf9c5c060",
@@ -2597,7 +3312,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נתי",
+    "lastName": "גורמן",
+    "displayName": "נתי גורמן",
+    "searchableNames": [
+      "נתי גורמן",
+      "גורמן נתי",
+      "נתי",
+      "גורמן",
+      "נתי גורמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2029665f-4b34-43d9-be1b-d02c5afa2125",
@@ -2623,7 +3349,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "גבריאלה",
+    "lastName": "לוי",
+    "displayName": "גבריאלה לוי",
+    "searchableNames": [
+      "גבריאלה לוי",
+      "לוי גבריאלה",
+      "גבריאלה",
+      "לוי",
+      "גבריאלה לוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "20b321dd-41f8-4038-b591-e5101f9f7183",
@@ -2660,7 +3397,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לירון",
+    "lastName": "כהן שמחון",
+    "displayName": "לירון כהן שמחון",
+    "searchableNames": [
+      "לירון כהן שמחון",
+      "כהן שמחון לירון",
+      "לירון",
+      "כהן שמחון",
+      "לירון כהן שמחון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2237ed20-dd6b-406e-a275-18afd6b3d510",
@@ -2715,7 +3463,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יאן",
+    "lastName": "דנצ'נקו",
+    "displayName": "יאן דנצ'נקו",
+    "searchableNames": [
+      "יאן דנצ'נקו",
+      "דנצ'נקו יאן",
+      "יאן",
+      "דנצ'נקו",
+      "יאן דנצ'נקו"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "226c0e5c-8c74-4cda-9dbb-a8660975c7df",
@@ -2760,7 +3519,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "אפיק",
+    "lastName": "איטלי",
+    "displayName": "אפיק איטלי",
+    "searchableNames": [
+      "אפיק איטלי",
+      "איטלי אפיק",
+      "אפיק",
+      "איטלי",
+      "אפיק איטלי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "232d63a2-8d95-4f4f-a380-9f4611b1a4d4",
@@ -2784,7 +3554,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נתי",
+    "lastName": "חילקו",
+    "displayName": "נתי חילקו",
+    "searchableNames": [
+      "נתי חילקו",
+      "חילקו נתי",
+      "נתי",
+      "חילקו",
+      "נתי חילקו"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2347d2b5-1c88-4139-8aba-7e70c04c305e",
@@ -2812,7 +3593,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הנאדי",
+    "lastName": "סבע",
+    "displayName": "הנאדי סבע",
+    "searchableNames": [
+      "הנאדי סבע",
+      "סבע הנאדי",
+      "הנאדי",
+      "סבע",
+      "הנאדי סבע"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "24021c26-1051-4a97-833e-7db99b3e19e0",
@@ -2871,7 +3663,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שרון",
+    "lastName": "רויטמן",
+    "displayName": "שרון רויטמן",
+    "searchableNames": [
+      "שרון רויטמן",
+      "רויטמן שרון",
+      "שרון",
+      "רויטמן",
+      "שרון רויטמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2620d0d8-cb43-42f1-8842-66da3ed26f0f",
@@ -2910,7 +3713,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ראפת",
+    "lastName": "נסאר",
+    "displayName": "ראפת נסאר",
+    "searchableNames": [
+      "ראפת נסאר",
+      "נסאר ראפת",
+      "ראפת",
+      "נסאר",
+      "ראפת נסאר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "26378433-6a29-4423-b64e-4c3067f1ca1d",
@@ -2934,7 +3748,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מור",
+    "lastName": "בן יוסף",
+    "displayName": "מור בן יוסף",
+    "searchableNames": [
+      "מור בן יוסף",
+      "בן יוסף מור",
+      "מור",
+      "בן יוסף",
+      "מור בן יוסף"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2659e809-35b6-4645-b58a-5f40ff79883f",
@@ -2958,7 +3783,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "טל",
+    "lastName": "נוביקוב",
+    "displayName": "טל נוביקוב",
+    "searchableNames": [
+      "טל נוביקוב",
+      "נוביקוב טל",
+      "טל",
+      "נוביקוב",
+      "טל נוביקוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "265e5176-17d8-481f-a226-9db1f531d41c",
@@ -2997,7 +3833,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סימונה",
+    "lastName": "שפק",
+    "displayName": "סימונה שפק",
+    "searchableNames": [
+      "סימונה שפק",
+      "שפק סימונה",
+      "סימונה",
+      "שפק",
+      "סימונה שפק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "26dd374e-bf79-40c9-9ff6-4126c95bf3ca",
@@ -3046,7 +3893,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לובה",
+    "lastName": "ליטבק",
+    "displayName": "לובה ליטבק",
+    "searchableNames": [
+      "לובה ליטבק",
+      "ליטבק לובה",
+      "לובה",
+      "ליטבק",
+      "לובה ליטבק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2703f86a-b891-4453-8288-756956226390",
@@ -3106,7 +3964,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוריה",
+    "lastName": "לוין",
+    "displayName": "מוריה לוין",
+    "searchableNames": [
+      "מוריה לוין",
+      "לוין מוריה",
+      "מוריה",
+      "לוין",
+      "מוריה לוין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "274d17f4-7520-4e7d-9f63-f5bc795ab667",
@@ -3140,7 +4009,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אירנה",
+    "lastName": "זרבוביץ",
+    "displayName": "אירנה זרבוביץ",
+    "searchableNames": [
+      "אירנה זרבוביץ",
+      "זרבוביץ אירנה",
+      "אירנה",
+      "זרבוביץ",
+      "אירנה זרבוביץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "27ad8aa6-6079-44fa-91b5-92a2a08939cf",
@@ -3179,7 +4059,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "צביאל",
+    "lastName": "עשוש",
+    "displayName": "צביאל עשוש",
+    "searchableNames": [
+      "צביאל עשוש",
+      "עשוש צביאל",
+      "צביאל",
+      "עשוש",
+      "צביאל עשוש"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "27eb45fb-0f0b-4271-a7ad-49b5c2d1a3f6",
@@ -3215,7 +4106,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ירדנה",
+    "lastName": "קרמר",
+    "displayName": "ירדנה קרמר",
+    "searchableNames": [
+      "ירדנה קרמר",
+      "קרמר ירדנה",
+      "ירדנה",
+      "קרמר",
+      "ירדנה קרמר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2839ac79-e95a-4cb2-8234-9cbf49c1e204",
@@ -3274,7 +4176,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רונית",
+    "lastName": "פנחס",
+    "displayName": "רונית פנחס",
+    "searchableNames": [
+      "רונית פנחס",
+      "פנחס רונית",
+      "רונית",
+      "פנחס",
+      "רונית פנחס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "28494e0a-7b26-407b-ae23-f47732674237",
@@ -3329,7 +4242,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נסרין",
+    "lastName": "חדיד",
+    "displayName": "נסרין חדיד",
+    "searchableNames": [
+      "נסרין חדיד",
+      "חדיד נסרין",
+      "נסרין",
+      "חדיד",
+      "נסרין חדיד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "28c6257a-9caa-4165-9fa1-8384b5419f83",
@@ -3393,7 +4317,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עינת",
+    "lastName": "ברק",
+    "displayName": "עינת ברק",
+    "searchableNames": [
+      "עינת ברק",
+      "ברק עינת",
+      "עינת",
+      "ברק",
+      "עינת ברק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "28deca90-6b1f-4e73-9671-c8687a756557",
@@ -3441,7 +4376,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אריאל",
+    "lastName": "סלע",
+    "displayName": "אריאל סלע",
+    "searchableNames": [
+      "אריאל סלע",
+      "סלע אריאל",
+      "אריאל",
+      "סלע",
+      "אריאל סלע"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "292d6495-7935-4a0d-83d4-8133c9f1239d",
@@ -3484,7 +4430,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מאיה",
+    "lastName": "טקצ'נקו",
+    "displayName": "מאיה טקצ'נקו",
+    "searchableNames": [
+      "מאיה טקצ'נקו",
+      "טקצ'נקו מאיה",
+      "מאיה",
+      "טקצ'נקו",
+      "מאיה טקצ'נקו"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "29c9320b-3838-4350-9a80-75376102aff6",
@@ -3522,7 +4479,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נועה",
+    "lastName": "אדטו",
+    "displayName": "נועה אדטו",
+    "searchableNames": [
+      "נועה אדטו",
+      "אדטו נועה",
+      "נועה",
+      "אדטו",
+      "נועה אדטו"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2ab07107-dc5b-4a32-8bec-a590fd1787e1",
@@ -3546,7 +4514,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "גבריאל",
+    "lastName": "עמרם",
+    "displayName": "גבריאל עמרם",
+    "searchableNames": [
+      "גבריאל עמרם",
+      "עמרם גבריאל",
+      "גבריאל",
+      "עמרם",
+      "גבריאל עמרם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2c61e2dd-b63c-47e3-ae49-cbc7fadd9979",
@@ -3592,7 +4571,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רוני",
+    "lastName": "שמש",
+    "displayName": "רוני שמש",
+    "searchableNames": [
+      "רוני שמש",
+      "שמש רוני",
+      "רוני",
+      "שמש",
+      "רוני שמש"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2c9f3935-0e1c-4ce3-9324-2321a5f62b0d",
@@ -3684,7 +4674,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אולגה",
+    "lastName": "קזקוב",
+    "displayName": "אולגה קזקוב",
+    "searchableNames": [
+      "אולגה קזקוב",
+      "קזקוב אולגה",
+      "אולגה",
+      "קזקוב",
+      "אולגה קזקוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2ccb45b6-0544-42a5-bdf5-17b72464169a",
@@ -3724,7 +4725,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שרית",
+    "lastName": "טל",
+    "displayName": "שרית טל",
+    "searchableNames": [
+      "שרית טל",
+      "טל שרית",
+      "שרית",
+      "טל",
+      "שרית טל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2d120399-a876-4bdc-bf76-e148bf92c43c",
@@ -3758,7 +4770,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מאיה",
+    "lastName": "מרדכי",
+    "displayName": "מאיה מרדכי",
+    "searchableNames": [
+      "מאיה מרדכי",
+      "מרדכי מאיה",
+      "מאיה",
+      "מרדכי",
+      "מאיה מרדכי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2d4918fb-170e-4dbb-bb09-d68751c0db78",
@@ -3783,7 +4806,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "איאד",
+    "lastName": "חוסין",
+    "displayName": "איאד חוסין",
+    "searchableNames": [
+      "איאד חוסין",
+      "חוסין איאד",
+      "איאד",
+      "חוסין",
+      "איאד חוסין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2e1ed591-e297-4b5d-bde4-3ee130752f81",
@@ -3818,7 +4852,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוחמד",
+    "lastName": "אגבאריה",
+    "displayName": "מוחמד אגבאריה",
+    "searchableNames": [
+      "מוחמד אגבאריה",
+      "אגבאריה מוחמד",
+      "מוחמד",
+      "אגבאריה",
+      "מוחמד אגבאריה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2e550bfb-9a13-49b8-b42d-832310a07966",
@@ -3853,7 +4898,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לירז",
+    "lastName": "יצחקי",
+    "displayName": "לירז יצחקי",
+    "searchableNames": [
+      "לירז יצחקי",
+      "יצחקי לירז",
+      "לירז",
+      "יצחקי",
+      "לירז יצחקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2e66ca5c-1927-4475-8d0c-3d564c205488",
@@ -3889,7 +4945,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "איציק",
+    "lastName": "ב.",
+    "displayName": "איציק ב.",
+    "searchableNames": [
+      "איציק ב.",
+      "ב. איציק",
+      "איציק",
+      "ב.",
+      "איציק ב."
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "2e846213-358c-4ba0-bd2f-7ab6ace1777c",
@@ -3927,7 +4994,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רחל",
+    "lastName": "בריקמן",
+    "displayName": "רחל בריקמן",
+    "searchableNames": [
+      "רחל בריקמן",
+      "בריקמן רחל",
+      "רחל",
+      "בריקמן",
+      "רחל בריקמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "30331d0d-2bc8-425f-942b-f537c8eb5f37",
@@ -3958,7 +5036,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "פאדי",
+    "lastName": "נאטור",
+    "displayName": "פאדי נאטור",
+    "searchableNames": [
+      "פאדי נאטור",
+      "נאטור פאדי",
+      "פאדי",
+      "נאטור",
+      "פאדי נאטור"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "306d4875-b07d-4fb0-90f7-0b43c239ba24",
@@ -3989,7 +5078,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יאיר",
+    "lastName": "פרוינדליך",
+    "displayName": "יאיר פרוינדליך",
+    "searchableNames": [
+      "יאיר פרוינדליך",
+      "פרוינדליך יאיר",
+      "יאיר",
+      "פרוינדליך",
+      "יאיר פרוינדליך"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "311bb49f-8a76-4cb0-93ec-4887466e3070",
@@ -4027,7 +5127,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לאה",
+    "lastName": "בוסיס",
+    "displayName": "לאה בוסיס",
+    "searchableNames": [
+      "לאה בוסיס",
+      "בוסיס לאה",
+      "לאה",
+      "בוסיס",
+      "לאה בוסיס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "31470c83-6725-468b-b904-c8fc2efb74e7",
@@ -4086,7 +5197,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "סרגיי - נועם",
+    "lastName": "וילנגרד",
+    "displayName": "סרגיי - נועם וילנגרד",
+    "searchableNames": [
+      "סרגיי - נועם וילנגרד",
+      "וילנגרד סרגיי - נועם",
+      "סרגיי - נועם",
+      "וילנגרד",
+      "סרגיי - נועם וילנגרד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "31d09738-dd9c-45dc-9c34-76f26534d575",
@@ -4115,7 +5237,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "גלעד",
+    "lastName": "שוורץ",
+    "displayName": "גלעד שוורץ",
+    "searchableNames": [
+      "גלעד שוורץ",
+      "שוורץ גלעד",
+      "גלעד",
+      "שוורץ",
+      "גלעד שוורץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "32544fd5-06dd-422d-8966-6422aa1df23f",
@@ -4143,7 +5276,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אחמד",
+    "lastName": "גבארה",
+    "displayName": "אחמד גבארה",
+    "searchableNames": [
+      "אחמד גבארה",
+      "גבארה אחמד",
+      "אחמד",
+      "גבארה",
+      "אחמד גבארה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "32e3fdcd-fa1a-4b9c-aed6-e748be09c0ee",
@@ -4170,7 +5314,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ניזאר",
+    "lastName": "ח'וריה",
+    "displayName": "ניזאר ח'וריה",
+    "searchableNames": [
+      "ניזאר ח'וריה",
+      "ח'וריה ניזאר",
+      "ניזאר",
+      "ח'וריה",
+      "ניזאר ח'וריה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "331003a8-e358-4a8b-acd8-48778f64b0ac",
@@ -4203,7 +5358,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מאיה",
+    "lastName": "חמדאן",
+    "displayName": "מאיה חמדאן",
+    "searchableNames": [
+      "מאיה חמדאן",
+      "חמדאן מאיה",
+      "מאיה",
+      "חמדאן",
+      "מאיה חמדאן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "33ad3b1c-e23c-4ff2-a773-33ca2651cd29",
@@ -4237,7 +5403,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "קסניה",
+    "lastName": "אברס",
+    "displayName": "קסניה אברס",
+    "searchableNames": [
+      "קסניה אברס",
+      "אברס קסניה",
+      "קסניה",
+      "אברס",
+      "קסניה אברס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "33b029af-d17a-4d1a-a575-626bbea65e81",
@@ -4267,7 +5444,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלעד",
+    "lastName": "כ\"ץ",
+    "displayName": "אלעד כ\"ץ",
+    "searchableNames": [
+      "אלעד כ\"ץ",
+      "כ\"ץ אלעד",
+      "אלעד",
+      "כ\"ץ",
+      "אלעד כ\"ץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3427d8f5-b613-4644-b846-f1485f7038bd",
@@ -4297,7 +5485,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דנית",
+    "lastName": "לוריאן",
+    "displayName": "דנית לוריאן",
+    "searchableNames": [
+      "דנית לוריאן",
+      "לוריאן דנית",
+      "דנית",
+      "לוריאן",
+      "דנית לוריאן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "344586c6-0f27-4c2b-8bcd-caffc2dfb0be",
@@ -4326,7 +5525,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נטע",
+    "lastName": "וירגיליס",
+    "displayName": "נטע וירגיליס",
+    "searchableNames": [
+      "נטע וירגיליס",
+      "וירגיליס נטע",
+      "נטע",
+      "וירגיליס",
+      "נטע וירגיליס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3555effd-3428-4992-a66b-763d41b29fa6",
@@ -4353,7 +5563,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הילה",
+    "lastName": "חוט",
+    "displayName": "הילה חוט",
+    "searchableNames": [
+      "הילה חוט",
+      "חוט הילה",
+      "הילה",
+      "חוט",
+      "הילה חוט"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "35ae9f5e-7149-442e-a9ae-3124414d685f",
@@ -4385,7 +5606,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עמר",
+    "lastName": "ותד",
+    "displayName": "עמר ותד",
+    "searchableNames": [
+      "עמר ותד",
+      "ותד עמר",
+      "עמר",
+      "ותד",
+      "עמר ותד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "35cdcea0-4f14-4c88-83c9-930fa1d48c2d",
@@ -4412,7 +5644,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רבקה",
+    "lastName": "אליה",
+    "displayName": "רבקה אליה",
+    "searchableNames": [
+      "רבקה אליה",
+      "אליה רבקה",
+      "רבקה",
+      "אליה",
+      "רבקה אליה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3892b68b-4933-4957-88d8-25edd3006d6b",
@@ -4441,7 +5684,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לואיזה",
+    "lastName": "גוילי",
+    "displayName": "לואיזה גוילי",
+    "searchableNames": [
+      "לואיזה גוילי",
+      "גוילי לואיזה",
+      "לואיזה",
+      "גוילי",
+      "לואיזה גוילי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "38efd1a6-8b94-4501-b004-b6d28c156190",
@@ -4471,7 +5725,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ארקדי",
+    "lastName": "אומנסקי",
+    "displayName": "ארקדי אומנסקי",
+    "searchableNames": [
+      "ארקדי אומנסקי",
+      "אומנסקי ארקדי",
+      "ארקדי",
+      "אומנסקי",
+      "ארקדי אומנסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "39342068-3d6e-4b5a-86dd-ebd02224c8dc",
@@ -4523,7 +5788,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חוה",
+    "lastName": "כהן",
+    "displayName": "חוה כהן",
+    "searchableNames": [
+      "חוה כהן",
+      "כהן חוה",
+      "חוה",
+      "כהן",
+      "חוה כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3a37acbb-6389-45d7-9e88-316f83ba7f28",
@@ -4566,7 +5842,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "Michal",
+    "lastName": "Avivi-Nahman",
+    "displayName": "Michal Avivi-Nahman",
+    "searchableNames": [
+      "Michal Avivi-Nahman",
+      "Avivi-Nahman Michal",
+      "Michal",
+      "Avivi-Nahman",
+      "Michal Avivi-Nahman"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "3a4e7e1e-90c4-48dc-bed1-e7f5b0023591",
@@ -4619,7 +5906,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תהילה",
+    "lastName": "ליטבינוב",
+    "displayName": "תהילה ליטבינוב",
+    "searchableNames": [
+      "תהילה ליטבינוב",
+      "ליטבינוב תהילה",
+      "תהילה",
+      "ליטבינוב",
+      "תהילה ליטבינוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3aa23de9-66e6-46c8-93eb-644627e51868",
@@ -4680,7 +5978,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ליאנה",
+    "lastName": "שולומוביץ",
+    "displayName": "ליאנה שולומוביץ",
+    "searchableNames": [
+      "ליאנה שולומוביץ",
+      "שולומוביץ ליאנה",
+      "ליאנה",
+      "שולומוביץ",
+      "ליאנה שולומוביץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3c0f3337-b5b9-44de-8570-54a0660ac56f",
@@ -4740,7 +6049,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אהבה יעל",
+    "lastName": "שמחוני",
+    "displayName": "אהבה יעל שמחוני",
+    "searchableNames": [
+      "אהבה יעל שמחוני",
+      "שמחוני אהבה יעל",
+      "אהבה יעל",
+      "שמחוני",
+      "אהבה יעל שמחוני"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3c4a6157-5d85-4956-92af-092aff100e0b",
@@ -4768,7 +6088,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלכס",
+    "lastName": "שמיס",
+    "displayName": "אלכס שמיס",
+    "searchableNames": [
+      "אלכס שמיס",
+      "שמיס אלכס",
+      "אלכס",
+      "שמיס",
+      "אלכס שמיס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3ced8c05-ed94-4865-9531-6e08e581164e",
@@ -4797,7 +6128,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלה",
+    "lastName": "רבודה",
+    "displayName": "אלה רבודה",
+    "searchableNames": [
+      "אלה רבודה",
+      "רבודה אלה",
+      "אלה",
+      "רבודה",
+      "אלה רבודה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3d086627-d57b-4c5c-abd4-26fee7033e34",
@@ -4855,7 +6197,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יערה",
+    "lastName": "נג'רי",
+    "displayName": "יערה נג'רי",
+    "searchableNames": [
+      "יערה נג'רי",
+      "נג'רי יערה",
+      "יערה",
+      "נג'רי",
+      "יערה נג'רי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3d108e81-7b2e-4845-9571-080a317504af",
@@ -4916,7 +6269,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אורן",
+    "lastName": "וויציג",
+    "displayName": "אורן וויציג",
+    "searchableNames": [
+      "אורן וויציג",
+      "וויציג אורן",
+      "אורן",
+      "וויציג",
+      "אורן וויציג"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3d533758-eda4-4048-bd04-7587b0e6157d",
@@ -4986,7 +6350,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רותי",
+    "lastName": "נשיא",
+    "displayName": "רותי נשיא",
+    "searchableNames": [
+      "רותי נשיא",
+      "נשיא רותי",
+      "רותי",
+      "נשיא",
+      "רותי נשיא"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3dc25766-c280-435b-ab35-ccf2cee88f9b",
@@ -5012,7 +6387,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ז'קלין",
+    "lastName": "רוזנטל",
+    "displayName": "ז'קלין רוזנטל",
+    "searchableNames": [
+      "ז'קלין רוזנטל",
+      "רוזנטל ז'קלין",
+      "ז'קלין",
+      "רוזנטל",
+      "ז'קלין רוזנטל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3e26e865-c4d5-4597-b7bd-cc16fea1137c",
@@ -5065,7 +6451,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דניאלה",
+    "lastName": "לורז",
+    "displayName": "דניאלה לורז",
+    "searchableNames": [
+      "דניאלה לורז",
+      "לורז דניאלה",
+      "דניאלה",
+      "לורז",
+      "דניאלה לורז"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "3f9ddccb-6348-47f1-aa33-fc631b98db41",
@@ -5106,7 +6503,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נתלי",
+    "lastName": "רז",
+    "displayName": "נתלי רז",
+    "searchableNames": [
+      "נתלי רז",
+      "רז נתלי",
+      "נתלי",
+      "רז",
+      "נתלי רז"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4081978b-8f18-441c-8d1d-596764f5caa9",
@@ -5165,7 +6573,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דבורה",
+    "lastName": "פסיקוב",
+    "displayName": "דבורה פסיקוב",
+    "searchableNames": [
+      "דבורה פסיקוב",
+      "פסיקוב דבורה",
+      "דבורה",
+      "פסיקוב",
+      "דבורה פסיקוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "408e1cb8-d5ac-4c29-99f8-9719ed41c25e",
@@ -5227,7 +6646,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לימור",
+    "lastName": "זיידנר",
+    "displayName": "לימור זיידנר",
+    "searchableNames": [
+      "לימור זיידנר",
+      "זיידנר לימור",
+      "לימור",
+      "זיידנר",
+      "לימור זיידנר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "41aedcac-b8f8-436e-9457-6ae071a9faca",
@@ -5289,7 +6719,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לירי",
+    "lastName": "יער",
+    "displayName": "לירי יער",
+    "searchableNames": [
+      "לירי יער",
+      "יער לירי",
+      "לירי",
+      "יער",
+      "לירי יער"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "42230c64-e5f2-4e90-af36-965ebb6ce600",
@@ -5334,7 +6775,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "FeRas",
+    "lastName": "Alamour",
+    "displayName": "FeRas Alamour",
+    "searchableNames": [
+      "FeRas Alamour",
+      "Alamour FeRas",
+      "FeRas",
+      "Alamour",
+      "FeRas Alamour"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "43f12d2b-f0dd-4c29-8ed9-3a72c88531f2",
@@ -5361,7 +6813,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ליטל",
+    "lastName": "פרי",
+    "displayName": "ליטל פרי",
+    "searchableNames": [
+      "ליטל פרי",
+      "פרי ליטל",
+      "ליטל",
+      "פרי",
+      "ליטל פרי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "44a1a660-1ad4-4173-8115-ca0518791a24",
@@ -5415,7 +6878,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ג׳רייס",
+    "lastName": "כנעאני",
+    "displayName": "ג׳רייס כנעאני",
+    "searchableNames": [
+      "ג׳רייס כנעאני",
+      "כנעאני ג׳רייס",
+      "ג׳רייס",
+      "כנעאני",
+      "ג׳רייס כנעאני"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "44d503e3-d197-4880-a3b6-73b72d271869",
@@ -5448,7 +6922,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לאה",
+    "lastName": "אטיאס",
+    "displayName": "לאה אטיאס",
+    "searchableNames": [
+      "לאה אטיאס",
+      "אטיאס לאה",
+      "לאה",
+      "אטיאס",
+      "לאה אטיאס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "45763fc3-ea85-4da1-b1fe-d53ce6c3dadd",
@@ -5521,7 +7006,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ירדן",
+    "lastName": "בן נפתלי",
+    "displayName": "ירדן בן נפתלי",
+    "searchableNames": [
+      "ירדן בן נפתלי",
+      "בן נפתלי ירדן",
+      "ירדן",
+      "בן נפתלי",
+      "ירדן בן נפתלי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "45b60037-a6e4-4928-b742-b9a495caaaec",
@@ -5551,7 +7047,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "yaniva",
+    "lastName": "kadosha",
+    "displayName": "yaniva kadosha",
+    "searchableNames": [
+      "yaniva kadosha",
+      "kadosha yaniva",
+      "yaniva",
+      "kadosha",
+      "yaniva kadosha"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "45c898e3-855c-4cb0-b0a0-dee3424defea",
@@ -5603,7 +7110,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יעל",
+    "lastName": "סטלקובסקי",
+    "displayName": "יעל סטלקובסקי",
+    "searchableNames": [
+      "יעל סטלקובסקי",
+      "סטלקובסקי יעל",
+      "יעל",
+      "סטלקובסקי",
+      "יעל סטלקובסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "46116601-62a0-45ab-80ba-c73f22ffe0c4",
@@ -5645,7 +7163,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נגם",
+    "lastName": "אליאס",
+    "displayName": "נגם אליאס",
+    "searchableNames": [
+      "נגם אליאס",
+      "אליאס נגם",
+      "נגם",
+      "אליאס",
+      "נגם אליאס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "481c8cdf-7f4b-4214-8de5-76052fc0236b",
@@ -5683,7 +7212,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עידית",
+    "lastName": "וידר",
+    "displayName": "עידית וידר",
+    "searchableNames": [
+      "עידית וידר",
+      "וידר עידית",
+      "עידית",
+      "וידר",
+      "עידית וידר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "489c415e-9aab-4f7d-afde-8adc7a2c4f8c",
@@ -5711,7 +7251,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ריטה",
+    "lastName": "סרור",
+    "displayName": "ריטה סרור",
+    "searchableNames": [
+      "ריטה סרור",
+      "סרור ריטה",
+      "ריטה",
+      "סרור",
+      "ריטה סרור"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4909b9e2-410e-40df-9e40-b71a86c17ec0",
@@ -5767,7 +7318,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "אנה",
+    "lastName": "צייטלין",
+    "displayName": "אנה צייטלין",
+    "searchableNames": [
+      "אנה צייטלין",
+      "צייטלין אנה",
+      "אנה",
+      "צייטלין",
+      "אנה צייטלין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4983d84e-9875-4322-9ea4-ac9723727925",
@@ -5813,7 +7375,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מהא",
+    "lastName": "חלף",
+    "displayName": "מהא חלף",
+    "searchableNames": [
+      "מהא חלף",
+      "חלף מהא",
+      "מהא",
+      "חלף",
+      "מהא חלף"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4b47e991-ff0a-4cd6-bb1d-d64f68f76b05",
@@ -5837,7 +7410,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סוזן",
+    "lastName": "אוסטרובסקי",
+    "displayName": "סוזן אוסטרובסקי",
+    "searchableNames": [
+      "סוזן אוסטרובסקי",
+      "אוסטרובסקי סוזן",
+      "סוזן",
+      "אוסטרובסקי",
+      "סוזן אוסטרובסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4bb530a0-a778-4b97-8afe-3b29ef552ec6",
@@ -5902,7 +7486,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מור",
+    "lastName": "קרן",
+    "displayName": "מור קרן",
+    "searchableNames": [
+      "מור קרן",
+      "קרן מור",
+      "מור",
+      "קרן",
+      "מור קרן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4c38c523-bc09-4edc-869e-cd967ebeb41c",
@@ -5929,7 +7524,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "איזבלה",
+    "lastName": "קיבלר",
+    "displayName": "איזבלה קיבלר",
+    "searchableNames": [
+      "איזבלה קיבלר",
+      "קיבלר איזבלה",
+      "איזבלה",
+      "קיבלר",
+      "איזבלה קיבלר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4c5b970b-e5ff-4ce1-9be8-e962bb3fcba4",
@@ -5953,7 +7559,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אחמד",
+    "lastName": "טאהא",
+    "displayName": "אחמד טאהא",
+    "searchableNames": [
+      "אחמד טאהא",
+      "טאהא אחמד",
+      "אחמד",
+      "טאהא",
+      "אחמד טאהא"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4cb5bc5e-49e9-4488-98df-8b2cf5a1e3e7",
@@ -6002,7 +7619,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אבראהים",
+    "lastName": "אגבאריה",
+    "displayName": "אבראהים אגבאריה",
+    "searchableNames": [
+      "אבראהים אגבאריה",
+      "אגבאריה אבראהים",
+      "אבראהים",
+      "אגבאריה",
+      "אבראהים אגבאריה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4d5d65d7-b86d-49be-90a8-98f56b55f877",
@@ -6028,7 +7656,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נדב",
+    "lastName": "אלמליח",
+    "displayName": "נדב אלמליח",
+    "searchableNames": [
+      "נדב אלמליח",
+      "אלמליח נדב",
+      "נדב",
+      "אלמליח",
+      "נדב אלמליח"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4e4c3755-3d8a-4f5a-ac53-1a80e59fede5",
@@ -6086,7 +7725,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "חרות",
+    "lastName": "יהייס",
+    "displayName": "חרות יהייס",
+    "searchableNames": [
+      "חרות יהייס",
+      "יהייס חרות",
+      "חרות",
+      "יהייס",
+      "חרות יהייס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4e658a0f-bcf7-434b-bf92-dd55f4f5be34",
@@ -6153,7 +7803,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוחמד",
+    "lastName": "מנאע",
+    "displayName": "מוחמד מנאע",
+    "searchableNames": [
+      "מוחמד מנאע",
+      "מנאע מוחמד",
+      "מוחמד",
+      "מנאע",
+      "מוחמד מנאע"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4f82767f-4447-4d7a-84af-73eda496e0d0",
@@ -6211,7 +7872,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סאהר",
+    "lastName": "אגבאריה",
+    "displayName": "סאהר אגבאריה",
+    "searchableNames": [
+      "סאהר אגבאריה",
+      "אגבאריה סאהר",
+      "סאהר",
+      "אגבאריה",
+      "סאהר אגבאריה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "4ff3be64-2a24-4382-9330-9085d8f1b45b",
@@ -6251,7 +7923,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יוסף",
+    "lastName": "חדאד",
+    "displayName": "יוסף חדאד",
+    "searchableNames": [
+      "יוסף חדאד",
+      "חדאד יוסף",
+      "יוסף",
+      "חדאד",
+      "יוסף חדאד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "504456ff-a50d-4fac-a832-8d33b7e0bb1e",
@@ -6304,7 +7987,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אנבל",
+    "lastName": "יעקבי",
+    "displayName": "אנבל יעקבי",
+    "searchableNames": [
+      "אנבל יעקבי",
+      "יעקבי אנבל",
+      "אנבל",
+      "יעקבי",
+      "אנבל יעקבי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "506f9f0f-882b-482a-826b-d4f065ac61ee",
@@ -6331,7 +8025,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לנא",
+    "lastName": "ספדי",
+    "displayName": "לנא ספדי",
+    "searchableNames": [
+      "לנא ספדי",
+      "ספדי לנא",
+      "לנא",
+      "ספדי",
+      "לנא ספדי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "516c755e-2642-488c-967e-c3f4c4b5d97d",
@@ -6369,7 +8074,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שני",
+    "lastName": "מלכין",
+    "displayName": "שני מלכין",
+    "searchableNames": [
+      "שני מלכין",
+      "מלכין שני",
+      "שני",
+      "מלכין",
+      "שני מלכין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "52b8f034-c1d4-4448-a4dd-ad536713ae45",
@@ -6396,7 +8112,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלעד",
+    "lastName": "קורן",
+    "displayName": "אלעד קורן",
+    "searchableNames": [
+      "אלעד קורן",
+      "קורן אלעד",
+      "אלעד",
+      "קורן",
+      "אלעד קורן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "52bb2474-bd09-4e0d-b1fd-f0eb8280194c",
@@ -6424,7 +8151,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מאהר",
+    "lastName": "קבהה",
+    "displayName": "מאהר קבהה",
+    "searchableNames": [
+      "מאהר קבהה",
+      "קבהה מאהר",
+      "מאהר",
+      "קבהה",
+      "מאהר קבהה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "52dd8dca-4c93-4e0c-a342-44d9b151bde6",
@@ -6478,7 +8216,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דניאל",
+    "lastName": "אבראהים",
+    "displayName": "דניאל אבראהים",
+    "searchableNames": [
+      "דניאל אבראהים",
+      "אבראהים דניאל",
+      "דניאל",
+      "אבראהים",
+      "דניאל אבראהים"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "534358b1-b4d1-49d6-b143-ba4638e751df",
@@ -6539,7 +8288,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "בטי",
+    "lastName": "כהן",
+    "displayName": "בטי כהן",
+    "searchableNames": [
+      "בטי כהן",
+      "כהן בטי",
+      "בטי",
+      "כהן",
+      "בטי כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "537257d3-b06a-4039-b2ef-62e8c0d0adcb",
@@ -6579,7 +8339,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יהונתן",
+    "lastName": "קרמר",
+    "displayName": "יהונתן קרמר",
+    "searchableNames": [
+      "יהונתן קרמר",
+      "קרמר יהונתן",
+      "יהונתן",
+      "קרמר",
+      "יהונתן קרמר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "54020434-68c1-4409-bf2b-53f730b78220",
@@ -6609,7 +8380,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ויקטוריה",
+    "lastName": "קוגן",
+    "displayName": "ויקטוריה קוגן",
+    "searchableNames": [
+      "ויקטוריה קוגן",
+      "קוגן ויקטוריה",
+      "ויקטוריה",
+      "קוגן",
+      "ויקטוריה קוגן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "540777d1-66f2-4c5d-9998-bad4d02719b9",
@@ -6662,7 +8444,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מרים",
+    "lastName": "ברמן",
+    "displayName": "מרים ברמן",
+    "searchableNames": [
+      "מרים ברמן",
+      "ברמן מרים",
+      "מרים",
+      "ברמן",
+      "מרים ברמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5516f1e3-61cd-4716-8668-b28d70c9852b",
@@ -6686,7 +8479,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "Aliza",
+    "lastName": "Rave",
+    "displayName": "Aliza Rave",
+    "searchableNames": [
+      "Aliza Rave",
+      "Rave Aliza",
+      "Aliza",
+      "Rave",
+      "Aliza Rave"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "55cbb0f0-d23e-4ef9-9e13-ed3bc1d7bad9",
@@ -6739,7 +8543,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עדיי",
+    "lastName": "כנעאן",
+    "displayName": "עדיי כנעאן",
+    "searchableNames": [
+      "עדיי כנעאן",
+      "כנעאן עדיי",
+      "עדיי",
+      "כנעאן",
+      "עדיי כנעאן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "561bc94f-c83d-436c-a64b-97f9c9fed88e",
@@ -6782,7 +8597,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עומאר",
+    "lastName": "אבו רקייק",
+    "displayName": "עומאר אבו רקייק",
+    "searchableNames": [
+      "עומאר אבו רקייק",
+      "אבו רקייק עומאר",
+      "עומאר",
+      "אבו רקייק",
+      "עומאר אבו רקייק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "571cd31b-d184-4c7b-be7a-ac3ad305c466",
@@ -6833,7 +8659,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אורית",
+    "lastName": "קרן",
+    "displayName": "אורית קרן",
+    "searchableNames": [
+      "אורית קרן",
+      "קרן אורית",
+      "אורית",
+      "קרן",
+      "אורית קרן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "58b8cfd1-96c4-420a-a497-8a26502ee842",
@@ -6880,7 +8717,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אהרון",
+    "lastName": "אברהם",
+    "displayName": "אהרון אברהם",
+    "searchableNames": [
+      "אהרון אברהם",
+      "אברהם אהרון",
+      "אהרון",
+      "אברהם",
+      "אהרון אברהם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "591e69ed-ae36-4153-85e2-aff4fe0edc5a",
@@ -6904,7 +8752,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "גאורגי",
+    "lastName": "גוליאק",
+    "displayName": "גאורגי גוליאק",
+    "searchableNames": [
+      "גאורגי גוליאק",
+      "גוליאק גאורגי",
+      "גאורגי",
+      "גוליאק",
+      "גאורגי גוליאק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5932b773-9a84-4ef3-9861-64de590cb97b",
@@ -6941,7 +8800,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רחל",
+    "lastName": "זיכרמן",
+    "displayName": "רחל זיכרמן",
+    "searchableNames": [
+      "רחל זיכרמן",
+      "זיכרמן רחל",
+      "רחל",
+      "זיכרמן",
+      "רחל זיכרמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "59398c0c-9639-4f51-a37b-19ae53763b99",
@@ -7028,7 +8898,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סיון",
+    "lastName": "תם",
+    "displayName": "סיון תם",
+    "searchableNames": [
+      "סיון תם",
+      "תם סיון",
+      "סיון",
+      "תם",
+      "סיון תם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "59482d6a-d698-4d32-a7b6-579ab822cb0e",
@@ -7089,7 +8970,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "טלי",
+    "lastName": "בר עוז",
+    "displayName": "טלי בר עוז",
+    "searchableNames": [
+      "טלי בר עוז",
+      "בר עוז טלי",
+      "טלי",
+      "בר עוז",
+      "טלי בר עוז"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "59ab8c06-9a50-421d-8bda-f773503556ed",
@@ -7131,7 +9023,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הגר",
+    "lastName": "שיין",
+    "displayName": "הגר שיין",
+    "searchableNames": [
+      "הגר שיין",
+      "שיין הגר",
+      "הגר",
+      "שיין",
+      "הגר שיין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5ab95c6a-c0ea-4c6a-92a8-0d5aaab1fa63",
@@ -7173,7 +9076,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עידן",
+    "lastName": "לזר",
+    "displayName": "עידן לזר",
+    "searchableNames": [
+      "עידן לזר",
+      "לזר עידן",
+      "עידן",
+      "לזר",
+      "עידן לזר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5ad17c01-55e1-4d43-bb35-bcbb92a71b22",
@@ -7211,7 +9125,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלה שחר",
+    "lastName": "דיאמנט",
+    "displayName": "אלה שחר דיאמנט",
+    "searchableNames": [
+      "אלה שחר דיאמנט",
+      "דיאמנט אלה שחר",
+      "אלה שחר",
+      "דיאמנט",
+      "אלה שחר דיאמנט"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5c13d7d3-5644-4e81-97a3-e96b1e8ff71f",
@@ -7250,7 +9175,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מרים",
+    "lastName": "מינץ",
+    "displayName": "מרים מינץ",
+    "searchableNames": [
+      "מרים מינץ",
+      "מינץ מרים",
+      "מרים",
+      "מינץ",
+      "מרים מינץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5c91181d-db67-478e-bc70-a1203fef0874",
@@ -7276,7 +9212,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תמר",
+    "lastName": "שלו",
+    "displayName": "תמר שלו",
+    "searchableNames": [
+      "תמר שלו",
+      "שלו תמר",
+      "תמר",
+      "שלו",
+      "תמר שלו"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5cef1252-1127-4bba-a97b-8c7826d2ed18",
@@ -7319,7 +9266,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דנה",
+    "lastName": "פוליקובסקי",
+    "displayName": "דנה פוליקובסקי",
+    "searchableNames": [
+      "דנה פוליקובסקי",
+      "פוליקובסקי דנה",
+      "דנה",
+      "פוליקובסקי",
+      "דנה פוליקובסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5e33bd26-2bda-40f0-8f74-a00c4fd90605",
@@ -7352,7 +9310,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלה",
+    "lastName": "ויפיק",
+    "displayName": "אלה ויפיק",
+    "searchableNames": [
+      "אלה ויפיק",
+      "ויפיק אלה",
+      "אלה",
+      "ויפיק",
+      "אלה ויפיק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5e4e49c1-69b7-49d4-a444-9f7dc7aa6853",
@@ -7377,7 +9346,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "קמילה",
+    "lastName": "ברקן",
+    "displayName": "קמילה ברקן",
+    "searchableNames": [
+      "קמילה ברקן",
+      "ברקן קמילה",
+      "קמילה",
+      "ברקן",
+      "קמילה ברקן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5ebcedd6-a063-4277-b2a0-d4b4d733fa3a",
@@ -7422,7 +9402,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נדין",
+    "lastName": "סורקין",
+    "displayName": "נדין סורקין",
+    "searchableNames": [
+      "נדין סורקין",
+      "סורקין נדין",
+      "נדין",
+      "סורקין",
+      "נדין סורקין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5ed0b609-2c3b-4418-91ab-8cfb7f4268f0",
@@ -7469,7 +9460,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נעמה",
+    "lastName": "תורגמן",
+    "displayName": "נעמה תורגמן",
+    "searchableNames": [
+      "נעמה תורגמן",
+      "תורגמן נעמה",
+      "נעמה",
+      "תורגמן",
+      "נעמה תורגמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "5ee6cd15-13cb-4114-913d-106b2c436bef",
@@ -7501,7 +9503,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "Nizar",
+    "lastName": "Daoud",
+    "displayName": "Nizar Daoud",
+    "searchableNames": [
+      "Nizar Daoud",
+      "Daoud Nizar",
+      "Nizar",
+      "Daoud",
+      "Nizar Daoud"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "6030834b-270e-4b0d-b4dd-d7211bd1e691",
@@ -7534,7 +9547,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מיכל",
+    "lastName": "מורג",
+    "displayName": "מיכל מורג",
+    "searchableNames": [
+      "מיכל מורג",
+      "מורג מיכל",
+      "מיכל",
+      "מורג",
+      "מיכל מורג"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "61f7853c-3d6f-4fff-a0f9-210beedc431d",
@@ -7562,7 +9586,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלבירה",
+    "lastName": "דוחובני",
+    "displayName": "אלבירה דוחובני",
+    "searchableNames": [
+      "אלבירה דוחובני",
+      "דוחובני אלבירה",
+      "אלבירה",
+      "דוחובני",
+      "אלבירה דוחובני"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6238cbbc-1b48-4bb1-b19c-0e2f48904fd9",
@@ -7647,7 +9682,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אוקסנה",
+    "lastName": "שטרנגולד",
+    "displayName": "אוקסנה שטרנגולד",
+    "searchableNames": [
+      "אוקסנה שטרנגולד",
+      "שטרנגולד אוקסנה",
+      "אוקסנה",
+      "שטרנגולד",
+      "אוקסנה שטרנגולד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "62a43d55-9696-4d2f-9fb2-9906520121c3",
@@ -7673,7 +9719,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רעות",
+    "lastName": "גמליאל",
+    "displayName": "רעות גמליאל",
+    "searchableNames": [
+      "רעות גמליאל",
+      "גמליאל רעות",
+      "רעות",
+      "גמליאל",
+      "רעות גמליאל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6319b5ac-153d-4280-81d1-c1593189f01a",
@@ -7720,7 +9777,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אליאב",
+    "lastName": "וקנין",
+    "displayName": "אליאב וקנין",
+    "searchableNames": [
+      "אליאב וקנין",
+      "וקנין אליאב",
+      "אליאב",
+      "וקנין",
+      "אליאב וקנין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6476af94-29cc-4b22-a635-dff7d0f39f0d",
@@ -7748,7 +9816,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "פאדי",
+    "lastName": "נאטור",
+    "displayName": "פאדי נאטור",
+    "searchableNames": [
+      "פאדי נאטור",
+      "נאטור פאדי",
+      "פאדי",
+      "נאטור",
+      "פאדי נאטור"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "64b77b7f-63d2-49a0-9570-a533f81125cf",
@@ -7779,7 +9858,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לירון",
+    "lastName": "למפרט",
+    "displayName": "לירון למפרט",
+    "searchableNames": [
+      "לירון למפרט",
+      "למפרט לירון",
+      "לירון",
+      "למפרט",
+      "לירון למפרט"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "665d1a0a-48df-4f7d-b76c-9b144be754a7",
@@ -7841,7 +9931,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דוד",
+    "lastName": "מורטוב",
+    "displayName": "דוד מורטוב",
+    "searchableNames": [
+      "דוד מורטוב",
+      "מורטוב דוד",
+      "דוד",
+      "מורטוב",
+      "דוד מורטוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6685c2b6-6aa0-4956-b164-1faeb2543c6a",
@@ -7891,7 +9992,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "Elad",
+    "lastName": "Levy",
+    "displayName": "Elad Levy",
+    "searchableNames": [
+      "Elad Levy",
+      "Levy Elad",
+      "Elad",
+      "Levy",
+      "Elad Levy"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "67032432-c3c0-4d12-af5f-6be11f877bee",
@@ -7957,7 +10069,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "ויקי",
+    "lastName": "בנין",
+    "displayName": "ויקי בנין",
+    "searchableNames": [
+      "ויקי בנין",
+      "בנין ויקי",
+      "ויקי",
+      "בנין",
+      "ויקי בנין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "67e4c1cf-141e-4cff-a952-c92956afa70e",
@@ -8007,7 +10130,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עלי",
+    "lastName": "עיאשי",
+    "displayName": "עלי עיאשי",
+    "searchableNames": [
+      "עלי עיאשי",
+      "עיאשי עלי",
+      "עלי",
+      "עיאשי",
+      "עלי עיאשי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "67f47168-61b2-47bf-a1a4-de4c65b3e1de",
@@ -8036,7 +10170,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שרית",
+    "lastName": "ליאני אדלר",
+    "displayName": "שרית ליאני אדלר",
+    "searchableNames": [
+      "שרית ליאני אדלר",
+      "ליאני אדלר שרית",
+      "שרית",
+      "ליאני אדלר",
+      "שרית ליאני אדלר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "69069920-41f7-49b2-bc53-dd2f972237be",
@@ -8060,7 +10205,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חבצלת",
+    "lastName": "שלוש",
+    "displayName": "חבצלת שלוש",
+    "searchableNames": [
+      "חבצלת שלוש",
+      "שלוש חבצלת",
+      "חבצלת",
+      "שלוש",
+      "חבצלת שלוש"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "69837344-1751-4cf2-9af3-55cec0734b9d",
@@ -8102,7 +10258,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מאיה",
+    "lastName": "אלדן",
+    "displayName": "מאיה אלדן",
+    "searchableNames": [
+      "מאיה אלדן",
+      "אלדן מאיה",
+      "מאיה",
+      "אלדן",
+      "מאיה אלדן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6984f194-8feb-44f9-a72e-eeaabf6891e1",
@@ -8138,7 +10305,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רוחמה",
+    "lastName": "פוזנר גבירץ",
+    "displayName": "רוחמה פוזנר גבירץ",
+    "searchableNames": [
+      "רוחמה פוזנר גבירץ",
+      "פוזנר גבירץ רוחמה",
+      "רוחמה",
+      "פוזנר גבירץ",
+      "רוחמה פוזנר גבירץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "69910442-9ed3-4e9e-819b-32f7c887404a",
@@ -8178,7 +10356,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "טליה",
+    "lastName": "טולידאנו",
+    "displayName": "טליה טולידאנו",
+    "searchableNames": [
+      "טליה טולידאנו",
+      "טולידאנו טליה",
+      "טליה",
+      "טולידאנו",
+      "טליה טולידאנו"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "69a82b2f-b7c0-4173-b31d-b6b07b291f57",
@@ -8215,7 +10404,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סבטלנה",
+    "lastName": "שפק",
+    "displayName": "סבטלנה שפק",
+    "searchableNames": [
+      "סבטלנה שפק",
+      "שפק סבטלנה",
+      "סבטלנה",
+      "שפק",
+      "סבטלנה שפק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6a60a320-c1a7-4913-aec8-9f94a01cae4a",
@@ -8250,7 +10450,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נטע שפרה",
+    "lastName": "קשני",
+    "displayName": "נטע שפרה קשני",
+    "searchableNames": [
+      "נטע שפרה קשני",
+      "קשני נטע שפרה",
+      "נטע שפרה",
+      "קשני",
+      "נטע שפרה קשני"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6aeebd6e-97bb-4ad8-98c8-8ce7deadc178",
@@ -8305,7 +10516,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "רונית",
+    "lastName": "איזנקרפט",
+    "displayName": "רונית איזנקרפט",
+    "searchableNames": [
+      "רונית איזנקרפט",
+      "איזנקרפט רונית",
+      "רונית",
+      "איזנקרפט",
+      "רונית איזנקרפט"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6b1228fb-c5f1-4f1f-8795-e1cb4f494faf",
@@ -8346,7 +10568,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עלאא",
+    "lastName": "חורי",
+    "displayName": "עלאא חורי",
+    "searchableNames": [
+      "עלאא חורי",
+      "חורי עלאא",
+      "עלאא",
+      "חורי",
+      "עלאא חורי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6b4d62f5-26ff-4a82-bcd3-63dce67e2282",
@@ -8370,7 +10603,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רויטל",
+    "lastName": "פיילייב",
+    "displayName": "רויטל פיילייב",
+    "searchableNames": [
+      "רויטל פיילייב",
+      "פיילייב רויטל",
+      "רויטל",
+      "פיילייב",
+      "רויטל פיילייב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6b74c90b-14a9-4324-8fc6-945acad61c6d",
@@ -8422,7 +10666,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תאמר",
+    "lastName": "חמוד",
+    "displayName": "תאמר חמוד",
+    "searchableNames": [
+      "תאמר חמוד",
+      "חמוד תאמר",
+      "תאמר",
+      "חמוד",
+      "תאמר חמוד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6bf4d662-ad3e-409e-ad4c-df8bcb467f40",
@@ -8451,7 +10706,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "צפנת",
+    "lastName": "נורמן",
+    "displayName": "צפנת נורמן",
+    "searchableNames": [
+      "צפנת נורמן",
+      "נורמן צפנת",
+      "צפנת",
+      "נורמן",
+      "צפנת נורמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6cc1d3a8-2b23-4a92-ba0e-8909b7d8eb4a",
@@ -8479,7 +10745,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "משהור",
+    "lastName": "חשאן",
+    "displayName": "משהור חשאן",
+    "searchableNames": [
+      "משהור חשאן",
+      "חשאן משהור",
+      "משהור",
+      "חשאן",
+      "משהור חשאן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6cdb2fc2-ba24-4714-9de9-664ae6b7166c",
@@ -8539,7 +10816,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לילך",
+    "lastName": "כסיף",
+    "displayName": "לילך כסיף",
+    "searchableNames": [
+      "לילך כסיף",
+      "כסיף לילך",
+      "לילך",
+      "כסיף",
+      "לילך כסיף"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6e00d216-68ba-4deb-bd74-a511564a3f54",
@@ -8576,7 +10864,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חנה",
+    "lastName": "לוי",
+    "displayName": "חנה לוי",
+    "searchableNames": [
+      "חנה לוי",
+      "לוי חנה",
+      "חנה",
+      "לוי",
+      "חנה לוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6e14d2ef-ebcc-4b1f-bef2-6f226835b037",
@@ -8642,7 +10941,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הדר",
+    "lastName": "ברוך",
+    "displayName": "הדר ברוך",
+    "searchableNames": [
+      "הדר ברוך",
+      "ברוך הדר",
+      "הדר",
+      "ברוך",
+      "הדר ברוך"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6e2db07c-9e30-4611-9523-bff7e1783ee5",
@@ -8686,7 +10996,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אורלי",
+    "lastName": "גיטמן",
+    "displayName": "אורלי גיטמן",
+    "searchableNames": [
+      "אורלי גיטמן",
+      "גיטמן אורלי",
+      "אורלי",
+      "גיטמן",
+      "אורלי גיטמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6ef19e6e-da45-4fe1-b5e2-97ad3f79e27b",
@@ -8718,7 +11039,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חגית",
+    "lastName": "גבעתי",
+    "displayName": "חגית גבעתי",
+    "searchableNames": [
+      "חגית גבעתי",
+      "גבעתי חגית",
+      "חגית",
+      "גבעתי",
+      "חגית גבעתי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6efd60f2-d60f-4a36-bbf9-dee277776711",
@@ -8745,7 +11077,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עמית",
+    "lastName": "שוקרון",
+    "displayName": "עמית שוקרון",
+    "searchableNames": [
+      "עמית שוקרון",
+      "שוקרון עמית",
+      "עמית",
+      "שוקרון",
+      "עמית שוקרון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "6f733862-4974-4602-ac05-7c1f2295ad53",
@@ -8769,7 +11112,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רותם",
+    "lastName": "שם טוב",
+    "displayName": "רותם שם טוב",
+    "searchableNames": [
+      "רותם שם טוב",
+      "שם טוב רותם",
+      "רותם",
+      "שם טוב",
+      "רותם שם טוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "70ef6ced-a2ad-4322-afb4-270393c96b7e",
@@ -8796,7 +11150,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חיה",
+    "lastName": "לוי",
+    "displayName": "חיה לוי",
+    "searchableNames": [
+      "חיה לוי",
+      "לוי חיה",
+      "חיה",
+      "לוי",
+      "חיה לוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "712a5cfd-aeea-40b9-b3a8-408a67088f83",
@@ -8831,7 +11196,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ענבל",
+    "lastName": "איזמירלי",
+    "displayName": "ענבל איזמירלי",
+    "searchableNames": [
+      "ענבל איזמירלי",
+      "איזמירלי ענבל",
+      "ענבל",
+      "איזמירלי",
+      "ענבל איזמירלי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "722dd81e-5e91-4f9b-8984-dca9afa89739",
@@ -8855,7 +11231,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מיכל",
+    "lastName": "ארז",
+    "displayName": "מיכל ארז",
+    "searchableNames": [
+      "מיכל ארז",
+      "ארז מיכל",
+      "מיכל",
+      "ארז",
+      "מיכל ארז"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "72ead15b-c91f-42a9-9bef-1d7c19b9968f",
@@ -8921,7 +11308,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עטרה",
+    "lastName": "חי",
+    "displayName": "עטרה חי",
+    "searchableNames": [
+      "עטרה חי",
+      "חי עטרה",
+      "עטרה",
+      "חי",
+      "עטרה חי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "732c1b13-5e1b-4dbd-81e0-b1ee282d9242",
@@ -8967,7 +11365,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ליהיא",
+    "lastName": "איילון כהן",
+    "displayName": "ליהיא איילון כהן",
+    "searchableNames": [
+      "ליהיא איילון כהן",
+      "איילון כהן ליהיא",
+      "ליהיא",
+      "איילון כהן",
+      "ליהיא איילון כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "73a24fb0-acb8-4956-949f-50696f801894",
@@ -9005,7 +11414,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יערה",
+    "lastName": "ארוך אילון",
+    "displayName": "יערה ארוך אילון",
+    "searchableNames": [
+      "יערה ארוך אילון",
+      "ארוך אילון יערה",
+      "יערה",
+      "ארוך אילון",
+      "יערה ארוך אילון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "747d6f12-3cd6-49ab-a79f-daba36118478",
@@ -9073,7 +11493,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אנה",
+    "lastName": "בלצקי",
+    "displayName": "אנה בלצקי",
+    "searchableNames": [
+      "אנה בלצקי",
+      "בלצקי אנה",
+      "אנה",
+      "בלצקי",
+      "אנה בלצקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "75df0325-677c-415d-a7cb-ca47030b5d54",
@@ -9116,7 +11547,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "וולא",
+    "lastName": "אבומוך",
+    "displayName": "וולא אבומוך",
+    "searchableNames": [
+      "וולא אבומוך",
+      "אבומוך וולא",
+      "וולא",
+      "אבומוך",
+      "וולא אבומוך"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "79c2a99b-807e-436b-969b-2401d5aef5bb",
@@ -9148,7 +11590,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ליאור",
+    "lastName": "בילגוראי",
+    "displayName": "ליאור בילגוראי",
+    "searchableNames": [
+      "ליאור בילגוראי",
+      "בילגוראי ליאור",
+      "ליאור",
+      "בילגוראי",
+      "ליאור בילגוראי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "7a00f586-0267-485c-bc37-f4c8e359ea8b",
@@ -9179,7 +11632,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלעד",
+    "lastName": "סורקין",
+    "displayName": "אלעד סורקין",
+    "searchableNames": [
+      "אלעד סורקין",
+      "סורקין אלעד",
+      "אלעד",
+      "סורקין",
+      "אלעד סורקין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "7bd82675-23c3-4dd6-bb6a-b1726194ae35",
@@ -9215,7 +11679,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוניר",
+    "lastName": "ריזק",
+    "displayName": "מוניר ריזק",
+    "searchableNames": [
+      "מוניר ריזק",
+      "ריזק מוניר",
+      "מוניר",
+      "ריזק",
+      "מוניר ריזק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "7c2ffd33-c427-43bc-bc40-6927c7c977fa",
@@ -9264,7 +11739,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דיאנה",
+    "lastName": "אלאייב",
+    "displayName": "דיאנה אלאייב",
+    "searchableNames": [
+      "דיאנה אלאייב",
+      "אלאייב דיאנה",
+      "דיאנה",
+      "אלאייב",
+      "דיאנה אלאייב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "7cc2f9a3-ed5c-41b0-bbab-ce33215b2678",
@@ -9291,7 +11777,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אוסאמה",
+    "lastName": "חדאד",
+    "displayName": "אוסאמה חדאד",
+    "searchableNames": [
+      "אוסאמה חדאד",
+      "חדאד אוסאמה",
+      "אוסאמה",
+      "חדאד",
+      "אוסאמה חדאד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "7ce6df25-017d-4f46-9245-a26d45f9a86c",
@@ -9347,7 +11844,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מקס",
+    "lastName": "ציסין",
+    "displayName": "מקס ציסין",
+    "searchableNames": [
+      "מקס ציסין",
+      "ציסין מקס",
+      "מקס",
+      "ציסין",
+      "מקס ציסין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "7d43ebab-0fd6-4be8-8bbc-3cf8296b51a3",
@@ -9389,7 +11897,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מילה",
+    "lastName": "גולדפרב וולגין",
+    "displayName": "מילה גולדפרב וולגין",
+    "searchableNames": [
+      "מילה גולדפרב וולגין",
+      "גולדפרב וולגין מילה",
+      "מילה",
+      "גולדפרב וולגין",
+      "מילה גולדפרב וולגין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "7d7b0340-850d-45e5-af7a-cf8c8021e9cf",
@@ -9423,7 +11942,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ויקטוריה",
+    "lastName": "משה",
+    "displayName": "ויקטוריה משה",
+    "searchableNames": [
+      "ויקטוריה משה",
+      "משה ויקטוריה",
+      "ויקטוריה",
+      "משה",
+      "ויקטוריה משה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "7da2512a-e767-40cd-ace9-b6acc9cd0978",
@@ -9453,7 +11983,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ליליה",
+    "lastName": "אנגל",
+    "displayName": "ליליה אנגל",
+    "searchableNames": [
+      "ליליה אנגל",
+      "אנגל ליליה",
+      "ליליה",
+      "אנגל",
+      "ליליה אנגל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "7f19d293-cb17-48b7-8ea4-634558252f8c",
@@ -9496,7 +12037,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "פנינה",
+    "lastName": "ראובני",
+    "displayName": "פנינה ראובני",
+    "searchableNames": [
+      "פנינה ראובני",
+      "ראובני פנינה",
+      "פנינה",
+      "ראובני",
+      "פנינה ראובני"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "80a5be65-a314-4910-a20f-3007ace5ac07",
@@ -9537,7 +12089,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נועה",
+    "lastName": "שושני",
+    "displayName": "נועה שושני",
+    "searchableNames": [
+      "נועה שושני",
+      "שושני נועה",
+      "נועה",
+      "שושני",
+      "נועה שושני"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8114bcd7-f6f9-46ab-87ad-8bca3c71f1c4",
@@ -9568,7 +12131,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לודמילה",
+    "lastName": "אברמוב",
+    "displayName": "לודמילה אברמוב",
+    "searchableNames": [
+      "לודמילה אברמוב",
+      "אברמוב לודמילה",
+      "לודמילה",
+      "אברמוב",
+      "לודמילה אברמוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "816c05b7-2690-4251-943b-167e30a76537",
@@ -9596,7 +12170,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נדיה",
+    "lastName": "טולמסוב רגב",
+    "displayName": "נדיה טולמסוב רגב",
+    "searchableNames": [
+      "נדיה טולמסוב רגב",
+      "טולמסוב רגב נדיה",
+      "נדיה",
+      "טולמסוב רגב",
+      "נדיה טולמסוב רגב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8291fefa-f62a-4308-943c-7c3db36579a1",
@@ -9625,7 +12210,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יבגניה",
+    "lastName": "ולדמן",
+    "displayName": "יבגניה ולדמן",
+    "searchableNames": [
+      "יבגניה ולדמן",
+      "ולדמן יבגניה",
+      "יבגניה",
+      "ולדמן",
+      "יבגניה ולדמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "82e7be7f-e6de-4776-aa70-42e7089c2a2d",
@@ -9666,7 +12262,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סאמר",
+    "lastName": "גואלנה",
+    "displayName": "סאמר גואלנה",
+    "searchableNames": [
+      "סאמר גואלנה",
+      "גואלנה סאמר",
+      "סאמר",
+      "גואלנה",
+      "סאמר גואלנה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "83861ed7-5f2a-45c1-803f-40916112cc50",
@@ -9694,7 +12301,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רוני",
+    "lastName": "אדלר",
+    "displayName": "רוני אדלר",
+    "searchableNames": [
+      "רוני אדלר",
+      "אדלר רוני",
+      "רוני",
+      "אדלר",
+      "רוני אדלר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "848c9dd7-0e6a-4e94-9535-1a00b204b650",
@@ -9758,7 +12376,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "מוריה",
+    "lastName": "עמאר",
+    "displayName": "מוריה עמאר",
+    "searchableNames": [
+      "מוריה עמאר",
+      "עמאר מוריה",
+      "מוריה",
+      "עמאר",
+      "מוריה עמאר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "84c711a9-533f-4328-aa9a-2fc8fd4f3de3",
@@ -9795,7 +12424,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "צופיה",
+    "lastName": "כהן",
+    "displayName": "צופיה כהן",
+    "searchableNames": [
+      "צופיה כהן",
+      "כהן צופיה",
+      "צופיה",
+      "כהן",
+      "צופיה כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "856457c9-bba0-41f2-b99a-ee2870287d38",
@@ -9839,7 +12479,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אסתר",
+    "lastName": "רחימוב",
+    "displayName": "אסתר רחימוב",
+    "searchableNames": [
+      "אסתר רחימוב",
+      "רחימוב אסתר",
+      "אסתר",
+      "רחימוב",
+      "אסתר רחימוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "856dbca8-57b1-45c5-b7f7-f5057921122b",
@@ -9863,7 +12514,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלה שירי",
+    "lastName": "אזבנד",
+    "displayName": "אלה שירי אזבנד",
+    "searchableNames": [
+      "אלה שירי אזבנד",
+      "אזבנד אלה שירי",
+      "אלה שירי",
+      "אזבנד",
+      "אלה שירי אזבנד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "86ae65f9-8ee8-4a59-b0f0-abbbd88339a8",
@@ -9930,7 +12592,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מרה",
+    "lastName": "גרינברג",
+    "displayName": "מרה גרינברג",
+    "searchableNames": [
+      "מרה גרינברג",
+      "גרינברג מרה",
+      "מרה",
+      "גרינברג",
+      "מרה גרינברג"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "87e47a26-357a-4f61-a832-b8b1c4abb703",
@@ -9992,7 +12665,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אסנת",
+    "lastName": "זוהר",
+    "displayName": "אסנת זוהר",
+    "searchableNames": [
+      "אסנת זוהר",
+      "זוהר אסנת",
+      "אסנת",
+      "זוהר",
+      "אסנת זוהר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8972ae27-f9ca-4004-94e2-a96f62cecd04",
@@ -10028,7 +12712,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לימור",
+    "lastName": "חיימוב",
+    "displayName": "לימור חיימוב",
+    "searchableNames": [
+      "לימור חיימוב",
+      "חיימוב לימור",
+      "לימור",
+      "חיימוב",
+      "לימור חיימוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "897b7852-cd1d-4135-af2a-4ced6588039f",
@@ -10061,7 +12756,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מרב",
+    "lastName": "פינקלשטיין",
+    "displayName": "מרב פינקלשטיין",
+    "searchableNames": [
+      "מרב פינקלשטיין",
+      "פינקלשטיין מרב",
+      "מרב",
+      "פינקלשטיין",
+      "מרב פינקלשטיין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8a7e01e1-3793-4d1e-a081-c7a444268b19",
@@ -10093,7 +12799,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עודד",
+    "lastName": "משולם",
+    "displayName": "עודד משולם",
+    "searchableNames": [
+      "עודד משולם",
+      "משולם עודד",
+      "עודד",
+      "משולם",
+      "עודד משולם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8acc14e4-e715-4e1a-9575-f0e2a3454a99",
@@ -10125,7 +12842,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חנה",
+    "lastName": "משולם",
+    "displayName": "חנה משולם",
+    "searchableNames": [
+      "חנה משולם",
+      "משולם חנה",
+      "חנה",
+      "משולם",
+      "חנה משולם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8b487680-f05a-429a-ab44-2ed6993e227a",
@@ -10193,7 +12921,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "איילת",
+    "lastName": "יעקב",
+    "displayName": "איילת יעקב",
+    "searchableNames": [
+      "איילת יעקב",
+      "יעקב איילת",
+      "איילת",
+      "יעקב",
+      "איילת יעקב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8c639a31-bc51-4615-8731-af040c1bdc2f",
@@ -10224,7 +12963,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דנה",
+    "lastName": "דנה",
+    "displayName": "דנה דנה",
+    "searchableNames": [
+      "דנה דנה",
+      "דנה דנה",
+      "דנה",
+      "דנה",
+      "דנה דנה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8c743cf8-4d4a-4a8d-912f-4fa8bdc6374c",
@@ -10258,7 +13008,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אנטון",
+    "lastName": "אמסיס",
+    "displayName": "אנטון אמסיס",
+    "searchableNames": [
+      "אנטון אמסיס",
+      "אמסיס אנטון",
+      "אנטון",
+      "אמסיס",
+      "אנטון אמסיס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8d84486a-2724-4625-abe4-cfa877454424",
@@ -10292,7 +13053,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אסף",
+    "lastName": "כוכבי",
+    "displayName": "אסף כוכבי",
+    "searchableNames": [
+      "אסף כוכבי",
+      "כוכבי אסף",
+      "אסף",
+      "כוכבי",
+      "אסף כוכבי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "8f404d3a-1080-4e97-a30d-36fe44d2ecc9",
@@ -10327,7 +13099,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רלי",
+    "lastName": "זר כבוד",
+    "displayName": "רלי זר כבוד",
+    "searchableNames": [
+      "רלי זר כבוד",
+      "זר כבוד רלי",
+      "רלי",
+      "זר כבוד",
+      "רלי זר כבוד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "90508ccb-1b8b-49e1-b4e7-d22c5d587947",
@@ -10354,7 +13137,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מירב",
+    "lastName": "בן דוד",
+    "displayName": "מירב בן דוד",
+    "searchableNames": [
+      "מירב בן דוד",
+      "בן דוד מירב",
+      "מירב",
+      "בן דוד",
+      "מירב בן דוד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9078bbe1-9041-4d00-8c0a-1a6a919f94c5",
@@ -10413,7 +13207,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שני",
+    "lastName": "צורף",
+    "displayName": "שני צורף",
+    "searchableNames": [
+      "שני צורף",
+      "צורף שני",
+      "שני",
+      "צורף",
+      "שני צורף"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "908cc936-9ab2-4eb8-be40-1e7a72cf3913",
@@ -10461,7 +13266,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ג׳נא",
+    "lastName": "אבופול",
+    "displayName": "ג׳נא אבופול",
+    "searchableNames": [
+      "ג׳נא אבופול",
+      "אבופול ג׳נא",
+      "ג׳נא",
+      "אבופול",
+      "ג׳נא אבופול"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9128230a-f59e-4fb3-9295-6b31ae33dfc4",
@@ -10519,7 +13335,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "כפיר",
+    "lastName": "כהן",
+    "displayName": "כפיר כהן",
+    "searchableNames": [
+      "כפיר כהן",
+      "כהן כפיר",
+      "כפיר",
+      "כהן",
+      "כפיר כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "912dd8c2-e00a-4052-8b13-19e159e94b08",
@@ -10543,7 +13370,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אימאם",
+    "lastName": "דעאיפה",
+    "displayName": "אימאם דעאיפה",
+    "searchableNames": [
+      "אימאם דעאיפה",
+      "דעאיפה אימאם",
+      "אימאם",
+      "דעאיפה",
+      "אימאם דעאיפה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "912ef874-b47b-498f-a6aa-8c7c6c51882a",
@@ -10584,7 +13422,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אנה",
+    "lastName": "סימקין",
+    "displayName": "אנה סימקין",
+    "searchableNames": [
+      "אנה סימקין",
+      "סימקין אנה",
+      "אנה",
+      "סימקין",
+      "אנה סימקין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9199374c-34e0-4084-a39d-604ba0c0adb7",
@@ -10633,7 +13482,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דורית",
+    "lastName": "שוויצר",
+    "displayName": "דורית שוויצר",
+    "searchableNames": [
+      "דורית שוויצר",
+      "שוויצר דורית",
+      "דורית",
+      "שוויצר",
+      "דורית שוויצר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "91df8100-7183-4585-ac6e-0432228565f3",
@@ -10674,7 +13534,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שרה",
+    "lastName": "בביאן/וורצמן",
+    "displayName": "שרה בביאן/וורצמן",
+    "searchableNames": [
+      "שרה בביאן/וורצמן",
+      "בביאן/וורצמן שרה",
+      "שרה",
+      "בביאן/וורצמן",
+      "שרה בביאן/וורצמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "932c9df0-f6a8-4b1f-8e06-72e55ed61e1b",
@@ -10713,7 +13584,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יזן",
+    "lastName": "קאדרי",
+    "displayName": "יזן קאדרי",
+    "searchableNames": [
+      "יזן קאדרי",
+      "קאדרי יזן",
+      "יזן",
+      "קאדרי",
+      "יזן קאדרי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "935b3fb5-b1fe-4d7b-a0d4-8620af9cdb05",
@@ -10759,7 +13641,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יבגניה",
+    "lastName": "אינגלזי",
+    "displayName": "יבגניה אינגלזי",
+    "searchableNames": [
+      "יבגניה אינגלזי",
+      "אינגלזי יבגניה",
+      "יבגניה",
+      "אינגלזי",
+      "יבגניה אינגלזי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "93be9f4a-04b1-48d1-a5e1-321563f03ba4",
@@ -10793,7 +13686,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חליל",
+    "lastName": "גזאוי",
+    "displayName": "חליל גזאוי",
+    "searchableNames": [
+      "חליל גזאוי",
+      "גזאוי חליל",
+      "חליל",
+      "גזאוי",
+      "חליל גזאוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9438795f-2606-47f9-8aa1-2a21b2d6f85c",
@@ -10817,7 +13721,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נינה",
+    "lastName": "מרג'יה שוורץ",
+    "displayName": "נינה מרג'יה שוורץ",
+    "searchableNames": [
+      "נינה מרג'יה שוורץ",
+      "מרג'יה שוורץ נינה",
+      "נינה",
+      "מרג'יה שוורץ",
+      "נינה מרג'יה שוורץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "94ea7f6a-9aa6-4301-8b16-f65efd83be2e",
@@ -10843,7 +13758,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "פואז",
+    "lastName": "סואעד",
+    "displayName": "פואז סואעד",
+    "searchableNames": [
+      "פואז סואעד",
+      "סואעד פואז",
+      "פואז",
+      "סואעד",
+      "פואז סואעד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9601f9ad-c5d5-4596-8ad9-7d30bdcd3749",
@@ -10884,7 +13810,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עדי",
+    "lastName": "סרסור",
+    "displayName": "עדי סרסור",
+    "searchableNames": [
+      "עדי סרסור",
+      "סרסור עדי",
+      "עדי",
+      "סרסור",
+      "עדי סרסור"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "96848384-472a-4fab-8ee7-5ccb2f8066d0",
@@ -10943,7 +13880,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוחמד",
+    "lastName": "גבארין",
+    "displayName": "מוחמד גבארין",
+    "searchableNames": [
+      "מוחמד גבארין",
+      "גבארין מוחמד",
+      "מוחמד",
+      "גבארין",
+      "מוחמד גבארין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "96b1ba87-a629-4f0f-a74c-ecb4b7e63345",
@@ -10972,7 +13920,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלכסנדרה",
+    "lastName": "מוקובנינה",
+    "displayName": "אלכסנדרה מוקובנינה",
+    "searchableNames": [
+      "אלכסנדרה מוקובנינה",
+      "מוקובנינה אלכסנדרה",
+      "אלכסנדרה",
+      "מוקובנינה",
+      "אלכסנדרה מוקובנינה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "96e2738b-b255-473d-9ed1-9ad48a3f2f8f",
@@ -10997,7 +13956,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יעל",
+    "lastName": "לוין",
+    "displayName": "יעל לוין",
+    "searchableNames": [
+      "יעל לוין",
+      "לוין יעל",
+      "יעל",
+      "לוין",
+      "יעל לוין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9728e632-090f-4d98-86da-67a981a5d2c0",
@@ -11082,7 +14052,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יעל",
+    "lastName": "לנג",
+    "displayName": "יעל לנג",
+    "searchableNames": [
+      "יעל לנג",
+      "לנג יעל",
+      "יעל",
+      "לנג",
+      "יעל לנג"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "973603dc-3c5c-433e-bca1-80ae123a0098",
@@ -11138,7 +14119,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אתי",
+    "lastName": "רביבו",
+    "displayName": "אתי רביבו",
+    "searchableNames": [
+      "אתי רביבו",
+      "רביבו אתי",
+      "אתי",
+      "רביבו",
+      "אתי רביבו"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "97e3a843-cb67-42cd-a8ea-902cfa993cbf",
@@ -11207,7 +14199,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "בתיה",
+    "lastName": "אביב",
+    "displayName": "בתיה אביב",
+    "searchableNames": [
+      "בתיה אביב",
+      "אביב בתיה",
+      "בתיה",
+      "אביב",
+      "בתיה אביב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "97ff12f1-16db-4765-87ad-74ca75c52187",
@@ -11242,7 +14245,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חני",
+    "lastName": "רוטשטיין",
+    "displayName": "חני רוטשטיין",
+    "searchableNames": [
+      "חני רוטשטיין",
+      "רוטשטיין חני",
+      "חני",
+      "רוטשטיין",
+      "חני רוטשטיין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9823d5da-4640-4e49-bd94-d4e47c9986c0",
@@ -11273,7 +14287,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דיאנה",
+    "lastName": "בלס",
+    "displayName": "דיאנה בלס",
+    "searchableNames": [
+      "דיאנה בלס",
+      "בלס דיאנה",
+      "דיאנה",
+      "בלס",
+      "דיאנה בלס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "98ab277e-5ef7-49af-b07b-4424b6cddb24",
@@ -11331,7 +14356,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ליאת",
+    "lastName": "סבתי",
+    "displayName": "ליאת סבתי",
+    "searchableNames": [
+      "ליאת סבתי",
+      "סבתי ליאת",
+      "ליאת",
+      "סבתי",
+      "ליאת סבתי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9a4548f2-965a-48ae-b22f-3a46dd623ca1",
@@ -11368,7 +14404,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "טארק",
+    "lastName": "אבו פול",
+    "displayName": "טארק אבו פול",
+    "searchableNames": [
+      "טארק אבו פול",
+      "אבו פול טארק",
+      "טארק",
+      "אבו פול",
+      "טארק אבו פול"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9a518e24-301b-42a1-b13b-4f173c96aa3c",
@@ -11415,7 +14462,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עדן",
+    "lastName": "קורסונסקי",
+    "displayName": "עדן קורסונסקי",
+    "searchableNames": [
+      "עדן קורסונסקי",
+      "קורסונסקי עדן",
+      "עדן",
+      "קורסונסקי",
+      "עדן קורסונסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9aa2a370-d7f7-46e7-8312-aa8be0ac039a",
@@ -11448,7 +14506,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נילי",
+    "lastName": "רובין",
+    "displayName": "נילי רובין",
+    "searchableNames": [
+      "נילי רובין",
+      "רובין נילי",
+      "נילי",
+      "רובין",
+      "נילי רובין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9b4804f6-bf5e-4fb5-b5c5-c43ec03a7694",
@@ -11478,7 +14547,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דינה",
+    "lastName": "יאסין",
+    "displayName": "דינה יאסין",
+    "searchableNames": [
+      "דינה יאסין",
+      "יאסין דינה",
+      "דינה",
+      "יאסין",
+      "דינה יאסין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9b487976-f428-48b0-91be-8defdab34a98",
@@ -11502,7 +14582,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נעמה",
+    "lastName": "טל גוז",
+    "displayName": "נעמה טל גוז",
+    "searchableNames": [
+      "נעמה טל גוז",
+      "טל גוז נעמה",
+      "נעמה",
+      "טל גוז",
+      "נעמה טל גוז"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9bb5761c-c567-40c8-8a21-cd50d20b995e",
@@ -11556,7 +14647,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "מאיה",
+    "lastName": "אללוף",
+    "displayName": "מאיה אללוף",
+    "searchableNames": [
+      "מאיה אללוף",
+      "אללוף מאיה",
+      "מאיה",
+      "אללוף",
+      "מאיה אללוף"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9e335338-7c1b-4f8f-b320-dc95dabfab57",
@@ -11627,7 +14729,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אורטל",
+    "lastName": "צוקרל",
+    "displayName": "אורטל צוקרל",
+    "searchableNames": [
+      "אורטל צוקרל",
+      "צוקרל אורטל",
+      "אורטל",
+      "צוקרל",
+      "אורטל צוקרל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9e888a37-0b94-48e7-aac2-89aa231b4322",
@@ -11675,7 +14788,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "Alona",
+    "lastName": "Baum",
+    "displayName": "Alona Baum",
+    "searchableNames": [
+      "Alona Baum",
+      "Baum Alona",
+      "Alona",
+      "Baum",
+      "Alona Baum"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "9f091108-847f-4b74-bfb9-6e8dda9f14be",
@@ -11715,7 +14839,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מרינה",
+    "lastName": "גרינברג צפריר",
+    "displayName": "מרינה גרינברג צפריר",
+    "searchableNames": [
+      "מרינה גרינברג צפריר",
+      "גרינברג צפריר מרינה",
+      "מרינה",
+      "גרינברג צפריר",
+      "מרינה גרינברג צפריר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9f618f53-6ad6-4c44-b243-94b6d5401c25",
@@ -11764,7 +14899,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלמוג",
+    "lastName": "כהן",
+    "displayName": "אלמוג כהן",
+    "searchableNames": [
+      "אלמוג כהן",
+      "כהן אלמוג",
+      "אלמוג",
+      "כהן",
+      "אלמוג כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "9fa15b98-d20f-4492-ac66-5aa349295d91",
@@ -11800,7 +14946,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מתן",
+    "lastName": "ניצקי",
+    "displayName": "מתן ניצקי",
+    "searchableNames": [
+      "מתן ניצקי",
+      "ניצקי מתן",
+      "מתן",
+      "ניצקי",
+      "מתן ניצקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a02ce659-9efb-4db1-8f54-70a8afe848dd",
@@ -11866,7 +15023,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יוספית",
+    "lastName": "משה",
+    "displayName": "יוספית משה",
+    "searchableNames": [
+      "יוספית משה",
+      "משה יוספית",
+      "יוספית",
+      "משה",
+      "יוספית משה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a03d9de1-d999-49d2-b014-7e4111d368c6",
@@ -11898,7 +15066,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "בלה",
+    "lastName": "ח",
+    "displayName": "בלה ח",
+    "searchableNames": [
+      "בלה ח",
+      "ח בלה",
+      "בלה",
+      "ח",
+      "בלה ח"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a05b6159-8250-4aaa-b5ce-9268c9fd176a",
@@ -11933,7 +15112,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "נאוראס",
+    "lastName": "חוסיין",
+    "displayName": "נאוראס חוסיין",
+    "searchableNames": [
+      "נאוראס חוסיין",
+      "חוסיין נאוראס",
+      "נאוראס",
+      "חוסיין",
+      "נאוראס חוסיין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a107d0d2-9371-4e01-81c0-7c7a5f18a99c",
@@ -11973,7 +15163,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "בת שבע",
+    "lastName": "כהן",
+    "displayName": "בת שבע כהן",
+    "searchableNames": [
+      "בת שבע כהן",
+      "כהן בת שבע",
+      "בת שבע",
+      "כהן",
+      "בת שבע כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a1bad986-dd08-4698-bab7-d7691500703a",
@@ -12004,7 +15205,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לאה",
+    "lastName": "אטיאס",
+    "displayName": "לאה אטיאס",
+    "searchableNames": [
+      "לאה אטיאס",
+      "אטיאס לאה",
+      "לאה",
+      "אטיאס",
+      "לאה אטיאס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a27916b2-a8c2-439d-939c-b787ce06d537",
@@ -12034,7 +15246,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רותם",
+    "lastName": "פרץ",
+    "displayName": "רותם פרץ",
+    "searchableNames": [
+      "רותם פרץ",
+      "פרץ רותם",
+      "רותם",
+      "פרץ",
+      "רותם פרץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a29de420-c5ef-46df-8c80-c4b39bd0c680",
@@ -12065,7 +15288,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נלי",
+    "lastName": "ישראלוב",
+    "displayName": "נלי ישראלוב",
+    "searchableNames": [
+      "נלי ישראלוב",
+      "ישראלוב נלי",
+      "נלי",
+      "ישראלוב",
+      "נלי ישראלוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a2ba1525-6b11-4268-869c-af10e3c0b4db",
@@ -12089,7 +15323,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אינאס",
+    "lastName": "אזברגה",
+    "displayName": "אינאס אזברגה",
+    "searchableNames": [
+      "אינאס אזברגה",
+      "אזברגה אינאס",
+      "אינאס",
+      "אזברגה",
+      "אינאס אזברגה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a30fa6c5-9fbb-420a-9aaf-e0af40a29b8a",
@@ -12178,7 +15423,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עיתאב",
+    "lastName": "שקרה",
+    "displayName": "עיתאב שקרה",
+    "searchableNames": [
+      "עיתאב שקרה",
+      "שקרה עיתאב",
+      "עיתאב",
+      "שקרה",
+      "עיתאב שקרה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a37fd268-078e-474c-83e2-449848bebe88",
@@ -12202,7 +15458,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רים",
+    "lastName": "יוסף",
+    "displayName": "רים יוסף",
+    "searchableNames": [
+      "רים יוסף",
+      "יוסף רים",
+      "רים",
+      "יוסף",
+      "רים יוסף"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a3f866ea-4136-4e82-abe5-f96473d4cb46",
@@ -12253,7 +15520,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אורטל",
+    "lastName": "אמרגי",
+    "displayName": "אורטל אמרגי",
+    "searchableNames": [
+      "אורטל אמרגי",
+      "אמרגי אורטל",
+      "אורטל",
+      "אמרגי",
+      "אורטל אמרגי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a3f9af58-c43f-462a-ab48-80687d8f35b1",
@@ -12287,7 +15565,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אהובה",
+    "lastName": "בולאק",
+    "displayName": "אהובה בולאק",
+    "searchableNames": [
+      "אהובה בולאק",
+      "בולאק אהובה",
+      "אהובה",
+      "בולאק",
+      "אהובה בולאק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a3fccf83-673e-47b0-bc49-3cd6a6a2b89c",
@@ -12340,7 +15629,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ורד",
+    "lastName": "להב",
+    "displayName": "ורד להב",
+    "searchableNames": [
+      "ורד להב",
+      "להב ורד",
+      "ורד",
+      "להב",
+      "ורד להב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a441ffb2-bb2b-4cf7-805b-64f2693a2bc8",
@@ -12390,7 +15690,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ישראל",
+    "lastName": "שטרן",
+    "displayName": "ישראל שטרן",
+    "searchableNames": [
+      "ישראל שטרן",
+      "שטרן ישראל",
+      "ישראל",
+      "שטרן",
+      "ישראל שטרן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a52bc5ef-1b64-4804-ac1e-417abe2dc90c",
@@ -12438,7 +15749,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רעיה",
+    "lastName": "שמיס",
+    "displayName": "רעיה שמיס",
+    "searchableNames": [
+      "רעיה שמיס",
+      "שמיס רעיה",
+      "רעיה",
+      "שמיס",
+      "רעיה שמיס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a5426006-295b-4c0a-b8da-5e542f9b45e9",
@@ -12490,7 +15812,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "Lavy",
+    "lastName": "Zohar",
+    "displayName": "Lavy Zohar",
+    "searchableNames": [
+      "Lavy Zohar",
+      "Zohar Lavy",
+      "Lavy",
+      "Zohar",
+      "Lavy Zohar"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "a5dcd9e2-26a0-4394-bdf5-b5efa937a378",
@@ -12517,7 +15850,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מורן",
+    "lastName": "אסולין",
+    "displayName": "מורן אסולין",
+    "searchableNames": [
+      "מורן אסולין",
+      "אסולין מורן",
+      "מורן",
+      "אסולין",
+      "מורן אסולין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a6110b3d-5b23-468e-8b85-2393a044458d",
@@ -12563,7 +15907,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אדמונד",
+    "lastName": "שהין",
+    "displayName": "אדמונד שהין",
+    "searchableNames": [
+      "אדמונד שהין",
+      "שהין אדמונד",
+      "אדמונד",
+      "שהין",
+      "אדמונד שהין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a6b3b14f-6602-4004-9c8d-225a037a1142",
@@ -12597,7 +15952,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מרים",
+    "lastName": "שפיגלמן",
+    "displayName": "מרים שפיגלמן",
+    "searchableNames": [
+      "מרים שפיגלמן",
+      "שפיגלמן מרים",
+      "מרים",
+      "שפיגלמן",
+      "מרים שפיגלמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a7a973a9-ad9b-498d-be16-d38b6489e9cb",
@@ -12659,7 +16025,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אביגיל",
+    "lastName": "שירי",
+    "displayName": "אביגיל שירי",
+    "searchableNames": [
+      "אביגיל שירי",
+      "שירי אביגיל",
+      "אביגיל",
+      "שירי",
+      "אביגיל שירי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a7c88e9d-97cf-4d0c-83b1-a746daa76598",
@@ -12707,7 +16084,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תסנים",
+    "lastName": "עדוי",
+    "displayName": "תסנים עדוי",
+    "searchableNames": [
+      "תסנים עדוי",
+      "עדוי תסנים",
+      "תסנים",
+      "עדוי",
+      "תסנים עדוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a7d40c60-71e3-4498-9ac7-8d18379fee81",
@@ -12743,7 +16131,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלי",
+    "lastName": "שוורץ",
+    "displayName": "אלי שוורץ",
+    "searchableNames": [
+      "אלי שוורץ",
+      "שוורץ אלי",
+      "אלי",
+      "שוורץ",
+      "אלי שוורץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a889a356-c685-4a1e-a17e-5d782f44729d",
@@ -12785,7 +16184,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אתי",
+    "lastName": "נונה",
+    "displayName": "אתי נונה",
+    "searchableNames": [
+      "אתי נונה",
+      "נונה אתי",
+      "אתי",
+      "נונה",
+      "אתי נונה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a8b1386e-db8a-4cb0-973b-6411b6ccc24d",
@@ -12817,7 +16227,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חוסני",
+    "lastName": "אבו מוך",
+    "displayName": "חוסני אבו מוך",
+    "searchableNames": [
+      "חוסני אבו מוך",
+      "אבו מוך חוסני",
+      "חוסני",
+      "אבו מוך",
+      "חוסני אבו מוך"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "a9924f4a-5c58-485f-9cdf-8224d32b08d2",
@@ -12850,7 +16271,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סשה",
+    "lastName": "קטלן",
+    "displayName": "סשה קטלן",
+    "searchableNames": [
+      "סשה קטלן",
+      "קטלן סשה",
+      "סשה",
+      "קטלן",
+      "סשה קטלן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "aa8ff5b6-af7e-4a4b-9ea0-2c0f5fffc196",
@@ -12885,7 +16317,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ליבי",
+    "lastName": "אלתר",
+    "displayName": "ליבי אלתר",
+    "searchableNames": [
+      "ליבי אלתר",
+      "אלתר ליבי",
+      "ליבי",
+      "אלתר",
+      "ליבי אלתר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "abb23456-ed28-4b1c-8aab-7f488eab95b8",
@@ -12939,7 +16382,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אביחי",
+    "lastName": "אלון",
+    "displayName": "אביחי אלון",
+    "searchableNames": [
+      "אביחי אלון",
+      "אלון אביחי",
+      "אביחי",
+      "אלון",
+      "אביחי אלון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "abb4876a-9c29-46c1-99e1-d706d8bb50b6",
@@ -12971,7 +16425,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נור",
+    "lastName": "בדיר",
+    "displayName": "נור בדיר",
+    "searchableNames": [
+      "נור בדיר",
+      "בדיר נור",
+      "נור",
+      "בדיר",
+      "נור בדיר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "abf610c5-f98c-4e1e-a8ad-29a4800ba6d5",
@@ -13032,7 +16497,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מואמן",
+    "lastName": "דאר דיאב",
+    "displayName": "מואמן דאר דיאב",
+    "searchableNames": [
+      "מואמן דאר דיאב",
+      "דאר דיאב מואמן",
+      "מואמן",
+      "דאר דיאב",
+      "מואמן דאר דיאב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ae308931-561c-4df7-a66d-1ecd08225a2e",
@@ -13060,7 +16536,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ישראל",
+    "lastName": "מלר",
+    "displayName": "ישראל מלר",
+    "searchableNames": [
+      "ישראל מלר",
+      "מלר ישראל",
+      "ישראל",
+      "מלר",
+      "ישראל מלר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ae61ab5c-90ed-4d42-8d57-da39712f3887",
@@ -13093,7 +16580,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "sameeh",
+    "lastName": "msarwe",
+    "displayName": "sameeh msarwe",
+    "searchableNames": [
+      "sameeh msarwe",
+      "msarwe sameeh",
+      "sameeh",
+      "msarwe",
+      "sameeh msarwe"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "af0051e4-e099-45cc-8b77-ae2773efb092",
@@ -13124,7 +16622,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אורטל",
+    "lastName": "צרור",
+    "displayName": "אורטל צרור",
+    "searchableNames": [
+      "אורטל צרור",
+      "צרור אורטל",
+      "אורטל",
+      "צרור",
+      "אורטל צרור"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "affbce95-3f35-4f19-8d16-cc3641b83675",
@@ -13163,7 +16672,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "גלית",
+    "lastName": "כהן",
+    "displayName": "גלית כהן",
+    "searchableNames": [
+      "גלית כהן",
+      "כהן גלית",
+      "גלית",
+      "כהן",
+      "גלית כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b0265b0e-5887-41fb-bfd2-e5217b74975e",
@@ -13191,7 +16711,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אמה",
+    "lastName": "כהן",
+    "displayName": "אמה כהן",
+    "searchableNames": [
+      "אמה כהן",
+      "כהן אמה",
+      "אמה",
+      "כהן",
+      "אמה כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b04999a5-e273-49cb-9c65-d0c39f056c26",
@@ -13243,7 +16774,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "Yana",
+    "lastName": "Goldman",
+    "displayName": "Yana Goldman",
+    "searchableNames": [
+      "Yana Goldman",
+      "Goldman Yana",
+      "Yana",
+      "Goldman",
+      "Yana Goldman"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "b05d74e9-ee90-4cbb-8d24-289618b9cfeb",
@@ -13277,7 +16819,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מיכל",
+    "lastName": "פפר",
+    "displayName": "מיכל פפר",
+    "searchableNames": [
+      "מיכל פפר",
+      "פפר מיכל",
+      "מיכל",
+      "פפר",
+      "מיכל פפר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b0678304-f18c-40c3-a6f2-d93bde762dd6",
@@ -13304,7 +16857,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ברי",
+    "lastName": "שוורץ",
+    "displayName": "ברי שוורץ",
+    "searchableNames": [
+      "ברי שוורץ",
+      "שוורץ ברי",
+      "ברי",
+      "שוורץ",
+      "ברי שוורץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b07e0592-dd70-4f07-ae8f-d95f43710b4c",
@@ -13362,7 +16926,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נטלי",
+    "lastName": "קסטוריאנו",
+    "displayName": "נטלי קסטוריאנו",
+    "searchableNames": [
+      "נטלי קסטוריאנו",
+      "קסטוריאנו נטלי",
+      "נטלי",
+      "קסטוריאנו",
+      "נטלי קסטוריאנו"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b0b55da4-7d7e-42f9-8956-4f0ba153a0a4",
@@ -13391,7 +16966,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עלי",
+    "lastName": "זאמל",
+    "displayName": "עלי זאמל",
+    "searchableNames": [
+      "עלי זאמל",
+      "זאמל עלי",
+      "עלי",
+      "זאמל",
+      "עלי זאמל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b13c4cc4-c73e-4517-afae-261e0de3e850",
@@ -13445,7 +17031,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יעל",
+    "lastName": "מזרחי",
+    "displayName": "יעל מזרחי",
+    "searchableNames": [
+      "יעל מזרחי",
+      "מזרחי יעל",
+      "יעל",
+      "מזרחי",
+      "יעל מזרחי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b201abb4-d8d0-4005-81c9-5771f7fbab3a",
@@ -13469,7 +17066,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "זנט",
+    "lastName": "בן מרדכי",
+    "displayName": "זנט בן מרדכי",
+    "searchableNames": [
+      "זנט בן מרדכי",
+      "בן מרדכי זנט",
+      "זנט",
+      "בן מרדכי",
+      "זנט בן מרדכי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b22ecd1d-e30c-4e63-89bb-2d9965f880ba",
@@ -13521,7 +17129,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סלימאן",
+    "lastName": "אבו מטיר",
+    "displayName": "סלימאן אבו מטיר",
+    "searchableNames": [
+      "סלימאן אבו מטיר",
+      "אבו מטיר סלימאן",
+      "סלימאן",
+      "אבו מטיר",
+      "סלימאן אבו מטיר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b274e50b-f29b-4b67-a7d9-d3ad5d528d70",
@@ -13571,7 +17190,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אוריה",
+    "lastName": "דעדוש",
+    "displayName": "אוריה דעדוש",
+    "searchableNames": [
+      "אוריה דעדוש",
+      "דעדוש אוריה",
+      "אוריה",
+      "דעדוש",
+      "אוריה דעדוש"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b3547bd4-3e72-4c9e-b351-9379d1650d07",
@@ -13607,7 +17237,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוחמד",
+    "lastName": "מרדאוי",
+    "displayName": "מוחמד מרדאוי",
+    "searchableNames": [
+      "מוחמד מרדאוי",
+      "מרדאוי מוחמד",
+      "מוחמד",
+      "מרדאוי",
+      "מוחמד מרדאוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b35fea3e-b1e8-4fb9-95d4-4b7466af4df6",
@@ -13631,7 +17272,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שירה",
+    "lastName": "יצחקיאן",
+    "displayName": "שירה יצחקיאן",
+    "searchableNames": [
+      "שירה יצחקיאן",
+      "יצחקיאן שירה",
+      "שירה",
+      "יצחקיאן",
+      "שירה יצחקיאן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b397cc75-4b7f-47e4-bcdb-7c4135c4f44f",
@@ -13691,7 +17343,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "צופנת",
+    "lastName": "קציר",
+    "displayName": "צופנת קציר",
+    "searchableNames": [
+      "צופנת קציר",
+      "קציר צופנת",
+      "צופנת",
+      "קציר",
+      "צופנת קציר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b5210563-a6f1-44e9-b997-c9d937773289",
@@ -13719,7 +17382,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הילה",
+    "lastName": "קאופמן",
+    "displayName": "הילה קאופמן",
+    "searchableNames": [
+      "הילה קאופמן",
+      "קאופמן הילה",
+      "הילה",
+      "קאופמן",
+      "הילה קאופמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b5ba4288-0927-4abd-b6a0-a0cfa62b8c64",
@@ -13768,7 +17442,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שניר",
+    "lastName": "אביטל",
+    "displayName": "שניר אביטל",
+    "searchableNames": [
+      "שניר אביטל",
+      "אביטל שניר",
+      "שניר",
+      "אביטל",
+      "שניר אביטל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b676d4aa-3c62-4268-a6fc-4a899484b5dd",
@@ -13832,7 +17517,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "ליליאן",
+    "lastName": "אלחורי",
+    "displayName": "ליליאן אלחורי",
+    "searchableNames": [
+      "ליליאן אלחורי",
+      "אלחורי ליליאן",
+      "ליליאן",
+      "אלחורי",
+      "ליליאן אלחורי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b6da42b9-2c7e-4bd1-adea-b354755d6116",
@@ -13890,7 +17586,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מורן",
+    "lastName": "זימן",
+    "displayName": "מורן זימן",
+    "searchableNames": [
+      "מורן זימן",
+      "זימן מורן",
+      "מורן",
+      "זימן",
+      "מורן זימן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b7629f10-572e-47b7-84af-ed0eeb17a3d3",
@@ -13924,7 +17631,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אושרת",
+    "lastName": "ברששת",
+    "displayName": "אושרת ברששת",
+    "searchableNames": [
+      "אושרת ברששת",
+      "ברששת אושרת",
+      "אושרת",
+      "ברששת",
+      "אושרת ברששת"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b79890d4-6fa2-4a3c-aeb1-6306b69df872",
@@ -13976,7 +17694,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלה",
+    "lastName": "שקדי דורי",
+    "displayName": "אלה שקדי דורי",
+    "searchableNames": [
+      "אלה שקדי דורי",
+      "שקדי דורי אלה",
+      "אלה",
+      "שקדי דורי",
+      "אלה שקדי דורי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b93b48f3-dc6e-4934-be94-78f9f0cfd192",
@@ -14050,7 +17779,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "אורחן",
+    "lastName": "פריצקי",
+    "displayName": "אורחן פריצקי",
+    "searchableNames": [
+      "אורחן פריצקי",
+      "פריצקי אורחן",
+      "אורחן",
+      "פריצקי",
+      "אורחן פריצקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b9761e4f-3582-49c7-99e4-35b84f83b307",
@@ -14095,7 +17835,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מחמוד",
+    "lastName": "מחאמיד",
+    "displayName": "מחמוד מחאמיד",
+    "searchableNames": [
+      "מחמוד מחאמיד",
+      "מחאמיד מחמוד",
+      "מחמוד",
+      "מחאמיד",
+      "מחמוד מחאמיד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "b9fabc8e-08e2-4f15-a05c-26e96b4c5eb4",
@@ -14134,7 +17885,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שוקרי",
+    "lastName": "נגאר",
+    "displayName": "שוקרי נגאר",
+    "searchableNames": [
+      "שוקרי נגאר",
+      "נגאר שוקרי",
+      "שוקרי",
+      "נגאר",
+      "שוקרי נגאר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ba14e15b-2d78-4161-be50-c2b8766e7cde",
@@ -14163,7 +17925,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אורנה",
+    "lastName": "טדסה  סולומון",
+    "displayName": "אורנה טדסה  סולומון",
+    "searchableNames": [
+      "אורנה טדסה  סולומון",
+      "טדסה  סולומון אורנה",
+      "אורנה",
+      "טדסה  סולומון",
+      "אורנה טדסה  סולומון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "bc5c6668-24f3-4fed-a53c-0ecc37bb28ae",
@@ -14191,7 +17964,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוחמד",
+    "lastName": "שיך יוסף",
+    "displayName": "מוחמד שיך יוסף",
+    "searchableNames": [
+      "מוחמד שיך יוסף",
+      "שיך יוסף מוחמד",
+      "מוחמד",
+      "שיך יוסף",
+      "מוחמד שיך יוסף"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "bc625362-42da-4e64-9357-542bd8d36c63",
@@ -14226,7 +18010,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוסא",
+    "lastName": "דחלה",
+    "displayName": "מוסא דחלה",
+    "searchableNames": [
+      "מוסא דחלה",
+      "דחלה מוסא",
+      "מוסא",
+      "דחלה",
+      "מוסא דחלה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "bc674cc2-d225-4d51-90cb-75535969f787",
@@ -14260,7 +18055,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רן",
+    "lastName": "שוקרון",
+    "displayName": "רן שוקרון",
+    "searchableNames": [
+      "רן שוקרון",
+      "שוקרון רן",
+      "רן",
+      "שוקרון",
+      "רן שוקרון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "bcb120b9-b10e-4dfd-95f6-731d9c244272",
@@ -14313,7 +18119,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מייסאא",
+    "lastName": "בדוי",
+    "displayName": "מייסאא בדוי",
+    "searchableNames": [
+      "מייסאא בדוי",
+      "בדוי מייסאא",
+      "מייסאא",
+      "בדוי",
+      "מייסאא בדוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "bcde6ce1-dd75-44ca-a079-3c22d535767e",
@@ -14341,7 +18158,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלכסנדרה",
+    "lastName": "קירילובסקי",
+    "displayName": "אלכסנדרה קירילובסקי",
+    "searchableNames": [
+      "אלכסנדרה קירילובסקי",
+      "קירילובסקי אלכסנדרה",
+      "אלכסנדרה",
+      "קירילובסקי",
+      "אלכסנדרה קירילובסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "bd87b789-7508-4156-8911-30ef0e58dad7",
@@ -14376,7 +18204,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נראם",
+    "lastName": "יעקוב",
+    "displayName": "נראם יעקוב",
+    "searchableNames": [
+      "נראם יעקוב",
+      "יעקוב נראם",
+      "נראם",
+      "יעקוב",
+      "נראם יעקוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "bdaae758-7b8d-43d5-9a0e-4c4f57e24f0c",
@@ -14411,7 +18250,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סלים",
+    "lastName": "הקול",
+    "displayName": "סלים הקול",
+    "searchableNames": [
+      "סלים הקול",
+      "הקול סלים",
+      "סלים",
+      "הקול",
+      "סלים הקול"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "be4993ee-7ddc-43a6-91fc-1948f82853d4",
@@ -14460,7 +18310,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מאשה",
+    "lastName": "לוין",
+    "displayName": "מאשה לוין",
+    "searchableNames": [
+      "מאשה לוין",
+      "לוין מאשה",
+      "מאשה",
+      "לוין",
+      "מאשה לוין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "beda241f-4d53-408c-9fe5-cff4688a2461",
@@ -14489,7 +18350,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אביטל",
+    "lastName": "שקדי",
+    "displayName": "אביטל שקדי",
+    "searchableNames": [
+      "אביטל שקדי",
+      "שקדי אביטל",
+      "אביטל",
+      "שקדי",
+      "אביטל שקדי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c0b760d8-0a6f-41e4-973c-0585266e80b5",
@@ -14526,7 +18398,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רחל",
+    "lastName": "אלעזרי",
+    "displayName": "רחל אלעזרי",
+    "searchableNames": [
+      "רחל אלעזרי",
+      "אלעזרי רחל",
+      "רחל",
+      "אלעזרי",
+      "רחל אלעזרי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c0f11e89-5d9d-4181-8451-23c92ceddb84",
@@ -14614,7 +18497,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "פבל",
+    "lastName": "חמלבסקוי",
+    "displayName": "פבל חמלבסקוי",
+    "searchableNames": [
+      "פבל חמלבסקוי",
+      "חמלבסקוי פבל",
+      "פבל",
+      "חמלבסקוי",
+      "פבל חמלבסקוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c1a57c58-1d1c-4d9f-a0ef-e0e2bc156e16",
@@ -14664,7 +18558,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יבגני",
+    "lastName": "קראבייב",
+    "displayName": "יבגני קראבייב",
+    "searchableNames": [
+      "יבגני קראבייב",
+      "קראבייב יבגני",
+      "יבגני",
+      "קראבייב",
+      "יבגני קראבייב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c2c4f842-23a9-4cc7-84a8-ced7e36b92e1",
@@ -14744,7 +18649,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נדזידה",
+    "lastName": "קומרוב",
+    "displayName": "נדזידה קומרוב",
+    "searchableNames": [
+      "נדזידה קומרוב",
+      "קומרוב נדזידה",
+      "נדזידה",
+      "קומרוב",
+      "נדזידה קומרוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c36e528c-b9f7-45f9-a77e-5dc2475b34ff",
@@ -14803,7 +18719,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוריה",
+    "lastName": "שילה",
+    "displayName": "מוריה שילה",
+    "searchableNames": [
+      "מוריה שילה",
+      "שילה מוריה",
+      "מוריה",
+      "שילה",
+      "מוריה שילה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c4bea105-6147-4188-8ec0-a3698cffdd02",
@@ -14839,7 +18766,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מרווה",
+    "lastName": "חאג יחיא",
+    "displayName": "מרווה חאג יחיא",
+    "searchableNames": [
+      "מרווה חאג יחיא",
+      "חאג יחיא מרווה",
+      "מרווה",
+      "חאג יחיא",
+      "מרווה חאג יחיא"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c4c326d1-b29a-48a9-847e-064d83ea7230",
@@ -14865,7 +18803,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "לירן",
+    "lastName": "קרופניק",
+    "displayName": "לירן קרופניק",
+    "searchableNames": [
+      "לירן קרופניק",
+      "קרופניק לירן",
+      "לירן",
+      "קרופניק",
+      "לירן קרופניק"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c53b06bd-8962-431d-98eb-d3b182ffac54",
@@ -14895,7 +18844,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "היתם",
+    "lastName": "רעד",
+    "displayName": "היתם רעד",
+    "searchableNames": [
+      "היתם רעד",
+      "רעד היתם",
+      "היתם",
+      "רעד",
+      "היתם רעד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c601d98d-8b9b-408b-b16e-55ff53b672b6",
@@ -14925,7 +18885,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דבורה",
+    "lastName": "לוי",
+    "displayName": "דבורה לוי",
+    "searchableNames": [
+      "דבורה לוי",
+      "לוי דבורה",
+      "דבורה",
+      "לוי",
+      "דבורה לוי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c602f68b-2dad-4970-a1cd-4201b5e3d74f",
@@ -14991,7 +18962,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "אלה",
+    "lastName": "טולצ׳ינסקי",
+    "displayName": "אלה טולצ׳ינסקי",
+    "searchableNames": [
+      "אלה טולצ׳ינסקי",
+      "טולצ׳ינסקי אלה",
+      "אלה",
+      "טולצ׳ינסקי",
+      "אלה טולצ׳ינסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c609f222-fad5-4131-b749-8964354ba50e",
@@ -15040,7 +19022,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "Ahmad",
+    "lastName": "Magadly",
+    "displayName": "Ahmad Magadly",
+    "searchableNames": [
+      "Ahmad Magadly",
+      "Magadly Ahmad",
+      "Ahmad",
+      "Magadly",
+      "Ahmad Magadly"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "c7f969c9-ae7e-4d96-80d0-4f557f109420",
@@ -15069,7 +19062,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אנגלינה",
+    "lastName": "סקרקו",
+    "displayName": "אנגלינה סקרקו",
+    "searchableNames": [
+      "אנגלינה סקרקו",
+      "סקרקו אנגלינה",
+      "אנגלינה",
+      "סקרקו",
+      "אנגלינה סקרקו"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c7fb4796-74c4-4e50-a199-3ff7ea89ba2d",
@@ -15102,7 +19106,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אסתר",
+    "lastName": "פליישר",
+    "displayName": "אסתר פליישר",
+    "searchableNames": [
+      "אסתר פליישר",
+      "פליישר אסתר",
+      "אסתר",
+      "פליישר",
+      "אסתר פליישר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c811b393-c87d-41a9-9b85-a0f21fdf64b9",
@@ -15131,7 +19146,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אפרת",
+    "lastName": "בסון",
+    "displayName": "אפרת בסון",
+    "searchableNames": [
+      "אפרת בסון",
+      "בסון אפרת",
+      "אפרת",
+      "בסון",
+      "אפרת בסון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c8a7afce-2d85-4248-b6e7-35b39c8dc52e",
@@ -15155,7 +19181,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רבקה",
+    "lastName": "עם שלם",
+    "displayName": "רבקה עם שלם",
+    "searchableNames": [
+      "רבקה עם שלם",
+      "עם שלם רבקה",
+      "רבקה",
+      "עם שלם",
+      "רבקה עם שלם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "c9132304-f7c6-42bb-b6e1-18cf9d3255a4",
@@ -15197,7 +19234,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דבי",
+    "lastName": "צפתי",
+    "displayName": "דבי צפתי",
+    "searchableNames": [
+      "דבי צפתי",
+      "צפתי דבי",
+      "דבי",
+      "צפתי",
+      "דבי צפתי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "cae6bec4-157a-4b82-aff3-7a1643a35d1d",
@@ -15243,7 +19291,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דליה",
+    "lastName": "נקש",
+    "displayName": "דליה נקש",
+    "searchableNames": [
+      "דליה נקש",
+      "נקש דליה",
+      "דליה",
+      "נקש",
+      "דליה נקש"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "cc77a461-d807-445e-a683-eed719a1c2cc",
@@ -15270,7 +19329,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלה",
+    "lastName": "מאירסון",
+    "displayName": "אלה מאירסון",
+    "searchableNames": [
+      "אלה מאירסון",
+      "מאירסון אלה",
+      "אלה",
+      "מאירסון",
+      "אלה מאירסון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ccd2b2ea-5f16-41b5-8aa5-df1509880782",
@@ -15319,7 +19389,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אירנה",
+    "lastName": "גונחן",
+    "displayName": "אירנה גונחן",
+    "searchableNames": [
+      "אירנה גונחן",
+      "גונחן אירנה",
+      "אירנה",
+      "גונחן",
+      "אירנה גונחן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "cd1550da-9d56-4cfa-9dd9-cedf0211f571",
@@ -15348,7 +19429,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוריה",
+    "lastName": "מימרן",
+    "displayName": "מוריה מימרן",
+    "searchableNames": [
+      "מוריה מימרן",
+      "מימרן מוריה",
+      "מוריה",
+      "מימרן",
+      "מוריה מימרן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "cd6d7e1d-14d5-4439-8df1-f7b63c3546f3",
@@ -15380,7 +19472,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שלומית",
+    "lastName": "לבנון",
+    "displayName": "שלומית לבנון",
+    "searchableNames": [
+      "שלומית לבנון",
+      "לבנון שלומית",
+      "שלומית",
+      "לבנון",
+      "שלומית לבנון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "cfa00759-887e-458c-9c22-abe97c8071bf",
@@ -15417,7 +19520,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רוני",
+    "lastName": "אראל",
+    "displayName": "רוני אראל",
+    "searchableNames": [
+      "רוני אראל",
+      "אראל רוני",
+      "רוני",
+      "אראל",
+      "רוני אראל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d113a168-0df1-4016-a778-287995954843",
@@ -15457,7 +19571,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חן",
+    "lastName": "קטורזה",
+    "displayName": "חן קטורזה",
+    "searchableNames": [
+      "חן קטורזה",
+      "קטורזה חן",
+      "חן",
+      "קטורזה",
+      "חן קטורזה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d1508f90-7d2a-4f20-8419-9e482f3d21b1",
@@ -15486,7 +19611,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רבקה",
+    "lastName": "ליפקה",
+    "displayName": "רבקה ליפקה",
+    "searchableNames": [
+      "רבקה ליפקה",
+      "ליפקה רבקה",
+      "רבקה",
+      "ליפקה",
+      "רבקה ליפקה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d1b0a452-43bb-418f-81be-3e5b7162b58d",
@@ -15510,7 +19646,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רוחמה",
+    "lastName": "פוקס",
+    "displayName": "רוחמה פוקס",
+    "searchableNames": [
+      "רוחמה פוקס",
+      "פוקס רוחמה",
+      "רוחמה",
+      "פוקס",
+      "רוחמה פוקס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d25f71ab-4d15-4c80-88ed-82a6615780f2",
@@ -15537,7 +19684,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "איילת",
+    "lastName": "ציביאק דיין",
+    "displayName": "איילת ציביאק דיין",
+    "searchableNames": [
+      "איילת ציביאק דיין",
+      "ציביאק דיין איילת",
+      "איילת",
+      "ציביאק דיין",
+      "איילת ציביאק דיין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d2fad43e-5b78-4917-91ca-c6b6058cd16c",
@@ -15585,7 +19743,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "גילי",
+    "lastName": "גילת",
+    "displayName": "גילי גילת",
+    "searchableNames": [
+      "גילי גילת",
+      "גילת גילי",
+      "גילי",
+      "גילת",
+      "גילי גילת"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d3173db6-ef65-4aa0-a099-446a5187f837",
@@ -15617,7 +19786,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ענת",
+    "lastName": "דור און",
+    "displayName": "ענת דור און",
+    "searchableNames": [
+      "ענת דור און",
+      "דור און ענת",
+      "ענת",
+      "דור און",
+      "ענת דור און"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d3661ab3-d862-48c3-951b-e1e5a3f8a063",
@@ -15656,7 +19836,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אביטל",
+    "lastName": "הימלשטיין",
+    "displayName": "אביטל הימלשטיין",
+    "searchableNames": [
+      "אביטל הימלשטיין",
+      "הימלשטיין אביטל",
+      "אביטל",
+      "הימלשטיין",
+      "אביטל הימלשטיין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d3dc9420-aa19-404a-8898-57622e4a185d",
@@ -15705,7 +19896,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלה",
+    "lastName": "ברקאי",
+    "displayName": "אלה ברקאי",
+    "searchableNames": [
+      "אלה ברקאי",
+      "ברקאי אלה",
+      "אלה",
+      "ברקאי",
+      "אלה ברקאי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d4110a24-462f-44d5-ae1e-71beb7ef52ab",
@@ -15735,7 +19937,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "קרן אור",
+    "lastName": "סעדי",
+    "displayName": "קרן אור סעדי",
+    "searchableNames": [
+      "קרן אור סעדי",
+      "סעדי קרן אור",
+      "קרן אור",
+      "סעדי",
+      "קרן אור סעדי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d51c7ab0-8c80-4c22-bc2e-23a1848778a5",
@@ -15771,7 +19984,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חגית",
+    "lastName": "איפרגן",
+    "displayName": "חגית איפרגן",
+    "searchableNames": [
+      "חגית איפרגן",
+      "איפרגן חגית",
+      "חגית",
+      "איפרגן",
+      "חגית איפרגן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d522a266-72ea-4528-8fe5-d8dd5b29b6f2",
@@ -15795,7 +20019,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ניצן",
+    "lastName": "פלד",
+    "displayName": "ניצן פלד",
+    "searchableNames": [
+      "ניצן פלד",
+      "פלד ניצן",
+      "ניצן",
+      "פלד",
+      "ניצן פלד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d68bbaf5-070e-4c65-b007-91382ab1c3a6",
@@ -15873,7 +20108,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סימונה",
+    "lastName": "ענבר",
+    "displayName": "סימונה ענבר",
+    "searchableNames": [
+      "סימונה ענבר",
+      "ענבר סימונה",
+      "סימונה",
+      "ענבר",
+      "סימונה ענבר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d72acbf8-5b8b-4db4-a192-3add552f496d",
@@ -15915,7 +20161,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תגל",
+    "lastName": "כהן",
+    "displayName": "תגל כהן",
+    "searchableNames": [
+      "תגל כהן",
+      "כהן תגל",
+      "תגל",
+      "כהן",
+      "תגל כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d78c2951-9013-4869-8df0-66b85816bac6",
@@ -15944,7 +20201,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "וואיל",
+    "lastName": "מועלם",
+    "displayName": "וואיל מועלם",
+    "searchableNames": [
+      "וואיל מועלם",
+      "מועלם וואיל",
+      "וואיל",
+      "מועלם",
+      "וואיל מועלם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d7fc76dc-dc77-4f78-97a8-213c0061df44",
@@ -15973,7 +20241,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שמרית",
+    "lastName": "קוזין (בן עטר )",
+    "displayName": "שמרית קוזין (בן עטר )",
+    "searchableNames": [
+      "שמרית קוזין (בן עטר )",
+      "קוזין (בן עטר ) שמרית",
+      "שמרית",
+      "קוזין (בן עטר )",
+      "שמרית קוזין (בן עטר )"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "d95097f2-fa3c-4962-8a7c-6d4fbb9bb7d3",
@@ -16083,7 +20362,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ליטל",
+    "lastName": "גולדפרב",
+    "displayName": "ליטל גולדפרב",
+    "searchableNames": [
+      "ליטל גולדפרב",
+      "גולדפרב ליטל",
+      "ליטל",
+      "גולדפרב",
+      "ליטל גולדפרב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "da07af5b-4cbc-4afe-a311-0c9dbb3957f4",
@@ -16137,7 +20427,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סופיה",
+    "lastName": "שאולוב",
+    "displayName": "סופיה שאולוב",
+    "searchableNames": [
+      "סופיה שאולוב",
+      "שאולוב סופיה",
+      "סופיה",
+      "שאולוב",
+      "סופיה שאולוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "dbc3e0b2-dfe9-4d73-aaad-782de6b1607d",
@@ -16187,7 +20488,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "הודיה",
+    "lastName": "יעקבי גוטורוב",
+    "displayName": "הודיה יעקבי גוטורוב",
+    "searchableNames": [
+      "הודיה יעקבי גוטורוב",
+      "יעקבי גוטורוב הודיה",
+      "הודיה",
+      "יעקבי גוטורוב",
+      "הודיה יעקבי גוטורוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "dbdd37c7-e56f-4984-b06e-a6f49fc445eb",
@@ -16214,7 +20526,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עידן",
+    "lastName": "חקון",
+    "displayName": "עידן חקון",
+    "searchableNames": [
+      "עידן חקון",
+      "חקון עידן",
+      "עידן",
+      "חקון",
+      "עידן חקון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "dca2316a-4c35-4b90-9e53-0022e72efcf2",
@@ -16240,7 +20563,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נצר",
+    "lastName": "יריחובר",
+    "displayName": "נצר יריחובר",
+    "searchableNames": [
+      "נצר יריחובר",
+      "יריחובר נצר",
+      "נצר",
+      "יריחובר",
+      "נצר יריחובר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "dca9073d-15e3-4355-ad0f-d19a5ff4b332",
@@ -16266,7 +20600,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רעות",
+    "lastName": "אברמוביץ",
+    "displayName": "רעות אברמוביץ",
+    "searchableNames": [
+      "רעות אברמוביץ",
+      "אברמוביץ רעות",
+      "רעות",
+      "אברמוביץ",
+      "רעות אברמוביץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ddce137d-c92a-4fc3-8bb6-8f267be8ccb3",
@@ -16317,7 +20662,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "בר",
+    "lastName": "בנימינוב",
+    "displayName": "בר בנימינוב",
+    "searchableNames": [
+      "בר בנימינוב",
+      "בנימינוב בר",
+      "בר",
+      "בנימינוב",
+      "בר בנימינוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "de15aa45-03a2-48db-9cfc-4455342c0655",
@@ -16366,7 +20722,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מוריה",
+    "lastName": "אלבז",
+    "displayName": "מוריה אלבז",
+    "searchableNames": [
+      "מוריה אלבז",
+      "אלבז מוריה",
+      "מוריה",
+      "אלבז",
+      "מוריה אלבז"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "de560d8a-63c2-481a-b027-bf48fa542794",
@@ -16437,7 +20804,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אמיתי",
+    "lastName": "אורי",
+    "displayName": "אמיתי אורי",
+    "searchableNames": [
+      "אמיתי אורי",
+      "אורי אמיתי",
+      "אמיתי",
+      "אורי",
+      "אמיתי אורי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "de92c36f-0f04-49ef-835b-5ffc46722056",
@@ -16464,7 +20842,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ויסאם",
+    "lastName": "חביבי",
+    "displayName": "ויסאם חביבי",
+    "searchableNames": [
+      "ויסאם חביבי",
+      "חביבי ויסאם",
+      "ויסאם",
+      "חביבי",
+      "ויסאם חביבי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "deb4d10e-ca57-43c2-8907-5d916d6afd01",
@@ -16502,7 +20891,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מרים",
+    "lastName": "ברון",
+    "displayName": "מרים ברון",
+    "searchableNames": [
+      "מרים ברון",
+      "ברון מרים",
+      "מרים",
+      "ברון",
+      "מרים ברון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "deef0a30-db1d-4593-ba3c-abf2b3cd1613",
@@ -16531,7 +20931,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלכס",
+    "lastName": "רטושני",
+    "displayName": "אלכס רטושני",
+    "searchableNames": [
+      "אלכס רטושני",
+      "רטושני אלכס",
+      "אלכס",
+      "רטושני",
+      "אלכס רטושני"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e027b63a-9ad9-4bf3-8642-b6f7e8665057",
@@ -16571,7 +20982,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "עבד אלסלאם",
+    "lastName": "ג'בארין",
+    "displayName": "עבד אלסלאם ג'בארין",
+    "searchableNames": [
+      "עבד אלסלאם ג'בארין",
+      "ג'בארין עבד אלסלאם",
+      "עבד אלסלאם",
+      "ג'בארין",
+      "עבד אלסלאם ג'בארין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e0713047-751b-4a15-8b7b-1cc0a66d703a",
@@ -16602,7 +21024,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלישבע",
+    "lastName": "אנידג'ר",
+    "displayName": "אלישבע אנידג'ר",
+    "searchableNames": [
+      "אלישבע אנידג'ר",
+      "אנידג'ר אלישבע",
+      "אלישבע",
+      "אנידג'ר",
+      "אלישבע אנידג'ר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e1601637-e1fa-4edf-97a4-caa2871a31c3",
@@ -16672,7 +21105,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ניקול",
+    "lastName": "ברצלוור",
+    "displayName": "ניקול ברצלוור",
+    "searchableNames": [
+      "ניקול ברצלוור",
+      "ברצלוור ניקול",
+      "ניקול",
+      "ברצלוור",
+      "ניקול ברצלוור"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e17cf6e9-45d7-4916-b403-4aef955f2373",
@@ -16704,7 +21148,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רימונדה",
+    "lastName": "מרקוביץ",
+    "displayName": "רימונדה מרקוביץ",
+    "searchableNames": [
+      "רימונדה מרקוביץ",
+      "מרקוביץ רימונדה",
+      "רימונדה",
+      "מרקוביץ",
+      "רימונדה מרקוביץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e1bbb65e-7709-4deb-b776-5471816e39d8",
@@ -16740,7 +21195,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חאלד",
+    "lastName": "נגם",
+    "displayName": "חאלד נגם",
+    "searchableNames": [
+      "חאלד נגם",
+      "נגם חאלד",
+      "חאלד",
+      "נגם",
+      "חאלד נגם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e2dcba42-94ea-44d3-8a7c-194cc1c6079a",
@@ -16765,7 +21231,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "משה",
+    "lastName": "סובר",
+    "displayName": "משה סובר",
+    "searchableNames": [
+      "משה סובר",
+      "סובר משה",
+      "משה",
+      "סובר",
+      "משה סובר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e2f34dbf-824a-4c3f-b4df-4a2d5dea7087",
@@ -16803,7 +21280,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מורג",
+    "lastName": "שחם",
+    "displayName": "מורג שחם",
+    "searchableNames": [
+      "מורג שחם",
+      "שחם מורג",
+      "מורג",
+      "שחם",
+      "מורג שחם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e4970fff-09a2-4acc-9880-b03e8a302ac5",
@@ -16860,7 +21348,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ישראלה",
+    "lastName": "ישראלי",
+    "displayName": "ישראלה ישראלי",
+    "searchableNames": [
+      "ישראלה ישראלי",
+      "ישראלי ישראלה",
+      "ישראלה",
+      "ישראלי",
+      "ישראלה ישראלי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e499056e-9540-4089-bcaa-5e4cc8fd64e0",
@@ -16915,7 +21414,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "טינה",
+    "lastName": "גריגוריאן",
+    "displayName": "טינה גריגוריאן",
+    "searchableNames": [
+      "טינה גריגוריאן",
+      "גריגוריאן טינה",
+      "טינה",
+      "גריגוריאן",
+      "טינה גריגוריאן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e4d770d7-77f4-49b3-8fec-0853f8b309c5",
@@ -16947,7 +21457,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נוי",
+    "lastName": "הראל נקש",
+    "displayName": "נוי הראל נקש",
+    "searchableNames": [
+      "נוי הראל נקש",
+      "הראל נקש נוי",
+      "נוי",
+      "הראל נקש",
+      "נוי הראל נקש"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e535938a-8658-440f-93be-3d04928a023d",
@@ -16984,7 +21505,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "כרמל",
+    "lastName": "דילר שטח",
+    "displayName": "כרמל דילר שטח",
+    "searchableNames": [
+      "כרמל דילר שטח",
+      "דילר שטח כרמל",
+      "כרמל",
+      "דילר שטח",
+      "כרמל דילר שטח"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e535eb65-8fdf-4fa5-a3e9-77c5707b8396",
@@ -17026,7 +21558,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חיה",
+    "lastName": "אזולאי",
+    "displayName": "חיה אזולאי",
+    "searchableNames": [
+      "חיה אזולאי",
+      "אזולאי חיה",
+      "חיה",
+      "אזולאי",
+      "חיה אזולאי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e5672952-0574-455a-9efb-73deac37e5c0",
@@ -17080,7 +21623,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אליסה",
+    "lastName": "קוז'ורה",
+    "displayName": "אליסה קוז'ורה",
+    "searchableNames": [
+      "אליסה קוז'ורה",
+      "קוז'ורה אליסה",
+      "אליסה",
+      "קוז'ורה",
+      "אליסה קוז'ורה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e596692c-677d-4b64-814e-960d1db7c26a",
@@ -17121,7 +21675,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ברי",
+    "lastName": "שוורץ",
+    "displayName": "ברי שוורץ",
+    "searchableNames": [
+      "ברי שוורץ",
+      "שוורץ ברי",
+      "ברי",
+      "שוורץ",
+      "ברי שוורץ"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e5979f42-b517-4089-8bf8-a3af807f72d2",
@@ -17177,7 +21742,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יאיר",
+    "lastName": "רוזנהפט",
+    "displayName": "יאיר רוזנהפט",
+    "searchableNames": [
+      "יאיר רוזנהפט",
+      "רוזנהפט יאיר",
+      "יאיר",
+      "רוזנהפט",
+      "יאיר רוזנהפט"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e5d858c4-5f31-4bf6-95ca-23c3f26f5f5f",
@@ -17212,7 +21788,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אליס",
+    "lastName": "שדה",
+    "displayName": "אליס שדה",
+    "searchableNames": [
+      "אליס שדה",
+      "שדה אליס",
+      "אליס",
+      "שדה",
+      "אליס שדה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e6a68659-555d-43c0-beef-2b2218cc6fdf",
@@ -17249,7 +21836,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "תמר",
+    "lastName": "פוזננסקי מועלם",
+    "displayName": "תמר פוזננסקי מועלם",
+    "searchableNames": [
+      "תמר פוזננסקי מועלם",
+      "פוזננסקי מועלם תמר",
+      "תמר",
+      "פוזננסקי מועלם",
+      "תמר פוזננסקי מועלם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e7230842-81f6-4074-a06c-438b43703e51",
@@ -17279,7 +21877,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דוד",
+    "lastName": "מילגרם",
+    "displayName": "דוד מילגרם",
+    "searchableNames": [
+      "דוד מילגרם",
+      "מילגרם דוד",
+      "דוד",
+      "מילגרם",
+      "דוד מילגרם"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e7dc5a52-14a5-4f9f-9110-32ed5b17d9d0",
@@ -17322,7 +21931,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אנג'ליקה",
+    "lastName": "טוביאס",
+    "displayName": "אנג'ליקה טוביאס",
+    "searchableNames": [
+      "אנג'ליקה טוביאס",
+      "טוביאס אנג'ליקה",
+      "אנג'ליקה",
+      "טוביאס",
+      "אנג'ליקה טוביאס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e7fc40ec-cbf6-40a7-ae96-3c1c26fda7af",
@@ -17406,7 +22026,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סופיה",
+    "lastName": "פוקס",
+    "displayName": "סופיה פוקס",
+    "searchableNames": [
+      "סופיה פוקס",
+      "פוקס סופיה",
+      "סופיה",
+      "פוקס",
+      "סופיה פוקס"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e7fc6d76-b492-4ad7-8ad7-65a6466f2fa6",
@@ -17460,7 +22091,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חווה",
+    "lastName": "סינדלובסקי",
+    "displayName": "חווה סינדלובסקי",
+    "searchableNames": [
+      "חווה סינדלובסקי",
+      "סינדלובסקי חווה",
+      "חווה",
+      "סינדלובסקי",
+      "חווה סינדלובסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e880eac8-6bd3-4ac8-80cc-9a84d81e701f",
@@ -17491,7 +22133,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יהונתן",
+    "lastName": "עוזיאל",
+    "displayName": "יהונתן עוזיאל",
+    "searchableNames": [
+      "יהונתן עוזיאל",
+      "עוזיאל יהונתן",
+      "יהונתן",
+      "עוזיאל",
+      "יהונתן עוזיאל"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e923f8a0-0346-48cf-afc4-33fabb959418",
@@ -17515,7 +22168,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אורלי",
+    "lastName": "יעקב",
+    "displayName": "אורלי יעקב",
+    "searchableNames": [
+      "אורלי יעקב",
+      "יעקב אורלי",
+      "אורלי",
+      "יעקב",
+      "אורלי יעקב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e935827c-83a8-4496-983d-816e5b04f2a6",
@@ -17545,7 +22209,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דינה",
+    "lastName": "ברוש",
+    "displayName": "דינה ברוש",
+    "searchableNames": [
+      "דינה ברוש",
+      "ברוש דינה",
+      "דינה",
+      "ברוש",
+      "דינה ברוש"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e9493948-1d9c-4c71-9872-296fd2274055",
@@ -17569,7 +22244,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שרה",
+    "lastName": "ליברזון",
+    "displayName": "שרה ליברזון",
+    "searchableNames": [
+      "שרה ליברזון",
+      "ליברזון שרה",
+      "שרה",
+      "ליברזון",
+      "שרה ליברזון"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "e996f372-e29c-46b5-a259-165e7566d33d",
@@ -17612,7 +22298,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "איליה",
+    "lastName": "זלטקין",
+    "displayName": "איליה זלטקין",
+    "searchableNames": [
+      "איליה זלטקין",
+      "זלטקין איליה",
+      "איליה",
+      "זלטקין",
+      "איליה זלטקין"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ea0b0f26-892f-400c-b9b0-44362e8a36bb",
@@ -17648,7 +22345,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אנה",
+    "lastName": "דומרב",
+    "displayName": "אנה דומרב",
+    "searchableNames": [
+      "אנה דומרב",
+      "דומרב אנה",
+      "אנה",
+      "דומרב",
+      "אנה דומרב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ea2f2ed1-55d6-45c6-b5b6-946ecf349f14",
@@ -17684,7 +22392,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ענבל",
+    "lastName": "בן צבי",
+    "displayName": "ענבל בן צבי",
+    "searchableNames": [
+      "ענבל בן צבי",
+      "בן צבי ענבל",
+      "ענבל",
+      "בן צבי",
+      "ענבל בן צבי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ea6fc006-415b-4ae9-b4e3-0534bcb65e0d",
@@ -17727,7 +22446,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אנגלה",
+    "lastName": "תמרוב",
+    "displayName": "אנגלה תמרוב",
+    "searchableNames": [
+      "אנגלה תמרוב",
+      "תמרוב אנגלה",
+      "אנגלה",
+      "תמרוב",
+      "אנגלה תמרוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ea8c7c41-92cd-4905-8844-022664ed3fc6",
@@ -17758,7 +22488,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "סלאח",
+    "lastName": "נאבלסי",
+    "displayName": "סלאח נאבלסי",
+    "searchableNames": [
+      "סלאח נאבלסי",
+      "נאבלסי סלאח",
+      "סלאח",
+      "נאבלסי",
+      "סלאח נאבלסי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "eae6b5f6-c244-4ad3-a18a-7032b3ce1f35",
@@ -17803,7 +22544,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רוית",
+    "lastName": "פרצובסקי",
+    "displayName": "רוית פרצובסקי",
+    "searchableNames": [
+      "רוית פרצובסקי",
+      "פרצובסקי רוית",
+      "רוית",
+      "פרצובסקי",
+      "רוית פרצובסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "eb0e8ba3-e958-42b3-b863-dd8d455499a7",
@@ -17839,7 +22591,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אלכסנדרה",
+    "lastName": "ברגר פולסקי",
+    "displayName": "אלכסנדרה ברגר פולסקי",
+    "searchableNames": [
+      "אלכסנדרה ברגר פולסקי",
+      "ברגר פולסקי אלכסנדרה",
+      "אלכסנדרה",
+      "ברגר פולסקי",
+      "אלכסנדרה ברגר פולסקי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "eb0fc827-9b52-49c0-accb-ecfc938e5127",
@@ -17902,7 +22665,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יורי",
+    "lastName": "חרטיקוב",
+    "displayName": "יורי חרטיקוב",
+    "searchableNames": [
+      "יורי חרטיקוב",
+      "חרטיקוב יורי",
+      "יורי",
+      "חרטיקוב",
+      "יורי חרטיקוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ec08b7f5-32e8-402c-806e-f7ebd436ee7a",
@@ -17951,7 +22725,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שיראל",
+    "lastName": "מטטוב",
+    "displayName": "שיראל מטטוב",
+    "searchableNames": [
+      "שיראל מטטוב",
+      "מטטוב שיראל",
+      "שיראל",
+      "מטטוב",
+      "שיראל מטטוב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ed340718-c080-4e50-8459-bc9cbd139141",
@@ -17980,7 +22765,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "חאלד",
+    "lastName": "אבן ראשד",
+    "displayName": "חאלד אבן ראשד",
+    "searchableNames": [
+      "חאלד אבן ראשד",
+      "אבן ראשד חאלד",
+      "חאלד",
+      "אבן ראשד",
+      "חאלד אבן ראשד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "ef96f8cd-bb26-418d-9de6-d35c1cd65960",
@@ -18004,7 +22800,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אחות שחר טסט",
+    "lastName": "פורמן",
+    "displayName": "אחות שחר טסט פורמן",
+    "searchableNames": [
+      "אחות שחר טסט פורמן",
+      "פורמן אחות שחר טסט",
+      "אחות שחר טסט",
+      "פורמן",
+      "אחות שחר טסט פורמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f1b7fb1a-7288-4f72-bc7c-96faf0827759",
@@ -18041,7 +22848,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שרי",
+    "lastName": "בסר",
+    "displayName": "שרי בסר",
+    "searchableNames": [
+      "שרי בסר",
+      "בסר שרי",
+      "שרי",
+      "בסר",
+      "שרי בסר"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f2780141-05ed-4613-9d36-962d54675d6c",
@@ -18082,7 +22900,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נתי",
+    "lastName": "בלכמן",
+    "displayName": "נתי בלכמן",
+    "searchableNames": [
+      "נתי בלכמן",
+      "בלכמן נתי",
+      "נתי",
+      "בלכמן",
+      "נתי בלכמן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f2d9e225-7600-4355-ac74-7980063ada54",
@@ -18128,7 +22957,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רעות",
+    "lastName": "רוטשילד",
+    "displayName": "רעות רוטשילד",
+    "searchableNames": [
+      "רעות רוטשילד",
+      "רוטשילד רעות",
+      "רעות",
+      "רוטשילד",
+      "רעות רוטשילד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f317deba-4d1b-41cb-ab98-2ad37bb1a30f",
@@ -18160,7 +23000,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "אדם",
+    "lastName": "סלאמה",
+    "displayName": "אדם סלאמה",
+    "searchableNames": [
+      "אדם סלאמה",
+      "סלאמה אדם",
+      "אדם",
+      "סלאמה",
+      "אדם סלאמה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f448590a-8e1e-4423-9995-278c7a338ea5",
@@ -18206,7 +23057,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מירי",
+    "lastName": "רוזנברג",
+    "displayName": "מירי רוזנברג",
+    "searchableNames": [
+      "מירי רוזנברג",
+      "רוזנברג מירי",
+      "מירי",
+      "רוזנברג",
+      "מירי רוזנברג"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f497ef40-3724-45b5-a8da-3453d03fd7f4",
@@ -18275,7 +23137,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ענת",
+    "lastName": "גרינפלד",
+    "displayName": "ענת גרינפלד",
+    "searchableNames": [
+      "ענת גרינפלד",
+      "גרינפלד ענת",
+      "ענת",
+      "גרינפלד",
+      "ענת גרינפלד"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f5d27ae3-a8d5-4e81-8a1f-3057da1015d5",
@@ -18344,7 +23217,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "מרים",
+    "lastName": "מויסייב",
+    "displayName": "מרים מויסייב",
+    "searchableNames": [
+      "מרים מויסייב",
+      "מויסייב מרים",
+      "מרים",
+      "מויסייב",
+      "מרים מויסייב"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f5d7f46e-ecc0-4ff3-b30c-3d74d8207939",
@@ -18388,7 +23272,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "נטע",
+    "lastName": "סרוסי",
+    "displayName": "נטע סרוסי",
+    "searchableNames": [
+      "נטע סרוסי",
+      "סרוסי נטע",
+      "נטע",
+      "סרוסי",
+      "נטע סרוסי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f8399164-d044-4645-bcd2-47851f9c95bf",
@@ -18441,7 +23336,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "זמרתיה -Zimratya",
+    "lastName": "Duchan-דוכן",
+    "displayName": "זמרתיה -Zimratya Duchan-דוכן",
+    "searchableNames": [
+      "זמרתיה -Zimratya Duchan-דוכן",
+      "Duchan-דוכן זמרתיה -Zimratya",
+      "זמרתיה -Zimratya",
+      "Duchan-דוכן",
+      "זמרתיה -Zimratya Duchan-דוכן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f847802e-b668-4380-8cc2-4b800b276ba5",
@@ -18507,7 +23413,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שרה",
+    "lastName": "בש",
+    "displayName": "שרה בש",
+    "searchableNames": [
+      "שרה בש",
+      "בש שרה",
+      "שרה",
+      "בש",
+      "שרה בש"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "f884698a-8799-4009-ad86-1eb1e6ccfb1b",
@@ -18570,7 +23487,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "aliza",
+    "lastName": "rave",
+    "displayName": "aliza rave",
+    "searchableNames": [
+      "aliza rave",
+      "rave aliza",
+      "aliza",
+      "rave",
+      "aliza rave"
+    ],
+    "isHebrew": false
   },
   {
     "nurseId": "fa6a96c5-e46e-47db-8fbe-cc3494c6ab08",
@@ -18659,7 +23587,18 @@
     "treatmentType": [
       "NURSE",
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "רויטל",
+    "lastName": "צוברי",
+    "displayName": "רויטל צוברי",
+    "searchableNames": [
+      "רויטל צוברי",
+      "צוברי רויטל",
+      "רויטל",
+      "צוברי",
+      "רויטל צוברי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "fabf350d-c872-4792-a427-d620f1aa5b8c",
@@ -18695,7 +23634,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "רוי",
+    "lastName": "רחימי",
+    "displayName": "רוי רחימי",
+    "searchableNames": [
+      "רוי רחימי",
+      "רחימי רוי",
+      "רוי",
+      "רחימי",
+      "רוי רחימי"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "fbd29070-9dc9-41d4-a89e-7afbd64052a2",
@@ -18750,7 +23700,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "ווסים",
+    "lastName": "כבהא",
+    "displayName": "ווסים כבהא",
+    "searchableNames": [
+      "ווסים כבהא",
+      "כבהא ווסים",
+      "ווסים",
+      "כבהא",
+      "ווסים כבהא"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "fbd5334d-e56f-4a40-a82c-f50535557db5",
@@ -18787,7 +23748,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "דינה",
+    "lastName": "כהן",
+    "displayName": "דינה כהן",
+    "searchableNames": [
+      "דינה כהן",
+      "כהן דינה",
+      "דינה",
+      "כהן",
+      "דינה כהן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "fc34e2c5-a112-4012-905f-6d1156981664",
@@ -18812,7 +23784,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "שמרית",
+    "lastName": "קרן",
+    "displayName": "שמרית קרן",
+    "searchableNames": [
+      "שמרית קרן",
+      "קרן שמרית",
+      "שמרית",
+      "קרן",
+      "שמרית קרן"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "fd71dd06-5c72-413f-9105-1e9e6f6919a9",
@@ -18836,7 +23819,18 @@
     "isApproved": false,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "יחיאלה",
+    "lastName": "היינה",
+    "displayName": "יחיאלה היינה",
+    "searchableNames": [
+      "יחיאלה היינה",
+      "היינה יחיאלה",
+      "יחיאלה",
+      "היינה",
+      "יחיאלה היינה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "fea6e997-1e71-4444-b8dc-247218d5246b",
@@ -18874,7 +23868,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "טאריק",
+    "lastName": "מצארוה",
+    "displayName": "טאריק מצארוה",
+    "searchableNames": [
+      "טאריק מצארוה",
+      "מצארוה טאריק",
+      "טאריק",
+      "מצארוה",
+      "טאריק מצארוה"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "feacb387-a023-4a6f-a520-a3f4cfec7c95",
@@ -18903,7 +23908,18 @@
     "isApproved": true,
     "treatmentType": [
       "NURSE"
-    ]
+    ],
+    "firstName": "גיטי",
+    "lastName": "שיף",
+    "displayName": "גיטי שיף",
+    "searchableNames": [
+      "גיטי שיף",
+      "שיף גיטי",
+      "גיטי",
+      "שיף",
+      "גיטי שיף"
+    ],
+    "isHebrew": true
   },
   {
     "nurseId": "48f71239-a93d-4a2b-84c2-b2044e617a50",
@@ -18927,6 +23943,17 @@
     "isApproved": true,
     "treatmentType": [
       "PHYSICAL_THERAPIST"
-    ]
+    ],
+    "firstName": "טליה",
+    "lastName": "רביד",
+    "displayName": "טליה רביד",
+    "searchableNames": [
+      "טליה רביד",
+      "רביד טליה",
+      "טליה",
+      "רביד",
+      "טליה רביד"
+    ],
+    "isHebrew": true
   }
 ]

@@ -17,7 +17,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '' }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: 'welcome',
-      content: "Hi! I'm here to help you find nurses. You can ask me things like:\n\n• \"Who's available today at 3pm in Tel Aviv?\"\n• \"Find a pediatric nurse in Jerusalem\"\n• \"I need wound care specialists urgently\"\n\nWhat can I help you find?",
+      content: "שלום! אני כאן לעזור לך למצוא אחיות. תוכל/י לשאול אותי:\n\n• \"מי זמינה היום בשעה 3 אחה\"צ בתל אביב?\"\n• \"אני צריך/ה אחות לטיפול בפצעים דחוף\"\n• \"מצא/י 5 אחיות לניהול תרופות\"\n• \"אחות בשם אסתר אלגרבלי\"\n\nEnglish queries also supported!\n\nבמה אוכל לעזור?",
       type: 'bot',
       timestamp: new Date(),
     }
@@ -89,7 +89,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '' }) => {
         content: resultMessage.content,
         data: {
           query: structuredQuery,
-          results: response.results,
+          results: response.results || response.nurses,
           engine: response.engine,
           latency: response.latency_ms || latency
         }
@@ -112,7 +112,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '' }) => {
     query: StructuredQuery, 
     latency: number
   ): { content: string } => {
-    const results = response.results || [];
+    const results = response.results || response.nurses || [];
     const engine = response.engine || 'Unknown';
     const actualLatency = response.latency_ms || latency;
 
@@ -127,10 +127,17 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '' }) => {
 
     // Add top results in conversational format
     results.slice(0, 3).forEach((result, index) => {
-      const score = (result.score * 100).toFixed(0);
-      content += `${index + 1}. **${result.name || `Nurse ${result.id}`}** (${score}% match)\n`;
+      // Use matchScore (0-1 scale) if available, fallback to score
+      const matchPercent = Math.round((result.matchScore || result.score || 0) * 100);
+      const rating = result.rating ? `⭐ ${result.rating.toFixed(1)}` : '';
+
+      content += `${index + 1}. **${result.name || `Nurse ${result.id}`}** (${matchPercent}% match) ${rating}\n`;
       if (result.reason) {
         content += `   ${result.reason}\n`;
+      }
+      // Add location info if available
+      if (result.city) {
+        content += `   📍 ${result.city}\n`;
       }
       content += `\n`;
     });
@@ -139,7 +146,8 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '' }) => {
       content += `And ${results.length - 3} more result${results.length - 3 === 1 ? '' : 's'}...\n\n`;
     }
 
-    content += `*Search completed in ${actualLatency}ms using ${engine} engine*`;
+    content += `*Search completed in ${actualLatency}ms using ${engine} engine*\n\n`;
+    content += `💡 *Match % calculated based on location proximity, service specialization, and availability*`;
 
     return { content };
   };
@@ -158,10 +166,10 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '' }) => {
 
   const suggestions = [
     "Who's available today at 3pm in Tel Aviv?",
-    "Find a pediatric nurse in Jerusalem",
     "I need wound care specialists urgently",
-    "Show me nurses with wheelchairs in Haifa",
-    "Find 5 nurses for medication management"
+    "Find 5 nurses for medication management",
+    "Show me nurses in Nethanya",
+    "Who's available in Haifa?"
   ];
 
   return (

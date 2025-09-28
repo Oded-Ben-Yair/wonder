@@ -8,6 +8,10 @@ import { fileURLToPath } from 'url';
 import { parse } from 'csv-parse/sync';
 import { maskObject, maskSensitive } from './util/mask.js';
 import { startTimer, withTimeout } from './util/timing.js';
+// import { generateShortNurseName } from './utils/nameGenerator.js'; // TODO: Fix module compatibility
+
+// Load nurse names mapping (will load at startup)
+let nurseNamesData = {};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -143,9 +147,21 @@ function transformNurseData(productionNurse, index) {
     }
   }
 
+  // Get nurse name from the mapping
+  const nurseId = productionNurse.nurseId || `nurse-${index}`;
+  const nurseNameInfo = nurseNamesData[nurseId];
+  const nurseName = nurseNameInfo ? nurseNameInfo.displayName :
+    (productionNurse.displayName || productionNurse.firstName && productionNurse.lastName ?
+      `${productionNurse.firstName} ${productionNurse.lastName}` : `Nurse ${index + 1}`);
+
   return {
-    id: productionNurse.nurseId || `nurse-${index}`,
-    name: `Nurse ${index + 1}`, // Generate synthetic names for privacy
+    id: nurseId,
+    name: nurseName,
+    firstName: nurseNameInfo?.firstName || productionNurse.firstName || '',
+    lastName: nurseNameInfo?.lastName || productionNurse.lastName || '',
+    displayName: nurseName,
+    isHebrew: nurseNameInfo?.isHebrew || false,
+    searchableNames: nurseNameInfo?.searchVariations || [],
     city: primaryCity.replace(/תל אביב-יפו|תל אביב/g, 'Tel Aviv')
                     .replace(/ירושלים/g, 'Jerusalem')
                     .replace(/חיפה/g, 'Haifa')
@@ -199,7 +215,18 @@ async function loadEngines() {
 
 async function loadNursesData() {
   try {
-    // First try to load CSV data
+    // First load the nurse names mapping
+    try {
+      const namesPath = path.join(__dirname, 'data', 'nurse_names.json');
+      const namesData = await fs.readFile(namesPath, 'utf-8');
+      nurseNamesData = JSON.parse(namesData);
+      logger.info({ count: Object.keys(nurseNamesData).length }, 'Nurse names mapping loaded');
+    } catch (err) {
+      logger.warn('Could not load nurse names mapping, using default names');
+      nurseNamesData = {};
+    }
+
+    // Then try to load CSV data
     const csvPath = path.join(__dirname, 'data', 'nurses.csv');
     const jsonPath = path.join(__dirname, 'data', 'nurses.json');
     
@@ -305,7 +332,8 @@ async function loadNursesData() {
 
 // Request validation schema
 const matchSchema = Joi.object({
-  city: Joi.string().required(),
+  city: Joi.string().optional(), // Made optional to allow searching by nurseName
+  nurseName: Joi.string().optional(), // Added for Hebrew name searches
   servicesQuery: Joi.array().items(Joi.string()).default([]),
   expertise: Joi.array().items(Joi.string()).default([]),
   expertiseQuery: Joi.array().items(Joi.string()).default([]),
@@ -318,7 +346,7 @@ const matchSchema = Joi.object({
   lng: Joi.number().optional(),
   radiusKm: Joi.number().optional(),
   weights: Joi.object().optional()
-});
+}).or('city', 'nurseName'); // Require at least city OR nurseName
 
 // Initialize Express app
 const app = express();

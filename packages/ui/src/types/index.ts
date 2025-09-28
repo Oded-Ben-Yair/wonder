@@ -65,6 +65,7 @@ export type TreatmentType =
 // Query Types
 export interface StructuredQuery {
   municipality?: string;
+  nurseName?: string;  // Added for Hebrew name searches
   specialization?: Specialization[];
   specializations?: Specialization[];  // alias for specialization
   mobility?: Mobility[];
@@ -101,17 +102,25 @@ export interface EngineResult {
   id: string;
   name?: string;
   score: number;
+  matchScore?: number;  // 0-1 scale match percentage
+  rating?: number;      // 1-5 star rating
+  city?: string;        // Nurse location
+  services?: string[];  // Available services
+  distance?: number;    // Distance in km
   reason?: string;
   nurse?: Nurse;
 }
 
 // API Response Types
 export interface MatchResponse {
-  results: EngineResult[];
-  engine: string;
-  latency_ms: number;
-  query: StructuredQuery;
+  results?: EngineResult[];  // Legacy support
+  nurses: EngineResult[];    // Current backend format
+  engine?: string;
+  latency_ms?: number;
+  query: any;
+  total: number;
   total_results?: number;
+  timestamp: string;
   usage?: {
     total_tokens?: number;
     cost?: number;

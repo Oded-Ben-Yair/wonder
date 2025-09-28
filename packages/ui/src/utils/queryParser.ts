@@ -1,11 +1,14 @@
 import { StructuredQuery, Specialization, Mobility, TreatmentType } from '@/types';
 
-// City/Municipality mapping - matches actual CSV data
+// City/Municipality mapping - matches actual CSV data with Hebrew support
 const cityMapping: Record<string, string[]> = {
-  'tel aviv': ['Tel Aviv-Yafo', 'תל אביב-יפו', 'tel aviv', 'tlv', 'tel aviv yafo'],
+  'tel aviv': ['Tel Aviv', 'Tel Aviv-Yafo', 'תל אביב-יפו', 'tel aviv', 'tlv', 'tel aviv yafo'],
+  'תל אביב': ['Tel Aviv', 'Tel Aviv-Yafo', 'תל אביב-יפו'],
   'jerusalem': ['Jerusalem', 'ירושלים', 'jlm'],
-  'haifa': ['Hefa', 'חיפה', 'haifa', 'Haifa'],
-  'netanya': ['Nethanya', 'נתניה', 'netanya'],
+  'ירושלים': ['Jerusalem', 'ירושלים'],
+  'haifa': ['Haifa', 'Hefa', 'חיפה', 'haifa'],
+  'חיפה': ['Haifa', 'Hefa', 'חיפה'],
+  'netanya': ['Nethanya', 'Netanya', 'נתניה', 'netanya'],
   'herzliya': ['Herzliya', 'הרצליה'],
   'petach tikva': ['Petach Tikva', 'פתח תקווה', 'petah tikva'],
   'rishon lezion': ['Rishon LeTsiyon', 'ראשון לציון', 'rishon letsiyon'],
@@ -21,15 +24,23 @@ const cityMapping: Record<string, string[]> = {
   'rehovoth': ['Rehovoth', 'רחובות', 'rehovot']
 };
 
-// Specialization keywords - maps natural language to actual CSV specializations
+// Specialization keywords - maps natural language to actual CSV specializations (Hebrew & English)
 const specializationKeywords: Record<string, Specialization[]> = {
-  // Wound care
+  // Wound care - English
   'wound care': ['WOUND_CARE', 'WOUND_TREATMENT'],
   'wound': ['WOUND_CARE', 'WOUND_TREATMENT'],
   'diabetic wound': ['DIABETIC_WOUND_TREATMENT'],
   'burn': ['BURN_TREATMENT'],
   'burns': ['BURN_TREATMENT'],
   'difficult wound': ['DIFFICULT_WOUND_HEALING_TREATMENT'],
+
+  // Wound care - Hebrew
+  'פצעים': ['WOUND_CARE', 'WOUND_TREATMENT'],
+  'טיפול בפצעים': ['WOUND_CARE', 'WOUND_TREATMENT'],
+  'פצע': ['WOUND_CARE', 'WOUND_TREATMENT'],
+  'כוויות': ['BURN_TREATMENT'],
+  'כווייה': ['BURN_TREATMENT'],
+  'פצעי סוכרת': ['DIABETIC_WOUND_TREATMENT'],
 
   // Catheter and stoma
   'catheter': ['CENTRAL_CATHETER_TREATMENT', 'CATHETER_INSERTION_REPLACEMENT'],
@@ -38,11 +49,16 @@ const specializationKeywords: Record<string, Specialization[]> = {
   'stoma': ['STOMA_TREATMENT'],
   'stoma care': ['STOMA_TREATMENT'],
 
-  // Medication
+  // Medication - English
   'medication': ['MEDICATION', 'MEDICATION_ARRANGEMENT'],
   'medicine': ['MEDICATION', 'MEDICATION_ARRANGEMENT'],
   'pills': ['MEDICATION_ARRANGEMENT'],
   'medication management': ['MEDICATION', 'MEDICATION_ARRANGEMENT'],
+
+  // Medication - Hebrew
+  'תרופות': ['MEDICATION', 'MEDICATION_ARRANGEMENT'],
+  'ניהול תרופות': ['MEDICATION', 'MEDICATION_ARRANGEMENT'],
+  'סידור תרופות': ['MEDICATION_ARRANGEMENT'],
 
   // Pediatrics and newborn
   'circumcision': ['DAY_NIGHT_CIRCUMCISION_NURSE'],
@@ -136,6 +152,13 @@ export function parseNaturalLanguageQuery(text: string): StructuredQuery {
   const query: StructuredQuery = {};
   const normalizedText = text.toLowerCase().trim();
 
+  // Check for Hebrew nurse name patterns first
+  const hebrewNamePattern = /אחות בשם ([\u0590-\u05FF\s]+)|([\u0590-\u05FF]+\s[\u0590-\u05FF]+)(?=\s*אחות|מי |האם )/;
+  const nameMatch = text.match(hebrewNamePattern);
+  if (nameMatch) {
+    query.nurseName = nameMatch[1] || nameMatch[2];
+  }
+
   // Parse municipality
   const municipality = extractMunicipality(normalizedText);
   if (municipality) query.municipality = municipality;
@@ -160,8 +183,8 @@ export function parseNaturalLanguageQuery(text: string): StructuredQuery {
   const date = extractDate(normalizedText);
   if (date) query.date = date;
 
-  // Check for urgency
-  if (/(urgent|emergency|asap|immediately|now)/i.test(normalizedText)) {
+  // Check for urgency (English and Hebrew)
+  if (/(urgent|emergency|asap|immediately|now|דחוף|מיד|מייד|עכשיו)/i.test(normalizedText)) {
     query.isUrgent = true;
   }
 
