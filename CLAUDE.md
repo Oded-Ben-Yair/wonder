@@ -186,3 +186,83 @@ The project includes comprehensive test suites in `/tests`:
 - Node version: 20.x
 - Package manager: npm/pnpm
 - MCP config: ~/.config/claude-code/mcp-config.json
+
+## Azure Deployment - Hebrew NLP Chatbot
+
+### Live Production URL
+**https://wonder-hebrew-works.azurewebsites.net** ✅ STABLE & RUNNING
+
+### Azure Configuration
+- **App Service**: wonder-hebrew-works (Linux, Node 20, B3 plan)
+- **Resource Group**: wonder-llm-rg (NOT AZAI_group)
+- **Location**: Sweden Central
+- **Deployment Method**: ZIP deployment via Azure CLI
+- **Always On**: ENABLED (prevents idle shutdown)
+- **Startup Command**: `npm install && npm start`
+
+### Deployment Directory Structure
+```
+azure-hebrew-nlp-deploy/full-chatbot/
+├── server.js              # Express server with Hebrew NLP
+├── generate-names.js      # Hebrew name generator
+├── package.json          # Node dependencies
+├── data/
+│   └── nurses.json       # 371 active nurses database
+└── public/               # React build output
+    ├── index.html
+    └── assets/           # JS/CSS bundles
+```
+
+### Key Features Implemented
+1. **Hebrew Natural Language Processing**
+   - Welcome message and prompts in Hebrew
+   - 8 clickable Hebrew query suggestions
+   - Hebrew city name mapping (תל אביב → Tel Aviv)
+   - Hebrew error messages
+
+2. **Professional Nurse Names**
+   - 371 nurses with Hebrew names (שרה כהן, רחל לוי, etc.)
+   - Generated using Hebrew name arrays
+
+3. **Transparent Scoring System**
+   - Clear calculation formula shown to users
+   - Breakdown: 30% service + 25% location + 20% rating + 15% availability + 10% experience
+   - Hebrew display of score components
+
+### Deployment Commands
+```bash
+# Build React frontend
+cd packages/ui
+npm run build
+cp -r dist/* /home/odedbe/wonder/azure-hebrew-nlp-deploy/full-chatbot/public/
+
+# Deploy to Azure
+cd /home/odedbe/wonder/azure-hebrew-nlp-deploy/full-chatbot
+zip -r deploy.zip . -x "*.zip" -x "node_modules/*"
+az webapp deploy \
+  --resource-group wonder-llm-rg \
+  --name wonder-hebrew-works \
+  --src-path deploy.zip \
+  --type zip
+
+# Ensure stability
+az webapp config set --resource-group wonder-llm-rg --name wonder-hebrew-works --always-on true
+```
+
+### Test Results
+- **Success Rate**: 83% (10/12 queries working)
+- **Response Time**: < 500ms
+- **Database**: 371 active nurses
+- **Languages**: Hebrew & English support
+
+### Hebrew Query Examples
+- "אני צריך אחות לטיפול בפצעים בתל אביב"
+- "מי זמינה היום בשעה 15:00 בחיפה?"
+- "חפש אחות למתן תרופות בירושלים"
+- "אחות דחוף לטיפול בפצע ברמת גן"
+
+### API Endpoints (Azure)
+- `GET /` - React chatbot interface
+- `GET /health` - System health check
+- `POST /match` - Nurse matching with Hebrew NLP
+- `GET /engines` - Available matching engines

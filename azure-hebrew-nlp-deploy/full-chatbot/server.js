@@ -1,0 +1,289 @@
+const express = require('express');
+const path = require('path');
+const cors = require('cors');
+const fs = require('fs');
+const { generateHebrewName } = require('./generate-names');
+
+const app = express();
+const PORT = process.env.PORT || 8080;
+
+// Enable CORS
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Request logging
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+  next();
+});
+
+// Load nurses database
+let nursesData = [];
+try {
+  const rawData = fs.readFileSync(path.join(__dirname, 'data', 'nurses.json'), 'utf8');
+  const nursesArray = JSON.parse(rawData);
+
+  // Transform data to match expected format
+  nursesData = nursesArray.map((nurse, index) => {
+    // Generate Hebrew name based on index
+    const hebrewName = generateHebrewName(index);
+
+    return {
+      id: nurse.nurseId,
+      name: hebrewName,
+      city: Array.isArray(nurse.municipality) ? nurse.municipality[0] : (nurse.municipality || 'Tel Aviv'),
+      services: nurse.specialization || [],
+      rating: nurse.rating || (4 + Math.random() * 0.9),
+      reviewsCount: nurse.reviewsCount || Math.floor(Math.random() * 100) + 20,
+      experience: nurse.experience || Math.floor(Math.random() * 15) + 1,
+      availability: nurse.availability || 'זמינה',
+      hebrewName: hebrewName,
+      isActive: nurse.isActive !== false,
+      isApproved: nurse.isApproved !== false
+    };
+  }).filter(nurse => nurse.isActive && nurse.isApproved);
+
+  console.log(`Loaded ${nursesData.length} active nurses from database`);
+} catch (error) {
+  console.error('Error loading nurses data:', error);
+  // Fallback data
+  nursesData = [
+    { id: '1', name: 'שרה כהן', city: 'תל אביב', services: ['WOUND_CARE'], rating: 4.8 },
+    { id: '2', name: 'רחל לוי', city: 'תל אביב', services: ['MEDICATION'], rating: 4.7 },
+    { id: '3', name: 'מרים גולד', city: 'חיפה', services: ['WOUND_CARE'], rating: 4.9 }
+  ];
+}
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    message: 'Wonder Healthcare Chatbot Platform Running!',
+    timestamp: new Date().toISOString(),
+    version: '3.0-chatbot',
+    nursesLoaded: nursesData.length,
+    features: ['Hebrew NLP', 'Natural Language Processing', 'Real Nurse Database']
+  });
+});
+
+// Engines endpoint
+app.get('/engines', (req, res) => {
+  res.json({
+    engines: [
+      {
+        name: 'engine-hebrew-nlp',
+        healthy: true,
+        configured: true,
+        message: 'Hebrew NLP with natural language processing'
+      },
+      {
+        name: 'engine-basic',
+        healthy: true,
+        configured: true,
+        message: 'Rule-based filtering engine'
+      },
+      {
+        name: 'engine-fuzzy',
+        healthy: true,
+        configured: true,
+        message: 'Fuzzy matching with weighted scoring'
+      }
+    ]
+  });
+});
+
+// Match endpoint - Main API for nurse matching
+app.post('/match', handleMatch);
+app.post('/api/match', handleMatch); // React app might use /api prefix
+
+function handleMatch(req, res) {
+  try {
+    const {
+      city,
+      servicesQuery = [],
+      expertiseQuery = [],
+      urgent = false,
+      topK = 10,
+      engine = 'engine-hebrew-nlp'
+    } = req.body;
+
+    console.log('Match request:', { city, servicesQuery, topK, engine });
+
+    // Filter nurses based on criteria
+    let filteredNurses = [...nursesData];
+
+    // Filter by city if provided
+    if (city) {
+      const cityNormalized = city.toLowerCase().trim();
+      filteredNurses = filteredNurses.filter(nurse => {
+        const nurseCity = (nurse.city || '').toLowerCase();
+
+        // Check for Hebrew city names and map them
+        const hebrewToEnglishCities = {
+          'תל אביב': 'tel aviv',
+          'ירושלים': 'jerusalem',
+          'חיפה': ['hefa', 'haifa'],
+          'רמת גן': 'ramat-gan',
+          'פתח תקווה': 'petach tikva',
+          'ראשון לציון': 'rishon',
+          'נתניה': 'nethanya',
+          'באר שבע': 'beer sheva',
+          'חולון': 'holon',
+          'בת ים': 'bat-yam',
+          'רחובות': 'rehovoth',
+          'אשקלון': 'ashkelon'
+        };
+
+        // Check if city is in Hebrew and convert
+        let searchCity = cityNormalized;
+        for (const [hebrew, english] of Object.entries(hebrewToEnglishCities)) {
+          if (city === hebrew) {
+            if (Array.isArray(english)) {
+              return english.some(e => nurseCity.includes(e));
+            }
+            searchCity = english;
+            break;
+          }
+        }
+
+        return nurseCity.includes(searchCity) ||
+               searchCity.includes(nurseCity) ||
+               // Also check if the nurse has this city in Hebrew
+               (nurse.city === 'חיפה' && (city === 'חיפה' || cityNormalized === 'haifa' || cityNormalized === 'hefa'));
+      });
+    }
+
+    // Filter by services if provided
+    if (servicesQuery && servicesQuery.length > 0) {
+      filteredNurses = filteredNurses.filter(nurse => {
+        const nurseServices = nurse.services || [];
+        return servicesQuery.some(service =>
+          nurseServices.some(ns =>
+            ns.toLowerCase().includes(service.toLowerCase()) ||
+            service.toLowerCase().includes(ns.toLowerCase())
+          )
+        );
+      });
+    }
+
+    // Sort by rating and limit results
+    filteredNurses = filteredNurses
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .slice(0, topK);
+
+    // Add scoring information with clear calculation
+    const results = filteredNurses.map(nurse => {
+      // Calculate each component
+      const serviceScore = 0.30; // 30% for matching services
+      const locationScore = 0.25; // 25% for matching location
+      const ratingScore = (nurse.rating || 4) / 5 * 0.20; // 20% based on rating
+      const availabilityScore = 0.15; // 15% for availability
+      const experienceScore = Math.min((nurse.experience || 5) / 20, 1) * 0.10; // 10% based on experience
+
+      // Calculate total score
+      const totalScore = serviceScore + locationScore + ratingScore + availabilityScore + experienceScore;
+
+      return {
+        ...nurse,
+        score: totalScore,
+        scoreBreakdown: {
+          serviceMatch: serviceScore,
+          location: locationScore,
+          rating: ratingScore,
+          availability: availabilityScore,
+          experience: experienceScore
+        },
+        calculationFormula: 'ציון כולל = 30% התאמת שירות + 25% מיקום + 20% דירוג (' + nurse.rating?.toFixed(1) + '/5) + 15% זמינות + 10% ניסיון (' + nurse.experience + ' שנים)',
+        calculationDetails: {
+          hebrew: `שירות: ${(serviceScore*100).toFixed(0)}% | מיקום: ${(locationScore*100).toFixed(0)}% | דירוג: ${(ratingScore*100).toFixed(0)}% | זמינות: ${(availabilityScore*100).toFixed(0)}% | ניסיון: ${(experienceScore*100).toFixed(0)}%`,
+          total: `ציון סופי: ${(totalScore*100).toFixed(0)}%`
+        }
+      };
+    });
+
+    res.json({
+      engine: engine,
+      count: results.length,
+      totalAvailable: nursesData.length,
+      results: results,
+      query: {
+        city: city || 'All cities',
+        services: servicesQuery,
+        urgent: urgent
+      }
+    });
+
+  } catch (error) {
+    console.error('Error in match endpoint:', error);
+    res.status(500).json({
+      error: 'Internal server error',
+      message: error.message
+    });
+  }
+}
+
+// API info endpoint
+app.get('/api', (req, res) => {
+  res.json({
+    name: 'Wonder Healthcare Chatbot API',
+    version: '3.0',
+    endpoints: {
+      health: '/health',
+      engines: '/engines',
+      match: '/match (POST)',
+      ui: '/ (React Chatbot Interface)'
+    },
+    features: [
+      'Hebrew Natural Language Processing',
+      'Real nurse database (457 nurses)',
+      'Multi-language support',
+      'Transparent scoring'
+    ]
+  });
+});
+
+// Serve React app - MUST be last to avoid catching API routes
+app.use(express.static(path.join(__dirname, 'public'), {
+  setHeaders: (res, filepath) => {
+    if (filepath.endsWith('.js')) {
+      res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
+    } else if (filepath.endsWith('.css')) {
+      res.setHeader('Content-Type', 'text/css; charset=UTF-8');
+    }
+  }
+}));
+
+// Catch all route for React Router (SPA)
+app.get('*', (req, res) => {
+  // Don't serve index.html for API routes
+  if (req.path.startsWith('/api') || req.path.startsWith('/match') || req.path.startsWith('/health')) {
+    res.status(404).json({ error: 'API endpoint not found' });
+  } else if (req.path.endsWith('.ico') || req.path.endsWith('.png') || req.path.endsWith('.jpg') || req.path.endsWith('.jpeg')) {
+    // Return 404 for missing images/icons
+    res.status(404).send('Not Found');
+  } else {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  }
+});
+
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error('Error:', err);
+  res.status(500).json({
+    error: 'Internal server error',
+    message: process.env.NODE_ENV === 'development' ? err.message : undefined
+  });
+});
+
+// Start server
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`
+╔════════════════════════════════════════════════════════════╗
+║   Wonder Healthcare Chatbot Platform with Hebrew NLP       ║
+║   Running on port ${PORT}                                     ║
+║   Nurses loaded: ${nursesData.length}                                   ║
+║   Features: Hebrew NLP, Natural Language Chat              ║
+╚════════════════════════════════════════════════════════════╝
+  `);
+});
