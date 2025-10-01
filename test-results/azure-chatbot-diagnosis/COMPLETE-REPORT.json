@@ -1,0 +1,134 @@
+{
+  "testQuery": "אני צריך אחות לטיפול בפצעים בתל אביב",
+  "azureUrl": "https://wonder-ceo-web.azurewebsites.net",
+  "timestamp": "2025-10-01T04:47:30.557Z",
+  "steps": {
+    "load": {
+      "status": 200
+    },
+    "inputFound": {
+      "placeholder": "Ask me to find nurses... (e.g., 'Who's available today in Tel Aviv?')"
+    },
+    "queryEntered": {
+      "value": "אני צריך אחות לטיפול בפצעים בתל אביב"
+    },
+    "submission": {
+      "matchRequests": 1,
+      "matchResponses": 1
+    },
+    "display": {
+      "hasResults": true,
+      "hasError": false
+    }
+  },
+  "networkLogs": [
+    {
+      "type": "request",
+      "url": "https://wonder-ceo-web.azurewebsites.net/match?engine=engine-basic",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://wonder-ceo-web.azurewebsites.net/",
+        "accept-language": "en-US",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Microsoft Edge\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.7339.186 Safari/537.36 Edg/140.0.7339.186",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json"
+      },
+      "postData": "{\"servicesQuery\":[\"WOUND_CARE\",\"WOUND_TREATMENT\"],\"expertiseQuery\":[\"WOUND_CARE\",\"WOUND_TREATMENT\"],\"urgent\":false,\"topK\":5,\"nurseName\":\"אני צריך\"}",
+      "timestamp": "2025-10-01T04:47:24.382Z"
+    },
+    {
+      "type": "response",
+      "url": "https://wonder-ceo-web.azurewebsites.net/match?engine=engine-basic",
+      "status": 200,
+      "headers": {
+        "etag": "W/\"e8-4U3Pc3jiURuDgkxnghKzuPxWS8U\"",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-origin": "https://wonder-ceo-web.azurewebsites.net",
+        "content-length": "232",
+        "date": "Wed, 01 Oct 2025 04:47:24 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "vary": "Origin",
+        "x-powered-by": "Express"
+      },
+      "timestamp": "2025-10-01T04:47:24.482Z",
+      "body": {
+        "engine": "engine-basic",
+        "latency_ms": 9.78,
+        "count": 0,
+        "results": [],
+        "statistics": {
+          "totalNurses": 6703,
+          "filteredByLocation": 0,
+          "filteredByService": 0,
+          "availableNurses": 0,
+          "rankedResults": 0,
+          "timings": {
+            "parsing": 0,
+            "matching": 10,
+            "total": 10
+          }
+        }
+      }
+    }
+  ],
+  "consoleLogs": [],
+  "errors": [],
+  "matchRequestDetails": [
+    {
+      "type": "request",
+      "url": "https://wonder-ceo-web.azurewebsites.net/match?engine=engine-basic",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"Windows\"",
+        "referer": "https://wonder-ceo-web.azurewebsites.net/",
+        "accept-language": "en-US",
+        "sec-ch-ua": "\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Microsoft Edge\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.7339.186 Safari/537.36 Edg/140.0.7339.186",
+        "accept": "application/json, text/plain, */*",
+        "content-type": "application/json"
+      },
+      "postData": "{\"servicesQuery\":[\"WOUND_CARE\",\"WOUND_TREATMENT\"],\"expertiseQuery\":[\"WOUND_CARE\",\"WOUND_TREATMENT\"],\"urgent\":false,\"topK\":5,\"nurseName\":\"אני צריך\"}",
+      "timestamp": "2025-10-01T04:47:24.382Z"
+    }
+  ],
+  "matchResponseDetails": [
+    {
+      "type": "response",
+      "url": "https://wonder-ceo-web.azurewebsites.net/match?engine=engine-basic",
+      "status": 200,
+      "headers": {
+        "etag": "W/\"e8-4U3Pc3jiURuDgkxnghKzuPxWS8U\"",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-origin": "https://wonder-ceo-web.azurewebsites.net",
+        "content-length": "232",
+        "date": "Wed, 01 Oct 2025 04:47:24 GMT",
+        "content-type": "application/json; charset=utf-8",
+        "vary": "Origin",
+        "x-powered-by": "Express"
+      },
+      "timestamp": "2025-10-01T04:47:24.482Z",
+      "body": {
+        "engine": "engine-basic",
+        "latency_ms": 9.78,
+        "count": 0,
+        "results": [],
+        "statistics": {
+          "totalNurses": 6703,
+          "filteredByLocation": 0,
+          "filteredByService": 0,
+          "availableNurses": 0,
+          "rankedResults": 0,
+          "timings": {
+            "parsing": 0,
+            "matching": 10,
+            "total": 10
+          }
+        }
+      }
+    }
+  ]
+}

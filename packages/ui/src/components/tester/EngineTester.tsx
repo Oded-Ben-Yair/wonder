@@ -385,7 +385,7 @@ const EngineTester: React.FC = () => {
                         </div>
                       ) : result.response ? (
                         <NurseResults
-                          results={result.response.results}
+                          results={result.response.nurses || result.response.results || []}
                           query={query}
                           engine={result.engine}
                           latency={result.duration}
@@ -414,8 +414,8 @@ const EngineTester: React.FC = () => {
                         <p className="text-sm text-blue-700 font-medium">Most Results</p>
                         <p className="text-blue-900">
                           {testResults
-                            .filter(r => r.response?.results)
-                            .sort((a, b) => (b.response?.results?.length || 0) - (a.response?.results?.length || 0))[0]?.engine || 'N/A'}
+                            .filter(r => r.response?.nurses || r.response?.results)
+                            .sort((a, b) => ((b.response?.nurses || b.response?.results)?.length || 0) - ((a.response?.nurses || a.response?.results)?.length || 0))[0]?.engine || 'N/A'}
                         </p>
                       </div>
                       <div>

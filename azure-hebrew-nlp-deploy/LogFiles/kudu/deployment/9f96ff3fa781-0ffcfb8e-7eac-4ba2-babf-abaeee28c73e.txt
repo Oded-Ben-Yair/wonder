@@ -1,0 +1,136 @@
+2025-09-15T12:06:01  Fetching changes.
+2025-09-15T12:06:01    Starting  LocalZipHandler
+2025-09-15T12:06:01    Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/fe7812e9-2ef5-4acd-9560-b95ba6c9d78a.zip (8.67 MB) to /tmp/zipdeploy/extracted
+2025-09-15T12:06:06  Updating submodules.
+2025-09-15T12:06:06  Preparing deployment for commit id '5d4f4b5d-4'.
+2025-09-15T12:06:07  PreDeployment: context.CleanOutputPath False
+2025-09-15T12:06:07  PreDeployment: context.OutputPath /home/site/wwwroot
+2025-09-15T12:06:07  Repository path is /tmp/zipdeploy/extracted
+2025-09-15T12:06:07  Running oryx build...
+2025-09-15T12:06:07    Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8ddf4504044e86d -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log
+2025-09-15T12:06:10    Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2025-09-15T12:06:10    You can report issues at https://github.com/Microsoft/Oryx/issues
+2025-09-15T12:06:10    
+2025-09-15T12:06:10    Oryx Version: 0.2.20250611.1+0649de32f1279969c9023dd41b389cce4bb94493, Commit: 0649de32f1279969c9023dd41b389cce4bb94493, ReleaseTagName: 20250611.1
+2025-09-15T12:06:10    
+2025-09-15T12:06:10    Build Operation ID: c3f15e0d5fae7eec
+2025-09-15T12:06:10    Repository Commit : 5d4f4b5d-42bc-42c4-8142-900d5619856c
+2025-09-15T12:06:10    OS Type           : bookworm
+2025-09-15T12:06:11    Image Type        : githubactions
+2025-09-15T12:06:11    
+2025-09-15T12:06:11    Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2025-09-15T12:06:11    Backup SDK Storage URL: https://oryxsdks-cdn.azureedge.net
+2025-09-15T12:06:11    Detecting platforms...
+2025-09-15T12:06:11    External SDK provider is enabled.
+2025-09-15T12:06:11    Requesting metadata for platform nodejs from external SDK provider
+2025-09-15T12:06:13    Requesting metadata for platform nodejs from external SDK provider
+2025-09-15T12:06:14    Detected following platforms:
+2025-09-15T12:06:14      nodejs: 20.19.3
+2025-09-15T12:06:14    Requesting metadata for platform nodejs from external SDK provider
+2025-09-15T12:06:15    Version '20.19.3' of platform 'nodejs' is not installed. Generating script to install it...
+2025-09-15T12:06:15    Detected the following frameworks: Typescript,Express,Next.js
+2025-09-15T12:06:15    
+2025-09-15T12:06:15    Using intermediate directory '/tmp/8ddf4504044e86d'.
+2025-09-15T12:06:15    
+2025-09-15T12:06:15    Copying files to the intermediate directory...
+2025-09-15T12:06:16    Done in 1 sec(s).
+2025-09-15T12:06:16    
+2025-09-15T12:06:16    Source directory     : /tmp/8ddf4504044e86d
+2025-09-15T12:06:16    Destination directory: /home/site/wwwroot
+2025-09-15T12:06:16    
+2025-09-15T12:06:16    
+2025-09-15T12:06:17    Downloading and extracting 'nodejs' version '20.19.3' to '/tmp/oryx/platforms/nodejs/20.19.3'...
+2025-09-15T12:06:17    Detected image debian flavor: bookworm.
+2025-09-15T12:06:17    Skipping download of nodejs version 20.19.3 as it is available in external sdk provider cache...
+2025-09-15T12:06:17    Extracting contents...
+2025-09-15T12:06:25    Successfully extracted nodejs version 20.19.3 from external sdk provider cache...
+2025-09-15T12:06:25    Done in 9 sec(s).
+2025-09-15T12:06:25    
+2025-09-15T12:06:25    Removing existing manifest file
+2025-09-15T12:06:25    Creating directory for command manifest file if it does not exist
+2025-09-15T12:06:26    Creating a manifest file...
+2025-09-15T12:06:26    Node Build Command Manifest file created.
+2025-09-15T12:06:26    
+2025-09-15T12:06:26    Using Node version:
+2025-09-15T12:06:26    v20.19.3
+2025-09-15T12:06:26    
+2025-09-15T12:06:26    Using Npm version:
+2025-09-15T12:06:26    10.8.2
+2025-09-15T12:06:26    
+2025-09-15T12:06:26    Running 'npm install'...
+2025-09-15T12:06:26    
+2025-09-15T12:13:41    
+2025-09-15T12:13:41    added 100 packages, and audited 101 packages in 7m
+2025-09-15T12:13:41    
+2025-09-15T12:13:41    24 packages are looking for funding
+2025-09-15T12:13:41      run `npm fund` for details
+2025-09-15T12:13:41    
+2025-09-15T12:13:41    found 0 vulnerabilities
+2025-09-15T12:13:41    
+2025-09-15T12:13:41    npm notice
+2025-09-15T12:13:41    Running 'npm run build'...
+2025-09-15T12:13:41    npm notice New major version of npm available! 10.8.2 -> 11.6.0
+2025-09-15T12:13:41    
+2025-09-15T12:13:41    npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.0
+2025-09-15T12:13:41    npm notice To update run: npm install -g npm@11.6.0
+2025-09-15T12:13:41    npm notice
+2025-09-15T12:13:42    
+2025-09-15T12:13:42    > ceo@0.1.0 build
+2025-09-15T12:13:42    > next build --turbopack
+2025-09-15T12:13:42    
+2025-09-15T12:13:46     ⚠ Installing TypeScript as it was not found while loading "next.config.ts".
+2025-09-15T12:13:46    
+2025-09-15T12:13:46    Installing devDependencies (npm):
+2025-09-15T12:13:46    - typescript
+2025-09-15T12:13:46    
+2025-09-15T12:13:57    
+2025-09-15T12:13:57    added 34 packages, and audited 135 packages in 11s
+2025-09-15T12:13:57    
+2025-09-15T12:13:57    31 packages are looking for funding
+2025-09-15T12:13:57      run `npm fund` for details
+2025-09-15T12:13:57    
+2025-09-15T12:13:57    found 0 vulnerabilities
+2025-09-15T12:13:57    
+2025-09-15T12:13:57     ⨯ Failed to load next.config.ts, see more info here https://nextjs.org/docs/messages/next-config-error
+2025-09-15T12:13:57    
+2025-09-15T12:13:57    > Build error occurred
+2025-09-15T12:13:57    [Error: Cannot find module 'typescript'
+2025-09-15T12:13:57    Require stack:
+2025-09-15T12:13:57    - /tmp/8ddf4504044e86d/node_modules/next/dist/build/next-config-ts/transpile-config.js
+2025-09-15T12:13:57    - /tmp/8ddf4504044e86d/node_modules/next/dist/server/config.js
+2025-09-15T12:13:57    - /tmp/8ddf4504044e86d/node_modules/next/dist/cli/next-test.js
+2025-09-15T12:13:57    - /tmp/8ddf4504044e86d/node_modules/next/dist/bin/next] {
+2025-09-15T12:13:57      code: 'MODULE_NOT_FOUND',
+2025-09-15T12:13:57      requireStack: [Array]
+2025-09-15T12:13:58    }
+2025-09-15T12:13:59    npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.6.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.0
+npm notice To update run: npm install -g npm@11.6.0
+npm notice
+ ⚠ Installing TypeScript as it was not found while loading "next.config.ts".
+ ⨯ Failed to load next.config.ts, see more info here https://nextjs.org/docs/messages/next-config-error
+
+> Build error occurred
+[Error: Cannot find module 'typescript'
+Require stack:
+- /tmp/8ddf4504044e86d/node_modules/next/dist/build/next-config-ts/transpile-config.js
+- /tmp/8ddf4504044e86d/node_modules/next/dist/server/config.js
+- /tmp/8ddf4504044e86d/node_modules/next/dist/cli/next-test.js
+- /tmp/8ddf4504044e86d/node_modules/next/dist/bin/next] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+/bin/bash -c "oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8ddf4504044e86d -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS "
+2025-09-15T12:13:59  
+2025-09-15T12:13:59  
+2025-09-15T12:13:59  Generating summary of Oryx build
+2025-09-15T12:13:59  Parsing the build logs
+2025-09-15T12:14:00  Found 0 issue(s)
+2025-09-15T12:14:00  
+2025-09-15T12:14:00  Build Summary :
+2025-09-15T12:14:00  ===============
+2025-09-15T12:14:00  Errors (0)
+2025-09-15T12:14:00  Warnings (0)
+2025-09-15T12:14:01  
+2025-09-15T12:14:03  Deployment Failed. deployer = OneDeploy deploymentPath = OneDeploy

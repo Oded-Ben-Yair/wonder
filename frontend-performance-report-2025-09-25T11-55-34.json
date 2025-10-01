@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-09-25T11:55:22.310Z",
+  "url": "https://wonder-ceo-web.azurewebsites.net",
+  "metrics": {
+    "coreWebVitals": {
+      "lcp": 267.00113239999973,
+      "fid": 26.510213239999977,
+      "cls": 0.02,
+      "fcp": 132.08170591999982,
+      "ttfb": 49.53063971999994,
+      "loadTime": 165.1021323999998,
+      "htmlSize": 1899,
+      "grades": {
+        "lcp": "Good",
+        "fid": "Good",
+        "cls": "Good"
+      }
+    }
+  },
+  "resources": {
+    "htmlSize": 1899,
+    "caching": "cache-control: public, max-age=0\r",
+    "compression": "Not specified",
+    "contentType": "content-type: text/html; charset=UTF-8\r",
+    "serverTiming": "Not available",
+    "resources": {
+      "scripts": [
+        {
+          "src": "/assets/index-I_DWNAcd.js",
+          "type": "script",
+          "async": false,
+          "defer": false,
+          "module": true
+        }
+      ],
+      "styles": [
+        {
+          "href": "/assets/index-afXAVAVa.css",
+          "type": "stylesheet"
+        }
+      ],
+      "images": [],
+      "fonts": [],
+      "preload": [],
+      "prefetch": []
+    }
+  },
+  "recommendations": [
+    {
+      "type": "Compression",
+      "priority": "High",
+      "issue": "Content compression not detected",
+      "solution": "Enable gzip/brotli compression on server"
+    },
+    {
+      "type": "Resource Hints",
+      "priority": "Low",
+      "issue": "No resource preloading detected",
+      "solution": "Implement preload hints for critical resources"
+    }
+  ],
+  "networkPerformance": [
+    {
+      "name": "Fast Connection",
+      "time": 91.11746700000003,
+      "size": 1899,
+      "success": true,
+      "status": 200
+    },
+    {
+      "name": "Slow 3G Simulation",
+      "time": 89.89967499999875,
+      "size": 1899,
+      "success": true,
+      "status": 200
+    },
+    {
+      "name": "Offline -> Online",
+      "time": 377.0000920000002,
+      "size": 1899,
+      "success": true,
+      "status": 200
+    }
+  ]
+}

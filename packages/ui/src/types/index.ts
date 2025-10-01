@@ -98,11 +98,28 @@ export interface Engine {
   averageLatency?: number;
 }
 
+export interface ScoreComponent {
+  weight: number;
+  score: number;
+  weighted: number;
+  explanation: string;
+}
+
+export interface ScoreBreakdown {
+  serviceMatch: ScoreComponent;
+  location: ScoreComponent;
+  rating: ScoreComponent;
+  availability: ScoreComponent;
+  experience: ScoreComponent;
+}
+
 export interface EngineResult {
   id: string;
   name?: string;
   score: number;
   matchScore?: number;  // 0-1 scale match percentage
+  scoreBreakdown?: ScoreBreakdown;  // Detailed score components
+  calculationFormula?: string;  // Human-readable formula
   rating?: number;      // 1-5 star rating
   city?: string;        // Nurse location
   services?: string[];  // Available services
@@ -112,6 +129,19 @@ export interface EngineResult {
 }
 
 // API Response Types
+export interface QueryStatistics {
+  totalNurses: number;
+  filteredByLocation: number;
+  filteredByService: number;
+  availableNurses: number;
+  rankedResults: number;
+  timings: {
+    parsing: number;
+    matching: number;
+    total: number;
+  };
+}
+
 export interface MatchResponse {
   results?: EngineResult[];  // Legacy support
   nurses: EngineResult[];    // Current backend format
@@ -121,6 +151,7 @@ export interface MatchResponse {
   total: number;
   total_results?: number;
   timestamp: string;
+  statistics?: QueryStatistics;  // New statistics
   usage?: {
     total_tokens?: number;
     cost?: number;

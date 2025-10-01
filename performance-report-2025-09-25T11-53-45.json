@@ -1,0 +1,171 @@
+{
+  "timestamp": "2025-09-25T11:53:23.967Z",
+  "system": {
+    "platform": "linux",
+    "arch": "x64",
+    "cpus": 14,
+    "memory": "7GB",
+    "nodeVersion": "v20.19.5"
+  },
+  "backend": {
+    "baselineTests": {},
+    "loadTests": {
+      "Light Load": {
+        "config": {
+          "name": "Light Load",
+          "concurrent": 10,
+          "totalRequests": 50,
+          "duration": 30000
+        },
+        "duration": 1403,
+        "totalRequests": 50,
+        "successful": 50,
+        "failed": 0,
+        "successRate": 100,
+        "throughput": "35.64",
+        "responseTime": {
+          "min": 82,
+          "max": 543,
+          "avg": 201,
+          "median": 131,
+          "p95": 505,
+          "p99": 543
+        },
+        "errors": {}
+      },
+      "Medium Load": {
+        "config": {
+          "name": "Medium Load",
+          "concurrent": 50,
+          "totalRequests": 250,
+          "duration": 60000
+        },
+        "duration": 3203,
+        "totalRequests": 250,
+        "successful": 250,
+        "failed": 0,
+        "successRate": 100,
+        "throughput": "78.05",
+        "responseTime": {
+          "min": 109,
+          "max": 1154,
+          "avg": 398,
+          "median": 354,
+          "p95": 1133,
+          "p99": 1140
+        },
+        "errors": {}
+      },
+      "Heavy Load": {
+        "config": {
+          "name": "Heavy Load",
+          "concurrent": 100,
+          "totalRequests": 500,
+          "duration": 120000
+        },
+        "duration": 3628,
+        "totalRequests": 500,
+        "successful": 500,
+        "failed": 0,
+        "successRate": 100,
+        "throughput": "137.82",
+        "responseTime": {
+          "min": 95,
+          "max": 796,
+          "avg": 415,
+          "median": 415,
+          "p95": 659,
+          "p99": 778
+        },
+        "errors": {}
+      }
+    },
+    "endpointTests": {
+      "Health Check": {
+        "requests": 10,
+        "successful": 10,
+        "failed": 0,
+        "successRate": 100,
+        "responseTime": {
+          "min": 90,
+          "max": 581,
+          "avg": 157,
+          "median": 104,
+          "p95": 581,
+          "p99": 581
+        },
+        "dataValidation": true,
+        "errors": []
+      },
+      "Match Query - Simple": {
+        "requests": 10,
+        "successful": 10,
+        "failed": 0,
+        "successRate": 100,
+        "responseTime": {
+          "min": 90,
+          "max": 106,
+          "avg": 99,
+          "median": 104,
+          "p95": 106,
+          "p99": 106
+        },
+        "dataValidation": true,
+        "errors": []
+      },
+      "Match Query - Complex": {
+        "requests": 10,
+        "successful": 10,
+        "failed": 0,
+        "successRate": 100,
+        "responseTime": {
+          "min": 88,
+          "max": 155,
+          "avg": 104,
+          "median": 103,
+          "p95": 155,
+          "p99": 155
+        },
+        "dataValidation": true,
+        "errors": []
+      }
+    }
+  },
+  "frontend": {
+    "loadTime": {
+      "requests": 5,
+      "successful": 5,
+      "avgLoadTime": 246,
+      "minLoadTime": 83,
+      "maxLoadTime": 838,
+      "htmlSize": 1899,
+      "successRate": 100
+    },
+    "resourceAnalysis": {
+      "totalScripts": 1,
+      "totalStylesheets": 1,
+      "totalImages": 0,
+      "totalPreloads": 0,
+      "hasServiceWorker": false,
+      "hasMetaViewport": true,
+      "resources": {
+        "scripts": [
+          "/assets/index-I_DWNAcd.js"
+        ],
+        "stylesheets": [
+          "/assets/index-afXAVAVa.css"
+        ],
+        "images": [],
+        "preloads": []
+      }
+    }
+  },
+  "summary": {},
+  "recommendations": {
+    "backend": [],
+    "frontend": [
+      "Implement service worker for caching"
+    ],
+    "infrastructure": []
+  }
+}

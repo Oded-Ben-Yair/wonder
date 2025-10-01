@@ -1,0 +1,9 @@
+<step title="Incoming Request" date="2025-09-16T10:51:30.193" instance="b45a72" url="/api/deployments/latest" method="GET" type="request" pid="821,1,36" Accept="*/*" Host="wonder-ceo-web.scm.azurewebsites.net" User-Agent="AZURECLI/2.77.0 (DEB)" Accept-Encoding="gzip, deflate" Authorization="Bea..." x-ms-client-request-id="149751ec-92eb-11f0-86df-00155db73fc4" X-ARR-LOG-ID="149751ec-92eb-11f0-86df-00155db73fc4" CLIENT-IP="199.203.90.233:54636" X-SITE-DEPLOYMENT-ID="wonder-ceo-web" WAS-DEFAULT-HOSTNAME="wonder-ceo-web.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/latest" X-Client-IP="199.203.90.233" X-Client-Port="54636" >
+  <step title="Cleanup Xml Logs" date="2025-09-16T10:51:30.208" /><!-- duration: 6ms -->
+  <step title="DeploymentService.GetResult" date="2025-09-16T10:51:30.229" >
+    <step title="DeploymentService.GetLatestDeployment" date="2025-09-16T10:51:30.233" >
+      <step title="DeploymentManager.GetResults" date="2025-09-16T10:51:30.239" /><!-- duration: 608ms -->
+    </step><!-- duration: 620ms -->
+  </step><!-- duration: 628ms -->
+  <step title="Outgoing response" date="2025-09-16T10:51:30.868" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 5ms -->
+</step><!-- duration: 683ms -->

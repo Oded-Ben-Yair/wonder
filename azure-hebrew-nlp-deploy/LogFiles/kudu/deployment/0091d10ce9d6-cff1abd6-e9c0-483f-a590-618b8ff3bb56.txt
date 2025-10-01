@@ -1,0 +1,16 @@
+2025-09-29T04:45:14  Fetching changes.
+2025-09-29T04:45:14    Starting  LocalZipHandler
+2025-09-29T04:45:14    Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/ae1f88a6-8955-4773-9fb6-26b8d7647408.zip (7.35 MB) to /tmp/zipdeploy/extracted
+2025-09-29T04:45:21  Updating submodules.
+2025-09-29T04:45:22  Preparing deployment for commit id '5d58e7c7-a'.
+2025-09-29T04:45:22  PreDeployment: context.CleanOutputPath False
+2025-09-29T04:45:22  PreDeployment: context.OutputPath /home/site/wwwroot
+2025-09-29T04:45:22  Running custom deployment command...
+2025-09-29T04:45:22  Not setting execute permissions for deploy.cmd
+2025-09-29T04:45:23  Running deployment command...
+2025-09-29T04:45:23    Command: deploy.cmd
+2025-09-29T04:45:23    /opt/Kudu/Scripts/starter.sh: line 2: exec: deploy.cmd: not found
+2025-09-29T04:45:23    /opt/Kudu/Scripts/starter.sh: line 2: exec: deploy.cmd: not found
+/opt/Kudu/Scripts/starter.sh deploy.cmd
+2025-09-29T04:45:23  
+2025-09-29T04:45:24  Deployment Failed. deployer = OneDeploy deploymentPath = OneDeploy

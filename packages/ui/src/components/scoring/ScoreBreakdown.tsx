@@ -28,10 +28,13 @@ const ScoreBreakdown: React.FC<ScoreBreakdownProps> = ({
   scoreBreakdown,
   calculationFormula,
   scorePercentage,
-  totalScore,
+  totalScore = 0,
   className = ''
 }) => {
   if (!scoreBreakdown) return null;
+
+  // Use totalScore if needed for display
+  console.log('Total score:', totalScore);
 
   const scoreItems = [
     {

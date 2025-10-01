@@ -1,0 +1,118 @@
+<step title="Incoming Request" date="2025-09-29T04:45:11.609" instance="94a41b" url="/api/publish?type=zip&amp;restart=True" method="POST" type="request" pid="823,1,15" Accept="*/*" Host="wonder-ceo-web.scm.azurewebsites.net" User-Agent="AZURECLI/2.77.0 (DEB)" Accept-Encoding="gzip, deflate" Authorization="Bea..." Cache-Control="no-cache" Content-Type="application/octet-stream" Cookie="ARRAffinity=94a41bc1b0bad4b76ec8de5af5839092b53f106e22f1ec1633d69c4db331a7c4; ARRAffinitySameSite=94a41bc1b0bad4b76ec8de5af5839092b53f106e22f1ec1633d69c4db331a7c4" Content-Length="7709032" x-ms-client-request-id="0e185d62-9cef-11f0-86df-00155df454f1" x-ms-artifact-checksum="acc7c1e1bc93ba2dc835472f1bd7fd7d815902621598027780fcac1ed85b3eec" X-ARR-LOG-ID="0e185d62-9cef-11f0-86df-00155df454f1" CLIENT-IP="199.203.90.233:57142" X-SITE-DEPLOYMENT-ID="wonder-ceo-web" WAS-DEFAULT-HOSTNAME="wonder-ceo-web.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?type=zip&amp;restart=True" X-Client-IP="199.203.90.233" X-Client-Port="57142" >
+  <step title="OneDeploy" date="2025-09-29T04:45:11.720" >
+    <step title="None repository commit" date="2025-09-29T04:45:11.750" >
+      <step title="Commit id: 5d58e7c7-a15c-471b-bec0-cbad22c9c24a" date="2025-09-29T04:45:11.755" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 5ms -->
+    </step><!-- duration: 13ms -->
+    <step title="Starting PushDeployAsync" date="2025-09-29T04:45:11.767" /><!-- duration: 6ms -->
+    <step title="Writing artifact to /tmp/zipdeploy/ae1f88a6-8955-4773-9fb6-26b8d7647408.zip" date="2025-09-29T04:45:11.862" >
+      <step title="Writing multipart request body to /tmp/zipdeploy/ae1f88a6-8955-4773-9fb6-26b8d7647408.zip" date="2025-09-29T04:45:11.871" /><!-- duration: 10ms -->
+    </step><!-- duration: 1309ms -->
+    <step title="Attempting to fetch target branch HEAD" date="2025-09-29T04:45:13.191" /><!-- duration: 3ms -->
+    <step title="Acquiring Deployment Lock" date="2025-09-29T04:45:13.199" /><!-- duration: 4ms -->
+    <step title="Acquired Deployment Lock" date="2025-09-29T04:45:13.257" /><!-- duration: 4ms -->
+    <step title="Performing fetch based deployment" date="2025-09-29T04:45:13.270" >
+      <step title="Creating temporary deployment" date="2025-09-29T04:45:13.275" /><!-- duration: 68ms -->
+      <step title="Releasing Deployment Lock" date="2025-09-29T04:45:14.565" /><!-- duration: 7ms -->
+      <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/ae1f88a6-8955-4773-9fb6-26b8d7647408.zip (7.35 MB) to /tmp/zipdeploy/extracted" date="2025-09-29T04:45:14.625" >
+        <step title="ChmodRecursive Process exited with total time taken in ms: 206" date="2025-09-29T04:45:18.548" /><!-- duration: 7ms -->
+      </step><!-- duration: 3935ms -->
+      <step title="None repository commit" date="2025-09-29T04:45:18.569" >
+        <step title="Commit id: 5d58e7c7-a15c-471b-bec0-cbad22c9c24a" date="2025-09-29T04:45:18.578" Message="OneDeploy" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 4ms -->
+      </step><!-- duration: 16ms -->
+      <step title="Deployment timer started" date="2025-09-29T04:45:20.599" >
+        <step title="DeploymentManager.Deploy(id:5d58e7c7-a15c-471b-bec0-cbad22c9c24a)" date="2025-09-29T04:45:20.636" >
+          <step title="Collecting changeset information" date="2025-09-29T04:45:20.689" /><!-- duration: 136ms -->
+          <step title="Updating submodules" date="2025-09-29T04:45:20.832" /><!-- duration: 1156ms -->
+          <step title="Determining deployment builder" date="2025-09-29T04:45:22.258" >
+            <step title="Builder is CustomBuilder" date="2025-09-29T04:45:22.267" /><!-- duration: 4ms -->
+          </step><!-- duration: 19ms -->
+          <step title="PreDeployment: context.CleanOutputPath False" date="2025-09-29T04:45:22.350" >
+            <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2025-09-29T04:45:22.524" >
+              <step title="Building" date="2025-09-29T04:45:22.707" >
+                <step title="Executing external process" date="2025-09-29T04:45:23.291" type="process" path="starter.sh" arguments="deploy.cmd" >
+                  <step title="Process dump" date="2025-09-29T04:45:23.428" exitCode="127" type="processOutput" /><!-- duration: 8ms -->
+                </step><!-- duration: 149ms -->
+                <step title="Error occurred" date="2025-09-29T04:45:23.508" type="error" text="/opt/Kudu/Scripts/starter.sh: line 2: exec: deploy.cmd: not found
+/opt/Kudu/Scripts/starter.sh deploy.cmd" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122" /><!-- duration: 4ms -->
+                <step title="Error occurred" date="2025-09-29T04:45:23.547" type="error" text="/opt/Kudu/Scripts/starter.sh: line 2: exec: deploy.cmd: not found
+/opt/Kudu/Scripts/starter.sh deploy.cmd" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.CustomBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/CustomBuilder.cs:line 53
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771" /><!-- duration: 18ms -->
+                <step title="Purge deployment items" date="2025-09-29T04:45:24.500" >
+                  <step title="Remove 89cd6781-, Failed, received at 09/29/2025 04:38:54" date="2025-09-29T04:45:24.565" /><!-- duration: 4ms -->
+                  <step title="Remove temp-6952, Failed, received at 09/29/2025 04:38:42" date="2025-09-29T04:45:24.634" /><!-- duration: 4ms -->
+                </step><!-- duration: 141ms -->
+              </step><!-- duration: 1938ms -->
+            </step><!-- duration: 2126ms -->
+            <step title="Error occurred" date="2025-09-29T04:45:24.654" type="error" text="/opt/Kudu/Scripts/starter.sh: line 2: exec: deploy.cmd: not found
+/opt/Kudu/Scripts/starter.sh deploy.cmd" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.CustomBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/CustomBuilder.cs:line 53
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840" /><!-- duration: 4ms -->
+            <step title="Cleaning up temp files" date="2025-09-29T04:45:24.737" /><!-- duration: 5ms -->
+            <step title="Cleaning up temp files" date="2025-09-29T04:45:24.770" /><!-- duration: 506ms -->
+            <step title="Error occurred" date="2025-09-29T04:45:25.300" type="error" text="/opt/Kudu/Scripts/starter.sh: line 2: exec: deploy.cmd: not found
+/opt/Kudu/Scripts/starter.sh deploy.cmd" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.CustomBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/CustomBuilder.cs:line 53
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 4ms -->
+          </step><!-- duration: 2963ms -->
+          <step title="Reloading status file with latest updates" date="2025-09-29T04:45:25.364" >
+            <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2025-09-29T04:45:25.370" /><!-- duration: 97ms -->
+          </step><!-- duration: 107ms -->
+          <step title="Error occurred" date="2025-09-29T04:45:25.475" type="error" text="/opt/Kudu/Scripts/starter.sh: line 2: exec: deploy.cmd: not found
+/opt/Kudu/Scripts/starter.sh deploy.cmd" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.CustomBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/CustomBuilder.cs:line 53
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 3ms -->
+          <step title="Marking deployment as failed and cleaning up the temp deployment" date="2025-09-29T04:45:25.540" /><!-- duration: 7ms -->
+        </step><!-- duration: 5040ms -->
+      </step><!-- duration: 5083ms -->
+      <step title="Error occurred" date="2025-09-29T04:45:25.716" type="error" text="Deployment failed" stackTrace="   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 307
+   at Kudu.Core.Deployment.FetchDeploymentManager.PerformDeployment(DeploymentInfoBase deploymentInfo, IDisposable tempDeployment, ChangeSet tempChangeSet, DeployStatusApiResult updateStatusObj) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 230
+   at Kudu.Core.Deployment.FetchDeploymentManager.&lt;&gt;c__DisplayClass17_0.&lt;&lt;FetchDeploy&gt;b__0&gt;d.MoveNext() in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 131
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.FetchDeploymentManager.FetchDeploy(DeploymentInfoBase deployInfo, Boolean asyncRequested, Uri requestUri, String targetBranch) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 124
+   at Kudu.Services.Deployment.PushDeploymentController.PushDeployAsync(ArtifactDeploymentInfo deploymentInfo, Boolean isAsync, HttpContext context, JObject requestJson) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 791
+   at Kudu.Services.Deployment.PushDeploymentController.OneDeploy(String type, Boolean async, String path, Nullable`1 restart, Nullable`1 clean, Boolean ignoreStack, Boolean trackDeploymentProgress, Boolean trackStatus, Boolean reset) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 624
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeActionMethodAsync&gt;g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeNextActionFilterAsync&gt;g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeInnerFilterAsync&gt;g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResourceFilter&gt;g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeFilterPipelineAsync&gt;g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context) in /tmp/KuduLite/Kudu.Services.Web/Tracing/TraceMiddleware.cs:line 101" innerText="/opt/Kudu/Scripts/starter.sh: line 2: exec: deploy.cmd: not found
+/opt/Kudu/Scripts/starter.sh deploy.cmd" innerStackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 122
+   at Kudu.Core.Deployment.Generator.CustomBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/CustomBuilder.cs:line 53
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 28ms -->
+      <step title="Incoming Request" date="2025-09-29T04:45:25.776" url="/Error?type=zip&amp;restart=True" method="POST" type="request" pid="823,1,15" Accept="*/*" Host="wonder-ceo-web.scm.azurewebsites.net" User-Agent="AZURECLI/2.77.0 (DEB)" Accept-Encoding="gzip, deflate" Authorization="Bea..." Cache-Control="no-cache" Content-Type="application/octet-stream" Cookie="ARRAffinity=94a41bc1b0bad4b76ec8de5af5839092b53f106e22f1ec1633d69c4db331a7c4; ARRAffinitySameSite=94a41bc1b0bad4b76ec8de5af5839092b53f106e22f1ec1633d69c4db331a7c4" Content-Length="7709032" x-ms-client-request-id="0e185d62-9cef-11f0-86df-00155df454f1" x-ms-artifact-checksum="acc7c1e1bc93ba2dc835472f1bd7fd7d815902621598027780fcac1ed85b3eec" X-ARR-LOG-ID="0e185d62-9cef-11f0-86df-00155df454f1" CLIENT-IP="199.203.90.233:57142" X-SITE-DEPLOYMENT-ID="wonder-ceo-web" WAS-DEFAULT-HOSTNAME="wonder-ceo-web.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?type=zip&amp;restart=True" X-Client-IP="199.203.90.233" X-Client-Port="57142" >
+        <step title="Outgoing response" date="2025-09-29T04:45:25.844" type="response" statusCode="400" statusText="BadRequest" /><!-- duration: 4ms -->
+      </step><!-- duration: 82ms -->

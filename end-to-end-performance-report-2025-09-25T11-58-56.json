@@ -1,0 +1,1007 @@
+{
+  "timestamp": "2025-09-25T11:57:27.570Z",
+  "scenarios": {
+    "Emergency Wound Care Search": {
+      "scenario": {
+        "name": "Emergency Wound Care Search",
+        "description": "User needs urgent wound care nurse in Tel Aviv",
+        "steps": [
+          {
+            "type": "frontend_load",
+            "url": "https://wonder-ceo-web.azurewebsites.net"
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Tel Aviv",
+              "servicesQuery": [
+                "WOUND_CARE"
+              ],
+              "urgent": true,
+              "topK": 5
+            }
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Tel Aviv",
+              "servicesQuery": [
+                "WOUND_CARE"
+              ],
+              "gender": "FEMALE",
+              "urgent": true,
+              "topK": 3
+            }
+          }
+        ],
+        "frequency": 0.3
+      },
+      "stats": {
+        "testRuns": 6,
+        "successful": 6,
+        "successRate": 100,
+        "averageTime": 3499.7572791666666,
+        "minTime": 2280.508396000001,
+        "maxTime": 4211.5237400000005,
+        "errors": []
+      },
+      "results": [
+        {
+          "userId": "user_1",
+          "scenario": "Emergency Wound Care Search",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 453.90866800000003,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 399.45255700000007,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "WOUND_CARE"
+                ],
+                "urgent": true,
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 1881,
+                "resultCount": 5
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 83.13742000000002,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "WOUND_CARE"
+                ],
+                "gender": "FEMALE",
+                "urgent": true,
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 1159,
+                "resultCount": 3
+              }
+            }
+          ],
+          "totalTime": 4211.5237400000005,
+          "success": true,
+          "errors": []
+        },
+        {
+          "userId": "user_2",
+          "scenario": "Emergency Wound Care Search",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 114.9831549999999,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 81.99534399999993,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "WOUND_CARE"
+                ],
+                "urgent": true,
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 1884,
+                "resultCount": 5
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 84.3846109999995,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "WOUND_CARE"
+                ],
+                "gender": "FEMALE",
+                "urgent": true,
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 1159,
+                "resultCount": 3
+              }
+            }
+          ],
+          "totalTime": 3842.421357,
+          "success": true,
+          "errors": []
+        },
+        {
+          "userId": "user_3",
+          "scenario": "Emergency Wound Care Search",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 230.9742350000015,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 86.76609000000099,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "WOUND_CARE"
+                ],
+                "urgent": true,
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 1881,
+                "resultCount": 5
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 98.45154100000036,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "WOUND_CARE"
+                ],
+                "gender": "FEMALE",
+                "urgent": true,
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 1161,
+                "resultCount": 3
+              }
+            }
+          ],
+          "totalTime": 3948.4406500000005,
+          "success": true,
+          "errors": []
+        }
+      ]
+    },
+    "Geriatric Care Planning": {
+      "scenario": {
+        "name": "Geriatric Care Planning",
+        "description": "Family planning long-term geriatric care",
+        "steps": [
+          {
+            "type": "frontend_load",
+            "url": "https://wonder-ceo-web.azurewebsites.net"
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Tel Aviv",
+              "servicesQuery": [
+                "GERIATRIC_CARE"
+              ],
+              "topK": 10
+            }
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Tel Aviv",
+              "servicesQuery": [
+                "GERIATRIC_CARE"
+              ],
+              "gender": "FEMALE",
+              "topK": 8
+            }
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Ramat Gan",
+              "servicesQuery": [
+                "GERIATRIC_CARE"
+              ],
+              "topK": 5
+            }
+          }
+        ],
+        "frequency": 0.25
+      },
+      "stats": {
+        "testRuns": 5,
+        "successful": 5,
+        "successRate": 100,
+        "averageTime": 4942.744409,
+        "minTime": 4403.503557,
+        "maxTime": 5178.825738,
+        "errors": []
+      },
+      "results": [
+        {
+          "userId": "user_1",
+          "scenario": "Geriatric Care Planning",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 89.05188300000009,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 83.72028399999908,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "GERIATRIC_CARE"
+                ],
+                "topK": 10
+              },
+              "response": {
+                "status": 200,
+                "size": 155,
+                "resultCount": 0
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 83.32470399999875,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "GERIATRIC_CARE"
+                ],
+                "gender": "FEMALE",
+                "topK": 8
+              },
+              "response": {
+                "status": 200,
+                "size": 154,
+                "resultCount": 0
+              }
+            },
+            {
+              "stepNumber": 4,
+              "type": "api_call",
+              "duration": 89.44263900000078,
+              "success": true,
+              "data": {
+                "city": "Ramat Gan",
+                "servicesQuery": [
+                  "GERIATRIC_CARE"
+                ],
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 155,
+                "resultCount": 0
+              }
+            }
+          ],
+          "totalTime": 4403.503557,
+          "success": true,
+          "errors": []
+        },
+        {
+          "userId": "user_2",
+          "scenario": "Geriatric Care Planning",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 386.5044130000024,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 82.5014540000011,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "GERIATRIC_CARE"
+                ],
+                "topK": 10
+              },
+              "response": {
+                "status": 200,
+                "size": 155,
+                "resultCount": 0
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 82.06716600000073,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "GERIATRIC_CARE"
+                ],
+                "gender": "FEMALE",
+                "topK": 8
+              },
+              "response": {
+                "status": 200,
+                "size": 154,
+                "resultCount": 0
+              }
+            },
+            {
+              "stepNumber": 4,
+              "type": "api_call",
+              "duration": 83.61172100000113,
+              "success": true,
+              "data": {
+                "city": "Ramat Gan",
+                "servicesQuery": [
+                  "GERIATRIC_CARE"
+                ],
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 155,
+                "resultCount": 0
+              }
+            }
+          ],
+          "totalTime": 5178.825738,
+          "success": true,
+          "errors": []
+        },
+        {
+          "userId": "user_3",
+          "scenario": "Geriatric Care Planning",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 415.0903150000013,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 90.44410500000231,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "GERIATRIC_CARE"
+                ],
+                "topK": 10
+              },
+              "response": {
+                "status": 200,
+                "size": 155,
+                "resultCount": 0
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 83.24998100000084,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "GERIATRIC_CARE"
+                ],
+                "gender": "FEMALE",
+                "topK": 8
+              },
+              "response": {
+                "status": 200,
+                "size": 154,
+                "resultCount": 0
+              }
+            },
+            {
+              "stepNumber": 4,
+              "type": "api_call",
+              "duration": 82.09088299999712,
+              "success": true,
+              "data": {
+                "city": "Ramat Gan",
+                "servicesQuery": [
+                  "GERIATRIC_CARE"
+                ],
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 155,
+                "resultCount": 0
+              }
+            }
+          ],
+          "totalTime": 5177.524819999999,
+          "success": true,
+          "errors": []
+        }
+      ]
+    },
+    "General Home Care Search": {
+      "scenario": {
+        "name": "General Home Care Search",
+        "description": "Basic home care nurse search",
+        "steps": [
+          {
+            "type": "frontend_load",
+            "url": "https://wonder-ceo-web.azurewebsites.net"
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Tel Aviv",
+              "topK": 5
+            }
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Tel Aviv",
+              "servicesQuery": [
+                "GENERAL_CARE"
+              ],
+              "topK": 3
+            }
+          }
+        ],
+        "frequency": 0.4
+      },
+      "stats": {
+        "testRuns": 8,
+        "successful": 8,
+        "successRate": 100,
+        "averageTime": 2978.515232749999,
+        "minTime": 1998.5047659999982,
+        "maxTime": 4210.511008000001,
+        "errors": []
+      },
+      "results": [
+        {
+          "userId": "user_1",
+          "scenario": "General Home Care Search",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 369.45726500000455,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 80.98361300000397,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 1658,
+                "resultCount": 5
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 89.57668999999441,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "GENERAL_CARE"
+                ],
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 152,
+                "resultCount": 0
+              }
+            }
+          ],
+          "totalTime": 3958.1572549999983,
+          "success": true,
+          "errors": []
+        },
+        {
+          "userId": "user_2",
+          "scenario": "General Home Care Search",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 104.35055199999624,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 84.00646499999857,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 1659,
+                "resultCount": 5
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 85.10134599999583,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "GENERAL_CARE"
+                ],
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 152,
+                "resultCount": 0
+              }
+            }
+          ],
+          "totalTime": 3179.363526000001,
+          "success": true,
+          "errors": []
+        },
+        {
+          "userId": "user_3",
+          "scenario": "General Home Care Search",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 92.45299099999829,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 88.2516570000007,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 1659,
+                "resultCount": 5
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 90.48720200000389,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "GENERAL_CARE"
+                ],
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 152,
+                "resultCount": 0
+              }
+            }
+          ],
+          "totalTime": 4210.511008000001,
+          "success": true,
+          "errors": []
+        }
+      ]
+    },
+    "Specialized Medical Care": {
+      "scenario": {
+        "name": "Specialized Medical Care",
+        "description": "Complex medical requirements search",
+        "steps": [
+          {
+            "type": "frontend_load",
+            "url": "https://wonder-ceo-web.azurewebsites.net"
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Jerusalem",
+              "servicesQuery": [
+                "CENTRAL_CATHETER_TREATMENT"
+              ],
+              "topK": 3
+            }
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Haifa",
+              "servicesQuery": [
+                "STOMA_TREATMENT"
+              ],
+              "topK": 3
+            }
+          },
+          {
+            "type": "api_call",
+            "endpoint": "/match",
+            "data": {
+              "city": "Tel Aviv",
+              "servicesQuery": [
+                "CENTRAL_CATHETER_TREATMENT",
+                "WOUND_CARE"
+              ],
+              "urgent": true,
+              "topK": 5
+            }
+          }
+        ],
+        "frequency": 0.05
+      },
+      "stats": {
+        "testRuns": 3,
+        "successful": 3,
+        "successRate": 100,
+        "averageTime": 5049.1265306666655,
+        "minTime": 4354.604512999998,
+        "maxTime": 5415.654077999992,
+        "errors": []
+      },
+      "results": [
+        {
+          "userId": "user_1",
+          "scenario": "Specialized Medical Care",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 79.06048299999384,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 84.98658300000534,
+              "success": true,
+              "data": {
+                "city": "Jerusalem",
+                "servicesQuery": [
+                  "CENTRAL_CATHETER_TREATMENT"
+                ],
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 1107,
+                "resultCount": 3
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 82.28855900000781,
+              "success": true,
+              "data": {
+                "city": "Haifa",
+                "servicesQuery": [
+                  "STOMA_TREATMENT"
+                ],
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 152,
+                "resultCount": 0
+              }
+            },
+            {
+              "stepNumber": 4,
+              "type": "api_call",
+              "duration": 83.41715199999453,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "CENTRAL_CATHETER_TREATMENT",
+                  "WOUND_CARE"
+                ],
+                "urgent": true,
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 1909,
+                "resultCount": 5
+              }
+            }
+          ],
+          "totalTime": 5415.654077999992,
+          "success": true,
+          "errors": []
+        },
+        {
+          "userId": "user_2",
+          "scenario": "Specialized Medical Care",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 368.06749200000195,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 83.30611200000567,
+              "success": true,
+              "data": {
+                "city": "Jerusalem",
+                "servicesQuery": [
+                  "CENTRAL_CATHETER_TREATMENT"
+                ],
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 1105,
+                "resultCount": 3
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 84.65203100000508,
+              "success": true,
+              "data": {
+                "city": "Haifa",
+                "servicesQuery": [
+                  "STOMA_TREATMENT"
+                ],
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 152,
+                "resultCount": 0
+              }
+            },
+            {
+              "stepNumber": 4,
+              "type": "api_call",
+              "duration": 80.85851399999228,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "CENTRAL_CATHETER_TREATMENT",
+                  "WOUND_CARE"
+                ],
+                "urgent": true,
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 1913,
+                "resultCount": 5
+              }
+            }
+          ],
+          "totalTime": 4354.604512999998,
+          "success": true,
+          "errors": []
+        },
+        {
+          "userId": "user_3",
+          "scenario": "Specialized Medical Care",
+          "steps": [
+            {
+              "stepNumber": 1,
+              "type": "frontend_load",
+              "duration": 397.68426100000215,
+              "success": true,
+              "response": {
+                "status": 200,
+                "size": 1899
+              }
+            },
+            {
+              "stepNumber": 2,
+              "type": "api_call",
+              "duration": 81.43433400000504,
+              "success": true,
+              "data": {
+                "city": "Jerusalem",
+                "servicesQuery": [
+                  "CENTRAL_CATHETER_TREATMENT"
+                ],
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 1106,
+                "resultCount": 3
+              }
+            },
+            {
+              "stepNumber": 3,
+              "type": "api_call",
+              "duration": 82.0961890000035,
+              "success": true,
+              "data": {
+                "city": "Haifa",
+                "servicesQuery": [
+                  "STOMA_TREATMENT"
+                ],
+                "topK": 3
+              },
+              "response": {
+                "status": 200,
+                "size": 152,
+                "resultCount": 0
+              }
+            },
+            {
+              "stepNumber": 4,
+              "type": "api_call",
+              "duration": 88.56829100000323,
+              "success": true,
+              "data": {
+                "city": "Tel Aviv",
+                "servicesQuery": [
+                  "CENTRAL_CATHETER_TREATMENT",
+                  "WOUND_CARE"
+                ],
+                "urgent": true,
+                "topK": 5
+              },
+              "response": {
+                "status": 200,
+                "size": 1908,
+                "resultCount": 5
+              }
+            }
+          ],
+          "totalTime": 5377.121001000007,
+          "success": true,
+          "errors": []
+        }
+      ]
+    }
+  },
+  "patterns": {},
+  "systemMetrics": {},
+  "performance": {
+    "overallScore": 96,
+    "reliability": 100,
+    "scalability": 100,
+    "responsiveness": 89
+  },
+  "recommendations": [
+    {
+      "category": "Performance",
+      "priority": "Medium",
+      "issue": "Specialized Medical Care scenario takes 5049ms on average",
+      "recommendation": "Optimize this user journey for better performance"
+    }
+  ]
+}

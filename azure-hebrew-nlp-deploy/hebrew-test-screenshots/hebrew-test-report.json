@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-10-01T06:06:06.346Z",
+  "url": "https://wonder-ceo-web.azurewebsites.net",
+  "results": {
+    "passed": 10,
+    "failed": 8,
+    "total": 18
+  },
+  "englishFound": [
+    "Hebrew \"נמצאו X אחיות\": Found English \"Found X nurses\" instead",
+    "Hebrew \"קריטריוני חיפוש\": Found English \"Search criteria\" instead",
+    "Hebrew \"התמחויות\": Found English \"Specializations\" instead",
+    "Hebrew \"מיקומים\": Found English \"Locations\" instead",
+    "Hebrew \"קבע תור עם ההתאמה הטובה ביותר\": Found English \"Book Top Match\" instead",
+    "Hebrew \"רק 5 כוכבים\": Found English \"5-Star Only\" instead",
+    "Hebrew \"הרחב אזור\": Found English \"Expand Area\" instead",
+    "Hebrew \"חידוד:\" label: Found English \"Refine:\" instead"
+  ],
+  "assessment": "8 English strings remaining",
+  "screenshotDirectory": "/home/odedbe/wonder/azure-hebrew-nlp-deploy/hebrew-test-screenshots"
+}

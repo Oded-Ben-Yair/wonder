@@ -1,0 +1,27 @@
+{
+  "siteLoaded": true,
+  "querySubmitted": true,
+  "resultsShown": true,
+  "realNamesFound": [
+    "התאמת אחיות",
+    "אחיות מקצועיותפעילעומד",
+    "מחפש אחיותשאל",
+    "אותי למצוא",
+    "אחיות בשפה",
+    "אני עוזר",
+    "כאן כדי",
+    "לעזור לך",
+    "למצוא את",
+    "האחות המתאימה"
+  ],
+  "mockNamesFound": [],
+  "hebrewServiceNames": true,
+  "hebrewCityNames": true,
+  "englishTextFound": [],
+  "screenshots": [
+    "test-live-1-loaded.png",
+    "test-live-2-query-entered.png",
+    "test-live-3-results.png",
+    "test-live-4-final.png"
+  ]
+}

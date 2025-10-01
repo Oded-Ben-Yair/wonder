@@ -1,0 +1,41 @@
+{
+  "count": 3,
+  "results": [
+    {
+      "id": "292d6495-7935-4a0d-83d4-8133c9f1239d",
+      "name": "Nurse 292d6495",
+      "city": "Ashdod",
+      "reason": "passed: service, city, availability",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 4.46,
+        "reviewsCount": 87
+      }
+    },
+    {
+      "id": "f317deba-4d1b-41cb-ab98-2ad37bb1a30f",
+      "name": "Nurse f317deba",
+      "city": "Ashdod",
+      "reason": "passed: service, city, availability",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 3.8825,
+        "reviewsCount": 82
+      }
+    },
+    {
+      "id": "d1508f90-7d2a-4f20-8419-9e482f3d21b1",
+      "name": "Nurse d1508f90",
+      "city": "Ashdod",
+      "reason": "passed: service, city, availability",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 3.5495,
+        "reviewsCount": 30
+      }
+    }
+  ]
+}

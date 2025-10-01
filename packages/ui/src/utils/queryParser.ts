@@ -152,11 +152,11 @@ export function parseNaturalLanguageQuery(text: string): StructuredQuery {
   const query: StructuredQuery = {};
   const normalizedText = text.toLowerCase().trim();
 
-  // Check for Hebrew nurse name patterns first
-  const hebrewNamePattern = /אחות בשם ([\u0590-\u05FF\s]+)|([\u0590-\u05FF]+\s[\u0590-\u05FF]+)(?=\s*אחות|מי |האם )/;
+  // Check for Hebrew nurse name patterns - ONLY when explicitly mentioned "אחות בשם X"
+  const hebrewNamePattern = /אחות בשם ([\u0590-\u05FF\s]+)/;
   const nameMatch = text.match(hebrewNamePattern);
   if (nameMatch) {
-    query.nurseName = nameMatch[1] || nameMatch[2];
+    query.nurseName = nameMatch[1].trim();
   }
 
   // Parse municipality
@@ -204,7 +204,12 @@ export function parseNaturalLanguageQuery(text: string): StructuredQuery {
  * Extract municipality from query text
  */
 function extractMunicipality(text: string): string | undefined {
-  for (const [, variants] of Object.entries(cityMapping)) {
+  for (const [key, variants] of Object.entries(cityMapping)) {
+    // Check the key itself first (important for Hebrew keys like 'תל אביב')
+    if (text.includes(key.toLowerCase())) {
+      return variants[0]; // Return the first (canonical) form
+    }
+    // Then check all variants
     for (const variant of variants) {
       if (text.includes(variant.toLowerCase())) {
         return variants[0]; // Return the first (canonical) form

@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const fs = require('fs');
-const { generateHebrewName } = require('./generate-names');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -18,6 +17,16 @@ app.use((req, res, next) => {
   next();
 });
 
+// Load real nurse names database
+let nurseNames = {};
+try {
+  const namesData = fs.readFileSync(path.join(__dirname, 'data', 'nurse_names.json'), 'utf8');
+  nurseNames = JSON.parse(namesData);
+  console.log(`Loaded ${Object.keys(nurseNames).length} nurse names from database`);
+} catch (error) {
+  console.error('Error loading nurse names:', error);
+}
+
 // Load nurses database
 let nursesData = [];
 try {
@@ -26,19 +35,20 @@ try {
 
   // Transform data to match expected format
   nursesData = nursesArray.map((nurse, index) => {
-    // Generate Hebrew name based on index
-    const hebrewName = generateHebrewName(index);
+    // Look up real name by nurseId from nurse_names.json
+    const nurseNameData = nurseNames[nurse.nurseId];
+    const realName = nurseNameData?.displayName || nurseNameData?.fullName || `אחות ${nurse.nurseId.substring(0, 8)}`;
 
     return {
       id: nurse.nurseId,
-      name: hebrewName,
+      name: realName,
       city: Array.isArray(nurse.municipality) ? nurse.municipality[0] : (nurse.municipality || 'Tel Aviv'),
       services: nurse.specialization || [],
       rating: nurse.rating || (4 + Math.random() * 0.9),
       reviewsCount: nurse.reviewsCount || Math.floor(Math.random() * 100) + 20,
       experience: nurse.experience || Math.floor(Math.random() * 15) + 1,
       availability: nurse.availability || 'זמינה',
-      hebrewName: hebrewName,
+      hebrewName: realName,
       isActive: nurse.isActive !== false,
       isApproved: nurse.isApproved !== false
     };
@@ -119,38 +129,50 @@ function handleMatch(req, res) {
       filteredNurses = filteredNurses.filter(nurse => {
         const nurseCity = (nurse.city || '').toLowerCase();
 
-        // Check for Hebrew city names and map them
-        const hebrewToEnglishCities = {
-          'תל אביב': 'tel aviv',
-          'ירושלים': 'jerusalem',
-          'חיפה': ['hefa', 'haifa'],
-          'רמת גן': 'ramat-gan',
-          'פתח תקווה': 'petach tikva',
-          'ראשון לציון': 'rishon',
-          'נתניה': 'nethanya',
-          'באר שבע': 'beer sheva',
-          'חולון': 'holon',
-          'בת ים': 'bat-yam',
-          'רחובות': 'rehovoth',
-          'אשקלון': 'ashkelon'
+        // Bidirectional city name mapping (Hebrew <-> English)
+        const cityMappings = {
+          // Hebrew to English variants
+          'תל אביב': ['tel aviv', 'tel-aviv', 'telaviv'],
+          'ירושלים': ['jerusalem', 'yerushalaim'],
+          'חיפה': ['haifa', 'hefa', 'heifa'],
+          'רמת גן': ['ramat gan', 'ramat-gan', 'ramatgan'],
+          'פתח תקווה': ['petach tikva', 'petah tikva', 'petach-tikva'],
+          'ראשון לציון': ['rishon lezion', 'rishon', 'rishon-lezion'],
+          'נתניה': ['netanya', 'nethanya', 'natanya'],
+          'באר שבע': ['beer sheva', 'beersheba', 'beer-sheva'],
+          'חולון': ['holon', 'kholon'],
+          'בת ים': ['bat yam', 'bat-yam', 'batyam'],
+          'רחובות': ['rehovot', 'rehovoth'],
+          'אשקלון': ['ashkelon', 'askelon'],
+          'הרצליה': ['herzliya', 'herzlia'],
+          'כפר סבא': ['kfar saba', 'kfar-saba'],
+          'חדרה': ['hadera', 'khadera'],
+          'מודיעין': ['modiin', 'modi\'in'],
+          'נצרת': ['nazareth', 'natzrat']
         };
 
-        // Check if city is in Hebrew and convert
-        let searchCity = cityNormalized;
-        for (const [hebrew, english] of Object.entries(hebrewToEnglishCities)) {
-          if (city === hebrew) {
-            if (Array.isArray(english)) {
-              return english.some(e => nurseCity.includes(e));
-            }
-            searchCity = english;
-            break;
+        // Check Hebrew city names against nurse city
+        for (const [hebrew, englishVariants] of Object.entries(cityMappings)) {
+          if (city === hebrew || cityNormalized === hebrew) {
+            // Query is in Hebrew, check if nurse city matches any English variant
+            return englishVariants.some(variant =>
+              nurseCity.includes(variant) || variant.includes(nurseCity)
+            );
           }
         }
 
-        return nurseCity.includes(searchCity) ||
-               searchCity.includes(nurseCity) ||
-               // Also check if the nurse has this city in Hebrew
-               (nurse.city === 'חיפה' && (city === 'חיפה' || cityNormalized === 'haifa' || cityNormalized === 'hefa'));
+        // Check English city names against Hebrew nurse cities
+        for (const [hebrew, englishVariants] of Object.entries(cityMappings)) {
+          if (englishVariants.some(variant => cityNormalized.includes(variant) || variant.includes(cityNormalized))) {
+            // Query is in English, check if nurse city is in Hebrew or English
+            return nurseCity === hebrew.toLowerCase() ||
+                   englishVariants.some(variant => nurseCity.includes(variant));
+          }
+        }
+
+        // Fallback: direct string matching
+        return nurseCity.includes(cityNormalized) ||
+               cityNormalized.includes(nurseCity);
       });
     }
 

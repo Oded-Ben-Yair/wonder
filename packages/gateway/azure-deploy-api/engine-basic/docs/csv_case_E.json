@@ -1,0 +1,41 @@
+{
+  "count": 3,
+  "results": [
+    {
+      "id": "274d17f4-7520-4e7d-9f63-f5bc795ab667",
+      "name": "Nurse 274d17f4",
+      "city": "Kiryat Tivon",
+      "reason": "passed: service, city",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 4.8395,
+        "reviewsCount": 92
+      }
+    },
+    {
+      "id": "67f47168-61b2-47bf-a1a4-de4c65b3e1de",
+      "name": "Nurse 67f47168",
+      "city": "Kiryat Tivon",
+      "reason": "passed: service, city",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 4.202,
+        "reviewsCount": 69
+      }
+    },
+    {
+      "id": "0dcfd77e-de69-467a-bab7-b5212b4dcfc5",
+      "name": "Nurse 0dcfd77e",
+      "city": "Kiryat Tivon",
+      "reason": "passed: service, city",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 3.527,
+        "reviewsCount": 94
+      }
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonder Healthcare - חיפוש אחיות בעברית</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        input {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #5a67d8;
+        }
+        .results {
+            margin-top: 30px;
+        }
+        .nurse-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-right: 4px solid #667eea;
+        }
+        .nurse-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .nurse-info {
+            color: #666;
+            margin: 5px 0;
+        }
+        .rating {
+            color: #fbbf24;
+            font-weight: bold;
+        }
+        .loading {
+            text-align: center;
+            color: #666;
+            padding: 20px;
+        }
+        .error {
+            color: #ef4444;
+            text-align: center;
+            padding: 20px;
+        }
+        .stats {
+            background: #e5e7eb;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .test-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .test-btn {
+            background: #f3f4f6;
+            color: #333;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            border: 1px solid #d1d5db;
+        }
+        .test-btn:hover {
+            background: #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 Wonder Healthcare</h1>
+        <p class="subtitle">מערכת חיפוש אחיות בעברית</p>
+
+        <div class="stats" id="stats">
+            מתחבר למערכת...
+        </div>
+
+        <div class="test-buttons">
+            <button class="test-btn" onclick="searchNurse('אורטל')">חפש: אורטל</button>
+            <button class="test-btn" onclick="searchNurse('בתיה')">חפש: בתיה</button>
+            <button class="test-btn" onclick="searchNurse('מירי')">חפש: מירי</button>
+            <button class="test-btn" onclick="searchNurse('יעל')">חפש: יעל</button>
+            <button class="test-btn" onclick="searchByCity('Tel Aviv')">תל אביב</button>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="הקלד שם אחות בעברית..." />
+            <button onclick="search()">🔍 חפש</button>
+        </div>
+
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        const API_URL = 'https://wonder-ceo-web.azurewebsites.net';
+
+        // Check API status on load
+        async function checkStatus() {
+            try {
+                const response = await fetch(`${API_URL}/health`);
+                const data = await response.json();
+                document.getElementById('stats').innerHTML =
+                    `✅ המערכת פעילה | ${data.nursesLoaded} אחיות במערכת | תמיכה בעברית`;
+            } catch (error) {
+                document.getElementById('stats').innerHTML =
+                    `⚠️ בעיה בחיבור למערכת`;
+            }
+        }
+
+        async function search() {
+            const query = document.getElementById('searchInput').value;
+            if (!query) return;
+
+            searchNurse(query);
+        }
+
+        async function searchNurse(nurseName) {
+            document.getElementById('searchInput').value = nurseName;
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<div class="loading">🔍 מחפש...</div>';
+
+            try {
+                const response = await fetch(`${API_URL}/match`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        nurseName: nurseName,
+                        topK: 5
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.results && data.results.length > 0) {
+                    resultsDiv.innerHTML = `
+                        <h3>נמצאו ${data.results.length} תוצאות:</h3>
+                        ${data.results.map(nurse => `
+                            <div class="nurse-card">
+                                <div class="nurse-name">👩‍⚕️ ${nurse.name}</div>
+                                <div class="nurse-info">📍 ${nurse.city}</div>
+                                <div class="nurse-info">🏥 ${nurse.services.join(', ')}</div>
+                                <div class="nurse-info">
+                                    <span class="rating">⭐ ${nurse.rating}</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    `;
+                } else {
+                    resultsDiv.innerHTML = '<div class="error">לא נמצאו תוצאות</div>';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '<div class="error">שגיאה בחיפוש: ' + error.message + '</div>';
+            }
+        }
+
+        async function searchByCity(city) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<div class="loading">🔍 מחפש בעיר ' + city + '...</div>';
+
+            try {
+                const response = await fetch(`${API_URL}/match`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        city: city,
+                        topK: 10
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.results && data.results.length > 0) {
+                    resultsDiv.innerHTML = `
+                        <h3>אחיות ב${city} (${data.results.length} תוצאות):</h3>
+                        ${data.results.map(nurse => `
+                            <div class="nurse-card">
+                                <div class="nurse-name">👩‍⚕️ ${nurse.name}</div>
+                                <div class="nurse-info">📍 ${nurse.city}</div>
+                                <div class="nurse-info">🏥 ${nurse.services.join(', ')}</div>
+                                <div class="nurse-info">
+                                    <span class="rating">⭐ ${nurse.rating}</span>
+                                </div>
+                            </div>
+                        `).join('')}
+                    `;
+                } else {
+                    resultsDiv.innerHTML = '<div class="error">לא נמצאו תוצאות בעיר זו</div>';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '<div class="error">שגיאה בחיפוש: ' + error.message + '</div>';
+            }
+        }
+
+        // Check status on page load
+        checkStatus();
+
+        // Allow Enter key to search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                search();
+            }
+        });
+    </script>
+</body>
+</html>

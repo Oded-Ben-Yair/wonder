@@ -6,7 +6,8 @@ const getApiUrl = () => {
   if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
     return 'http://localhost:5050';
   }
-  return 'https://wonder-ceo-web.azurewebsites.net';
+  // Use relative URL so it calls its own backend when deployed
+  return '';
 };
 
 const api = axios.create({

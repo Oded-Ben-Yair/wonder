@@ -1,0 +1,22 @@
+{
+  "name": "@wonder/gateway",
+  "version": "1.0.0",
+  "description": "Wonder Healthcare Gateway with Hebrew Support",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "postinstall": "echo 'Hebrew nurse database ready'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.21.3",
+    "cors": "^2.8.5",
+    "joi": "^17.13.3",
+    "pino": "^9.6.0",
+    "dotenv": "^17.2.2",
+    "csv-parse": "^5.6.0"
+  }
+}

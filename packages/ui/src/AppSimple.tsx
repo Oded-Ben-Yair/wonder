@@ -11,11 +11,16 @@ function AppSimple() {
     setLoading(true);
     setError('');
     try {
-      const response = await executeMatch({ municipality: city, limit: 5 });
-      setResults(response.results || []);
+      const response = await executeMatch({
+        municipality: city,
+        limit: 5,
+        specializations: [],
+        isUrgent: false
+      });
+      setResults(response.nurses || []);
     } catch (err: any) {
       setError('Failed to fetch results. Please try again.');
-      console.error(err);
+      console.error('Search error:', err);
     } finally {
       setLoading(false);
     }

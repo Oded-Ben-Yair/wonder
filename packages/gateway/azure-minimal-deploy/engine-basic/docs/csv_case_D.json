@@ -1,0 +1,41 @@
+{
+  "count": 3,
+  "results": [
+    {
+      "id": "deb4d10e-ca57-43c2-8907-5d916d6afd01",
+      "name": "Nurse deb4d10e",
+      "city": "Bat-Yam",
+      "reason": "passed: service, city",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 4.8305,
+        "reviewsCount": 99
+      }
+    },
+    {
+      "id": "59398c0c-9639-4f51-a37b-19ae53763b99",
+      "name": "Nurse 59398c0c",
+      "city": "Bat-Yam",
+      "reason": "passed: service, city",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 4.1045,
+        "reviewsCount": 85
+      }
+    },
+    {
+      "id": "4983d84e-9875-4322-9ea4-ac9723727925",
+      "name": "Nurse 4983d84e",
+      "city": "Bat-Yam",
+      "reason": "passed: service, city",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 1,
+        "rating": 3.7880000000000003,
+        "reviewsCount": 67
+      }
+    }
+  ]
+}

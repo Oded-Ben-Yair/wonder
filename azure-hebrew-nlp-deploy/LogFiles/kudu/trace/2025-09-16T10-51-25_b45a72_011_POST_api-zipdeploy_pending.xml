@@ -1,0 +1,17 @@
+<step title="Incoming Request" date="2025-09-16T10:51:25.046" instance="b45a72" url="/api/zipdeploy?isAsync=true" method="POST" type="request" pid="821,1,33" Accept="*/*" Host="wonder-ceo-web.scm.azurewebsites.net" User-Agent="AZURECLI/2.77.0 (DEB)" Accept-Encoding="gzip, deflate" Authorization="Bea..." Cache-Control="no-cache" Content-Type="application/octet-stream" Content-Length="2367380" x-ms-client-request-id="149751ec-92eb-11f0-86df-00155db73fc4" x-ms-artifact-checksum="60aaf3158ed98854c4926632188029c7d0433c94802cf2a40f0db715177ccd02" X-ARR-LOG-ID="149751ec-92eb-11f0-86df-00155db73fc4" CLIENT-IP="199.203.90.233:54616" X-SITE-DEPLOYMENT-ID="wonder-ceo-web" WAS-DEFAULT-HOSTNAME="wonder-ceo-web.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/zipdeploy?isAsync=true" X-Client-IP="199.203.90.233" X-Client-Port="54616" >
+  <step title="Cleanup Xml Logs" date="2025-09-16T10:51:25.051" /><!-- duration: 13ms -->
+  <step title="ZipPushDeploy" date="2025-09-16T10:51:25.098" >
+    <step title="ZipDeploy. Extract zip." date="2025-09-16T10:51:25.106" /><!-- duration: 7ms -->
+    <step title="Starting PushDeployAsync" date="2025-09-16T10:51:25.118" /><!-- duration: 3ms -->
+    <step title="Removing node_modules symlink" date="2025-09-16T10:51:25.134" >
+      <step title="Writing artifact to /tmp/zipdeploy/437b9644-97de-407d-9311-1c385c992e2f.zip" date="2025-09-16T10:51:25.227" >
+        <step title="Writing multipart request body to /tmp/zipdeploy/437b9644-97de-407d-9311-1c385c992e2f.zip" date="2025-09-16T10:51:25.231" /><!-- duration: 4ms -->
+      </step><!-- duration: 493ms -->
+      <step title="Removing previous build artifact&apos;s manifest file" date="2025-09-16T10:51:25.726" >
+        <step title="Start deployment in the background" date="2025-09-16T10:51:25.742" >
+          <step title="Acquiring Deployment Lock" date="2025-09-16T10:51:25.774" /><!-- duration: 3ms -->
+          <step title="Acquired Deployment Lock" date="2025-09-16T10:51:25.821" /><!-- duration: 4ms -->
+        </step><!-- duration: 167ms -->
+      </step><!-- duration: 190ms -->
+      <step title="Outgoing response" date="2025-09-16T10:51:25.940" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 3ms -->
+    </step><!-- duration: 813ms -->

@@ -1,0 +1,29 @@
+{
+  "count": 2,
+  "results": [
+    {
+      "id": "3427d8f5-b613-4644-b846-f1485f7038bd",
+      "name": "Nurse 3427d8f5",
+      "city": "Beer Sheva",
+      "reason": "passed: service, city, availability",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 0.75,
+        "rating": 4.511,
+        "reviewsCount": 66
+      }
+    },
+    {
+      "id": "1ea503f2-55f0-4d82-b4bf-0e417170f366",
+      "name": "Nurse 1ea503f2",
+      "city": "Beer Sheva",
+      "reason": "passed: service, city, availability",
+      "meta": {
+        "distanceKm": null,
+        "availabilityRatio": 0.75,
+        "rating": 4.0760000000000005,
+        "reviewsCount": 97
+      }
+    }
+  ]
+}

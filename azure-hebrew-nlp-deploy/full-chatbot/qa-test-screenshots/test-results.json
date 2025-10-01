@@ -1,0 +1,57 @@
+{
+  "pageLoad": {
+    "status": "✅",
+    "details": [
+      "HTTP Status: 200",
+      "Load Time: 1628ms"
+    ]
+  },
+  "uiElements": {
+    "status": "✅",
+    "details": [
+      "✅ Header \"Wonder Healthcare\" found",
+      "✅ HIPAA badge found",
+      "✅ \"6,700+ Professionals\" text found",
+      "✅ Live status indicator found",
+      "✅ Gradient styling detected"
+    ]
+  },
+  "chatInterface": {
+    "status": "✅",
+    "details": [
+      "✅ Chat input found (placeholder: \"Ask me to find nurses... (e.g., 'Who's available today in Tel Aviv?')\")",
+      "⚠️ No Hebrew placeholder detected",
+      "✅ Submit button found (text: \"\")"
+    ]
+  },
+  "hebrewQuery": {
+    "status": "✅",
+    "details": [
+      "✅ Found 1 result elements",
+      "✅ Hebrew text detected in results"
+    ]
+  },
+  "interactiveCards": {
+    "status": "❌",
+    "details": [
+      "⚠️ Card does not appear clickable",
+      "⚠️ No visible change after clicking"
+    ]
+  },
+  "userFriendlyContent": {
+    "status": "✅",
+    "details": [
+      "✅ No technical service codes visible",
+      "✅ No technical ID chains visible",
+      "✅ Friendly service names found"
+    ]
+  },
+  "screenshots": [
+    "/home/odedbe/wonder/azure-hebrew-nlp-deploy/full-chatbot/qa-test-screenshots/01-initial-page-load.png",
+    "/home/odedbe/wonder/azure-hebrew-nlp-deploy/full-chatbot/qa-test-screenshots/02-chat-interface.png",
+    "/home/odedbe/wonder/azure-hebrew-nlp-deploy/full-chatbot/qa-test-screenshots/03-query-entered.png",
+    "/home/odedbe/wonder/azure-hebrew-nlp-deploy/full-chatbot/qa-test-screenshots/04-query-results.png",
+    "/home/odedbe/wonder/azure-hebrew-nlp-deploy/full-chatbot/qa-test-screenshots/05-card-clicked.png",
+    "/home/odedbe/wonder/azure-hebrew-nlp-deploy/full-chatbot/qa-test-screenshots/06-final-state.png"
+  ]
+}

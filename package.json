@@ -18,6 +18,7 @@
     "@playwright/test": "^1.55.1",
     "concurrently": "^8.2.2",
     "playwright": "^1.55.1",
+    "puppeteer": "^24.22.3",
     "turbo": "^2.5.8",
     "typescript": "^5.6.2"
   },

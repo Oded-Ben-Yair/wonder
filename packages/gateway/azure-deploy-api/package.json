@@ -1,0 +1,22 @@
+{
+  "name": "@wonder/gateway-api",
+  "version": "1.0.0",
+  "description": "Wonder Healthcare API with Hebrew Support",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "postinstall": "echo 'API server ready with Hebrew database'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "joi": "^17.13.3",
+    "pino": "^9.6.0",
+    "dotenv": "^16.4.5",
+    "csv-parse": "^5.6.0"
+  }
+}

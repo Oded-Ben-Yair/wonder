@@ -1,0 +1,4 @@
+<step title="Incoming Request" date="2025-09-25T12:32:51.710" instance="b45a72" url="/api/zipdeploy" method="PUT" type="request" pid="823,1,48" Accept="*/*" Host="wonder-ceo-web.scm.azurewebsites.net" User-Agent="curl/8.5.0" Authorization="Bea..." Content-Type="application/zip" Content-Length="249696" X-ARR-LOG-ID="38537c2d-a665-4234-8ae8-f3219a7d02dc" CLIENT-IP="199.203.90.233:58381" X-SITE-DEPLOYMENT-ID="wonder-ceo-web" WAS-DEFAULT-HOSTNAME="wonder-ceo-web.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/zipdeploy" X-Client-IP="199.203.90.233" X-Client-Port="58381" >
+  <step title="Cleanup Xml Logs" date="2025-09-25T12:32:52.219" /><!-- duration: 23ms -->
+  <step title="Outgoing response" date="2025-09-25T12:32:52.430" type="response" statusCode="415" statusText="UnsupportedMediaType" /><!-- duration: 4ms -->
+</step><!-- duration: 730ms -->

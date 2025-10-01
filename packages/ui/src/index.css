@@ -1,3 +1,6 @@
+/* 2025 Healthcare UI - Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,79 +9,332 @@
   * {
     border-color: hsl(214.3 31.8% 91.4%);
   }
-  
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-gradient-healthcare text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-attachment: fixed;
+  }
+
+  /* Custom Scrollbar - Healthcare Theme */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-400;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-600;
+  }
+
+  /* Focus States - Accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+    outline-offset: 2px;
+  }
+
+  /* Selection Color */
+  ::selection {
+    @apply bg-primary-200 text-primary-900;
+  }
+
+  ::-moz-selection {
+    @apply bg-primary-200 text-primary-900;
   }
 }
 
 @layer components {
+  /* Button Components - 2025 Style */
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
-    @apply touch-manipulation;
-    min-height: 44px; /* iOS accessibility minimum */
+    @apply bg-gradient-primary text-white px-4 py-2.5 rounded-xl font-medium
+           shadow-soft hover:shadow-card active:scale-[0.98]
+           transition-all duration-250 disabled:opacity-50 disabled:cursor-not-allowed
+           touch-manipulation;
+    min-height: 44px;
   }
-  
+
+  .btn-primary:hover:not(:disabled) {
+    @apply shadow-glow-teal;
+    transform: translateY(-1px);
+  }
+
   .btn-secondary {
-    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
-    @apply touch-manipulation;
-    min-height: 44px; /* iOS accessibility minimum */
+    @apply bg-white border-2 border-gray-200 hover:border-primary-300 text-gray-700
+           px-4 py-2.5 rounded-xl font-medium shadow-soft hover:shadow-card
+           transition-all duration-250 disabled:opacity-50 disabled:cursor-not-allowed
+           touch-manipulation;
+    min-height: 44px;
   }
-  
+
+  .btn-secondary:hover:not(:disabled) {
+    @apply bg-primary-50;
+    transform: translateY(-1px);
+  }
+
+  /* Input Field - Enhanced */
   .input-field {
-    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
-    @apply text-base; /* Prevents zoom on iOS */
-    min-height: 44px; /* iOS accessibility minimum */
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl
+           focus:outline-none focus:border-primary-400 focus:ring-4 focus:ring-primary-100
+           placeholder:text-gray-400 bg-white
+           transition-all duration-250 shadow-inner-soft;
+    @apply text-base;
+    min-height: 44px;
   }
-  
+
+  .input-field:hover {
+    @apply border-gray-300;
+  }
+
+  /* Card Components */
   .card {
-    @apply bg-white rounded-xl shadow-sm border border-gray-100;
+    @apply bg-white rounded-2xl shadow-card border border-gray-100
+           transition-all duration-300;
   }
-  
+
+  .card:hover {
+    @apply shadow-drawer border-primary-100;
+  }
+
   .nurse-card {
-    @apply card p-3 sm:p-4 hover:shadow-md transition-shadow duration-200;
+    @apply card p-4 sm:p-5 hover:shadow-drawer
+           transition-all duration-300 hover:border-primary-200;
+    transform-origin: center;
   }
-  
+
+  .nurse-card:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+
+  .nurse-card:active {
+    transform: translateY(0) scale(0.99);
+  }
+
+  /* Chat Bubbles - Enhanced */
   .chat-bubble {
-    @apply max-w-xs sm:max-w-sm lg:max-w-md px-3 sm:px-4 py-2 rounded-2xl text-sm leading-relaxed;
+    @apply max-w-xs sm:max-w-sm lg:max-w-md px-4 sm:px-5 py-3 rounded-2xl
+           text-sm leading-relaxed shadow-soft
+           animate-scale-in;
   }
-  
+
   .chat-bubble.user {
-    @apply bg-primary-600 text-white ml-auto rounded-br-md;
+    @apply bg-gradient-to-br from-primary-500 to-primary-600 text-white
+           ml-auto rounded-br-md shadow-glow-teal;
   }
-  
+
   .chat-bubble.bot {
-    @apply bg-gray-100 text-gray-800 mr-auto rounded-bl-md;
+    @apply bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800
+           mr-auto rounded-bl-md border border-gray-200;
   }
-  
+
+  /* Loading States */
   .loading-spinner {
-    @apply inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-current;
+    @apply inline-block animate-spin rounded-full h-4 w-4 border-2
+           border-gray-300 border-t-primary-500;
   }
-  
+
+  .loading-spinner-large {
+    @apply inline-block animate-spin rounded-full h-8 w-8 border-3
+           border-gray-200 border-t-primary-500;
+  }
+
+  /* Skeleton Loading */
+  .skeleton {
+    @apply bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200
+           rounded animate-shimmer;
+    background-size: 200% 100%;
+  }
+
+  .skeleton-text {
+    @apply skeleton h-4 w-full mb-2;
+  }
+
+  .skeleton-avatar {
+    @apply skeleton h-12 w-12 rounded-full;
+  }
+
+  /* Badge Components */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium
+           transition-all duration-200;
+  }
+
+  .badge-success {
+    @apply badge bg-success-50 text-success-700 border border-success-200;
+  }
+
+  .badge-warning {
+    @apply badge bg-warning-50 text-warning-700 border border-warning-200;
+  }
+
+  .badge-error {
+    @apply badge bg-error-50 text-error-700 border border-error-200;
+  }
+
+  .badge-info {
+    @apply badge bg-secondary-50 text-secondary-700 border border-secondary-200;
+  }
+
+  /* Score Badges - Healthcare Specific */
+  .score-badge-high {
+    @apply inline-flex items-center px-3 py-1.5 rounded-xl text-sm font-semibold
+           bg-gradient-to-br from-success-400 to-success-600 text-white
+           shadow-glow-green animate-pulse-glow;
+  }
+
+  .score-badge-medium {
+    @apply inline-flex items-center px-3 py-1.5 rounded-xl text-sm font-semibold
+           bg-gradient-to-br from-warning-300 to-warning-500 text-white
+           shadow-soft;
+  }
+
+  .score-badge-low {
+    @apply inline-flex items-center px-3 py-1.5 rounded-xl text-sm font-semibold
+           bg-gradient-to-br from-gray-300 to-gray-400 text-white
+           shadow-soft;
+  }
+
+  /* Avatar with Gradient */
+  .avatar-gradient-teal {
+    @apply bg-gradient-to-br from-primary-400 to-primary-600
+           rounded-full shadow-soft;
+  }
+
+  .avatar-gradient-blue {
+    @apply bg-gradient-to-br from-secondary-400 to-secondary-600
+           rounded-full shadow-soft;
+  }
+
+  /* Specialization Tags */
+  .spec-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-lg text-xs font-medium
+           bg-gradient-to-br from-secondary-50 to-secondary-100
+           text-secondary-700 border border-secondary-200
+           transition-all duration-200 hover:shadow-soft hover:scale-105;
+  }
+
+  /* Status Indicators */
+  .status-online {
+    @apply flex items-center gap-2 text-sm text-success-700 bg-success-50
+           px-3 py-1.5 rounded-full border border-success-200;
+  }
+
+  .status-online::before {
+    content: '';
+    @apply w-2 h-2 bg-success-500 rounded-full animate-pulse;
+  }
+
+  .status-busy {
+    @apply flex items-center gap-2 text-sm text-warning-700 bg-warning-50
+           px-3 py-1.5 rounded-full border border-warning-200;
+  }
+
+  .status-busy::before {
+    content: '';
+    @apply w-2 h-2 bg-warning-500 rounded-full animate-pulse;
+  }
+
   /* Mobile-first responsive utilities */
   .mobile-scroll {
     @apply overflow-y-auto;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
   }
-  
+
   .safe-area-top {
     padding-top: env(safe-area-inset-top);
   }
-  
+
   .safe-area-bottom {
     padding-bottom: env(safe-area-inset-bottom);
   }
-  
+
   .touch-scroll {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
   }
+
+  /* Header Gradient */
+  .header-gradient {
+    @apply bg-gradient-to-r from-white via-primary-50 to-white;
+    backdrop-filter: blur(10px);
+  }
+
+  /* Glass Effect */
+  .glass-effect {
+    backdrop-filter: blur(12px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+  }
+
+  /* Stagger Animation Container */
+  .stagger-container > * {
+    animation: slideInUp 0.3s ease-out both;
+  }
+
+  .stagger-container > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger-container > *:nth-child(2) { animation-delay: 100ms; }
+  .stagger-container > *:nth-child(3) { animation-delay: 200ms; }
+  .stagger-container > *:nth-child(4) { animation-delay: 300ms; }
+  .stagger-container > *:nth-child(5) { animation-delay: 400ms; }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* High Contrast Mode Support */
+  @media (prefers-contrast: high) {
+    .card {
+      @apply border-2 border-gray-300;
+    }
+
+    .btn-primary {
+      @apply border-2 border-primary-700;
+    }
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Dark Mode Preparation (for future) */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: light; /* Force light mode for now */
+    }
+  }
+
+  /* Print Styles */
+  @media print {
+    body {
+      @apply bg-white;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      @apply shadow-none border border-gray-300;
+    }
   }
 }

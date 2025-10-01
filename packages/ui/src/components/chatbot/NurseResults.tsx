@@ -1,15 +1,19 @@
-import React from 'react';
-import { 
-  MapPin, 
-  Clock, 
-  Star, 
-  User, 
-  Heart, 
-  Shield, 
+import React, { useState } from 'react';
+import {
+  MapPin,
+  Clock,
+  Star,
+  User,
+  Heart,
+  Shield,
   Activity,
-  ChevronRight 
+  ChevronRight,
+  ChevronDown
 } from 'lucide-react';
 import { EngineResult, StructuredQuery } from '@/types';
+import NurseProfileDrawer from './NurseProfileDrawer';
+import AIMatchInsights from './AIMatchInsights';
+import { he } from '@/i18n/he';
 
 interface NurseResultsProps {
   results: EngineResult[];
@@ -18,6 +22,7 @@ interface NurseResultsProps {
   latency: number;
   className?: string;
   compact?: boolean;
+  onBookAppointment?: (nurse: EngineResult) => void;
 }
 
 const NurseResults: React.FC<NurseResultsProps> = ({
@@ -26,20 +31,36 @@ const NurseResults: React.FC<NurseResultsProps> = ({
   engine,
   latency,
   className = '',
-  compact = false
+  compact = false,
+  onBookAppointment
 }) => {
+  const [selectedNurse, setSelectedNurse] = useState<EngineResult | null>(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [expandedNurseId, setExpandedNurseId] = useState<string | null>(null);
+
+  const handleNurseClick = (nurse: EngineResult) => {
+    setSelectedNurse(nurse);
+    setIsDrawerOpen(true);
+  };
+
+  const handleCloseDrawer = () => {
+    setIsDrawerOpen(false);
+    // Keep selectedNurse for animation, clear after transition
+    setTimeout(() => setSelectedNurse(null), 300);
+  };
   if (!results || results.length === 0) {
     return (
       <div className={`text-center py-8 ${className}`}>
         <div className="text-gray-400 mb-2">
           <User className="w-12 h-12 mx-auto" />
         </div>
-        <p className="text-gray-600">No nurses found matching your criteria</p>
+        <p className="text-gray-600">{he.results.noNursesFound}</p>
       </div>
     );
   }
 
-  const formatScore = (score: number) => {
+  const formatScore = (result: EngineResult) => {
+    const score = result.matchScore ?? result.score ?? 0;
     return Math.round(score * 100);
   };
 
@@ -51,9 +72,7 @@ const NurseResults: React.FC<NurseResultsProps> = ({
   };
 
   const formatSpecialization = (spec: string) => {
-    return spec.toLowerCase()
-      .replace(/_/g, ' ')
-      .replace(/\b\w/g, l => l.toUpperCase());
+    return he.services[spec as keyof typeof he.services] || spec;
   };
 
   const getSpecializationIcon = (spec: string) => {
@@ -63,32 +82,121 @@ const NurseResults: React.FC<NurseResultsProps> = ({
     return User;
   };
 
+  const toggleExpanded = (nurseId: string) => {
+    setExpandedNurseId(expandedNurseId === nurseId ? null : nurseId);
+  };
+
   if (compact) {
+
     return (
       <div className={`space-y-2 ${className}`}>
-        {results.slice(0, 3).map((result) => (
-          <div key={result.id} className="flex items-center justify-between p-2 bg-white rounded-lg border border-gray-100">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
-                <User className="w-3 h-3 text-gray-600" />
+        {results.slice(0, 3).map((result) => {
+          const isExpanded = expandedNurseId === result.id;
+          const nurse = result.nurse;
+
+          return (
+            <div key={result.id} className="bg-white rounded-lg border border-gray-100">
+              {/* Compact Card - Clickable */}
+              <div
+                className="flex items-center justify-between p-2 cursor-pointer hover:shadow-lg hover:border-primary-200 transition-all duration-200"
+                onClick={() => toggleExpanded(result.id)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleExpanded(result.id);
+                  }
+                }}
+                aria-expanded={isExpanded}
+                aria-label={`View details for ${result.name || `Nurse ${result.id.slice(0, 8)}`}`}
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                    <User className="w-3 h-3 text-gray-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">
+                      {result.name || `Nurse ${result.id.slice(0, 8)}`}
+                    </p>
+                    <p className="text-xs text-gray-500">ID: {result.id.slice(0, 8)}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className={`text-xs px-2 py-1 rounded-full font-medium ${getScoreColor(result.matchScore ?? result.score)}`}>
+                    {formatScore(result)}%
+                  </span>
+                  {isExpanded ? (
+                    <ChevronDown className="w-4 h-4 text-gray-400" />
+                  ) : (
+                    <ChevronRight className="w-4 h-4 text-gray-400" />
+                  )}
+                </div>
               </div>
-              <div>
-                <p className="text-sm font-medium text-gray-900">
-                  {result.name || `Nurse ${result.id.slice(0, 8)}`}
-                </p>
-                <p className="text-xs text-gray-500">ID: {result.id.slice(0, 8)}</p>
-              </div>
+
+              {/* Expanded Details */}
+              {isExpanded && (
+                <div className="px-3 pb-3 pt-2 border-t border-gray-100 space-y-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                  {/* Specializations */}
+                  {nurse?.specialization && nurse.specialization.length > 0 && (
+                    <div>
+                      <p className="text-xs font-medium text-gray-600 mb-1">{he.results.specializations}</p>
+                      <div className="flex flex-wrap gap-1">
+                        {nurse.specialization.map((spec) => (
+                          <span
+                            key={spec}
+                            className="inline-block px-2 py-0.5 bg-blue-50 text-blue-700 text-xs rounded"
+                          >
+                            {formatSpecialization(spec)}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Location */}
+                  {nurse?.municipality && nurse.municipality.length > 0 && (
+                    <div>
+                      <p className="text-xs font-medium text-gray-600 mb-1">{he.results.locations}</p>
+                      <div className="flex items-center gap-1 text-xs text-gray-700">
+                        <MapPin className="w-3 h-3" />
+                        <span>{nurse.municipality.join(', ')}</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Status */}
+                  <div className="flex items-center gap-2 text-xs">
+                    {nurse?.isActive && (
+                      <span className="flex items-center gap-1 text-green-600">
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                        {he.results.statusActive}
+                      </span>
+                    )}
+                    {nurse?.isApproved && (
+                      <span className="flex items-center gap-1 text-blue-600">
+                        <Shield className="w-3 h-3" />
+                        {he.results.statusApproved}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* AI Match Insights */}
+                  {result.scoreBreakdown && (
+                    <AIMatchInsights
+                      scoreBreakdown={result.scoreBreakdown}
+                      totalScore={result.matchScore || result.score || 0}
+                      nurseName={result.name || `Nurse ${result.id.slice(0, 8)}`}
+                    />
+                  )}
+                </div>
+              )}
             </div>
-            <div className="flex items-center gap-2">
-              <span className={`text-xs px-2 py-1 rounded-full font-medium ${getScoreColor(result.score)}`}>
-                {formatScore(result.score)}%
-              </span>
-            </div>
-          </div>
-        ))}
+          );
+        })}
         {results.length > 3 && (
           <p className="text-xs text-gray-500 text-center">
-            +{results.length - 3} more results available
+            {he.results.moreResults.replace('{count}', (results.length - 3).toString())}
           </p>
         )}
       </div>
@@ -101,7 +209,9 @@ const NurseResults: React.FC<NurseResultsProps> = ({
       <div className="mb-4 p-4 bg-white rounded-lg border border-gray-200">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-lg font-semibold text-gray-900">
-            Found {results.length} nurse{results.length === 1 ? '' : 's'}
+            {he.results.foundNurses
+              .replace('{count}', results.length.toString())
+              .replace('{plural}', results.length === 1 ? he.results.nurseSingular : he.results.nursePlural)}
           </h3>
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <div className="flex items-center gap-1">
@@ -114,11 +224,11 @@ const NurseResults: React.FC<NurseResultsProps> = ({
             </div>
           </div>
         </div>
-        
+
         {/* Query Summary */}
         {query && (
           <div className="text-sm text-gray-600">
-            <span className="font-medium">Search criteria:</span>
+            <span className="font-medium">{he.results.searchCriteria}</span>
             {query.municipality && (
               <span className="ml-2 inline-flex items-center gap-1">
                 <MapPin className="w-3 h-3" />
@@ -131,7 +241,7 @@ const NurseResults: React.FC<NurseResultsProps> = ({
               </span>
             )}
             {query.urgent && (
-              <span className="ml-2 text-red-600 font-medium">• URGENT</span>
+              <span className="ml-2 text-red-600 font-medium">• {he.results.urgent}</span>
             )}
           </div>
         )}
@@ -146,7 +256,20 @@ const NurseResults: React.FC<NurseResultsProps> = ({
             : User;
 
           return (
-            <div key={result.id} className="nurse-card group">
+            <div
+              key={result.id}
+              className="nurse-card group cursor-pointer"
+              onClick={() => handleNurseClick(result)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  handleNurseClick(result);
+                }
+              }}
+              aria-label={`View full profile for ${result.name || `Nurse ${result.id.slice(0, 8)}`}`}
+            >
               <div className="flex items-start justify-between">
                 {/* Nurse Info */}
                 <div className="flex items-start gap-3 flex-1">
@@ -166,10 +289,24 @@ const NurseResults: React.FC<NurseResultsProps> = ({
                       </div>
                       
                       <div className="flex items-center gap-2">
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getScoreColor(result.score)}`}>
+                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getScoreColor(result.matchScore ?? result.score)}`}>
                           <Star className="w-3 h-3 inline mr-1" />
-                          {formatScore(result.score)}%
+                          {formatScore(result)}%
                         </span>
+
+                        {/* Confidence Badge */}
+                        {result.matchScore && (
+                          <span className={`ml-2 px-2 py-1 rounded text-xs font-medium ${
+                            result.matchScore >= 0.9 ? 'bg-green-100 text-green-800' :
+                            result.matchScore >= 0.7 ? 'bg-yellow-100 text-yellow-800' :
+                            'bg-orange-100 text-orange-800'
+                          }`}>
+                            {result.matchScore >= 0.9 ? '🟢 התאמה מצוינת' :
+                             result.matchScore >= 0.7 ? '🟡 התאמה טובה' :
+                             '🟠 התאמה סבירה'}
+                          </span>
+                        )}
+
                         <div className="text-gray-400 group-hover:text-gray-600 transition-colors">
                           <ChevronRight className="w-4 h-4" />
                         </div>
@@ -213,25 +350,34 @@ const NurseResults: React.FC<NurseResultsProps> = ({
                       {nurse?.isActive && (
                         <span className="flex items-center gap-1 text-green-600">
                           <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                          Active
+                          {he.results.statusActive}
                         </span>
                       )}
                       {nurse?.isApproved && (
                         <span className="flex items-center gap-1 text-blue-600">
                           <Shield className="w-3 h-3" />
-                          Approved
+                          {he.results.statusApproved}
                         </span>
                       )}
                       {nurse?.isOnboardingCompleted && (
-                        <span className="text-gray-600">Onboarded</span>
+                        <span className="text-gray-600">{he.results.statusOnboarded}</span>
                       )}
                     </div>
 
                     {/* Reason */}
                     {result.reason && (
                       <div className="mt-2 p-2 bg-gray-50 rounded text-sm text-gray-700">
-                        <span className="font-medium">Match reason:</span> {result.reason}
+                        <span className="font-medium">{he.results.matchReason}</span> {result.reason}
                       </div>
+                    )}
+
+                    {/* AI Match Insights */}
+                    {result.scoreBreakdown && (
+                      <AIMatchInsights
+                        scoreBreakdown={result.scoreBreakdown}
+                        totalScore={result.matchScore || result.score || 0}
+                        nurseName={result.name || `Nurse ${result.id.slice(0, 8)}`}
+                      />
                     )}
                   </div>
                 </div>
@@ -245,13 +391,23 @@ const NurseResults: React.FC<NurseResultsProps> = ({
       <div className="mt-4 p-3 bg-gray-50 rounded-lg">
         <div className="flex justify-between items-center text-sm text-gray-600">
           <span>
-            Showing {results.length} result{results.length === 1 ? '' : 's'}
+            {he.results.showingResults
+              .replace('{count}', results.length.toString())
+              .replace('{plural}', results.length === 1 ? he.results.resultSingular : he.results.resultPlural)}
           </span>
           <span>
-            Avg. score: {Math.round(results.reduce((sum, r) => sum + r.score, 0) / results.length * 100)}%
+            {he.results.avgScore} {Math.round(results.reduce((sum, r) => sum + (r.matchScore ?? r.score), 0) / results.length * 100)}%
           </span>
         </div>
       </div>
+
+      {/* Profile Drawer */}
+      <NurseProfileDrawer
+        nurse={selectedNurse}
+        isOpen={isDrawerOpen}
+        onClose={handleCloseDrawer}
+        onBookAppointment={onBookAppointment}
+      />
     </div>
   );
 };

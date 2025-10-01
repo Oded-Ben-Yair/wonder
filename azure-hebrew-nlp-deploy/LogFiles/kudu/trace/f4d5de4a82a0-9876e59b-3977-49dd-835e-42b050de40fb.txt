@@ -1,0 +1,1 @@
+2025-09-25T11:34:08    Outgoing response, type: response, statusCode: 415, statusText: UnsupportedMediaType

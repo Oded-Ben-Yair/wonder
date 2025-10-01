@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wonder Healthcare Platform</title>
+    <meta name="description" content="Modern React UI for Wonder Healthcare Matching Platform - Find nurses with natural language queries">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      }
+      
+      #loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 4px solid #e0f2fe;
+        border-top: 4px solid #0ea5e9;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 16px;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        color: #64748b;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+      
+      .loading-subtext {
+        color: #94a3b8;
+        font-size: 12px;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CL5rKd_U.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CqHvzOqf.css">
+  </head>
+  <body>
+    <div id="root">
+      <div id="loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading Wonder Healthcare Platform...</div>
+        <div class="loading-subtext">Modern nurse matching with natural language queries</div>
+      </div>
+    </div>
+  </body>
+</html>

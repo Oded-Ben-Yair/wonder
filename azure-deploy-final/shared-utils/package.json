@@ -1,0 +1,16 @@
+{
+  "name": "@wonder/shared-utils",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "description": "Shared utilities for Wonder Healthcare Matching Platform",
+  "scripts": {
+    "test": "echo \"Shared utilities tests\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "csv-parse": "^5.6.0"
+  }
+}

@@ -1,0 +1,43 @@
+<step title="Incoming Request" date="2025-09-29T06:06:06.615" instance="94a41b" url="/api/publish?type=zip&amp;async=False" method="POST" type="request" pid="829,1,48" Accept="*/*" Host="wonder-ceo-web.scm.azurewebsites.net" User-Agent="AZURECLI/2.77.0 (DEB)" Accept-Encoding="gzip, deflate" Authorization="Bea..." Cache-Control="no-cache" Content-Type="application/octet-stream" Cookie="ARRAffinity=94a41bc1b0bad4b76ec8de5af5839092b53f106e22f1ec1633d69c4db331a7c4; ARRAffinitySameSite=94a41bc1b0bad4b76ec8de5af5839092b53f106e22f1ec1633d69c4db331a7c4" Content-Length="13872220" x-ms-client-request-id="5a4d9ade-9cfa-11f0-86df-00155df454f1" x-ms-artifact-checksum="a84c51c94a3e9a3ab2c236c3eb942b8cb1a11a4d900ec8e592327282273a15ce" X-ARR-LOG-ID="5a4d9ade-9cfa-11f0-86df-00155df454f1" CLIENT-IP="199.203.90.233:57190" X-SITE-DEPLOYMENT-ID="wonder-ceo-web" WAS-DEFAULT-HOSTNAME="wonder-ceo-web.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?type=zip&amp;async=False" X-Client-IP="199.203.90.233" X-Client-Port="57190" >
+  <step title="OneDeploy" date="2025-09-29T06:06:06.648" >
+    <step title="Starting PushDeployAsync" date="2025-09-29T06:06:06.666" /><!-- duration: 5ms -->
+    <step title="WEBSITE_RUN_FROM_PACKAGE is set to 1. Writing zip to SitePackagesPath" date="2025-09-29T06:06:06.688" /><!-- duration: 28ms -->
+    <step title="Copying zip to SitePackages /home/data/SitePackages/20250929060606.zip from request body" date="2025-09-29T06:06:06.753" /><!-- duration: 19ms -->
+    <step title="Writing multipart request body to /home/data/SitePackages/20250929060606.zip" date="2025-09-29T06:06:06.779" /><!-- duration: 26ms -->
+    <step title="Deleting outdated zip file /home/data/SitePackages/20250929051322.zip" date="2025-09-29T06:06:09.607" /><!-- duration: 20ms -->
+    <step title="Attempting to fetch target branch HEAD" date="2025-09-29T06:06:09.640" /><!-- duration: 5ms -->
+    <step title="Acquiring Deployment Lock" date="2025-09-29T06:06:09.656" /><!-- duration: 6ms -->
+    <step title="Acquired Deployment Lock" date="2025-09-29T06:06:09.701" /><!-- duration: 6ms -->
+    <step title="Performing fetch based deployment" date="2025-09-29T06:06:09.718" >
+      <step title="Creating temporary deployment" date="2025-09-29T06:06:09.730" /><!-- duration: 88ms -->
+      <step title="Releasing Deployment Lock" date="2025-09-29T06:06:11.042" /><!-- duration: 8ms -->
+      <step title="None repository commit" date="2025-09-29T06:06:11.378" >
+        <step title="Commit id: 8da81aac-effb-464e-840a-418e7550cf09" date="2025-09-29T06:06:11.425" Message="OneDeploy" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 6ms -->
+      </step><!-- duration: 62ms -->
+      <step title="Deployment timer started" date="2025-09-29T06:06:13.477" >
+        <step title="DeploymentManager.Deploy(id:8da81aac-effb-464e-840a-418e7550cf09)" date="2025-09-29T06:06:13.489" >
+          <step title="Collecting changeset information" date="2025-09-29T06:06:13.508" /><!-- duration: 144ms -->
+          <step title="Updating submodules" date="2025-09-29T06:06:13.661" /><!-- duration: 1160ms -->
+          <step title="Determining deployment builder" date="2025-09-29T06:06:15.130" >
+            <step title="Builder is RunFromZipSiteBuilder" date="2025-09-29T06:06:15.143" /><!-- duration: 5ms -->
+          </step><!-- duration: 23ms -->
+          <step title="PreDeployment: context.CleanOutputPath False" date="2025-09-29T06:06:15.238" >
+            <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2025-09-29T06:06:15.445" >
+              <step title="Building" date="2025-09-29T06:06:15.668" >
+                <step title="Modified file to trigger a restart of the app container." date="2025-09-29T06:06:16.240" /><!-- duration: 7ms -->
+                <step title="Skip function trigger and logicapp sync because function is not enabled." date="2025-09-29T06:06:16.254" /><!-- duration: 9ms -->
+                <step title="Purge deployment items" date="2025-09-29T06:06:18.006" >
+                  <step title="Remove 2d5670aa-, Success, received at 09/28/2025 12:46:10" date="2025-09-29T06:06:18.105" /><!-- duration: 5ms -->
+                </step><!-- duration: 108ms -->
+              </step><!-- duration: 2552ms -->
+            </step><!-- duration: 2786ms -->
+            <step title="Cleaning up temp files" date="2025-09-29T06:06:18.238" /><!-- duration: 6ms -->
+            <step title="Cleaning up temp files" date="2025-09-29T06:06:18.250" /><!-- duration: 538ms -->
+            <step title="Reloading status file with latest updates" date="2025-09-29T06:06:18.935" >
+              <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2025-09-29T06:06:18.952" /><!-- duration: 156ms -->
+            </step><!-- duration: 204ms -->
+            <step title="Cleaning up temporary deployment - fetch deployment was successful" date="2025-09-29T06:06:19.200" /><!-- duration: 18ms -->
+          </step><!-- duration: 4140ms -->
+        </step><!-- duration: 5929ms -->
+        <step title="Outgoing response" date="2025-09-29T06:06:19.427" type="response" statusCode="200" statusText="OK" /><!-- duration: 5ms -->
+      </step><!-- duration: 5962ms -->

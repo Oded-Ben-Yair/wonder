@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-09-28T09:31:33.041Z",
+  "urls": {
+    "backend": "https://wonder-ceo-web.azurewebsites.net",
+    "frontend": "https://delightful-water-0728cae03.1.azurestaticapps.net"
+  },
+  "summary": {
+    "total": 7,
+    "passed": 3,
+    "failed": 4,
+    "successRate": "42.9%"
+  },
+  "results": {
+    "backend": [
+      {
+        "test": "Health Check",
+        "status": "passed"
+      }
+    ],
+    "frontend": [
+      {
+        "test": "Frontend Load",
+        "status": "failed",
+        "error": "page.waitForTimeout is not a function"
+      },
+      {
+        "test": "ChatBot Interface",
+        "status": "passed"
+      },
+      {
+        "test": "Hebrew Input",
+        "status": "passed"
+      },
+      {
+        "test": "Mobile View",
+        "status": "failed",
+        "error": "page.waitForTimeout is not a function"
+      }
+    ],
+    "api": [
+      {
+        "test": "Hebrew Name Search",
+        "status": "failed",
+        "error": "Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON"
+      },
+      {
+        "test": "City Search",
+        "status": "failed",
+        "error": "Failed to fetch"
+      }
+    ]
+  }
+}

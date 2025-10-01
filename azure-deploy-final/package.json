@@ -1,0 +1,21 @@
+{
+  "name": "wonder-hebrew-matching",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Wonder nurse matching system with transparent AI scoring",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "pino": "^8.16.1",
+    "joi": "^17.11.0",
+    "csv-parse": "^5.5.3",
+    "dotenv": "^17.0.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

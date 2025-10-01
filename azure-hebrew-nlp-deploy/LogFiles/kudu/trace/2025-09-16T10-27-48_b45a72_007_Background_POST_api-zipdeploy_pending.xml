@@ -1,0 +1,14 @@
+<step title="BackgroundTrace" date="2025-09-16T10:27:48.375" instance="b45a72" url="/api/zipdeploy" method="POST" >
+  <step title="Cleanup Xml Logs" date="2025-09-16T10:27:48.416" /><!-- duration: 58ms -->
+  <step title="Creating temporary deployment - FetchDeploymentManager" date="2025-09-16T10:27:49.273" /><!-- duration: 101ms -->
+  <step title="Creating temporary deployment" date="2025-09-16T10:27:49.436" /><!-- duration: 859ms -->
+  <step title="Performing fetch based deployment" date="2025-09-16T10:27:50.855" >
+    <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/d14ebde0-9d01-4833-9a1f-3574315f7c93.zip (0.24 MB) to /tmp/zipdeploy/extracted" date="2025-09-16T10:27:53.014" >
+      <step title="ChmodRecursive Process exited with total time taken in ms: 159" date="2025-09-16T10:27:58.514" /><!-- duration: 79ms -->
+    </step><!-- duration: 5641ms -->
+    <step title="Deployment timer started" date="2025-09-16T10:28:00.893" >
+      <step title="DeploymentManager.Deploy(id:8afd6ef9-850f-4c01-8b77-f76da77be4fd)" date="2025-09-16T10:28:01.044" >
+        <step title="Collecting changeset information" date="2025-09-16T10:28:01.441" /><!-- duration: 1370ms -->
+>
+        <step title="Error occurred" date="2025-09-16T10:28:02.811" type="error" text="Deployment has been stopped due to SCM container restart. The restart can happen due to a management operation on site. Do not perform a management operation and a deployment operation in quick succession. Adding a small delay can help avoid any conflicts." >
+          <step title="Updating submodules" date="2025-09-16T10:28:02.892" 
