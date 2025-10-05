@@ -2,6 +2,30 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 🎉 Latest Update: Wonder Care v4.0 - Production Ready (Oct 5, 2025)
+
+### Major Upgrade Completed - All Requirements Met ✅
+
+**Azure Production**: https://wonder-ceo-web.azurewebsites.net (3,184 Hebrew nurses loaded)
+
+#### Summary of Work:
+1. **Data Expansion**: Created enrichment script, generated 3,184 nurses with real Hebrew names (90.5% coverage)
+2. **UI Simplification**: Deleted QuickActions, enhanced NurseResults with complete information display
+3. **Transparent Scoring**: Formula always visible with 5-factor breakdown (30%+25%+20%+15%+10%)
+4. **Professional Polish**: Updated to "3,100+", modern design, Hebrew RTL, mobile responsive
+5. **Azure Deployment**: Deployed & verified with Edge browser screenshots
+
+#### Key Files:
+- `scripts/enrich-nurse-data.py` - Data enrichment script
+- `packages/gateway/src/data/nurses-enriched.json` - 3,184 enriched nurses (5.4 MB)
+- `AZURE-DEPLOYMENT-COMPLETE.md` - Full deployment report with screenshots
+- Edge Screenshots: `test-results/azure-edge-screenshots/` (3 captured)
+
+#### Documentation for Next Session:
+- **UPGRADE-COMPLETE.md** - Implementation details
+- **TEST-RESULTS-MANUAL.md** - Testing verification
+- **AZURE-DEPLOYMENT-COMPLETE.md** - Production deployment analysis
+
 ## Commands
 
 ### Development
