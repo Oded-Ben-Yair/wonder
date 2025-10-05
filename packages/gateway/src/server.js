@@ -8,7 +8,11 @@ import { fileURLToPath } from 'url';
 import { parse } from 'csv-parse/sync';
 import { maskObject, maskSensitive } from './util/mask.js';
 import { startTimer, withTimeout } from './util/timing.js';
+import { fetchNursesFromDB, testConnection as testDBConnection } from './db.js';
 // import { generateShortNurseName } from './utils/nameGenerator.js'; // TODO: Fix module compatibility
+
+// Configuration: Use database or file-based caching
+const USE_DB = process.env.USE_DB === 'true';
 
 // Load nurse names mapping (will load at startup)
 let nurseNamesData = {};
@@ -502,7 +506,24 @@ app.post('/match', async (req, res) => {
       query.expertiseQuery = [...(query.expertiseQuery || []), ...query.expertise];
     }
 
-    const totalNurses = nursesData.length;
+    // Fetch fresh data from database if USE_DB mode enabled
+    let currentNursesData = nursesData;
+    if (USE_DB) {
+      try {
+        logger.info('[USE_DB] Fetching fresh nurse data from database');
+        const rawData = await fetchNursesFromDB();
+        currentNursesData = rawData
+          .filter(nurse => nurse.is_active && nurse.is_approved)
+          .map(transformNurseData);
+        logger.info({ count: currentNursesData.length }, '[USE_DB] Fresh data loaded');
+      } catch (error) {
+        logger.error({ error: error.message }, '[USE_DB] Database fetch failed, falling back to cached data');
+        // Fall back to cached data on error
+        currentNursesData = nursesData;
+      }
+    }
+
+    const totalNurses = currentNursesData.length;
     const parseTime = Date.now();
 
     // Determine engine
@@ -527,8 +548,8 @@ app.post('/match', async (req, res) => {
     const timer = startTimer();
 
     try {
-      console.log(`[Gateway] Calling ${engineName} with ${nursesData.length} nurses`);
-      const result = await engine.match(query, nursesData, {
+      console.log(`[Gateway] Calling ${engineName} with ${currentNursesData.length} nurses (USE_DB: ${USE_DB})`);
+      const result = await engine.match(query, currentNursesData, {
         timeout: 95000 // 95 second timeout
       });
 
@@ -596,12 +617,31 @@ app.post('/match', async (req, res) => {
 async function start() {
   try {
     await loadEngines();
+
+    // Test database connection if USE_DB enabled
+    if (USE_DB) {
+      logger.info('[USE_DB] Database mode enabled - testing connection');
+      const dbConnected = await testDBConnection();
+      if (dbConnected) {
+        logger.info('[USE_DB] ✓ Database connection successful - fresh queries enabled');
+      } else {
+        logger.warn('[USE_DB] ⚠️  Database connection failed - will fall back to cached data');
+      }
+    } else {
+      logger.info('[USE_DB] File-based caching mode (set USE_DB=true for fresh queries)');
+    }
+
     await loadNursesData();
-    
+
     app.listen(PORT, '0.0.0.0', () => {
       const host = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
       logger.info({ port: PORT }, `Gateway server running at ${host}`);
       logger.info(`CEO Playground available at ${host}/ceo-playground.html`);
+      if (USE_DB) {
+        logger.info('💾 DATABASE MODE: Queries fetch fresh data on each request');
+      } else {
+        logger.info('📁 CACHE MODE: Data loaded once at startup');
+      }
     });
   } catch (error) {
     logger.error({ error: error.message }, 'Failed to start server');
