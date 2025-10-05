@@ -1,6 +1,8 @@
 // Core Nurse Data Types
 export interface Nurse {
   nurseId: string;
+  firstName?: string;
+  lastName?: string;
   gender: 'MALE' | 'FEMALE';
   specialization: Specialization[];
   mobility: Mobility[];
@@ -12,6 +14,11 @@ export interface Nurse {
   isOnboardingCompleted: boolean;
   isApproved: boolean;
   treatmentType?: TreatmentType[];
+  rating?: number;
+  reviewsCount?: number;
+  experienceYears?: number;
+  languages?: string[];
+  availability?: any;
 }
 
 export type Specialization =
@@ -121,6 +128,7 @@ export interface EngineResult {
   scoreBreakdown?: ScoreBreakdown;  // Detailed score components
   calculationFormula?: string;  // Human-readable formula
   rating?: number;      // 1-5 star rating
+  reviewsCount?: number; // Number of reviews
   city?: string;        // Nurse location
   services?: string[];  // Available services
   distance?: number;    // Distance in km

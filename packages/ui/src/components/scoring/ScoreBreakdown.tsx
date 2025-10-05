@@ -74,20 +74,40 @@ const ScoreBreakdown: React.FC<ScoreBreakdownProps> = ({
     }
   ];
 
+  // Calculate the formula string
+  const defaultFormula = `Score = 0.30×Service + 0.25×Location + 0.20×Rating + 0.15×Availability + 0.10×Experience`;
+  const displayFormula = calculationFormula || defaultFormula;
+
+  // Calculate final score percentage
+  const finalScore = scorePercentage || `${Math.round(totalScore * 100)}%`;
+
   return (
-    <div className={`bg-gray-50 dark:bg-gray-800 rounded-lg p-4 ${className}`}>
+    <div className={`bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-700 ${className}`}>
+      {/* Formula Display - Always Visible */}
+      <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+        <div className="flex items-start gap-2">
+          <Calculator className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" />
+          <div className="flex-1 min-w-0">
+            <div className="text-xs font-semibold text-blue-700 dark:text-blue-300 mb-1">
+              🧮 נוסחת החישוב המלאה:
+            </div>
+            <code className="text-xs text-blue-600 dark:text-blue-400 font-mono block break-all" dir="ltr">
+              {displayFormula}
+            </code>
+          </div>
+        </div>
+      </div>
+
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <Calculator className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-          <h3 className="font-semibold text-gray-800 dark:text-gray-200">
-            חישוב ציון התאמה
+          <Calculator className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+          <h3 className="font-bold text-gray-800 dark:text-gray-200">
+            פירוק ציון התאמה
           </h3>
         </div>
-        {scorePercentage && (
-          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-            {scorePercentage}
-          </div>
-        )}
+        <div className="text-2xl font-extrabold text-primary-600 dark:text-primary-400">
+          {finalScore}
+        </div>
       </div>
 
       <div className="space-y-3">
@@ -133,22 +153,6 @@ const ScoreBreakdown: React.FC<ScoreBreakdownProps> = ({
           </div>
         ))}
       </div>
-
-      {calculationFormula && (
-        <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-          <div className="flex items-start gap-2">
-            <Calculator className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5" />
-            <div>
-              <div className="text-xs font-semibold text-blue-700 dark:text-blue-300 mb-1">
-                נוסחת החישוב:
-              </div>
-              <code className="text-xs text-blue-600 dark:text-blue-400 font-mono break-all" dir="ltr">
-                {calculationFormula}
-              </code>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

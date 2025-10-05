@@ -6,7 +6,7 @@ export const he = {
   header: {
     brandName: 'Wonder Healthcare',
     tagline: 'התאמת אחיות מבוססת AI',
-    professionalCount: '6,700+ אחיות מקצועיות',
+    professionalCount: '3,100+ אחיות מקצועיות',
     statusLive: 'פעיל',
     hipaaCompliant: 'עומד בתקן HIPAA'
   },
@@ -14,8 +14,8 @@ export const he = {
   // ChatBot.tsx
   chat: {
     welcomeTitle: '👋 **ברוכים הבאים ל-Wonder Healthcare!**',
-    welcomeMessage: 
-      `אני עוזר ה-AI שלך, כאן כדי לעזור לך למצוא את האחות המתאימה ביותר מרשת של **6,700+ אחיות מקצועיות**.\n\n` +
+    welcomeMessage:
+      `אני עוזר ה-AI שלך, כאן כדי לעזור לך למצוא את האחות המתאימה ביותר מרשת של **3,100+ אחיות מקצועיות**.\n\n` +
       `✨ **איך זה עובד:**\n` +
       `1️⃣ ספר לי מה אתה צריך (בעברית או אנגלית)\n` +
       `2️⃣ אחפש ואנתח אלפי פרופילים באופן מיידי\n` +
@@ -118,27 +118,6 @@ export const he = {
     },
 
     trustFooter: 'אנחנו מאמינים בשקיפות. החישוב המלא מבוסס על אלגוריתמים מתקדמים הלוקחים בחשבון מספר רב של גורמים כדי למצוא את ההתאמה הטובה ביותר עבורך.'
-  },
-
-  // QuickActions.tsx
-  quickActions: {
-    title: 'פעולות מהירות',
-    subtitle: 'לחץ כדי לחדד את החיפוש',
-    bookTopMatch: 'קבע תור עם ההתאמה הטובה ביותר',
-    fiveStarOnly: 'רק 5 כוכבים',
-    expandArea: 'הרחב אזור',
-    urgentAvailable: 'זמינה דחוף',
-    
-    // Query strings
-    queries: {
-      bookTopMatch: 'קבע תור עם ההתאמה הטובה ביותר',
-      fiveStarOnly: '{query} עם דירוג 5 כוכבים בלבד',
-      fiveStarDefault: 'מצא אחיות מדורגות 5 כוכבים בתל אביב',
-      expandArea: '{query} בכל הערים הסמוכות',
-      expandDefault: 'הרחב חיפוש לערים סמוכות',
-      urgentNow: '{query} זמינה דחוף עכשיו',
-      urgentDefault: 'מצא אחיות זמינות דחוף בתל אביב'
-    }
   },
 
   // ContextualSuggestions.tsx

@@ -8,7 +8,6 @@ import {
 import { parseNaturalLanguageQuery } from '@/utils/queryParser';
 import { executeMatch } from '@/utils/api';
 import NurseResults from './NurseResults';
-import QuickActions from './QuickActions';
 import ContextualSuggestions from './ContextualSuggestions';
 import { he } from '@/i18n/he';
 
@@ -345,19 +344,6 @@ const ChatBot: React.FC<ChatBotProps> = ({ className = '' }) => {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Quick Actions - Show after first search */}
-      {hasResults && !isLoading && (
-        <div className="flex-shrink-0 px-4 pt-4 bg-gray-50">
-          <QuickActions
-            onAction={(actionQuery) => {
-              setInputText(actionQuery);
-              inputRef.current?.focus();
-            }}
-            hasResults={hasResults}
-            lastQuery={lastUserQuery}
-          />
-        </div>
-      )}
 
       {/* Suggestions */}
       {messages.length === 1 && (

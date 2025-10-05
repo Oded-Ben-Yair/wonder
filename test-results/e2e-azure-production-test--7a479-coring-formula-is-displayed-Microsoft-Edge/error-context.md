@@ -1,0 +1,57 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - img [ref=e9]
+        - generic [ref=e11]:
+          - heading "Wonder Healthcare" [level=1] [ref=e12]
+          - paragraph [ref=e13]:
+            - text: 🤖 התאמת אחיות מבוססת AI •
+            - generic [ref=e14]: 3,100+ אחיות מקצועיות
+      - generic [ref=e15]:
+        - generic [ref=e17]: פעיל
+        - generic [ref=e18]:
+          - img [ref=e19]
+          - generic [ref=e21]: עומד בתקן HIPAA
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e25]:
+        - img [ref=e28]
+        - generic [ref=e30]:
+          - heading "מחפש אחיות" [level=2] [ref=e31]
+          - paragraph [ref=e32]: שאל אותי למצוא אחיות בשפה טבעית
+      - generic [ref=e34]:
+        - img [ref=e37]
+        - generic [ref=e40]:
+          - generic [ref=e42]:
+            - text: 👋
+            - strong [ref=e43]: ברוכים הבאים ל-Wonder Healthcare!
+            - text: אני עוזר ה-AI שלך, כאן כדי לעזור לך למצוא את האחות המתאימה ביותר מרשת של
+            - strong [ref=e44]: 3,100+ אחיות מקצועיות
+            - text: . ✨
+            - strong [ref=e45]: "איך זה עובד:"
+            - text: 1️⃣ ספר לי מה אתה צריך (בעברית או אנגלית) 2️⃣ אחפש ואנתח אלפי פרופילים באופן מיידי 3️⃣ תקבל התאמות מדורגות עם הסברים ברורים 🎯
+            - strong [ref=e46]: "נסה לשאול:"
+            - text: • "אני צריך אחות לטיפול בפצעים בתל אביב" • "מי זמינה היום בשעה 15:00 בחיפה?" • "מצא אחות למתן תרופות בירושלים"
+          - generic [ref=e47]: 08:10 AM
+      - generic [ref=e48]:
+        - paragraph [ref=e49]: "נסה לשאול:"
+        - generic [ref=e50]:
+          - button "אני צריך אחות לטיפול בפצעים בתל אביב" [ref=e51] [cursor=pointer]
+          - button "מי זמינה היום בשעה 15:00 בתל אביב?" [ref=e52] [cursor=pointer]
+          - button "חפש אחות למתן תרופות בחיפה" [ref=e53] [cursor=pointer]
+          - button "אחות דחוף לטיפול בפצע ברמת גן" [ref=e54] [cursor=pointer]
+          - button "מצא 5 אחיות בנתניה" [ref=e55] [cursor=pointer]
+          - button "אחות לטיפול בקשישים בירושלים" [ref=e56] [cursor=pointer]
+          - button "מי יכולה להגיע היום לפתח תקווה?" [ref=e57] [cursor=pointer]
+          - button "צריך אחות לבדיקת לחץ דם בראשון לציון" [ref=e58] [cursor=pointer]
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - 'textbox "שאל אותי למצוא אחיות... (לדוגמה: \"מי זמינה היום בתל אביב?\")" [active] [ref=e61]': מצא אחות
+          - button [ref=e62] [cursor=pointer]:
+            - img [ref=e63] [cursor=pointer]
+        - paragraph [ref=e66]: לחץ Enter לשליחה, Shift+Enter לשורה חדשה
+```

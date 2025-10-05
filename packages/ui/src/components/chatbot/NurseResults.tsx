@@ -134,18 +134,18 @@ const NurseResults: React.FC<NurseResultsProps> = ({
                 </div>
               </div>
 
-              {/* Expanded Details */}
+              {/* Expanded Details - Complete Information */}
               {isExpanded && (
-                <div className="px-3 pb-3 pt-2 border-t border-gray-100 space-y-2 animate-in fade-in slide-in-from-top-2 duration-200">
-                  {/* Specializations */}
+                <div className="px-3 pb-3 pt-2 border-t border-gray-100 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200">
+                  {/* Specializations - ALL shown */}
                   {nurse?.specialization && nurse.specialization.length > 0 && (
                     <div>
-                      <p className="text-xs font-medium text-gray-600 mb-1">{he.results.specializations}</p>
+                      <p className="text-xs font-semibold text-gray-700 mb-1.5">{he.results.specializations}</p>
                       <div className="flex flex-wrap gap-1">
                         {nurse.specialization.map((spec) => (
                           <span
                             key={spec}
-                            className="inline-block px-2 py-0.5 bg-blue-50 text-blue-700 text-xs rounded"
+                            className="inline-block px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded font-medium"
                           >
                             {formatSpecialization(spec)}
                           </span>
@@ -154,27 +154,67 @@ const NurseResults: React.FC<NurseResultsProps> = ({
                     </div>
                   )}
 
-                  {/* Location */}
+                  {/* Location - ALL cities */}
                   {nurse?.municipality && nurse.municipality.length > 0 && (
                     <div>
-                      <p className="text-xs font-medium text-gray-600 mb-1">{he.results.locations}</p>
-                      <div className="flex items-center gap-1 text-xs text-gray-700">
-                        <MapPin className="w-3 h-3" />
-                        <span>{nurse.municipality.join(', ')}</span>
+                      <p className="text-xs font-semibold text-gray-700 mb-1.5">{he.results.locations}</p>
+                      <div className="flex flex-wrap gap-1">
+                        {nurse.municipality.map((city) => (
+                          <span key={city} className="inline-flex items-center gap-1 px-2 py-1 bg-green-50 text-green-700 text-xs rounded font-medium">
+                            <MapPin className="w-3 h-3" />
+                            {city}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Rating & Experience */}
+                  <div className="grid grid-cols-2 gap-2">
+                    {result.rating !== undefined && (
+                      <div className="bg-amber-50 p-2 rounded">
+                        <p className="text-xs text-gray-600 mb-0.5">דירוג</p>
+                        <div className="flex items-center gap-1">
+                          <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
+                          <span className="text-sm font-bold text-amber-700">{result.rating.toFixed(1)}/5.0</span>
+                        </div>
+                        {result.reviewsCount && (
+                          <p className="text-xs text-gray-600 mt-0.5">{result.reviewsCount} ביקורות</p>
+                        )}
+                      </div>
+                    )}
+                    {nurse?.experienceYears !== undefined && (
+                      <div className="bg-purple-50 p-2 rounded">
+                        <p className="text-xs text-gray-600 mb-0.5">ניסיון</p>
+                        <p className="text-sm font-bold text-purple-700">{nurse.experienceYears} שנים</p>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Languages */}
+                  {nurse?.languages && nurse.languages.length > 0 && (
+                    <div>
+                      <p className="text-xs font-semibold text-gray-700 mb-1.5">שפות</p>
+                      <div className="flex flex-wrap gap-1">
+                        {nurse.languages.map((lang) => (
+                          <span key={lang} className="inline-block px-2 py-1 bg-indigo-50 text-indigo-700 text-xs rounded font-medium">
+                            {lang}
+                          </span>
+                        ))}
                       </div>
                     </div>
                   )}
 
                   {/* Status */}
-                  <div className="flex items-center gap-2 text-xs">
+                  <div className="flex items-center gap-2 text-xs pt-1">
                     {nurse?.isActive && (
-                      <span className="flex items-center gap-1 text-green-600">
-                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                      <span className="flex items-center gap-1 px-2 py-1 bg-green-50 text-green-700 rounded font-medium">
+                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
                         {he.results.statusActive}
                       </span>
                     )}
                     {nurse?.isApproved && (
-                      <span className="flex items-center gap-1 text-blue-600">
+                      <span className="flex items-center gap-1 px-2 py-1 bg-blue-50 text-blue-700 rounded font-medium">
                         <Shield className="w-3 h-3" />
                         {he.results.statusApproved}
                       </span>
@@ -183,11 +223,13 @@ const NurseResults: React.FC<NurseResultsProps> = ({
 
                   {/* AI Match Insights */}
                   {result.scoreBreakdown && (
-                    <AIMatchInsights
-                      scoreBreakdown={result.scoreBreakdown}
-                      totalScore={result.matchScore || result.score || 0}
-                      nurseName={result.name || `Nurse ${result.id.slice(0, 8)}`}
-                    />
+                    <div className="pt-2 border-t border-gray-200">
+                      <AIMatchInsights
+                        scoreBreakdown={result.scoreBreakdown}
+                        totalScore={result.matchScore || result.score || 0}
+                        nurseName={result.name || `Nurse ${result.id.slice(0, 8)}`}
+                      />
+                    </div>
                   )}
                 </div>
               )}

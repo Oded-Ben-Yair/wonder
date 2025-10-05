@@ -17,27 +17,23 @@ app.use((req, res, next) => {
   next();
 });
 
-// Load real nurse names database
-let nurseNames = {};
-try {
-  const namesData = fs.readFileSync(path.join(__dirname, 'data', 'nurse_names.json'), 'utf8');
-  nurseNames = JSON.parse(namesData);
-  console.log(`Loaded ${Object.keys(nurseNames).length} nurse names from database`);
-} catch (error) {
-  console.error('Error loading nurse names:', error);
-}
-
-// Load nurses database
+// Load enriched nurses database (3,184 nurses with real Hebrew names)
 let nursesData = [];
 try {
-  const rawData = fs.readFileSync(path.join(__dirname, 'data', 'nurses.json'), 'utf8');
+  // Try enriched data first, fallback to nurses.json
+  const enrichedPath = path.join(__dirname, 'data', 'nurses-enriched.json');
+  const fallbackPath = path.join(__dirname, 'data', 'nurses.json');
+
+  const dataPath = fs.existsSync(enrichedPath) ? enrichedPath : fallbackPath;
+  const rawData = fs.readFileSync(dataPath, 'utf8');
   const nursesArray = JSON.parse(rawData);
+
+  console.log(`✅ Loading from ${dataPath.includes('enriched') ? 'ENRICHED' : 'fallback'} data file`);
 
   // Transform data to match expected format
   nursesData = nursesArray.map((nurse, index) => {
-    // Look up real name by nurseId from nurse_names.json
-    const nurseNameData = nurseNames[nurse.nurseId];
-    const realName = nurseNameData?.displayName || nurseNameData?.fullName || `אחות ${nurse.nurseId.substring(0, 8)}`;
+    // Use real Hebrew names from enriched data
+    const realName = `${nurse.firstName || 'אחות'} ${nurse.lastName || nurse.nurseId?.substring(0, 8)}`;
 
     return {
       id: nurse.nurseId,
@@ -46,7 +42,8 @@ try {
       services: nurse.specialization || [],
       rating: nurse.rating || (4 + Math.random() * 0.9),
       reviewsCount: nurse.reviewsCount || Math.floor(Math.random() * 100) + 20,
-      experience: nurse.experience || Math.floor(Math.random() * 15) + 1,
+      experience: nurse.experienceYears || Math.floor(Math.random() * 15) + 1,
+      languages: nurse.languages || ['HEBREW'],
       availability: nurse.availability || 'זמינה',
       hebrewName: realName,
       isActive: nurse.isActive !== false,
@@ -54,9 +51,9 @@ try {
     };
   }).filter(nurse => nurse.isActive && nurse.isApproved);
 
-  console.log(`Loaded ${nursesData.length} active nurses from database`);
+  console.log(`✅ Loaded ${nursesData.length} active nurses from ${dataPath.includes('enriched') ? 'ENRICHED' : 'fallback'} database`);
 } catch (error) {
-  console.error('Error loading nurses data:', error);
+  console.error('❌ Error loading nurses data:', error);
   // Fallback data
   nursesData = [
     { id: '1', name: 'שרה כהן', city: 'תל אביב', services: ['WOUND_CARE'], rating: 4.8 },
@@ -249,7 +246,7 @@ function handleMatch(req, res) {
 app.get('/api', (req, res) => {
   res.json({
     name: 'Wonder Healthcare Chatbot API',
-    version: '3.0',
+    version: '4.0-enriched',
     endpoints: {
       health: '/health',
       engines: '/engines',
@@ -258,9 +255,10 @@ app.get('/api', (req, res) => {
     },
     features: [
       'Hebrew Natural Language Processing',
-      'Real nurse database (457 nurses)',
+      `Real nurse database (${nursesData.length} nurses with Hebrew names)`,
       'Multi-language support',
-      'Transparent scoring'
+      'Transparent scoring formula',
+      'Complete nurse information display'
     ]
   });
 });

@@ -119,28 +119,31 @@ function transformNurseData(productionNurse, index) {
     Object.values(cityCoords).find((_, i) => i === index % Object.keys(cityCoords).length) ||
     { lat: 32.0853, lng: 34.7818 }; // Default to Tel Aviv
 
-  // Generate synthetic rating and reviews based on experience and approvals
+  // Use enriched rating data or generate synthetic if missing
   const isApproved = productionNurse.isApproved;
   const isProfileUpdated = productionNurse.isProfileUpdated;
   const hasMultipleSpecializations = specializations.length > 3;
-  
-  let rating = 4.2 + Math.random() * 0.6; // Base 4.2-4.8
-  if (isApproved) rating += 0.2;
-  if (isProfileUpdated) rating += 0.1;
-  if (hasMultipleSpecializations) rating += 0.1;
-  rating = Math.min(5.0, rating);
 
-  const reviewsCount = Math.floor(20 + Math.random() * 200 + (specializations.length * 10));
+  let rating = productionNurse.rating || (4.2 + Math.random() * 0.6); // Use enriched or generate
+  if (!productionNurse.rating) {
+    if (isApproved) rating += 0.2;
+    if (isProfileUpdated) rating += 0.1;
+    if (hasMultipleSpecializations) rating += 0.1;
+    rating = Math.min(5.0, rating);
+  }
 
-  // Generate availability based on status and activity
-  const availability = {};
-  if (productionNurse.isActive && isApproved) {
+  const reviewsCount = productionNurse.reviewsCount ||
+    Math.floor(20 + Math.random() * 200 + (specializations.length * 10));
+
+  // Use enriched availability data or generate synthetic
+  let availability = productionNurse.availability || {};
+  if (!productionNurse.availability && productionNurse.isActive && isApproved) {
     const today = new Date();
     for (let i = 0; i < 7; i++) {
       const date = new Date(today);
       date.setDate(today.getDate() + i);
       const dateStr = date.toISOString().split('T')[0];
-      
+
       // Generate random availability patterns
       if (Math.random() > 0.3) { // 70% chance of availability per day
         availability[dateStr] = [
@@ -232,7 +235,8 @@ async function loadNursesData() {
 
     // Then try to load CSV data
     const csvPath = path.join(__dirname, 'data', 'nurses.csv');
-    const jsonPath = path.join(__dirname, 'data', 'nurses.json');
+    // Use enriched dataset (3,184 nurses with Hebrew names)
+    const jsonPath = path.join(__dirname, 'data', 'nurses-enriched.json');
     
     let rawNursesData;
     

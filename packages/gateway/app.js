@@ -7,7 +7,6 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { generateShortNurseName } from './src/utils/nameGenerator.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -20,18 +19,22 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-// Load nurse data
+// Load enriched nurse data (3,184 nurses with Hebrew names)
 let nursesData = [];
 try {
-  const dataPath = path.join(__dirname, 'src', 'data', 'nurses.json');
+  const enrichedPath = path.join(__dirname, 'src', 'data', 'nurses-enriched.json');
+  const fallbackPath = path.join(__dirname, 'src', 'data', 'nurses.json');
+
+  const dataPath = fs.existsSync(enrichedPath) ? enrichedPath : fallbackPath;
+
   if (fs.existsSync(dataPath)) {
     nursesData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-    console.log(`Loaded ${nursesData.length} nurses from data file`);
+    console.log(`✅ Loaded ${nursesData.length} nurses from ${dataPath.includes('enriched') ? 'ENRICHED' : 'fallback'} data file`);
   } else {
-    console.warn('Nurse data file not found, using empty dataset');
+    console.warn('⚠️  Nurse data file not found, using empty dataset');
   }
 } catch (error) {
-  console.error('Error loading nurses data:', error);
+  console.error('❌ Error loading nurses data:', error);
 }
 
 // Health check endpoint
@@ -108,10 +111,10 @@ app.post('/match', (req, res) => {
   // Transform to response format
   const nurses = results.map((nurse, index) => ({
     id: nurse.nurseId,
-    name: generateShortNurseName(nurse.nurseId, nurse.gender),
+    name: `${nurse.firstName} ${nurse.lastName}`,
     city: Array.isArray(nurse.municipality) ? nurse.municipality[0] : nurse.municipality,
     services: Array.isArray(nurse.specialization) ? nurse.specialization : [nurse.specialization],
-    rating: 4.5 + (Math.random() * 0.5),
+    rating: nurse.rating || (4.5 + (Math.random() * 0.5)),
     distance: Math.random() * 10,
     matchScore: 0.9 - (index * 0.05)
   }));
