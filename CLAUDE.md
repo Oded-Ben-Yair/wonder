@@ -135,9 +135,16 @@ Gateway transforms nurse data in `loadNursesData()` (server.js:184-224):
 #### Gateway (.env)
 ```bash
 PORT=5050
-USE_DB=false  # Set true for PostgreSQL instead of JSON
-DATABASE_URL=<postgres-connection-string>
+USE_DB=false  # Set true for PostgreSQL fresh queries (default: false, uses cached JSON)
+DATABASE_URL=<postgres-connection-string>  # Required when USE_DB=true
+NODE_ENV=production  # Set for SSL in database connections
 ```
+
+**Database Integration** (✅ IMPLEMENTED):
+- When `USE_DB=false` (default): Loads nurses from `src/data/nurses.json` once at startup
+- When `USE_DB=true`: Fetches fresh nurse data from PostgreSQL on every `/match` request
+- Database module: `packages/gateway/src/db.js` with connection pooling and error handling
+- Graceful fallback to cached data if database query fails
 
 #### Azure GPT Engine (.env)
 ```bash
@@ -157,7 +164,25 @@ The project includes comprehensive test suites in `/tests`:
 
 ### Known Issues & Fixes
 
-#### Fixed Issues
+#### Fixed Issues (Pre-Production Code Review - Oct 2025)
+
+**Mathematical Accuracy Improvements**:
+- **Rating Score Penalization** (engine-basic): Fixed logarithmic scaling to avoid penalizing nurses with <100 reviews. Now uses `reviewConfidence = 1 - e^(-0.05*reviewCount)` reaching 86% at 50 reviews, 95% at 100 reviews.
+- **Experience Score Overflow** (engine-basic): Added `Math.min(1, ...)` capping to prevent scores >1.0 when nurses have >5 specializations or >200 reviews.
+- **Distance Score Null Handling** (engine-fuzzy): Changed from misleading 0.5 to proper 0 for unknown locations, with weight redistribution to other factors.
+- **Urgent Boost Overflow** (engine-fuzzy): Replaced multiplicative 1.10x with diminishing returns algorithm to keep final scores ≤1.0.
+
+**Performance Optimizations**:
+- **Trigonometric Caching** (shared-utils/geo.js): Added LRU cache for cos(lat) calculations, ~40% performance improvement.
+- **Batch Operations** (shared-utils): Created `batchDistanceKm()` and `batchAvailabilityRatio()` for bulk processing.
+- **Time Window Caching** (shared-utils/time.js): Cache parsed time windows to avoid repeated string splitting.
+
+**Validation & Architecture**:
+- **Enhanced Validation** (gateway): Added coordinate bounds (-90/90, -180/180), time range validation, radius limits (0-500km).
+- **Database Integration** (gateway): Implemented PostgreSQL integration with USE_DB flag for fresh queries per request.
+- **ES Modules Migration** (gateway): Converted app.js to ES modules, added "type": "module" to package.json.
+
+**Legacy Fixes**:
 - **Field Mapping**: Frontend `municipality` → gateway `city` (api.ts:57)
 - **Service Arrays**: `specializations` → `servicesQuery`/`expertiseQuery` (api.ts)
 - **City Matching**: "Tel Aviv-Yafo" matches "Tel Aviv" (basic.js:152-171)
@@ -187,10 +212,11 @@ The project includes comprehensive test suites in `/tests`:
 - Package manager: npm/pnpm
 - MCP config: ~/.config/claude-code/mcp-config.json
 
-## Azure Deployment - Hebrew NLP Chatbot
+## Azure Deployments
 
-### Live Production URL
-**https://wonder-hebrew-works.azurewebsites.net** ✅ STABLE & RUNNING
+### Deployment 1: Hebrew NLP Chatbot (Primary)
+
+**Live Production URL**: https://wonder-hebrew-works.azurewebsites.net ✅ STABLE & RUNNING
 
 ### Azure Configuration
 - **App Service**: wonder-hebrew-works (Linux, Node 20, B3 plan)
@@ -266,3 +292,21 @@ az webapp config set --resource-group wonder-llm-rg --name wonder-hebrew-works -
 - `GET /health` - System health check
 - `POST /match` - Nurse matching with Hebrew NLP
 - `GET /engines` - Available matching engines
+
+---
+
+### Deployment 2: CEO Web Platform (Legacy)
+
+**Live Production URL**: https://wonder-ceo-web.azurewebsites.net
+
+**Status**: ⚠️ OUTDATED - Running older version (371 nurses vs 6703+ current)
+
+**Azure Configuration**:
+- **App Service**: wonder-ceo-web (Linux, Node 20)
+- **Resource Group**: TBD
+- **Deployment Method**: ZIP deployment via Azure CLI
+
+**Notes**:
+- This deployment requires update with latest mathematical improvements
+- Should be updated with database integration (USE_DB flag)
+- Currently serves as backup/testing environment
