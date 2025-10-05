@@ -1,11 +1,16 @@
 // Azure App Service compatible entry point
-// This file uses CommonJS for maximum compatibility
+// Updated to ES modules for consistency
 
-const express = require('express');
-const cors = require('cors');
-const path = require('path');
-const fs = require('fs');
-const { generateShortNurseName } = require('./src/utils/nameGenerator');
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { generateShortNurseName } from './src/utils/nameGenerator.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 8080;

@@ -71,11 +71,18 @@ function calculateDetailedScore(nurse, query) {
   }
 
   // 3. Rating Score (20% weight)
+  // Using logarithmic scaling to avoid penalizing high-rated nurses with fewer reviews
   const rating = nurse.rating || 0;
   const reviewsCount = nurse.reviewsCount || 0;
-  const ratingScore = (rating / 5.0) * Math.min(reviewsCount / 100, 1.0);
+
+  // Logarithmic scaling: rapidly increases for first reviews, then plateaus
+  // Formula: rating * (1 - e^(-k*reviewCount)) where k controls steepness
+  const k = 0.05; // Reaches ~86% confidence at 50 reviews, ~95% at 100 reviews
+  const reviewConfidence = reviewsCount > 0 ? (1 - Math.exp(-k * reviewsCount)) : 0;
+  const ratingScore = (rating / 5.0) * reviewConfidence;
+
   const ratingExplanation = reviewsCount > 0
-    ? `${rating.toFixed(1)}★ מבוסס על ${reviewsCount} ביקורות | ${rating.toFixed(1)}★ from ${reviewsCount} reviews`
+    ? `${rating.toFixed(1)}★ מבוסס על ${reviewsCount} ביקורות (${(reviewConfidence * 100).toFixed(0)}% confidence) | ${rating.toFixed(1)}★ from ${reviewsCount} reviews (${(reviewConfidence * 100).toFixed(0)}% confidence)`
     : 'אין ביקורות עדיין | No reviews yet';
 
   // 4. Availability Score (15% weight)
@@ -89,8 +96,11 @@ function calculateDetailedScore(nurse, query) {
     : 'זמינות לא צוינה | Availability not specified';
 
   // 5. Experience Score (10% weight)
+  // Properly capped to ensure score stays within [0,1] range
   const specCount = (nurse.specialization || []).length;
-  const experienceScore = ((specCount / 5) * 0.5 + (reviewsCount / 200) * 0.5);
+  const specScore = Math.min(1, specCount / 5); // Cap at 5 specializations
+  const caseScore = Math.min(1, reviewsCount / 200); // Cap at 200 reviews
+  const experienceScore = (specScore * 0.5 + caseScore * 0.5);
   const experienceExplanation = `${specCount} התמחויות, ${reviewsCount} מקרים | ${specCount} specializations, ${reviewsCount} cases`;
 
   // Calculate composite score

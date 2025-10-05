@@ -330,7 +330,7 @@ async function loadNursesData() {
   }
 }
 
-// Request validation schema
+// Request validation schema with enhanced validation
 const matchSchema = Joi.object({
   city: Joi.string().optional(), // Made optional to allow searching by nurseName
   nurseName: Joi.string().optional(), // Added for Hebrew name searches
@@ -342,11 +342,29 @@ const matchSchema = Joi.object({
   engine: Joi.string().optional(),
   start: Joi.string().isoDate().optional(),
   end: Joi.string().isoDate().optional(),
-  lat: Joi.number().optional(),
-  lng: Joi.number().optional(),
-  radiusKm: Joi.number().optional(),
+  lat: Joi.number().min(-90).max(90).optional(), // Valid latitude range
+  lng: Joi.number().min(-180).max(180).optional(), // Valid longitude range
+  radiusKm: Joi.number().min(0).max(500).optional(), // Reasonable radius limit
   weights: Joi.object().optional()
-}).or('city', 'nurseName'); // Require at least city OR nurseName
+})
+.or('city', 'nurseName') // Require at least city OR nurseName
+.and('lat', 'lng') // If lat provided, lng must be provided too
+.custom((value, helpers) => {
+  // Validate that end time is after start time
+  if (value.start && value.end) {
+    const startDate = new Date(value.start);
+    const endDate = new Date(value.end);
+    if (endDate <= startDate) {
+      return helpers.error('any.invalid', { message: 'End time must be after start time' });
+    }
+    // Validate reasonable time range (max 30 days)
+    const daysDiff = (endDate - startDate) / (1000 * 60 * 60 * 24);
+    if (daysDiff > 30) {
+      return helpers.error('any.invalid', { message: 'Time range cannot exceed 30 days' });
+    }
+  }
+  return value;
+});
 
 // Initialize Express app
 const app = express();

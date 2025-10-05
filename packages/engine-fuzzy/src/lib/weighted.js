@@ -53,16 +53,37 @@ export function weightedMatch(query, nurses){
     // availability
     const avail = (s&&e) ? availabilityOverlapRatio(s,e,n.availability,day) : 1;
 
-    // location
+    // location - use 0 when location unknown (don't give false positive weight)
     const dKm = (lat!=null&&lng!=null&&n.lat!=null&&n.lng!=null) ? distanceKm(lat,lng,n.lat,n.lng) : null;
-    const location = (dKm==null) ? 0.5 : Math.max(0, 1 - (dKm/(maxDistanceKm||50)));
+    const locationScore = (dKm==null) ? 0 : Math.max(0, 1 - (dKm/(maxDistanceKm||50)));
 
-    let score = (weights.services*serviceScore) + (weights.expertise*expertiseScore) + (weights.availability*avail) + (weights.location*location);
+    // Adjust weights when location is unknown to maintain proportional scoring
+    const effectiveWeights = {...weights};
+    if (dKm === null && lat != null && lng != null) {
+      // User provided location but nurse location unknown - redistribute weight
+      const locationWeight = weights.location || 0.2;
+      const redistribution = locationWeight / 3;
+      effectiveWeights.services = (weights.services || 0.3) + redistribution;
+      effectiveWeights.expertise = (weights.expertise || 0.3) + redistribution;
+      effectiveWeights.availability = (weights.availability || 0.2) + redistribution;
+      effectiveWeights.location = 0;
+    }
+
+    let score = (effectiveWeights.services*serviceScore) + (effectiveWeights.expertise*expertiseScore) +
+                (effectiveWeights.availability*avail) + (effectiveWeights.location*locationScore);
 
     const hoursToStart = s ? (s - new Date())/36e5 : null;
     const isUrgent = urgent === true || (hoursToStart!=null && hoursToStart < 24);
-    if(isUrgent) score *= 1.10;
 
+    // Apply urgent boost but cap to ensure score stays in [0,1]
+    if(isUrgent) {
+      // Use additive boost with diminishing returns instead of multiplicative
+      // This prevents already high scores from exceeding 1.0
+      const urgentBoost = 0.10 * (1 - score); // Boost is proportional to remaining headroom
+      score = score + urgentBoost;
+    }
+
+    // Final capping to ensure valid range
     score = Math.max(0, Math.min(1, score));
 
     const reason = [
